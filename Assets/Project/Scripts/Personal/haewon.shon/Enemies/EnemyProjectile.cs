@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class EnemyProjectile : MonoBehaviour
 {
     public int damage = 1;
     public float lifetime = 3.0f;
+    public float speed = 10.0f;
     Rigidbody2D rb;
 
     void Awake()
@@ -18,16 +19,15 @@ public class Bullet : MonoBehaviour
     }
     public void SetDirection(Vector2 dir)
     {
-       rb.linearVelocity = dir * 10.0f;
+       rb.linearVelocity = dir * speed;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Hit " + other.name);
-        Enemy enemyComponent = other.GetComponent<Enemy>();
-        if (enemyComponent)
+        Character characterComponent = other.GetComponent<Character>();
+        if (characterComponent)
         { 
-            enemyComponent.OnTakeDamage(damage);
+            other.GetComponent<Character>().OnTakeDamage(damage);
             Destroy(gameObject);
         }
     }
