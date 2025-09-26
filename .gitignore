@@ -97,3 +97,22 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Unity Package Manager
+manifest.lock
+
+# Plastic SCM (Unity 기본 VCS)
+.plastic/
+
+# Timeline Cache
+TimelineCache/
+
+# WebGL Template Cache
+WebGLTemplates/
+
+#mskim ignore
+.idea/
+*.DotSettings.user
+CLAUDE.md
+.claude/
+unity_gamejam_template.md
