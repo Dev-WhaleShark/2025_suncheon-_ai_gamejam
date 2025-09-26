@@ -1,0 +1,514 @@
+fileFormatVersion: 2
+guid: 51392b0c1dc8b3e4a9ed2156f2d12b72
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3149768857148897227
+    second: tall trees_0
+  - first:
+      213: -4602229567374103023
+    second: tall trees_1
+  - first:
+      213: -3278613045686922932
+    second: tall trees_2
+  - first:
+      213: -2570273906503381980
+    second: tall trees_3
+  - first:
+      213: -2539613460348106456
+    second: tall trees_4
+  - first:
+      213: -4733391149367075793
+    second: tall trees_5
+  - first:
+      213: 9211894322368648487
+    second: tall trees_6
+  - first:
+      213: 4120730853191008905
+    second: tall trees_7
+  - first:
+      213: 8847266115683941184
+    second: tall trees_8
+  - first:
+      213: 1362212234407870633
+    second: tall trees_9
+  - first:
+      213: 6423414961370469129
+    second: tall trees_10
+  - first:
+      213: -7532870107495966596
+    second: tall trees_11
+  - first:
+      213: 7262628495463491850
+    second: tall trees_12
+  - first:
+      213: -5665447646336388550
+    second: tall trees_13
+  - first:
+      213: -534720693616997865
+    second: tall trees_14
+  - first:
+      213: -4640212768129448600
+    second: tall trees_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tall trees_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 112
+        width: 40
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc7b2fe561a36bb20800000000000000
+      internalID: 3149768857148897227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 112
+        width: 40
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11eedd597989120c0800000000000000
+      internalID: -4602229567374103023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_2
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 112
+        width: 40
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c419ed74ec60082d0800000000000000
+      internalID: -3278613045686922932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 112
+        width: 41
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42c096bff7d845cd0800000000000000
+      internalID: -2570273906503381980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_4
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 112
+        width: 40
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8298625630b71ccd0800000000000000
+      internalID: -2539613460348106456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_5
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 112
+        width: 40
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c5ff604dd9f4eb0800000000000000
+      internalID: -4733391149367075793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_6
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 112
+        width: 40
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7259839541937df70800000000000000
+      internalID: 9211894322368648487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_7
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 112
+        width: 41
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982417fd0e6cf2930800000000000000
+      internalID: 4120730853191008905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 40
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04bf0ba48adc7ca70800000000000000
+      internalID: 8847266115683941184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_9
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 0
+        width: 40
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a082945fcc87e210800000000000000
+      internalID: 1362212234407870633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_10
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 40
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9039a69efdd842950800000000000000
+      internalID: 6423414961370469129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_11
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 41
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c785b8f4c8ed57790800000000000000
+      internalID: -7532870107495966596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_12
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 0
+        width: 40
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a092bb7332a0ac460800000000000000
+      internalID: 7262628495463491850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_13
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 0
+        width: 40
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32fb8ae1694061b0800000000000000
+      internalID: -5665447646336388550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_14
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 0
+        width: 40
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71a88eabc5a4498f0800000000000000
+      internalID: -534720693616997865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall trees_15
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 41
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86589618217aa9fb0800000000000000
+      internalID: -4640212768129448600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tall trees_0: 3149768857148897227
+      tall trees_1: -4602229567374103023
+      tall trees_10: 6423414961370469129
+      tall trees_11: -7532870107495966596
+      tall trees_12: 7262628495463491850
+      tall trees_13: -5665447646336388550
+      tall trees_14: -534720693616997865
+      tall trees_15: -4640212768129448600
+      tall trees_2: -3278613045686922932
+      tall trees_3: -2570273906503381980
+      tall trees_4: -2539613460348106456
+      tall trees_5: -4733391149367075793
+      tall trees_6: 9211894322368648487
+      tall trees_7: 4120730853191008905
+      tall trees_8: 8847266115683941184
+      tall trees_9: 1362212234407870633
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

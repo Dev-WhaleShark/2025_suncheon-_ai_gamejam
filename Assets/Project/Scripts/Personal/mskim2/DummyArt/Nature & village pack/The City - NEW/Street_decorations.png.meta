@@ -1,0 +1,1589 @@
+fileFormatVersion: 2
+guid: 612d99a0e295c4c4f9695f9ddcd501ff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7908730640190037535
+    second: Street_decorations_0
+  - first:
+      213: 3541986904054371442
+    second: Street_decorations_1
+  - first:
+      213: 6396808327154345437
+    second: Street_decorations_2
+  - first:
+      213: 2357326243317122881
+    second: Street_decorations_3
+  - first:
+      213: 3636054549047716897
+    second: Street_decorations_4
+  - first:
+      213: 3135225590777750189
+    second: Street_decorations_5
+  - first:
+      213: 3007308195992694671
+    second: Street_decorations_6
+  - first:
+      213: 3606354114300452741
+    second: Street_decorations_7
+  - first:
+      213: 610101266733170285
+    second: Street_decorations_8
+  - first:
+      213: -7915712309761669437
+    second: Street_decorations_9
+  - first:
+      213: 1785434798855731164
+    second: Street_decorations_10
+  - first:
+      213: -8777583590106413136
+    second: Street_decorations_11
+  - first:
+      213: 8616598159325270887
+    second: Street_decorations_12
+  - first:
+      213: -7498313288918609258
+    second: Street_decorations_13
+  - first:
+      213: 4397437781068154263
+    second: Street_decorations_14
+  - first:
+      213: 3247069216472234647
+    second: Street_decorations_15
+  - first:
+      213: -2025392671748838889
+    second: Street_decorations_16
+  - first:
+      213: 6716377660220437036
+    second: Street_decorations_17
+  - first:
+      213: -518464292948059165
+    second: Street_decorations_18
+  - first:
+      213: -5300051594617857930
+    second: Street_decorations_19
+  - first:
+      213: 3543165790063029051
+    second: Street_decorations_20
+  - first:
+      213: -2472917490906430516
+    second: Street_decorations_21
+  - first:
+      213: 6634037805281279834
+    second: Street_decorations_22
+  - first:
+      213: -6969306563462824079
+    second: Street_decorations_23
+  - first:
+      213: -4739588472736641594
+    second: Street_decorations_24
+  - first:
+      213: -8591773266596353928
+    second: Street_decorations_25
+  - first:
+      213: 2750867451295364391
+    second: Street_decorations_26
+  - first:
+      213: -5462900422597169188
+    second: Street_decorations_27
+  - first:
+      213: -8358549064834655742
+    second: Street_decorations_28
+  - first:
+      213: -2808612181896342581
+    second: Street_decorations_29
+  - first:
+      213: 1233252257206851160
+    second: Street_decorations_30
+  - first:
+      213: -1981728517960415817
+    second: Street_decorations_31
+  - first:
+      213: -4893780567248329816
+    second: Street_decorations_32
+  - first:
+      213: 2937575995752529600
+    second: Street_decorations_33
+  - first:
+      213: -2947954561389090325
+    second: Street_decorations_34
+  - first:
+      213: -4726480376754295767
+    second: Street_decorations_35
+  - first:
+      213: 4571183562907967516
+    second: Street_decorations_36
+  - first:
+      213: 3056591875578888565
+    second: Street_decorations_37
+  - first:
+      213: 3753183398964094737
+    second: Street_decorations_38
+  - first:
+      213: 880986546206520495
+    second: Street_decorations_39
+  - first:
+      213: -3445117349314141023
+    second: Street_decorations_40
+  - first:
+      213: 6493811113400555679
+    second: Street_decorations_41
+  - first:
+      213: -8878770126310535779
+    second: Street_decorations_42
+  - first:
+      213: -5614306553467753959
+    second: Street_decorations_43
+  - first:
+      213: -2966823188308186976
+    second: Street_decorations_44
+  - first:
+      213: -1836803111690121555
+    second: Street_decorations_45
+  - first:
+      213: 2166181066591091326
+    second: Street_decorations_46
+  - first:
+      213: -6118431184049324410
+    second: Street_decorations_47
+  - first:
+      213: -8345234371591914649
+    second: Street_decorations_48
+  - first:
+      213: -8534401033208239972
+    second: Street_decorations_49
+  - first:
+      213: -3266747992246112402
+    second: Street_decorations_50
+  - first:
+      213: -7703540514084167234
+    second: Street_decorations_51
+  - first:
+      213: -2640650405084214350
+    second: Street_decorations_52
+  - first:
+      213: -5878642315603457601
+    second: Street_decorations_53
+  - first:
+      213: 9128053035875309337
+    second: Street_decorations_54
+  - first:
+      213: 3107750439979634275
+    second: Street_decorations_55
+  - first:
+      213: 6919599312135683026
+    second: Street_decorations_56
+  - first:
+      213: -5414102737898868631
+    second: Street_decorations_57
+  - first:
+      213: -7609459200333430953
+    second: Street_decorations_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Street_decorations_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 560
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1a93f826b8e3290800000000000000
+      internalID: -7908730640190037535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 560
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2741f3fa25aa72130800000000000000
+      internalID: 3541986904054371442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 546
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd5ab44284706c850800000000000000
+      internalID: 6396808327154345437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 546
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1478f988ab7e6b020800000000000000
+      internalID: 2357326243317122881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_4
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 563
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12caee3095cd57230800000000000000
+      internalID: 3636054549047716897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da2a50d401f828b20800000000000000
+      internalID: 3135225590777750189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_6
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 527
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8fe340feda1cb920800000000000000
+      internalID: 3007308195992694671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_7
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 527
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f952da5f75c0230800000000000000
+      internalID: 3606354114300452741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_8
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 527
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6e75a0aed3877800800000000000000
+      internalID: 610101266733170285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_9
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 532
+        width: 49
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c60870f79db52290800000000000000
+      internalID: -7915712309761669437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 501
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd7ba6b6d7327c810800000000000000
+      internalID: 1785434798855731164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_11
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 502
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b7c86dfa32cf2680800000000000000
+      internalID: -8777583590106413136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_12
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 501
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7631eda8f5e449770800000000000000
+      internalID: 8616598159325270887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_13
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 482
+        width: 8
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6925a6f9ac3a0f790800000000000000
+      internalID: -7498313288918609258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_14
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 482
+        width: 11
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 795037efc56d60d30800000000000000
+      internalID: 4397437781068154263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_15
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 431
+        width: 8
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79afee8af38ef0d20800000000000000
+      internalID: 3247069216472234647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_16
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 463
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71a2bb5981c54e3e0800000000000000
+      internalID: -2025392671748838889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 453
+        width: 16
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c22fec6a5ed553d50800000000000000
+      internalID: 6716377660220437036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 421
+        width: 16
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eb5b16f87b0ec8f0800000000000000
+      internalID: -518464292948059165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 421
+        width: 16
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6785f83d72f6276b0800000000000000
+      internalID: -5300051594617857930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_20
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 447
+        width: 16
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3be509738adb2130800000000000000
+      internalID: 3543165790063029051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 447
+        width: 16
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc30ca3e4ae6eadd0800000000000000
+      internalID: -2472917490906430516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_22
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 447
+        width: 16
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f7d4a3c36d01c50800000000000000
+      internalID: 6634037805281279834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_23
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 447
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17ffff10b9c084f90800000000000000
+      internalID: -6969306563462824079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_24
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 431
+        width: 16
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd0ffc3569993eb0800000000000000
+      internalID: -4739588472736641594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_25
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 431
+        width: 8
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 878a3d53cb3e3c880800000000000000
+      internalID: -8591773266596353928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_26
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 423
+        width: 6
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 725f4aa4f5b0d2620800000000000000
+      internalID: 2750867451295364391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 421
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdfa3c36201ef24b0800000000000000
+      internalID: -5462900422597169188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_28
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 422
+        width: 40
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20a5bd839e7700c80800000000000000
+      internalID: -8358549064834655742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_29
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 367
+        width: 10
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3db3ae91ec509d0800000000000000
+      internalID: -2808612181896342581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_30
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 417
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8565345d4646d1110800000000000000
+      internalID: 1233252257206851160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b545bd996c7f74e0800000000000000
+      internalID: -1981728517960415817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_32
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 375
+        width: 6
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a32470a08cc51cb0800000000000000
+      internalID: -4893780567248329816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_33
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 357
+        width: 54
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce3b8fddcd54c820800000000000000
+      internalID: 2937575995752529600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_34
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 357
+        width: 16
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be9296202f2c617d0800000000000000
+      internalID: -2947954561389090325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_35
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 401
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ca4b9a32b286eb0800000000000000
+      internalID: -4726480376754295767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_36
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 383
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10eb363b3b107f30800000000000000
+      internalID: 4571183562907967516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_37
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 385
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5718937cd123b6a20800000000000000
+      internalID: 3056591875578888565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_38
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 385
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 117e5288a6cf51430800000000000000
+      internalID: 3753183398964094737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_39
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 369
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa4b98a9894e93c00800000000000000
+      internalID: 880986546206520495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_40
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 353
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a46898160c7030d0800000000000000
+      internalID: -3445117349314141023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_41
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 357
+        width: 40
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9859bc4dc6ae1a50800000000000000
+      internalID: 6493811113400555679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_42
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 354
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d09e2ac9548c480800000000000000
+      internalID: -8878770126310535779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_43
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 354
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a286c7fe9f512b0800000000000000
+      internalID: -5614306553467753959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 287
+        width: 81
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a8af75770ab3d6d0800000000000000
+      internalID: -2966823188308186976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_45
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 335
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daec06d3d4d5286e0800000000000000
+      internalID: -1836803111690121555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_46
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 338
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7ab6510432df0e10800000000000000
+      internalID: 2166181066591091326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_47
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 338
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e31144147f61ba0800000000000000
+      internalID: -6118431184049324410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_48
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 319
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76b32e1dd85cf2c80800000000000000
+      internalID: -8345234371591914649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_49
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 321
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9865ec3a77bf8980800000000000000
+      internalID: -8534401033208239972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_50
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 277
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f237f420e2aa2d0800000000000000
+      internalID: -3266747992246112402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_51
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 296
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb1ee21b7b6871590800000000000000
+      internalID: -7703540514084167234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_52
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 289
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bbc6f482768a5bd0800000000000000
+      internalID: -2640650405084214350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 176
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb940e8d5fdda6ea0800000000000000
+      internalID: -5878642315603457601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_54
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 245
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9171646afdb5dae70800000000000000
+      internalID: 9128053035875309337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_55
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 242
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ecc814f82f02b20800000000000000
+      internalID: 3107750439979634275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_56
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 271
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db72eba9ea570060800000000000000
+      internalID: 6919599312135683026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_57
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 271
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 960711abe3e3dd4b0800000000000000
+      internalID: -5414102737898868631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Street_decorations_58
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 272
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75f3c478c25c56690800000000000000
+      internalID: -7609459200333430953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Street_decorations_0: -7908730640190037535
+      Street_decorations_1: 3541986904054371442
+      Street_decorations_10: 1785434798855731164
+      Street_decorations_11: -8777583590106413136
+      Street_decorations_12: 8616598159325270887
+      Street_decorations_13: -7498313288918609258
+      Street_decorations_14: 4397437781068154263
+      Street_decorations_15: 3247069216472234647
+      Street_decorations_16: -2025392671748838889
+      Street_decorations_17: 6716377660220437036
+      Street_decorations_18: -518464292948059165
+      Street_decorations_19: -5300051594617857930
+      Street_decorations_2: 6396808327154345437
+      Street_decorations_20: 3543165790063029051
+      Street_decorations_21: -2472917490906430516
+      Street_decorations_22: 6634037805281279834
+      Street_decorations_23: -6969306563462824079
+      Street_decorations_24: -4739588472736641594
+      Street_decorations_25: -8591773266596353928
+      Street_decorations_26: 2750867451295364391
+      Street_decorations_27: -5462900422597169188
+      Street_decorations_28: -8358549064834655742
+      Street_decorations_29: -2808612181896342581
+      Street_decorations_3: 2357326243317122881
+      Street_decorations_30: 1233252257206851160
+      Street_decorations_31: -1981728517960415817
+      Street_decorations_32: -4893780567248329816
+      Street_decorations_33: 2937575995752529600
+      Street_decorations_34: -2947954561389090325
+      Street_decorations_35: -4726480376754295767
+      Street_decorations_36: 4571183562907967516
+      Street_decorations_37: 3056591875578888565
+      Street_decorations_38: 3753183398964094737
+      Street_decorations_39: 880986546206520495
+      Street_decorations_4: 3636054549047716897
+      Street_decorations_40: -3445117349314141023
+      Street_decorations_41: 6493811113400555679
+      Street_decorations_42: -8878770126310535779
+      Street_decorations_43: -5614306553467753959
+      Street_decorations_44: -2966823188308186976
+      Street_decorations_45: -1836803111690121555
+      Street_decorations_46: 2166181066591091326
+      Street_decorations_47: -6118431184049324410
+      Street_decorations_48: -8345234371591914649
+      Street_decorations_49: -8534401033208239972
+      Street_decorations_5: 3135225590777750189
+      Street_decorations_50: -3266747992246112402
+      Street_decorations_51: -7703540514084167234
+      Street_decorations_52: -2640650405084214350
+      Street_decorations_53: -5878642315603457601
+      Street_decorations_54: 9128053035875309337
+      Street_decorations_55: 3107750439979634275
+      Street_decorations_56: 6919599312135683026
+      Street_decorations_57: -5414102737898868631
+      Street_decorations_58: -7609459200333430953
+      Street_decorations_6: 3007308195992694671
+      Street_decorations_7: 3606354114300452741
+      Street_decorations_8: 610101266733170285
+      Street_decorations_9: -7915712309761669437
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

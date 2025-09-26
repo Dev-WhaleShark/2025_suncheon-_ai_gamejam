@@ -1,0 +1,2239 @@
+fileFormatVersion: 2
+guid: d8784a38b98c9344c883f786c91fd506
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6239114325120768939
+    second: two_floor_house_0
+  - first:
+      213: 2144285956806431814
+    second: two_floor_house_1
+  - first:
+      213: 3805631525547700011
+    second: two_floor_house_2
+  - first:
+      213: -4155672353993615219
+    second: two_floor_house_3
+  - first:
+      213: -3623249469508704935
+    second: two_floor_house_4
+  - first:
+      213: 5384994398016001749
+    second: two_floor_house_5
+  - first:
+      213: -3150861206249449600
+    second: two_floor_house_6
+  - first:
+      213: -4413909724429608615
+    second: two_floor_house_7
+  - first:
+      213: -8012174364491227626
+    second: two_floor_house_8
+  - first:
+      213: 7505082916332521820
+    second: two_floor_house_9
+  - first:
+      213: 5092816913129115849
+    second: two_floor_house_10
+  - first:
+      213: 470568546402522871
+    second: two_floor_house_11
+  - first:
+      213: 9053243142605846400
+    second: two_floor_house_12
+  - first:
+      213: -1024703430331648587
+    second: two_floor_house_13
+  - first:
+      213: 8165787001186512774
+    second: two_floor_house_14
+  - first:
+      213: -324807627461245972
+    second: two_floor_house_15
+  - first:
+      213: 6384007162512930730
+    second: two_floor_house_16
+  - first:
+      213: -3561198524060202607
+    second: two_floor_house_17
+  - first:
+      213: -2812076819422829899
+    second: two_floor_house_18
+  - first:
+      213: 8966152773669329394
+    second: two_floor_house_19
+  - first:
+      213: -6749887358083206895
+    second: two_floor_house_20
+  - first:
+      213: 8047721460484532740
+    second: two_floor_house_21
+  - first:
+      213: -7299275020660493969
+    second: two_floor_house_22
+  - first:
+      213: 8219074451436275716
+    second: two_floor_house_23
+  - first:
+      213: -3395777588241004323
+    second: two_floor_house_24
+  - first:
+      213: 2354994456331554397
+    second: two_floor_house_25
+  - first:
+      213: -2834335187373444289
+    second: two_floor_house_26
+  - first:
+      213: 7098848417858096076
+    second: two_floor_house_27
+  - first:
+      213: -727392524137678181
+    second: two_floor_house_28
+  - first:
+      213: -1055597915022441550
+    second: two_floor_house_29
+  - first:
+      213: 6533432293994449350
+    second: two_floor_house_30
+  - first:
+      213: 6080517256850858340
+    second: two_floor_house_31
+  - first:
+      213: -6452973686237242762
+    second: two_floor_house_32
+  - first:
+      213: 6457153237951633506
+    second: two_floor_house_33
+  - first:
+      213: -4072680763232742778
+    second: two_floor_house_34
+  - first:
+      213: -1556489061710098078
+    second: two_floor_house_35
+  - first:
+      213: 5507389336695675394
+    second: two_floor_house_36
+  - first:
+      213: -7781194968952896302
+    second: two_floor_house_37
+  - first:
+      213: -3967248091336926114
+    second: two_floor_house_38
+  - first:
+      213: 8478240253094083928
+    second: two_floor_house_39
+  - first:
+      213: 1163121292951168289
+    second: two_floor_house_40
+  - first:
+      213: -8994484740764006679
+    second: two_floor_house_41
+  - first:
+      213: 8673312614201277729
+    second: two_floor_house_42
+  - first:
+      213: 5014026605097725656
+    second: two_floor_house_43
+  - first:
+      213: 7508549800851902975
+    second: two_floor_house_44
+  - first:
+      213: 8110732758346743369
+    second: two_floor_house_45
+  - first:
+      213: -667439382645747672
+    second: two_floor_house_46
+  - first:
+      213: 4607438870718280068
+    second: two_floor_house_47
+  - first:
+      213: -1589720105866563886
+    second: two_floor_house_48
+  - first:
+      213: 36940541761450535
+    second: two_floor_house_49
+  - first:
+      213: -3677399258444921036
+    second: two_floor_house_50
+  - first:
+      213: -511375607038537194
+    second: two_floor_house_51
+  - first:
+      213: -8515410110229584712
+    second: two_floor_house_52
+  - first:
+      213: -2604452953480461335
+    second: two_floor_house_53
+  - first:
+      213: 3388864106816796861
+    second: two_floor_house_54
+  - first:
+      213: -6739581155282513753
+    second: two_floor_house_55
+  - first:
+      213: -4431000947472330112
+    second: two_floor_house_56
+  - first:
+      213: -2667139916109926449
+    second: two_floor_house_57
+  - first:
+      213: 558602572757792508
+    second: two_floor_house_58
+  - first:
+      213: 6334770886958100756
+    second: two_floor_house_59
+  - first:
+      213: 4234815371815026821
+    second: two_floor_house_60
+  - first:
+      213: -2520164807571285510
+    second: two_floor_house_61
+  - first:
+      213: -3081725163696569963
+    second: two_floor_house_62
+  - first:
+      213: 5096581022738792370
+    second: two_floor_house_63
+  - first:
+      213: -4851499587956338881
+    second: two_floor_house_64
+  - first:
+      213: 5632597765777078971
+    second: two_floor_house_65
+  - first:
+      213: -1821833538596124858
+    second: two_floor_house_66
+  - first:
+      213: -3373080359979819674
+    second: two_floor_house_67
+  - first:
+      213: 2197101115325251581
+    second: two_floor_house_68
+  - first:
+      213: 7162635638318410400
+    second: two_floor_house_69
+  - first:
+      213: 6872656837456429664
+    second: two_floor_house_70
+  - first:
+      213: -5692385975503902730
+    second: two_floor_house_71
+  - first:
+      213: 3188653060946919200
+    second: two_floor_house_72
+  - first:
+      213: -5057529605323756738
+    second: two_floor_house_73
+  - first:
+      213: -9032473843729474295
+    second: two_floor_house_74
+  - first:
+      213: -5654410946372405146
+    second: two_floor_house_75
+  - first:
+      213: -7382261688112322599
+    second: two_floor_house_76
+  - first:
+      213: 1454942789363609895
+    second: two_floor_house_77
+  - first:
+      213: -6226508798731688316
+    second: two_floor_house_78
+  - first:
+      213: -2446496698566051044
+    second: two_floor_house_79
+  - first:
+      213: 6480990717476156331
+    second: two_floor_house_80
+  - first:
+      213: 4126438430398852457
+    second: two_floor_house_81
+  - first:
+      213: 6908013504298916237
+    second: two_floor_house_82
+  - first:
+      213: 1104513179941227738
+    second: two_floor_house_83
+  - first:
+      213: -7928717820940390613
+    second: two_floor_house_84
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: two_floor_house_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1201
+        width: 144
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: babdfd52c69c59650800000000000000
+      internalID: 6239114325120768939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1201
+        width: 144
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6445e4087b802cd10800000000000000
+      internalID: 2144285956806431814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_2
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1201
+        width: 144
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2f6c4a95b150d430800000000000000
+      internalID: 3805631525547700011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_3
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1201
+        width: 144
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d889c4103061456c0800000000000000
+      internalID: -4155672353993615219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_4
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1252
+        width: 112
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 955af45edc1a7bdc0800000000000000
+      internalID: -3623249469508704935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_5
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 1252
+        width: 112
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d65633cfd75bba40800000000000000
+      internalID: 5384994398016001749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1073
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08751f84d64e544d0800000000000000
+      internalID: -3150861206249449600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_7
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1073
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9591bb4dd74aeb2c0800000000000000
+      internalID: -4413909724429608615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_8
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1073
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61e5206add90fc090800000000000000
+      internalID: -8012174364491227626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_9
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1073
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c594ad51629672860800000000000000
+      internalID: 7505082916332521820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_10
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1108
+        width: 112
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c09925eff15da640800000000000000
+      internalID: 5092816913129115849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_11
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 1108
+        width: 112
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f65bca899bc78600800000000000000
+      internalID: 470568546402522871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 945
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087334c0ca493ad70800000000000000
+      internalID: 9053243142605846400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 945
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b535f2c8a587c1f0800000000000000
+      internalID: -1024703430331648587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_14
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 945
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f693d6304b25170800000000000000
+      internalID: 8165787001186512774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_15
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 945
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce3c5d80f2d0e7bf0800000000000000
+      internalID: -324807627461245972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_16
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 964
+        width: 112
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa7f12db0bc889850800000000000000
+      internalID: 6384007162512930730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_17
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 964
+        width: 112
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1990fb67fc4149ec0800000000000000
+      internalID: -3561198524060202607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 817
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b22131280f79f8d0800000000000000
+      internalID: -2812076819422829899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_19
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 817
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f99174617c2e6c70800000000000000
+      internalID: 8966152773669329394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_20
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 817
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 111fc83d5359352a0800000000000000
+      internalID: -6749887358083206895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_21
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 817
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ae77797004faf60800000000000000
+      internalID: 8047721460484532740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_22
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 820
+        width: 112
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6136abba04c3ba90800000000000000
+      internalID: -7299275020660493969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_23
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 820
+        width: 112
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4080954caa4001270800000000000000
+      internalID: 8219074451436275716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_24
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 689
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd889ac6646cfd0d0800000000000000
+      internalID: -3395777588241004323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_25
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 689
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e08a11bfe9ea020800000000000000
+      internalID: 2354994456331554397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_26
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 689
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f33373ef92b6aa8d0800000000000000
+      internalID: -2834335187373444289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_27
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 689
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccb86c4560d248260800000000000000
+      internalID: 7098848417858096076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_28
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 658
+        width: 92
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9abf7a6a58c7e5f0800000000000000
+      internalID: -727392524137678181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_29
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 658
+        width: 92
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b3c1710a43c951f0800000000000000
+      internalID: -1055597915022441550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_30
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 599
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c9ca974e0a6baa50800000000000000
+      internalID: 6533432293994449350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_31
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 598
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4616a39aa36526450800000000000000
+      internalID: 6080517256850858340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_32
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 598
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67ad2e62f9e6276a0800000000000000
+      internalID: -6452973686237242762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_33
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 598
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268de5098aa6c9950800000000000000
+      internalID: 6457153237951633506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_34
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 599
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68212ff7c6eea77c0800000000000000
+      internalID: -4072680763232742778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_35
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 598
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2611dfbe17d366ae0800000000000000
+      internalID: -1556489061710098078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_36
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 598
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20a158d1c6d2e6c40800000000000000
+      internalID: 5507389336695675394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_37
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 598
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d4818bf664a30490800000000000000
+      internalID: -7781194968952896302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_38
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 500
+        width: 92
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5c140c51e081f8c0800000000000000
+      internalID: -3967248091336926114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_39
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 500
+        width: 92
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d371e2792c8a570800000000000000
+      internalID: 8478240253094083928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_40
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 519
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1252c0947ac342010800000000000000
+      internalID: 1163121292951168289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_41
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 518
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e6071978cb2d2380800000000000000
+      internalID: -8994484740764006679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_42
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 518
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12db1639edbcd5870800000000000000
+      internalID: 8673312614201277729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_43
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 518
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de2533c1a6659540800000000000000
+      internalID: 5014026605097725656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_44
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 519
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff19b1a034ab33860800000000000000
+      internalID: 7508549800851902975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_45
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 518
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94eb161a87c1f8070800000000000000
+      internalID: 8110732758346743369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_46
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 518
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8205b40fa67ccb6f0800000000000000
+      internalID: -667439382645747672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_47
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 518
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4817d7ddd39e0ff30800000000000000
+      internalID: 4607438870718280068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_48
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 463
+        width: 114
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dee6858cfd20f9e0800000000000000
+      internalID: -1589720105866563886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_49
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 463
+        width: 114
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 722708d1a3d338000800000000000000
+      internalID: 36940541761450535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_50
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 463
+        width: 114
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4370b1fabd047fcc0800000000000000
+      internalID: -3677399258444921036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_51
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 463
+        width: 114
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6121ba3489a37e8f0800000000000000
+      internalID: -511375607038537194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_52
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 340
+        width: 92
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4eefe0f9f23d980800000000000000
+      internalID: -8515410110229584712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_53
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 340
+        width: 92
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e3849976df1bdbd0800000000000000
+      internalID: -2604452953480461335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_54
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 415
+        width: 114
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db8f2ee33f9a70f20800000000000000
+      internalID: 3388864106816796861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_55
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 303
+        width: 482
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a01878a5a23872a0800000000000000
+      internalID: -6739581155282513753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_56
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 372
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0821e7e5d1ce182c0800000000000000
+      internalID: -4431000947472330112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_57
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 207
+        width: 482
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcfa00e906a6cfad0800000000000000
+      internalID: -2667139916109926449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_58
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 282
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf6f8df841e80c700800000000000000
+      internalID: 558602572757792508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_59
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 287
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 411bf920f80a9e750800000000000000
+      internalID: 6334770886958100756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_60
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 278
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5800666c42615ca30800000000000000
+      internalID: 4234815371815026821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_61
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 278
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9d54db573960dd0800000000000000
+      internalID: -2520164807571285510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_62
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 197
+        width: 60
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 591cb729a438b35d0800000000000000
+      internalID: -3081725163696569963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_63
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 258
+        width: 43
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bfb755ff61bab640800000000000000
+      internalID: 5096581022738792370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_64
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 234
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f88ef34d20cacb0800000000000000
+      internalID: -4851499587956338881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_65
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 234
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba3dcf33d10b2e40800000000000000
+      internalID: 5632597765777078971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_66
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 230
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 647c5149c0c87b6e0800000000000000
+      internalID: -1821833538596124858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_67
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 230
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d5e80b8496031d0800000000000000
+      internalID: -3373080359979819674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_68
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 111
+        width: 482
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff739ad2dbad7e10800000000000000
+      internalID: 2197101115325251581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_69
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 191
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aaa58de92bc66360800000000000000
+      internalID: 7162635638318410400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_70
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 191
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06200c31bf4906f50800000000000000
+      internalID: 6872656837456429664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_71
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 182
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7aca56d159001b0800000000000000
+      internalID: -5692385975503902730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_72
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 182
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ff3b1901f504c20800000000000000
+      internalID: 3188653060946919200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_73
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 143
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3be7a1be9b00d9b0800000000000000
+      internalID: -5057529605323756738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_74
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 143
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d5f7d25e436a280800000000000000
+      internalID: -9032473843729474295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_75
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 134
+        width: 62
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668746fd33f7781b0800000000000000
+      internalID: -5654410946372405146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_76
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 116
+        width: 120
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d7e6198b10fc8990800000000000000
+      internalID: -7382261688112322599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_77
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 15
+        width: 482
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721b88022cef03410800000000000000
+      internalID: 1454942789363609895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_78
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 101
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 486e0ccac3ff699a0800000000000000
+      internalID: -6226508798731688316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_79
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 101
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1bfdc9f63c4c0ed0800000000000000
+      internalID: -2446496698566051044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_80
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 86
+        width: 62
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba335c348ba11f950800000000000000
+      internalID: 6480990717476156331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_81
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 69
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96da17fb3ed044930800000000000000
+      internalID: 4126438430398852457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_82
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 69
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8996539ea13edf50800000000000000
+      internalID: 6908013504298916237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_83
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 35
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc422c92e4045f00800000000000000
+      internalID: 1104513179941227738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: two_floor_house_84
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 35
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2fe986662987f190800000000000000
+      internalID: -7928717820940390613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      two_floor_house_0: 6239114325120768939
+      two_floor_house_1: 2144285956806431814
+      two_floor_house_10: 5092816913129115849
+      two_floor_house_11: 470568546402522871
+      two_floor_house_12: 9053243142605846400
+      two_floor_house_13: -1024703430331648587
+      two_floor_house_14: 8165787001186512774
+      two_floor_house_15: -324807627461245972
+      two_floor_house_16: 6384007162512930730
+      two_floor_house_17: -3561198524060202607
+      two_floor_house_18: -2812076819422829899
+      two_floor_house_19: 8966152773669329394
+      two_floor_house_2: 3805631525547700011
+      two_floor_house_20: -6749887358083206895
+      two_floor_house_21: 8047721460484532740
+      two_floor_house_22: -7299275020660493969
+      two_floor_house_23: 8219074451436275716
+      two_floor_house_24: -3395777588241004323
+      two_floor_house_25: 2354994456331554397
+      two_floor_house_26: -2834335187373444289
+      two_floor_house_27: 7098848417858096076
+      two_floor_house_28: -727392524137678181
+      two_floor_house_29: -1055597915022441550
+      two_floor_house_3: -4155672353993615219
+      two_floor_house_30: 6533432293994449350
+      two_floor_house_31: 6080517256850858340
+      two_floor_house_32: -6452973686237242762
+      two_floor_house_33: 6457153237951633506
+      two_floor_house_34: -4072680763232742778
+      two_floor_house_35: -1556489061710098078
+      two_floor_house_36: 5507389336695675394
+      two_floor_house_37: -7781194968952896302
+      two_floor_house_38: -3967248091336926114
+      two_floor_house_39: 8478240253094083928
+      two_floor_house_4: -3623249469508704935
+      two_floor_house_40: 1163121292951168289
+      two_floor_house_41: -8994484740764006679
+      two_floor_house_42: 8673312614201277729
+      two_floor_house_43: 5014026605097725656
+      two_floor_house_44: 7508549800851902975
+      two_floor_house_45: 8110732758346743369
+      two_floor_house_46: -667439382645747672
+      two_floor_house_47: 4607438870718280068
+      two_floor_house_48: -1589720105866563886
+      two_floor_house_49: 36940541761450535
+      two_floor_house_5: 5384994398016001749
+      two_floor_house_50: -3677399258444921036
+      two_floor_house_51: -511375607038537194
+      two_floor_house_52: -8515410110229584712
+      two_floor_house_53: -2604452953480461335
+      two_floor_house_54: 3388864106816796861
+      two_floor_house_55: -6739581155282513753
+      two_floor_house_56: -4431000947472330112
+      two_floor_house_57: -2667139916109926449
+      two_floor_house_58: 558602572757792508
+      two_floor_house_59: 6334770886958100756
+      two_floor_house_6: -3150861206249449600
+      two_floor_house_60: 4234815371815026821
+      two_floor_house_61: -2520164807571285510
+      two_floor_house_62: -3081725163696569963
+      two_floor_house_63: 5096581022738792370
+      two_floor_house_64: -4851499587956338881
+      two_floor_house_65: 5632597765777078971
+      two_floor_house_66: -1821833538596124858
+      two_floor_house_67: -3373080359979819674
+      two_floor_house_68: 2197101115325251581
+      two_floor_house_69: 7162635638318410400
+      two_floor_house_7: -4413909724429608615
+      two_floor_house_70: 6872656837456429664
+      two_floor_house_71: -5692385975503902730
+      two_floor_house_72: 3188653060946919200
+      two_floor_house_73: -5057529605323756738
+      two_floor_house_74: -9032473843729474295
+      two_floor_house_75: -5654410946372405146
+      two_floor_house_76: -7382261688112322599
+      two_floor_house_77: 1454942789363609895
+      two_floor_house_78: -6226508798731688316
+      two_floor_house_79: -2446496698566051044
+      two_floor_house_8: -8012174364491227626
+      two_floor_house_80: 6480990717476156331
+      two_floor_house_81: 4126438430398852457
+      two_floor_house_82: 6908013504298916237
+      two_floor_house_83: 1104513179941227738
+      two_floor_house_84: -7928717820940390613
+      two_floor_house_9: 7505082916332521820
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

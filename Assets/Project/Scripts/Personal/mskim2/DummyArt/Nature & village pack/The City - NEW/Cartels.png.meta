@@ -1,0 +1,4164 @@
+fileFormatVersion: 2
+guid: 62d2281e00746204f8bd4394a5dae17d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5539003625520031810
+    second: Cartels_0
+  - first:
+      213: -8585227779204164314
+    second: Cartels_1
+  - first:
+      213: -8786896544116839290
+    second: Cartels_2
+  - first:
+      213: 3215757074080772082
+    second: Cartels_3
+  - first:
+      213: 1671074838435107430
+    second: Cartels_4
+  - first:
+      213: 4841388131449348058
+    second: Cartels_5
+  - first:
+      213: 709307872461391069
+    second: Cartels_6
+  - first:
+      213: -6194993612433461380
+    second: Cartels_7
+  - first:
+      213: 4208840217243504551
+    second: Cartels_8
+  - first:
+      213: 6945765187821486395
+    second: Cartels_9
+  - first:
+      213: 484947755210713891
+    second: Cartels_10
+  - first:
+      213: -7775423471929192342
+    second: Cartels_11
+  - first:
+      213: 7600490910553410606
+    second: Cartels_12
+  - first:
+      213: 4147890782787109710
+    second: Cartels_13
+  - first:
+      213: 4400380917466641345
+    second: Cartels_14
+  - first:
+      213: -9051538710787481160
+    second: Cartels_15
+  - first:
+      213: -1593951477923275847
+    second: Cartels_16
+  - first:
+      213: -6885180504536383634
+    second: Cartels_17
+  - first:
+      213: 2095895133846504297
+    second: Cartels_18
+  - first:
+      213: -5901680011633558742
+    second: Cartels_19
+  - first:
+      213: 6257541523919026416
+    second: Cartels_20
+  - first:
+      213: -2306334758441348345
+    second: Cartels_21
+  - first:
+      213: 5815824194318260447
+    second: Cartels_22
+  - first:
+      213: 818111087300111795
+    second: Cartels_23
+  - first:
+      213: 1216472230949246184
+    second: Cartels_24
+  - first:
+      213: 5753909502071832708
+    second: Cartels_25
+  - first:
+      213: -9149690371754969255
+    second: Cartels_26
+  - first:
+      213: -2614152847238067736
+    second: Cartels_27
+  - first:
+      213: 8781941573414610787
+    second: Cartels_28
+  - first:
+      213: -3213747027281260297
+    second: Cartels_29
+  - first:
+      213: 7240483187338956411
+    second: Cartels_30
+  - first:
+      213: 4775803874135092440
+    second: Cartels_31
+  - first:
+      213: 1449857559081496343
+    second: Cartels_32
+  - first:
+      213: 2996687366515414538
+    second: Cartels_33
+  - first:
+      213: 3557861186577494872
+    second: Cartels_34
+  - first:
+      213: 853689458093511643
+    second: Cartels_35
+  - first:
+      213: -5607464110989213587
+    second: Cartels_36
+  - first:
+      213: 3868394757344150765
+    second: Cartels_37
+  - first:
+      213: 3552386439822952186
+    second: Cartels_38
+  - first:
+      213: -2519990971009807216
+    second: Cartels_39
+  - first:
+      213: 4487142690308954226
+    second: Cartels_40
+  - first:
+      213: -3170715251605229271
+    second: Cartels_41
+  - first:
+      213: 3007882380796481346
+    second: Cartels_42
+  - first:
+      213: -4473992461875767012
+    second: Cartels_43
+  - first:
+      213: -8507986936656427455
+    second: Cartels_44
+  - first:
+      213: -4290681156863327553
+    second: Cartels_45
+  - first:
+      213: -7834537546758447320
+    second: Cartels_46
+  - first:
+      213: -5588595494890828565
+    second: Cartels_47
+  - first:
+      213: -6624281307382597040
+    second: Cartels_48
+  - first:
+      213: 1754136842664179389
+    second: Cartels_49
+  - first:
+      213: 967543200709143684
+    second: Cartels_50
+  - first:
+      213: -4430367724741854833
+    second: Cartels_51
+  - first:
+      213: 8481894601988491812
+    second: Cartels_52
+  - first:
+      213: 1563247229330467057
+    second: Cartels_53
+  - first:
+      213: 330808763447093405
+    second: Cartels_54
+  - first:
+      213: -2896295220107721336
+    second: Cartels_55
+  - first:
+      213: -1403678147465394225
+    second: Cartels_56
+  - first:
+      213: -8936460839192349223
+    second: Cartels_57
+  - first:
+      213: 7091490790528164394
+    second: Cartels_58
+  - first:
+      213: 3258537296465887200
+    second: Cartels_59
+  - first:
+      213: -4411083511974020974
+    second: Cartels_60
+  - first:
+      213: -8600566883310036095
+    second: Cartels_61
+  - first:
+      213: -8206697302095170630
+    second: Cartels_62
+  - first:
+      213: -8374233980453494007
+    second: Cartels_63
+  - first:
+      213: -7079637711072322590
+    second: Cartels_64
+  - first:
+      213: -5294016788386794796
+    second: Cartels_65
+  - first:
+      213: 1642530172831595596
+    second: Cartels_66
+  - first:
+      213: 5580466734849603742
+    second: Cartels_67
+  - first:
+      213: 4288672243797359164
+    second: Cartels_68
+  - first:
+      213: -4175235534597683548
+    second: Cartels_69
+  - first:
+      213: -6875835422151222826
+    second: Cartels_70
+  - first:
+      213: -2304970736306923409
+    second: Cartels_71
+  - first:
+      213: 3004987545716046231
+    second: Cartels_72
+  - first:
+      213: 6074809632052857660
+    second: Cartels_73
+  - first:
+      213: 2742585601944340176
+    second: Cartels_74
+  - first:
+      213: 4106976265166447479
+    second: Cartels_75
+  - first:
+      213: 3157125810080067418
+    second: Cartels_76
+  - first:
+      213: 3081458809254806766
+    second: Cartels_77
+  - first:
+      213: 1149626367322957524
+    second: Cartels_78
+  - first:
+      213: 1369140433373345361
+    second: Cartels_79
+  - first:
+      213: -1550748247938397841
+    second: Cartels_80
+  - first:
+      213: 8118130137158316965
+    second: Cartels_81
+  - first:
+      213: -766824061776440449
+    second: Cartels_82
+  - first:
+      213: -3000433441082479431
+    second: Cartels_83
+  - first:
+      213: 4472446427661237597
+    second: Cartels_84
+  - first:
+      213: 3660169758520824302
+    second: Cartels_85
+  - first:
+      213: 5647429183813488043
+    second: Cartels_86
+  - first:
+      213: 4294071495552862735
+    second: Cartels_87
+  - first:
+      213: -3808717778848656518
+    second: Cartels_88
+  - first:
+      213: 1031521589401667071
+    second: Cartels_89
+  - first:
+      213: 1000119065535744559
+    second: Cartels_90
+  - first:
+      213: 4773293768281192920
+    second: Cartels_91
+  - first:
+      213: 356330584203783191
+    second: Cartels_92
+  - first:
+      213: 1167025961016416948
+    second: Cartels_93
+  - first:
+      213: -9007012880944414893
+    second: Cartels_94
+  - first:
+      213: -8069581384565691236
+    second: Cartels_95
+  - first:
+      213: -903784030022186830
+    second: Cartels_96
+  - first:
+      213: 9079490056561088593
+    second: Cartels_97
+  - first:
+      213: 1456914279016158469
+    second: Cartels_98
+  - first:
+      213: 8967352423213306979
+    second: Cartels_99
+  - first:
+      213: -3604531807232888825
+    second: Cartels_100
+  - first:
+      213: 5083561849603653654
+    second: Cartels_101
+  - first:
+      213: 6830217669836602966
+    second: Cartels_102
+  - first:
+      213: 1924143829859404105
+    second: Cartels_103
+  - first:
+      213: -6960869343355800055
+    second: Cartels_104
+  - first:
+      213: -7156639054464264993
+    second: Cartels_105
+  - first:
+      213: -562387374054541216
+    second: Cartels_106
+  - first:
+      213: 1920807615047878657
+    second: Cartels_107
+  - first:
+      213: 8238737178083273170
+    second: Cartels_108
+  - first:
+      213: -7492703235268215424
+    second: Cartels_109
+  - first:
+      213: -562740637645567042
+    second: Cartels_110
+  - first:
+      213: -5309910073015353353
+    second: Cartels_111
+  - first:
+      213: -3903721780720455232
+    second: Cartels_112
+  - first:
+      213: 2968135769682348121
+    second: Cartels_113
+  - first:
+      213: -4854304210664083353
+    second: Cartels_114
+  - first:
+      213: 6495256030424428648
+    second: Cartels_115
+  - first:
+      213: 5419780194593443855
+    second: Cartels_116
+  - first:
+      213: -3130822564557243644
+    second: Cartels_117
+  - first:
+      213: 6577944308454984546
+    second: Cartels_118
+  - first:
+      213: -5484917064415816346
+    second: Cartels_119
+  - first:
+      213: 8633393338205213220
+    second: Cartels_120
+  - first:
+      213: -3730045051441838432
+    second: Cartels_121
+  - first:
+      213: 3781859916034129314
+    second: Cartels_122
+  - first:
+      213: -2718038203323669500
+    second: Cartels_123
+  - first:
+      213: 662693711963064224
+    second: Cartels_124
+  - first:
+      213: 157293259654697498
+    second: Cartels_125
+  - first:
+      213: -2968456870419238220
+    second: Cartels_126
+  - first:
+      213: 324085023580926507
+    second: Cartels_127
+  - first:
+      213: -510414422615524828
+    second: Cartels_128
+  - first:
+      213: 3722961017063138176
+    second: Cartels_129
+  - first:
+      213: 3359904617380007110
+    second: Cartels_130
+  - first:
+      213: -3376028779117483297
+    second: Cartels_131
+  - first:
+      213: 3199780062107713148
+    second: Cartels_132
+  - first:
+      213: 2263855475932353123
+    second: Cartels_133
+  - first:
+      213: -2140881411182384478
+    second: Cartels_134
+  - first:
+      213: -2059629057695430002
+    second: Cartels_135
+  - first:
+      213: -492212154807411335
+    second: Cartels_136
+  - first:
+      213: -2318460511571196447
+    second: Cartels_137
+  - first:
+      213: 4675314567902672348
+    second: Cartels_138
+  - first:
+      213: 8180998686004285919
+    second: Cartels_139
+  - first:
+      213: -7643349980193709716
+    second: Cartels_140
+  - first:
+      213: 1093519613015787045
+    second: Cartels_141
+  - first:
+      213: 5072269442817123110
+    second: Cartels_142
+  - first:
+      213: -7287648234921145490
+    second: Cartels_143
+  - first:
+      213: -5483204489900180416
+    second: Cartels_144
+  - first:
+      213: -1745607514815762232
+    second: Cartels_145
+  - first:
+      213: -399187069922025700
+    second: Cartels_146
+  - first:
+      213: -5542006574082300489
+    second: Cartels_147
+  - first:
+      213: -2470503772768788735
+    second: Cartels_148
+  - first:
+      213: 603860577603269236
+    second: Cartels_149
+  - first:
+      213: -868546309692938798
+    second: Cartels_150
+  - first:
+      213: -622814561683442203
+    second: Cartels_151
+  - first:
+      213: 7899263384262169606
+    second: Cartels_152
+  - first:
+      213: 6105076100923830282
+    second: Cartels_153
+  - first:
+      213: 2114673871514318159
+    second: Cartels_154
+  - first:
+      213: 6425284158381149183
+    second: Cartels_155
+  - first:
+      213: -1640642132012574387
+    second: Cartels_156
+  - first:
+      213: 4036816258895499642
+    second: Cartels_157
+  - first:
+      213: 5552933073309408153
+    second: Cartels_158
+  - first:
+      213: -3887137386392736021
+    second: Cartels_159
+  - first:
+      213: -2669235728265627033
+    second: Cartels_160
+  - first:
+      213: 2093103863192401655
+    second: Cartels_161
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cartels_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 883
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb7174bac818123b0800000000000000
+      internalID: -5539003625520031810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 883
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62558b042d42bd880800000000000000
+      internalID: -8585227779204164314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_2
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 883
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ceec9e52cae0680800000000000000
+      internalID: -8786896544116839290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_3
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 883
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ffa884650aa0ac20800000000000000
+      internalID: 3215757074080772082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_4
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 883
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 662940a36b9d03710800000000000000
+      internalID: 1671074838435107430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_5
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 883
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf94d2dad0103340800000000000000
+      internalID: 4841388131449348058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_6
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 886
+        width: 146
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4037e70c7f7d900800000000000000
+      internalID: 709307872461391069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_7
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 851
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7fe619c126f60aa0800000000000000
+      internalID: -6194993612433461380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_8
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 851
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af4d21d0edc86a30800000000000000
+      internalID: 4208840217243504551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_9
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 851
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b31cf5953a0546060800000000000000
+      internalID: 6945765187821486395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_10
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 851
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32b25fbf961eab600800000000000000
+      internalID: 484947755210713891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_11
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 851
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a601d695c85281490800000000000000
+      internalID: -7775423471929192342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_12
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 851
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c0f1ac63e5a7960800000000000000
+      internalID: 7600490910553410606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_13
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 854
+        width: 98
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e438423c0b4409930800000000000000
+      internalID: 4147890782787109710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 812
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3b106512b411d30800000000000000
+      internalID: 4400380917466641345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_15
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 812
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b1a0d8ef79726280800000000000000
+      internalID: -9051538710787481160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_16
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 812
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb9c21739521e9e0800000000000000
+      internalID: -1593951477923275847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 812
+        width: 49
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6ff9a47fcce270a0800000000000000
+      internalID: -6885180504536383634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_18
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 811
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 963046b058d161d10800000000000000
+      internalID: 2095895133846504297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_19
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 812
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2bfe804c45091ea0800000000000000
+      internalID: -5901680011633558742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_20
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 812
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f83374bcd047d650800000000000000
+      internalID: 6257541523919026416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_21
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 812
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70397f5b1c04effd0800000000000000
+      internalID: -2306334758441348345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_22
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 812
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8567a8a45f5b050800000000000000
+      internalID: 5815824194318260447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_23
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 812
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bde45903b38a5b00800000000000000
+      internalID: 818111087300111795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_24
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 812
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e45bd48c07c1e010800000000000000
+      internalID: 1216472230949246184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_25
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 812
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4808cb4e43ef9df40800000000000000
+      internalID: 5753909502071832708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_26
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 809
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 957bbb28515c50180800000000000000
+      internalID: -9149690371754969255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_27
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 809
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e98cc7f5d9a8bbd0800000000000000
+      internalID: -2614152847238067736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_28
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 809
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 367ec911559bfd970800000000000000
+      internalID: 8781941573414610787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_29
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 809
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0dee81b1a7663d0800000000000000
+      internalID: -3213747027281260297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_30
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 809
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7ec68fd81d5b7460800000000000000
+      internalID: 7240483187338956411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_31
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 816
+        width: 61
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dca1caf150174240800000000000000
+      internalID: 4775803874135092440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_32
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 800
+        width: 61
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71fa7ffa4cdee1410800000000000000
+      internalID: 1449857559081496343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_33
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 816
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a065d00684f569920800000000000000
+      internalID: 2996687366515414538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_34
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 800
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853f91a16ef006130800000000000000
+      internalID: 3557861186577494872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_35
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 808
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3d8220a0ae8db00800000000000000
+      internalID: 853689458093511643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_36
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 808
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d608cb5c9194e22b0800000000000000
+      internalID: -5607464110989213587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_37
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 808
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de44b72498c4fa530800000000000000
+      internalID: 3868394757344150765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_38
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 786
+        width: 12
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6cf8a45ac9c4130800000000000000
+      internalID: 3552386439822952186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_39
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 779
+        width: 41
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09cc4c73091370dd0800000000000000
+      internalID: -2519990971009807216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_40
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 780
+        width: 31
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2781b50c088854e30800000000000000
+      internalID: 4487142690308954226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_41
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 780
+        width: 65
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9213820274b5ff3d0800000000000000
+      internalID: -3170715251605229271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_42
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 781
+        width: 36
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24fc781c6152eb920800000000000000
+      internalID: 3007882380796481346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_43
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 780
+        width: 33
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c199e166f8f29e1c0800000000000000
+      internalID: -4473992461875767012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_44
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 781
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1460ee655fe8de980800000000000000
+      internalID: -8507986936656427455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_45
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 779
+        width: 50
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb203b888307474c0800000000000000
+      internalID: -4290681156863327553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_46
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 780
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82f90024c91264390800000000000000
+      internalID: -7834537546758447320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_47
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 779
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bec0fadc1025172b0800000000000000
+      internalID: -5588595494890828565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_48
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 778
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05a33357f33d114a0800000000000000
+      internalID: -6624281307382597040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_49
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 780
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db67c622a22f75810800000000000000
+      internalID: 1754136842664179389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_50
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 778
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48cec1f2a676d6d00800000000000000
+      internalID: 967543200709143684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_51
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 784
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89f766070c2482c0800000000000000
+      internalID: -4430367724741854833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_52
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 784
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ac3d5933eb5b570800000000000000
+      internalID: 8481894601988491812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_53
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 785
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f82b589215c1b510800000000000000
+      internalID: 1563247229330467057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_54
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 748
+        width: 52
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d98a9d151d4479400800000000000000
+      internalID: 330808763447093405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_55
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 748
+        width: 45
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88541d0b7da4ec7d0800000000000000
+      internalID: -2896295220107721336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_56
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 748
+        width: 48
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc7c8517922258ce0800000000000000
+      internalID: -1403678147465394225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_57
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 755
+        width: 35
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d530c2d6305bf380800000000000000
+      internalID: -8936460839192349223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_58
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 744
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a22a2693d490a6260800000000000000
+      internalID: 7091490790528164394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_59
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 752
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eff53b1866a83d20800000000000000
+      internalID: 3258537296465887200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_60
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 746
+        width: 69
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298b432baeea8c2c0800000000000000
+      internalID: -4411083511974020974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_61
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 748
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18b1155ccf5a4a880800000000000000
+      internalID: -8600566883310036095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_62
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 747
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab3f571e844fb1e80800000000000000
+      internalID: -8206697302095170630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_63
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 747
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9036019309eb8cb80800000000000000
+      internalID: -8374233980453494007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_64
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 749
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eb1315e20310cd90800000000000000
+      internalID: -7079637711072322590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_65
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 747
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d23045a7cfd786b0800000000000000
+      internalID: -5294016788386794796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_66
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 747
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4cfc7c5d707bc610800000000000000
+      internalID: 1642530172831595596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_67
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 716
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e983893cdecc17d40800000000000000
+      internalID: 5580466734849603742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_68
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 716
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a7e91feac648b30800000000000000
+      internalID: 4288672243797359164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_69
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 716
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a687b217659e06c0800000000000000
+      internalID: -4175235534597683548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_70
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 716
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d9d0a00d102490a0800000000000000
+      internalID: -6875835422151222826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_71
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 716
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6851ccd3591300e0800000000000000
+      internalID: -2304970736306923409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_72
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 716
+        width: 48
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 799b0e0704cd3b920800000000000000
+      internalID: 3004987545716046231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_73
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 718
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3bc1a4bc2f0e4450800000000000000
+      internalID: 6074809632052857660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_74
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 718
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d64ef9f21f9f0620800000000000000
+      internalID: 2742585601944340176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_75
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 718
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773e43a4729eef830800000000000000
+      internalID: 4106976265166447479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_76
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 718
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f2a05723d50db20800000000000000
+      internalID: 3157125810080067418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_77
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 718
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee481a3f57a83ca20800000000000000
+      internalID: 3081458809254806766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_78
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 715
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d625b0171b44ff00800000000000000
+      internalID: 1149626367322957524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_79
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 715
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156b7da58f9200310800000000000000
+      internalID: 1369140433373345361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_80
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 723
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6982994fa2aa7ae0800000000000000
+      internalID: -1550748247938397841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_81
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 715
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3f6b9195469a070800000000000000
+      internalID: 8118130137158316965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_82
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 723
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f73d7902491bb55f0800000000000000
+      internalID: -766824061776440449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_83
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 715
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bc631caea15c56d0800000000000000
+      internalID: -3000433441082479431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_84
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 723
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d76b57452511e30800000000000000
+      internalID: 4472446427661237597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_85
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 716
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1d242c0098bc230800000000000000
+      internalID: 3660169758520824302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_86
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 716
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad806bdbe2bf5e40800000000000000
+      internalID: 5647429183813488043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_87
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 716
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a0f84364b979b30800000000000000
+      internalID: 4294071495552862735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_88
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 716
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a73d20e0c57b42bc0800000000000000
+      internalID: -3808717778848656518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_89
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 715
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5ce6a9b63b05e00800000000000000
+      internalID: 1031521589401667071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_90
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 716
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2a8a52cdf221ed00800000000000000
+      internalID: 1000119065535744559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_91
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 716
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d97cfa64652e3240800000000000000
+      internalID: 4773293768281192920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_92
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 716
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71ce21647c0f1f400800000000000000
+      internalID: 356330584203783191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_93
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 716
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bada0aadeb123010800000000000000
+      internalID: 1167025961016416948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_94
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 716
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35fb0f78189a00380800000000000000
+      internalID: -9007012880944414893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_95
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 716
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c6bd63c76130090800000000000000
+      internalID: -8069581384565691236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_96
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 715
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b84bd0963d1573f0800000000000000
+      internalID: -903784030022186830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_97
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 714
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 158d30be914d00e70800000000000000
+      internalID: 9079490056561088593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_98
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 716
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 505d3f451dff73410800000000000000
+      internalID: 1456914279016158469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_99
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 714
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3641e51948f627c70800000000000000
+      internalID: 8967352423213306979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_100
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 683
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70079404b612afdc0800000000000000
+      internalID: -3604531807232888825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_101
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 685
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6108a5f71907c8640800000000000000
+      internalID: 5083561849603653654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_102
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 685
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65ef43d58cec9ce50800000000000000
+      internalID: 6830217669836602966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_103
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 685
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94987836e9ee3ba10800000000000000
+      internalID: 1924143829859404105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_104
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 684
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 906fe556636066f90800000000000000
+      internalID: -6960869343355800055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_105
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 686
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd458fc82b28eac90800000000000000
+      internalID: -7156639054464264993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_106
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 686
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0687057b9aff138f0800000000000000
+      internalID: -562387374054541216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_107
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 686
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1084bc8595418aa10800000000000000
+      internalID: 1920807615047878657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_108
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 684
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d9257110dfd55270800000000000000
+      internalID: 8238737178083273170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_109
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 684
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08dfa660b12940890800000000000000
+      internalID: -7492703235268215424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_110
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 684
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebb85702f5eb038f0800000000000000
+      internalID: -562740637645567042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_111
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 684
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ffb6a4fbe86f46b0800000000000000
+      internalID: -5309910073015353353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_112
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 684
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c1b33629b133d9c0800000000000000
+      internalID: -3903721780720455232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_113
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 684
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9580c05b1cfe03920800000000000000
+      internalID: 2968135769682348121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_114
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 684
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7603fa32a0c02acb0800000000000000
+      internalID: -4854304210664083353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_115
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 685
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86079a242f8c32a50800000000000000
+      internalID: 6495256030424428648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_116
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 685
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00907b2f5de63b40800000000000000
+      internalID: 5419780194593443855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_117
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 685
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40bb9c027751d84d0800000000000000
+      internalID: -3130822564557243644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_118
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 685
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26b03c14f7d894b50800000000000000
+      internalID: 6577944308454984546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_119
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 684
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66554018df8a1e3b0800000000000000
+      internalID: -5484917064415816346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_120
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 685
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42212f9df79ffc770800000000000000
+      internalID: 8633393338205213220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_121
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 684
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a60b90d9c73c3cc0800000000000000
+      internalID: -3730045051441838432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_122
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 683
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2adb0857e8ddb7430800000000000000
+      internalID: 3781859916034129314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_123
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 683
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 404a3f4a7a6974ad0800000000000000
+      internalID: -2718038203323669500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_124
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 685
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a781708b6c523900800000000000000
+      internalID: 662693711963064224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_125
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 683
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a121843e261de2200800000000000000
+      internalID: 157293259654697498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_126
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 652
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2f793343cedc6d0800000000000000
+      internalID: -2968456870419238220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_127
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 655
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22b093ac916f7400800000000000000
+      internalID: 324085023580926507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_128
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 652
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42af3c379c4aae8f0800000000000000
+      internalID: -510414422615524828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_129
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 652
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 083eca6e15d9aa330800000000000000
+      internalID: 3722961017063138176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_130
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 652
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cc412ea277c0ae20800000000000000
+      internalID: 3359904617380007110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_131
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 652
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdae43d56bfe521d0800000000000000
+      internalID: -3376028779117483297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_132
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 652
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ebe496307e76c20800000000000000
+      internalID: 3199780062107713148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_133
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 652
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36255c99f84da6f10800000000000000
+      internalID: 2263855475932353123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_134
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 652
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aaac3c03bf0a42e0800000000000000
+      internalID: -2140881411182384478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_135
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 652
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8acdfec84aba63e0800000000000000
+      internalID: -2059629057695430002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_136
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 652
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d139e27af4b29f0800000000000000
+      internalID: -492212154807411335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_137
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 652
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5470ec27c23dfd0800000000000000
+      internalID: -2318460511571196447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_138
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 655
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd53c0124dd02e040800000000000000
+      internalID: 4675314567902672348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_139
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 652
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd1193bc5feb88170800000000000000
+      internalID: 8180998686004285919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_140
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 652
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61a09070bd5de590800000000000000
+      internalID: -7643349980193709716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_141
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 652
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5268ab85b46fc2f00800000000000000
+      internalID: 1093519613015787045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_142
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 652
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 623ee282f22546640800000000000000
+      internalID: 5072269442817123110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_143
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 648
+        width: 39
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6bc58dba821dda90800000000000000
+      internalID: -7287648234921145490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_144
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 659
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04c3ca4519eb7e3b0800000000000000
+      internalID: -5483204489900180416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_145
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 659
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c07722c63b56c7e0800000000000000
+      internalID: -1745607514815762232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_146
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 659
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1f5e52997dc57af0800000000000000
+      internalID: -399187069922025700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_147
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 659
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5e1f83266d613b0800000000000000
+      internalID: -5542006574082300489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_148
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 659
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10f9adf68e107bdd0800000000000000
+      internalID: -2470503772768788735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_149
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 652
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 472b7e5fef7516800800000000000000
+      internalID: 603860577603269236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_150
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 652
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5a6cbabbd42f3f0800000000000000
+      internalID: -868546309692938798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_151
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 650
+        width: 43
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e5fae9b4715b57f0800000000000000
+      internalID: -622814561683442203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_152
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 652
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60452362232df9d60800000000000000
+      internalID: 7899263384262169606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_153
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 652
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00ba422e5699b450800000000000000
+      internalID: 6105076100923830282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_154
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 651
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45396f9ea4d85d10800000000000000
+      internalID: 2114673871514318159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_155
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 651
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffbc04146e13b2950800000000000000
+      internalID: 6425284158381149183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_156
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 649
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d49d9d56ca44b39e0800000000000000
+      internalID: -1640642132012574387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_157
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 652
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a71dcfedff6a50830800000000000000
+      internalID: 4036816258895499642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_158
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 620
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b1020a53bff0d40800000000000000
+      internalID: 5552933073309408153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_159
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 619
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beeabea542d1e0ac0800000000000000
+      internalID: -3887137386392736021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_160
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 619
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a32f25f38f4fad0800000000000000
+      internalID: -2669235728265627033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartels_161
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 619
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f6b493bfd23c0d10800000000000000
+      internalID: 2093103863192401655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Cartels_0: -5539003625520031810
+      Cartels_1: -8585227779204164314
+      Cartels_10: 484947755210713891
+      Cartels_100: -3604531807232888825
+      Cartels_101: 5083561849603653654
+      Cartels_102: 6830217669836602966
+      Cartels_103: 1924143829859404105
+      Cartels_104: -6960869343355800055
+      Cartels_105: -7156639054464264993
+      Cartels_106: -562387374054541216
+      Cartels_107: 1920807615047878657
+      Cartels_108: 8238737178083273170
+      Cartels_109: -7492703235268215424
+      Cartels_11: -7775423471929192342
+      Cartels_110: -562740637645567042
+      Cartels_111: -5309910073015353353
+      Cartels_112: -3903721780720455232
+      Cartels_113: 2968135769682348121
+      Cartels_114: -4854304210664083353
+      Cartels_115: 6495256030424428648
+      Cartels_116: 5419780194593443855
+      Cartels_117: -3130822564557243644
+      Cartels_118: 6577944308454984546
+      Cartels_119: -5484917064415816346
+      Cartels_12: 7600490910553410606
+      Cartels_120: 8633393338205213220
+      Cartels_121: -3730045051441838432
+      Cartels_122: 3781859916034129314
+      Cartels_123: -2718038203323669500
+      Cartels_124: 662693711963064224
+      Cartels_125: 157293259654697498
+      Cartels_126: -2968456870419238220
+      Cartels_127: 324085023580926507
+      Cartels_128: -510414422615524828
+      Cartels_129: 3722961017063138176
+      Cartels_13: 4147890782787109710
+      Cartels_130: 3359904617380007110
+      Cartels_131: -3376028779117483297
+      Cartels_132: 3199780062107713148
+      Cartels_133: 2263855475932353123
+      Cartels_134: -2140881411182384478
+      Cartels_135: -2059629057695430002
+      Cartels_136: -492212154807411335
+      Cartels_137: -2318460511571196447
+      Cartels_138: 4675314567902672348
+      Cartels_139: 8180998686004285919
+      Cartels_14: 4400380917466641345
+      Cartels_140: -7643349980193709716
+      Cartels_141: 1093519613015787045
+      Cartels_142: 5072269442817123110
+      Cartels_143: -7287648234921145490
+      Cartels_144: -5483204489900180416
+      Cartels_145: -1745607514815762232
+      Cartels_146: -399187069922025700
+      Cartels_147: -5542006574082300489
+      Cartels_148: -2470503772768788735
+      Cartels_149: 603860577603269236
+      Cartels_15: -9051538710787481160
+      Cartels_150: -868546309692938798
+      Cartels_151: -622814561683442203
+      Cartels_152: 7899263384262169606
+      Cartels_153: 6105076100923830282
+      Cartels_154: 2114673871514318159
+      Cartels_155: 6425284158381149183
+      Cartels_156: -1640642132012574387
+      Cartels_157: 4036816258895499642
+      Cartels_158: 5552933073309408153
+      Cartels_159: -3887137386392736021
+      Cartels_16: -1593951477923275847
+      Cartels_160: -2669235728265627033
+      Cartels_161: 2093103863192401655
+      Cartels_17: -6885180504536383634
+      Cartels_18: 2095895133846504297
+      Cartels_19: -5901680011633558742
+      Cartels_2: -8786896544116839290
+      Cartels_20: 6257541523919026416
+      Cartels_21: -2306334758441348345
+      Cartels_22: 5815824194318260447
+      Cartels_23: 818111087300111795
+      Cartels_24: 1216472230949246184
+      Cartels_25: 5753909502071832708
+      Cartels_26: -9149690371754969255
+      Cartels_27: -2614152847238067736
+      Cartels_28: 8781941573414610787
+      Cartels_29: -3213747027281260297
+      Cartels_3: 3215757074080772082
+      Cartels_30: 7240483187338956411
+      Cartels_31: 4775803874135092440
+      Cartels_32: 1449857559081496343
+      Cartels_33: 2996687366515414538
+      Cartels_34: 3557861186577494872
+      Cartels_35: 853689458093511643
+      Cartels_36: -5607464110989213587
+      Cartels_37: 3868394757344150765
+      Cartels_38: 3552386439822952186
+      Cartels_39: -2519990971009807216
+      Cartels_4: 1671074838435107430
+      Cartels_40: 4487142690308954226
+      Cartels_41: -3170715251605229271
+      Cartels_42: 3007882380796481346
+      Cartels_43: -4473992461875767012
+      Cartels_44: -8507986936656427455
+      Cartels_45: -4290681156863327553
+      Cartels_46: -7834537546758447320
+      Cartels_47: -5588595494890828565
+      Cartels_48: -6624281307382597040
+      Cartels_49: 1754136842664179389
+      Cartels_5: 4841388131449348058
+      Cartels_50: 967543200709143684
+      Cartels_51: -4430367724741854833
+      Cartels_52: 8481894601988491812
+      Cartels_53: 1563247229330467057
+      Cartels_54: 330808763447093405
+      Cartels_55: -2896295220107721336
+      Cartels_56: -1403678147465394225
+      Cartels_57: -8936460839192349223
+      Cartels_58: 7091490790528164394
+      Cartels_59: 3258537296465887200
+      Cartels_6: 709307872461391069
+      Cartels_60: -4411083511974020974
+      Cartels_61: -8600566883310036095
+      Cartels_62: -8206697302095170630
+      Cartels_63: -8374233980453494007
+      Cartels_64: -7079637711072322590
+      Cartels_65: -5294016788386794796
+      Cartels_66: 1642530172831595596
+      Cartels_67: 5580466734849603742
+      Cartels_68: 4288672243797359164
+      Cartels_69: -4175235534597683548
+      Cartels_7: -6194993612433461380
+      Cartels_70: -6875835422151222826
+      Cartels_71: -2304970736306923409
+      Cartels_72: 3004987545716046231
+      Cartels_73: 6074809632052857660
+      Cartels_74: 2742585601944340176
+      Cartels_75: 4106976265166447479
+      Cartels_76: 3157125810080067418
+      Cartels_77: 3081458809254806766
+      Cartels_78: 1149626367322957524
+      Cartels_79: 1369140433373345361
+      Cartels_8: 4208840217243504551
+      Cartels_80: -1550748247938397841
+      Cartels_81: 8118130137158316965
+      Cartels_82: -766824061776440449
+      Cartels_83: -3000433441082479431
+      Cartels_84: 4472446427661237597
+      Cartels_85: 3660169758520824302
+      Cartels_86: 5647429183813488043
+      Cartels_87: 4294071495552862735
+      Cartels_88: -3808717778848656518
+      Cartels_89: 1031521589401667071
+      Cartels_9: 6945765187821486395
+      Cartels_90: 1000119065535744559
+      Cartels_91: 4773293768281192920
+      Cartels_92: 356330584203783191
+      Cartels_93: 1167025961016416948
+      Cartels_94: -9007012880944414893
+      Cartels_95: -8069581384565691236
+      Cartels_96: -903784030022186830
+      Cartels_97: 9079490056561088593
+      Cartels_98: 1456914279016158469
+      Cartels_99: 8967352423213306979
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

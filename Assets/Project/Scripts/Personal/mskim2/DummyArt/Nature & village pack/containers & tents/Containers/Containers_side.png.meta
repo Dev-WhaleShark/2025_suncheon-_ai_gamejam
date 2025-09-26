@@ -1,0 +1,514 @@
+fileFormatVersion: 2
+guid: a5551f4612038e54c93b05ae7b64ef8e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8009279288286986992
+    second: Containers_side_0
+  - first:
+      213: -2864410456468908426
+    second: Containers_side_1
+  - first:
+      213: 3499510868655087788
+    second: Containers_side_2
+  - first:
+      213: -2005569245792215998
+    second: Containers_side_3
+  - first:
+      213: -7512620631890907513
+    second: Containers_side_4
+  - first:
+      213: -7176808247496716500
+    second: Containers_side_5
+  - first:
+      213: -2293628453594556154
+    second: Containers_side_6
+  - first:
+      213: 1709935970601379872
+    second: Containers_side_7
+  - first:
+      213: -903233838163807395
+    second: Containers_side_8
+  - first:
+      213: 4023939765020816145
+    second: Containers_side_9
+  - first:
+      213: 1056362165933667995
+    second: Containers_side_10
+  - first:
+      213: 3832308653511085137
+    second: Containers_side_11
+  - first:
+      213: -2253304975888338052
+    second: Containers_side_12
+  - first:
+      213: 6430736539499612614
+    second: Containers_side_13
+  - first:
+      213: 6393167906567276197
+    second: Containers_side_14
+  - first:
+      213: -5983046671132774197
+    second: Containers_side_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Containers_side_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 124
+        width: 104
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f24d35e31da62f60800000000000000
+      internalID: 8009279288286986992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 124
+        width: 104
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 676914bbdd19f38d0800000000000000
+      internalID: -2864410456468908426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_2
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 124
+        width: 104
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca02ec50892c09030800000000000000
+      internalID: 3499510868655087788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_3
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 124
+        width: 104
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c5b1c9569ca24e0800000000000000
+      internalID: -2005569245792215998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_4
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e2fdfb65fcdb790800000000000000
+      internalID: -7512620631890907513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_5
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f4dda5cead66c90800000000000000
+      internalID: -7176808247496716500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_6
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60994c8d2156b20e0800000000000000
+      internalID: -2293628453594556154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_7
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028ab54a4b9eab710800000000000000
+      internalID: 1709935970601379872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_8
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5332271c911773f0800000000000000
+      internalID: -903233838163807395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_9
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11372a385e7e7d730800000000000000
+      internalID: 4023939765020816145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_10
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9673a60bc3f8ae00800000000000000
+      internalID: 1056362165933667995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_11
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 95
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15c0f2a7a681f2530800000000000000
+      internalID: 3832308653511085137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 12
+        width: 104
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c733e8d1017aab0e0800000000000000
+      internalID: -2253304975888338052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_13
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 12
+        width: 104
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c9cff8afc09e3950800000000000000
+      internalID: 6430736539499612614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_14
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 12
+        width: 104
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a6ce5ca65819b850800000000000000
+      internalID: 6393167906567276197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Containers_side_15
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 12
+        width: 104
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc03c8c80c2f7fca0800000000000000
+      internalID: -5983046671132774197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Containers_side_0: 8009279288286986992
+      Containers_side_1: -2864410456468908426
+      Containers_side_10: 1056362165933667995
+      Containers_side_11: 3832308653511085137
+      Containers_side_12: -2253304975888338052
+      Containers_side_13: 6430736539499612614
+      Containers_side_14: 6393167906567276197
+      Containers_side_15: -5983046671132774197
+      Containers_side_2: 3499510868655087788
+      Containers_side_3: -2005569245792215998
+      Containers_side_4: -7512620631890907513
+      Containers_side_5: -7176808247496716500
+      Containers_side_6: -2293628453594556154
+      Containers_side_7: 1709935970601379872
+      Containers_side_8: -903233838163807395
+      Containers_side_9: 4023939765020816145
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

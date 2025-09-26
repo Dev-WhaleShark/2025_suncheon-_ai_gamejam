@@ -1,0 +1,514 @@
+fileFormatVersion: 2
+guid: aaad932513d68bb469d1bf40a4528c71
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -759365059538155788
+    second: sheet_metal_wall_0
+  - first:
+      213: 4575272425010595484
+    second: sheet_metal_wall_1
+  - first:
+      213: 608894819189213659
+    second: sheet_metal_wall_2
+  - first:
+      213: -5574547897693895242
+    second: sheet_metal_wall_3
+  - first:
+      213: 6281801510079490611
+    second: sheet_metal_wall_4
+  - first:
+      213: 6540069743764455021
+    second: sheet_metal_wall_5
+  - first:
+      213: -7541033821641993655
+    second: sheet_metal_wall_6
+  - first:
+      213: 4306403541454166102
+    second: sheet_metal_wall_7
+  - first:
+      213: -7162072359158679993
+    second: sheet_metal_wall_8
+  - first:
+      213: 765819803693900193
+    second: sheet_metal_wall_9
+  - first:
+      213: -3316083279988580686
+    second: sheet_metal_wall_10
+  - first:
+      213: -766129405510550288
+    second: sheet_metal_wall_11
+  - first:
+      213: -8404277504347948847
+    second: sheet_metal_wall_12
+  - first:
+      213: 3949114916645765764
+    second: sheet_metal_wall_13
+  - first:
+      213: 792719026712566057
+    second: sheet_metal_wall_14
+  - first:
+      213: -5079869149291057879
+    second: sheet_metal_wall_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sheet_metal_wall_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 295
+        width: 50
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f6826b60813675f0800000000000000
+      internalID: -759365059538155788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 311
+        width: 20
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96856b9702ae7f30800000000000000
+      internalID: 4575272425010595484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 367
+        width: 39
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd9495bac9a337800800000000000000
+      internalID: 608894819189213659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 335
+        width: 39
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b50e86e83a33a2b0800000000000000
+      internalID: -5574547897693895242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_4
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 263
+        width: 20
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33aecc5e0317d2750800000000000000
+      internalID: 6281801510079490611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_5
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 303
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6e3c5bf7cef2ca50800000000000000
+      internalID: 6540069743764455021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_6
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 278
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94292dd71bdd85790800000000000000
+      internalID: -7541033821641993655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_7
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 303
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6581cd3643b63cb30800000000000000
+      internalID: 4306403541454166102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_8
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 278
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 746f3b8b2253b9c90800000000000000
+      internalID: -7162072359158679993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 215
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a16221dd0db0aa00800000000000000
+      internalID: 765819803693900193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_10
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 215
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be1ba283d7eaf1d0800000000000000
+      internalID: -3316083279988580686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_11
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 215
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fcff846d592e55f0800000000000000
+      internalID: -766129405510550288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_12
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 167
+        width: 130
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d8b88733220e5b80800000000000000
+      internalID: -8404277504347948847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_13
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 119
+        width: 130
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4820ed7e7131ec630800000000000000
+      internalID: 3949114916645765764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_14
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 71
+        width: 130
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92955e931cd400b00800000000000000
+      internalID: 792719026712566057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_metal_wall_15
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 23
+        width: 130
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d6a0b4ceda089b0800000000000000
+      internalID: -5079869149291057879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sheet_metal_wall_0: -759365059538155788
+      sheet_metal_wall_1: 4575272425010595484
+      sheet_metal_wall_10: -3316083279988580686
+      sheet_metal_wall_11: -766129405510550288
+      sheet_metal_wall_12: -8404277504347948847
+      sheet_metal_wall_13: 3949114916645765764
+      sheet_metal_wall_14: 792719026712566057
+      sheet_metal_wall_15: -5079869149291057879
+      sheet_metal_wall_2: 608894819189213659
+      sheet_metal_wall_3: -5574547897693895242
+      sheet_metal_wall_4: 6281801510079490611
+      sheet_metal_wall_5: 6540069743764455021
+      sheet_metal_wall_6: -7541033821641993655
+      sheet_metal_wall_7: 4306403541454166102
+      sheet_metal_wall_8: -7162072359158679993
+      sheet_metal_wall_9: 765819803693900193
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

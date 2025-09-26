@@ -1,0 +1,2339 @@
+fileFormatVersion: 2
+guid: 816e934e2c0f7ac4eb494a622593369d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8988452292521946032
+    second: one_floor_house_0
+  - first:
+      213: 3351421696547362046
+    second: one_floor_house_1
+  - first:
+      213: 9142301362999973041
+    second: one_floor_house_2
+  - first:
+      213: -1973164066829682855
+    second: one_floor_house_3
+  - first:
+      213: -6253255682368673941
+    second: one_floor_house_4
+  - first:
+      213: -7643260680799333260
+    second: one_floor_house_5
+  - first:
+      213: -8521936713280104788
+    second: one_floor_house_6
+  - first:
+      213: 5107185801839419498
+    second: one_floor_house_7
+  - first:
+      213: -1688823931868836229
+    second: one_floor_house_8
+  - first:
+      213: -5166303626234964413
+    second: one_floor_house_9
+  - first:
+      213: -5729167226068864657
+    second: one_floor_house_10
+  - first:
+      213: 3255437950359627781
+    second: one_floor_house_11
+  - first:
+      213: 6776023510739317315
+    second: one_floor_house_12
+  - first:
+      213: -5309691441057544433
+    second: one_floor_house_13
+  - first:
+      213: 8422492446225169054
+    second: one_floor_house_14
+  - first:
+      213: -8430742274704149538
+    second: one_floor_house_15
+  - first:
+      213: 36548746135398604
+    second: one_floor_house_16
+  - first:
+      213: -5352774134843487708
+    second: one_floor_house_17
+  - first:
+      213: 1630374080968887894
+    second: one_floor_house_18
+  - first:
+      213: -2027801192192704092
+    second: one_floor_house_19
+  - first:
+      213: -8447564125011966002
+    second: one_floor_house_20
+  - first:
+      213: 3318524742023632833
+    second: one_floor_house_21
+  - first:
+      213: -6818180586019379888
+    second: one_floor_house_22
+  - first:
+      213: 5805969540806117587
+    second: one_floor_house_23
+  - first:
+      213: 5141227259920381053
+    second: one_floor_house_24
+  - first:
+      213: 8745820027515168301
+    second: one_floor_house_25
+  - first:
+      213: -5610229570359167883
+    second: one_floor_house_26
+  - first:
+      213: 507991737756656502
+    second: one_floor_house_27
+  - first:
+      213: -4817349855726550401
+    second: one_floor_house_28
+  - first:
+      213: 6168737233775601225
+    second: one_floor_house_29
+  - first:
+      213: -8402432892021408990
+    second: one_floor_house_30
+  - first:
+      213: -4467869099148198287
+    second: one_floor_house_31
+  - first:
+      213: 3717906483447086675
+    second: one_floor_house_32
+  - first:
+      213: 4574726008735420923
+    second: one_floor_house_33
+  - first:
+      213: -8345266247362301643
+    second: one_floor_house_34
+  - first:
+      213: 771507602486352603
+    second: one_floor_house_35
+  - first:
+      213: -1512763250151134449
+    second: one_floor_house_36
+  - first:
+      213: -7613809688548825082
+    second: one_floor_house_37
+  - first:
+      213: -2771172523721656382
+    second: one_floor_house_38
+  - first:
+      213: -5532629481663330654
+    second: one_floor_house_39
+  - first:
+      213: 1613262486529321547
+    second: one_floor_house_40
+  - first:
+      213: -2986926157396817410
+    second: one_floor_house_41
+  - first:
+      213: 171400475366654231
+    second: one_floor_house_42
+  - first:
+      213: 622206448045486801
+    second: one_floor_house_43
+  - first:
+      213: -4103962297395901607
+    second: one_floor_house_44
+  - first:
+      213: 5008447592213989718
+    second: one_floor_house_45
+  - first:
+      213: -3494458072541292070
+    second: one_floor_house_46
+  - first:
+      213: 6113457799095158341
+    second: one_floor_house_47
+  - first:
+      213: 2390970703987594811
+    second: one_floor_house_48
+  - first:
+      213: 5903241216107766714
+    second: one_floor_house_49
+  - first:
+      213: -642146185150001749
+    second: one_floor_house_50
+  - first:
+      213: 526686453775500368
+    second: one_floor_house_51
+  - first:
+      213: -6714431150415852906
+    second: one_floor_house_52
+  - first:
+      213: -4318867308265443872
+    second: one_floor_house_53
+  - first:
+      213: 4920462893564143103
+    second: one_floor_house_54
+  - first:
+      213: 1079077267228278791
+    second: one_floor_house_55
+  - first:
+      213: -5254123827319012434
+    second: one_floor_house_56
+  - first:
+      213: 1080421362525676983
+    second: one_floor_house_57
+  - first:
+      213: 7230131831779786123
+    second: one_floor_house_58
+  - first:
+      213: 101934217277891036
+    second: one_floor_house_59
+  - first:
+      213: -6686341481417310673
+    second: one_floor_house_60
+  - first:
+      213: -227548703721471528
+    second: one_floor_house_61
+  - first:
+      213: 1918824729597494995
+    second: one_floor_house_62
+  - first:
+      213: 2766059735925393199
+    second: one_floor_house_63
+  - first:
+      213: -5567351161383564437
+    second: one_floor_house_64
+  - first:
+      213: -3703283425271644931
+    second: one_floor_house_65
+  - first:
+      213: -5290925993253315547
+    second: one_floor_house_66
+  - first:
+      213: 508809366943160127
+    second: one_floor_house_67
+  - first:
+      213: 637816887755113867
+    second: one_floor_house_68
+  - first:
+      213: -8137073185458119184
+    second: one_floor_house_69
+  - first:
+      213: 7348835552848804296
+    second: one_floor_house_70
+  - first:
+      213: 2069044598769721206
+    second: one_floor_house_71
+  - first:
+      213: -7612329028710160056
+    second: one_floor_house_72
+  - first:
+      213: 6072021316733018014
+    second: one_floor_house_73
+  - first:
+      213: 172668191459282003
+    second: one_floor_house_74
+  - first:
+      213: -7935700276973435493
+    second: one_floor_house_75
+  - first:
+      213: -4597462776084291910
+    second: one_floor_house_76
+  - first:
+      213: 8110518621542534438
+    second: one_floor_house_77
+  - first:
+      213: -1478822234552208862
+    second: one_floor_house_78
+  - first:
+      213: -368529047062891915
+    second: one_floor_house_79
+  - first:
+      213: 2833729075381728318
+    second: one_floor_house_80
+  - first:
+      213: -7590651132197656211
+    second: one_floor_house_81
+  - first:
+      213: 482312175084726348
+    second: one_floor_house_82
+  - first:
+      213: 6892024130784559027
+    second: one_floor_house_83
+  - first:
+      213: 2525972397473752868
+    second: one_floor_house_84
+  - first:
+      213: -1949565508701329275
+    second: one_floor_house_85
+  - first:
+      213: 5869805359064056114
+    second: one_floor_house_86
+  - first:
+      213: 5329390647054924009
+    second: one_floor_house_87
+  - first:
+      213: -5030488135502342970
+    second: one_floor_house_88
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: one_floor_house_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1121
+        width: 144
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0541fa7434a924380800000000000000
+      internalID: -8988452292521946032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1121
+        width: 144
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef41e33c644a28e20800000000000000
+      internalID: 3351421696547362046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_2
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1121
+        width: 144
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b4de23d6aaffde70800000000000000
+      internalID: 9142301362999973041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_3
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1121
+        width: 144
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9573d094cb9ed94e0800000000000000
+      internalID: -1973164066829682855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_4
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1156
+        width: 108
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67e8ba8619f739a0800000000000000
+      internalID: -6253255682368673941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_5
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1156
+        width: 108
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 474de3318eeade590800000000000000
+      internalID: -7643260680799333260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_6
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1031
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca6549ed5bffbb980800000000000000
+      internalID: -8521936713280104788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_7
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1030
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a60ae808d6e50e640800000000000000
+      internalID: 5107185801839419498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_8
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1030
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e87cce4971098e0800000000000000
+      internalID: -1688823931868836229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_9
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1030
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 346d374693a9d48b0800000000000000
+      internalID: -5166303626234964413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_10
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1031
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f61fa5723c8ed70b0800000000000000
+      internalID: -5729167226068864657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_11
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1030
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 508e28b5193ad2d20800000000000000
+      internalID: 3255437950359627781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_12
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1030
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 342ff4b6b75490e50800000000000000
+      internalID: 6776023510739317315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_13
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1030
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0745dc24cf2056b0800000000000000
+      internalID: -5309691441057544433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_14
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1012
+        width: 108
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9a79ac6144b2e470800000000000000
+      internalID: 8422492446225169054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_15
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1012
+        width: 108
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3f363b19cfffa80800000000000000
+      internalID: -8430742274704149538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_16
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 951
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc8e26614e8d18000800000000000000
+      internalID: 36548746135398604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_17
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 950
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42a41c9d84027b5b0800000000000000
+      internalID: -5352774134843487708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_18
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 950
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65e872ba69040a610800000000000000
+      internalID: 1630374080968887894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_19
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 950
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a18d383f8dcbd3e0800000000000000
+      internalID: -2027801192192704092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_20
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 951
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec704577f2934ca80800000000000000
+      internalID: -8447564125011966002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_21
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 950
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c7d9aaaba4cd0e20800000000000000
+      internalID: 3318524742023632833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_22
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 950
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 055a9db91e4f061a0800000000000000
+      internalID: -6818180586019379888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_23
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 950
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d88c783982f29050800000000000000
+      internalID: 5805969540806117587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_24
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 868
+        width: 108
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d74fb1914fe495740800000000000000
+      internalID: 5141227259920381053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_25
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 868
+        width: 108
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d26e9894af46f5970800000000000000
+      internalID: 8745820027515168301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_26
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 849
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57479561ee57422b0800000000000000
+      internalID: -5610229570359167883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_27
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 769
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 673a1d54bcfbc0700800000000000000
+      internalID: 507991737756656502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_28
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 849
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f72c3a264d5552db0800000000000000
+      internalID: -4817349855726550401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 769
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 946abeba4d1cb9550800000000000000
+      internalID: 6168737233775601225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_30
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 849
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22b710e7dcf846b80800000000000000
+      internalID: -8402432892021408990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_31
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 769
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17eb352e9b0fef1c0800000000000000
+      internalID: -4467869099148198287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_32
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 849
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35e3cf59f38a89330800000000000000
+      internalID: 3717906483447086675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_33
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 769
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf15a672111bc7f30800000000000000
+      internalID: 4574726008735420923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_34
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 724
+        width: 108
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 531b9e92098af2c80800000000000000
+      internalID: -8345266247362301643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_35
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 724
+        width: 108
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda56bba312f4ba00800000000000000
+      internalID: 771507602486352603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_36
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 689
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0be975c6d5910be0800000000000000
+      internalID: -1512763250151134449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_37
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 609
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608ae9e8d60565690800000000000000
+      internalID: -7613809688548825082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_38
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 689
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c77f30a541da89d0800000000000000
+      internalID: -2771172523721656382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_39
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 609
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a68a9facc62833b0800000000000000
+      internalID: -5532629481663330654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_40
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 689
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4a2b0f1fa5736610800000000000000
+      internalID: 1613262486529321547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_41
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 609
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef94a0a3c7e4c86d0800000000000000
+      internalID: -2986926157396817410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_42
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 689
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 711009003dfe06200800000000000000
+      internalID: 171400475366654231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_43
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 609
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d275b8c77582a800800000000000000
+      internalID: 622206448045486801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_44
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 562
+        width: 89
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b0f14c80ccb07c0800000000000000
+      internalID: -4103962297395901607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_45
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 607
+        width: 17
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 659431a9c84918540800000000000000
+      internalID: 5008447592213989718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_46
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 607
+        width: 17
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad91eafb5e0318fc0800000000000000
+      internalID: -3494458072541292070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_47
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 607
+        width: 17
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54688605a7d57d450800000000000000
+      internalID: 6113457799095158341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_48
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 607
+        width: 32
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b36db87ff2f6e2120800000000000000
+      internalID: 2390970703987594811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_49
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 607
+        width: 17
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab36c8dfb968ce150800000000000000
+      internalID: 5903241216107766714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_50
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 607
+        width: 17
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad03446273a617f0800000000000000
+      internalID: -642146185150001749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_51
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 607
+        width: 17
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0548c490a8a2f4700800000000000000
+      internalID: 526686453775500368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_52
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 562
+        width: 89
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69a45aa717c81d2a0800000000000000
+      internalID: -6714431150415852906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_53
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 559
+        width: 114
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed6ac2c01d4014c0800000000000000
+      internalID: -4318867308265443872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_54
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 559
+        width: 114
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5a1659eeef84440800000000000000
+      internalID: 4920462893564143103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_55
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 559
+        width: 114
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 700475eae07a9fe00800000000000000
+      internalID: 1079077267228278791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_56
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 559
+        width: 114
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea30cb2773a9517b0800000000000000
+      internalID: -5254123827319012434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_57
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 511
+        width: 114
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b52611418d6efe00800000000000000
+      internalID: 1080421362525676983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_58
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 402
+        width: 92
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8d7a781896965460800000000000000
+      internalID: 7230131831779786123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_59
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 402
+        width: 92
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd16e4b61a42a6100800000000000000
+      internalID: 101934217277891036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_60
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 399
+        width: 482
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e792139d75533a0800000000000000
+      internalID: -6686341481417310673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_61
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 468
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d1c499d8a597dcf0800000000000000
+      internalID: -227548703721471528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_62
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 303
+        width: 482
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d6c4e9dce801aa10800000000000000
+      internalID: 1918824729597494995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_63
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 242
+        width: 92
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f270853bca4036620800000000000000
+      internalID: 2766059735925393199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_64
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 242
+        width: 92
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6bcfd5ad9bccb2b0800000000000000
+      internalID: -5567351161383564437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_65
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 207
+        width: 482
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc7716785b4b9cc0800000000000000
+      internalID: -3703283425271644931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_66
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 166
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c514777dad296b0800000000000000
+      internalID: -5290925993253315547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_67
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 166
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f37d9076c67af0700800000000000000
+      internalID: 508809366943160127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_68
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 166
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b858362841bf9d800800000000000000
+      internalID: 637816887755113867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_69
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 166
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fd9965cc0f431f80800000000000000
+      internalID: -8137073185458119184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_70
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 166
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c97050effe4cf560800000000000000
+      internalID: 7348835552848804296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_71
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 166
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67f1c1ea919b6bc10800000000000000
+      internalID: 2069044598769721206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_72
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 111
+        width: 482
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 849265a84139b5690800000000000000
+      internalID: -7612329028710160056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_73
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 106
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9f98747737244450800000000000000
+      internalID: 6072021316733018014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_74
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 106
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35c80f72ec0756200800000000000000
+      internalID: 172668191459282003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_75
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 106
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b95870ba4aabed190800000000000000
+      internalID: -7935700276973435493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_76
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 111
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe1a6ba6f78230c0800000000000000
+      internalID: -4597462776084291910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_77
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 102
+        width: 62
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62dcb3507b95e8070800000000000000
+      internalID: 8110518621542534438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_78
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 63
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222f097430b2a7be0800000000000000
+      internalID: -1478822234552208862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_79
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 63
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5723764c8c8b2eaf0800000000000000
+      internalID: -368529047062891915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_80
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 63
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e34f2df849d635720800000000000000
+      internalID: 2833729075381728318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_81
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 63
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d692173230798a690800000000000000
+      internalID: -7590651132197656211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_82
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 54
+        width: 62
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4865ca2e5481b600800000000000000
+      internalID: 482312175084726348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_83
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 21
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf75d27e6365af50800000000000000
+      internalID: 6892024130784559027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_84
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 21
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4276dd7238e0e0320800000000000000
+      internalID: 2525972397473752868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_85
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 21
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 588e083cf70c1f4e0800000000000000
+      internalID: -1949565508701329275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_86
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 21
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23182bfdfdcb57150800000000000000
+      internalID: 5869805359064056114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_87
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 19
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e87ff2ae8cc5f940800000000000000
+      internalID: 5329390647054924009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: one_floor_house_88
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 19
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c4d09481bd103ab0800000000000000
+      internalID: -5030488135502342970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      one_floor_house_0: -8988452292521946032
+      one_floor_house_1: 3351421696547362046
+      one_floor_house_10: -5729167226068864657
+      one_floor_house_11: 3255437950359627781
+      one_floor_house_12: 6776023510739317315
+      one_floor_house_13: -5309691441057544433
+      one_floor_house_14: 8422492446225169054
+      one_floor_house_15: -8430742274704149538
+      one_floor_house_16: 36548746135398604
+      one_floor_house_17: -5352774134843487708
+      one_floor_house_18: 1630374080968887894
+      one_floor_house_19: -2027801192192704092
+      one_floor_house_2: 9142301362999973041
+      one_floor_house_20: -8447564125011966002
+      one_floor_house_21: 3318524742023632833
+      one_floor_house_22: -6818180586019379888
+      one_floor_house_23: 5805969540806117587
+      one_floor_house_24: 5141227259920381053
+      one_floor_house_25: 8745820027515168301
+      one_floor_house_26: -5610229570359167883
+      one_floor_house_27: 507991737756656502
+      one_floor_house_28: -4817349855726550401
+      one_floor_house_29: 6168737233775601225
+      one_floor_house_3: -1973164066829682855
+      one_floor_house_30: -8402432892021408990
+      one_floor_house_31: -4467869099148198287
+      one_floor_house_32: 3717906483447086675
+      one_floor_house_33: 4574726008735420923
+      one_floor_house_34: -8345266247362301643
+      one_floor_house_35: 771507602486352603
+      one_floor_house_36: -1512763250151134449
+      one_floor_house_37: -7613809688548825082
+      one_floor_house_38: -2771172523721656382
+      one_floor_house_39: -5532629481663330654
+      one_floor_house_4: -6253255682368673941
+      one_floor_house_40: 1613262486529321547
+      one_floor_house_41: -2986926157396817410
+      one_floor_house_42: 171400475366654231
+      one_floor_house_43: 622206448045486801
+      one_floor_house_44: -4103962297395901607
+      one_floor_house_45: 5008447592213989718
+      one_floor_house_46: -3494458072541292070
+      one_floor_house_47: 6113457799095158341
+      one_floor_house_48: 2390970703987594811
+      one_floor_house_49: 5903241216107766714
+      one_floor_house_5: -7643260680799333260
+      one_floor_house_50: -642146185150001749
+      one_floor_house_51: 526686453775500368
+      one_floor_house_52: -6714431150415852906
+      one_floor_house_53: -4318867308265443872
+      one_floor_house_54: 4920462893564143103
+      one_floor_house_55: 1079077267228278791
+      one_floor_house_56: -5254123827319012434
+      one_floor_house_57: 1080421362525676983
+      one_floor_house_58: 7230131831779786123
+      one_floor_house_59: 101934217277891036
+      one_floor_house_6: -8521936713280104788
+      one_floor_house_60: -6686341481417310673
+      one_floor_house_61: -227548703721471528
+      one_floor_house_62: 1918824729597494995
+      one_floor_house_63: 2766059735925393199
+      one_floor_house_64: -5567351161383564437
+      one_floor_house_65: -3703283425271644931
+      one_floor_house_66: -5290925993253315547
+      one_floor_house_67: 508809366943160127
+      one_floor_house_68: 637816887755113867
+      one_floor_house_69: -8137073185458119184
+      one_floor_house_7: 5107185801839419498
+      one_floor_house_70: 7348835552848804296
+      one_floor_house_71: 2069044598769721206
+      one_floor_house_72: -7612329028710160056
+      one_floor_house_73: 6072021316733018014
+      one_floor_house_74: 172668191459282003
+      one_floor_house_75: -7935700276973435493
+      one_floor_house_76: -4597462776084291910
+      one_floor_house_77: 8110518621542534438
+      one_floor_house_78: -1478822234552208862
+      one_floor_house_79: -368529047062891915
+      one_floor_house_8: -1688823931868836229
+      one_floor_house_80: 2833729075381728318
+      one_floor_house_81: -7590651132197656211
+      one_floor_house_82: 482312175084726348
+      one_floor_house_83: 6892024130784559027
+      one_floor_house_84: 2525972397473752868
+      one_floor_house_85: -1949565508701329275
+      one_floor_house_86: 5869805359064056114
+      one_floor_house_87: 5329390647054924009
+      one_floor_house_88: -5030488135502342970
+      one_floor_house_9: -5166303626234964413
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
