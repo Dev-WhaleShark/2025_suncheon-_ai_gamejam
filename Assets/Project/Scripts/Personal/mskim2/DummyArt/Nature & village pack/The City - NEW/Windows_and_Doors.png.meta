@@ -1,0 +1,3314 @@
+fileFormatVersion: 2
+guid: 2985b8e6d0d1c9b43a6d3a33ef355fed
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9056400037088422135
+    second: Windows_and_Doors_0
+  - first:
+      213: -2080042344855662473
+    second: Windows_and_Doors_1
+  - first:
+      213: 5729489503186757271
+    second: Windows_and_Doors_2
+  - first:
+      213: 3405596810948283718
+    second: Windows_and_Doors_3
+  - first:
+      213: -5257229280797094242
+    second: Windows_and_Doors_4
+  - first:
+      213: -4750358710747922060
+    second: Windows_and_Doors_5
+  - first:
+      213: -7763621157317837607
+    second: Windows_and_Doors_6
+  - first:
+      213: 4119253112614145199
+    second: Windows_and_Doors_7
+  - first:
+      213: -2557068141949568497
+    second: Windows_and_Doors_8
+  - first:
+      213: -5205850777124367179
+    second: Windows_and_Doors_9
+  - first:
+      213: -296743725861747136
+    second: Windows_and_Doors_10
+  - first:
+      213: -3790309612905936660
+    second: Windows_and_Doors_11
+  - first:
+      213: 1938669527101372274
+    second: Windows_and_Doors_12
+  - first:
+      213: -542381150084714666
+    second: Windows_and_Doors_13
+  - first:
+      213: -5100545222950419189
+    second: Windows_and_Doors_14
+  - first:
+      213: -6300907987678118180
+    second: Windows_and_Doors_15
+  - first:
+      213: 92646183025218320
+    second: Windows_and_Doors_16
+  - first:
+      213: -4498431949661478607
+    second: Windows_and_Doors_17
+  - first:
+      213: 3419584628325188541
+    second: Windows_and_Doors_18
+  - first:
+      213: -955631190937129229
+    second: Windows_and_Doors_19
+  - first:
+      213: 816667400505752608
+    second: Windows_and_Doors_20
+  - first:
+      213: 851153166447170947
+    second: Windows_and_Doors_21
+  - first:
+      213: -8598577565719248346
+    second: Windows_and_Doors_22
+  - first:
+      213: -6832062900267882604
+    second: Windows_and_Doors_23
+  - first:
+      213: -6963106105666277819
+    second: Windows_and_Doors_24
+  - first:
+      213: -1558397458869625398
+    second: Windows_and_Doors_25
+  - first:
+      213: 8307817706076409786
+    second: Windows_and_Doors_26
+  - first:
+      213: 8692775660377101687
+    second: Windows_and_Doors_27
+  - first:
+      213: 5255323376648411993
+    second: Windows_and_Doors_28
+  - first:
+      213: -3347760460939999104
+    second: Windows_and_Doors_29
+  - first:
+      213: -5754321156376201248
+    second: Windows_and_Doors_30
+  - first:
+      213: 4785696930417833988
+    second: Windows_and_Doors_31
+  - first:
+      213: -5414837072145871365
+    second: Windows_and_Doors_32
+  - first:
+      213: 3357398662460260336
+    second: Windows_and_Doors_33
+  - first:
+      213: -1548276408224134006
+    second: Windows_and_Doors_34
+  - first:
+      213: -8786580479578664907
+    second: Windows_and_Doors_35
+  - first:
+      213: -902642852064800301
+    second: Windows_and_Doors_36
+  - first:
+      213: 8904198661005520821
+    second: Windows_and_Doors_37
+  - first:
+      213: -4664937136377043024
+    second: Windows_and_Doors_38
+  - first:
+      213: 6000366451829851807
+    second: Windows_and_Doors_39
+  - first:
+      213: 6423412162892323917
+    second: Windows_and_Doors_40
+  - first:
+      213: -198096477382443842
+    second: Windows_and_Doors_41
+  - first:
+      213: 7459135315378017663
+    second: Windows_and_Doors_42
+  - first:
+      213: 5455309178889874055
+    second: Windows_and_Doors_43
+  - first:
+      213: -2338910311965813520
+    second: Windows_and_Doors_44
+  - first:
+      213: -7697063690200357277
+    second: Windows_and_Doors_45
+  - first:
+      213: -3676915807426277345
+    second: Windows_and_Doors_46
+  - first:
+      213: -3613546103453493703
+    second: Windows_and_Doors_47
+  - first:
+      213: 8197504676378953110
+    second: Windows_and_Doors_48
+  - first:
+      213: -1302573547485402017
+    second: Windows_and_Doors_49
+  - first:
+      213: -5358931536935156348
+    second: Windows_and_Doors_50
+  - first:
+      213: 7265211259153011662
+    second: Windows_and_Doors_51
+  - first:
+      213: -6427642272309825077
+    second: Windows_and_Doors_52
+  - first:
+      213: -7744422365378368179
+    second: Windows_and_Doors_53
+  - first:
+      213: 7352120455810206613
+    second: Windows_and_Doors_54
+  - first:
+      213: 5613391016220381332
+    second: Windows_and_Doors_55
+  - first:
+      213: -2981321657356763521
+    second: Windows_and_Doors_56
+  - first:
+      213: 352568638947931578
+    second: Windows_and_Doors_57
+  - first:
+      213: -2123513594438090984
+    second: Windows_and_Doors_58
+  - first:
+      213: -3547701530922296082
+    second: Windows_and_Doors_59
+  - first:
+      213: 7699163591663910709
+    second: Windows_and_Doors_60
+  - first:
+      213: -4247612512516845062
+    second: Windows_and_Doors_61
+  - first:
+      213: -4066440861189302959
+    second: Windows_and_Doors_62
+  - first:
+      213: -2363710319618862783
+    second: Windows_and_Doors_63
+  - first:
+      213: 3068630778086938411
+    second: Windows_and_Doors_64
+  - first:
+      213: 5482490799122702994
+    second: Windows_and_Doors_65
+  - first:
+      213: 8867252708890935362
+    second: Windows_and_Doors_66
+  - first:
+      213: 6481828025193539616
+    second: Windows_and_Doors_67
+  - first:
+      213: -939421739743579539
+    second: Windows_and_Doors_68
+  - first:
+      213: -2823109865456015077
+    second: Windows_and_Doors_69
+  - first:
+      213: 4911122635502973732
+    second: Windows_and_Doors_70
+  - first:
+      213: 7016263682333195774
+    second: Windows_and_Doors_71
+  - first:
+      213: 3530831207533599475
+    second: Windows_and_Doors_72
+  - first:
+      213: 1059002703352700005
+    second: Windows_and_Doors_73
+  - first:
+      213: 4553107752009161739
+    second: Windows_and_Doors_74
+  - first:
+      213: -3916739310194620102
+    second: Windows_and_Doors_75
+  - first:
+      213: 5128152663054893596
+    second: Windows_and_Doors_76
+  - first:
+      213: -3831819094002208305
+    second: Windows_and_Doors_77
+  - first:
+      213: -4833066225078639503
+    second: Windows_and_Doors_78
+  - first:
+      213: -8545462680485461325
+    second: Windows_and_Doors_79
+  - first:
+      213: -3309572350956317129
+    second: Windows_and_Doors_80
+  - first:
+      213: 8213765188020640200
+    second: Windows_and_Doors_81
+  - first:
+      213: 44736493106776535
+    second: Windows_and_Doors_82
+  - first:
+      213: -4735678008052917519
+    second: Windows_and_Doors_83
+  - first:
+      213: -6364207542936896875
+    second: Windows_and_Doors_84
+  - first:
+      213: -2985242293693590699
+    second: Windows_and_Doors_85
+  - first:
+      213: -5450516173730255436
+    second: Windows_and_Doors_86
+  - first:
+      213: 4536960995051138962
+    second: Windows_and_Doors_87
+  - first:
+      213: 6355539621564480706
+    second: Windows_and_Doors_88
+  - first:
+      213: 1143582773066959867
+    second: Windows_and_Doors_89
+  - first:
+      213: -810932313486889072
+    second: Windows_and_Doors_90
+  - first:
+      213: -7658454038664173748
+    second: Windows_and_Doors_91
+  - first:
+      213: 8486348680973035480
+    second: Windows_and_Doors_92
+  - first:
+      213: 8305157311993896758
+    second: Windows_and_Doors_93
+  - first:
+      213: 5903377281765989992
+    second: Windows_and_Doors_94
+  - first:
+      213: 2642523980599970476
+    second: Windows_and_Doors_95
+  - first:
+      213: -5328192260939738722
+    second: Windows_and_Doors_96
+  - first:
+      213: 3214376031760697236
+    second: Windows_and_Doors_97
+  - first:
+      213: -3281258855652931580
+    second: Windows_and_Doors_98
+  - first:
+      213: -2642036718551969736
+    second: Windows_and_Doors_99
+  - first:
+      213: -8624063185224362547
+    second: Windows_and_Doors_100
+  - first:
+      213: -4775389407353847762
+    second: Windows_and_Doors_101
+  - first:
+      213: 6145492615170269679
+    second: Windows_and_Doors_102
+  - first:
+      213: 6754436272140332626
+    second: Windows_and_Doors_103
+  - first:
+      213: -8303971404697987704
+    second: Windows_and_Doors_104
+  - first:
+      213: -5583190762132333705
+    second: Windows_and_Doors_105
+  - first:
+      213: -6237041256571318964
+    second: Windows_and_Doors_106
+  - first:
+      213: -3442044764447323178
+    second: Windows_and_Doors_107
+  - first:
+      213: -6569317916848784078
+    second: Windows_and_Doors_108
+  - first:
+      213: -5299289327216396089
+    second: Windows_and_Doors_109
+  - first:
+      213: 698253152026119088
+    second: Windows_and_Doors_110
+  - first:
+      213: -4050245296981265022
+    second: Windows_and_Doors_111
+  - first:
+      213: 8596273043041446869
+    second: Windows_and_Doors_112
+  - first:
+      213: 8566459516227884441
+    second: Windows_and_Doors_113
+  - first:
+      213: 5197094052530511658
+    second: Windows_and_Doors_114
+  - first:
+      213: 8781352280167258362
+    second: Windows_and_Doors_115
+  - first:
+      213: 1372476350988404586
+    second: Windows_and_Doors_116
+  - first:
+      213: 2483949719389193254
+    second: Windows_and_Doors_117
+  - first:
+      213: -3886646174913202298
+    second: Windows_and_Doors_118
+  - first:
+      213: 7122858102457595386
+    second: Windows_and_Doors_119
+  - first:
+      213: -1892255190639879896
+    second: Windows_and_Doors_120
+  - first:
+      213: 4199748334522472775
+    second: Windows_and_Doors_121
+  - first:
+      213: 6032199713190469196
+    second: Windows_and_Doors_122
+  - first:
+      213: 5625308953905818739
+    second: Windows_and_Doors_123
+  - first:
+      213: 5324383892210467448
+    second: Windows_and_Doors_124
+  - first:
+      213: -483762246091389921
+    second: Windows_and_Doors_125
+  - first:
+      213: -5723175108740688831
+    second: Windows_and_Doors_126
+  - first:
+      213: 4072394608675283224
+    second: Windows_and_Doors_127
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Windows_and_Doors_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 403
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 907928d2624315280800000000000000
+      internalID: -9056400037088422135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 403
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7709b1502843223e0800000000000000
+      internalID: -2080042344855662473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 403
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796a6c5d85c338f40800000000000000
+      internalID: 5729489503186757271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 403
+        width: 66
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d86c4814c134f20800000000000000
+      internalID: 3405596810948283718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_4
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 403
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9e8e47b2d19a07b0800000000000000
+      internalID: -5257229280797094242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_5
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 403
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 471003acbe5531eb0800000000000000
+      internalID: -4750358710747922060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_6
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 403
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dcfc5bd0b3124490800000000000000
+      internalID: -7763621157317837607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_7
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 403
+        width: 66
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: facc94591e68a2930800000000000000
+      internalID: 4119253112614145199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_8
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 409
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ab0a4a218738cd0800000000000000
+      internalID: -2557068141949568497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_9
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 409
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b49fcbcc4a11c7b0800000000000000
+      internalID: -5205850777124367179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 409
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0464fae4721c1ebf0800000000000000
+      internalID: -296743725861747136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_11
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 431
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce84efd2d7d166bc0800000000000000
+      internalID: -3790309612905936660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_12
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 415
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27770c3d9a987ea10800000000000000
+      internalID: 1938669527101372274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_13
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 431
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f2558b7331978f0800000000000000
+      internalID: -542381150084714666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_14
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 415
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b058931c4293739b0800000000000000
+      internalID: -5100545222950419189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_15
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 409
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cde3600a19dae88a0800000000000000
+      internalID: -6300907987678118180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_16
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 409
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013930d6635294100800000000000000
+      internalID: 92646183025218320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_17
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 409
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 131e82ab9fb5291c0800000000000000
+      internalID: -4498431949661478607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_18
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 431
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db385ba0a1ec47f20800000000000000
+      internalID: 3419584628325188541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_19
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 415
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fea8e7be7aecb2f0800000000000000
+      internalID: -955631190937129229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_20
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 431
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02c79c28ca2655b00800000000000000
+      internalID: 816667400505752608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_21
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 415
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38558879b47efcb00800000000000000
+      internalID: 851153166447170947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_22
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 399
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62249add247bba880800000000000000
+      internalID: -8598577565719248346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_23
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 399
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49768627df2af21a0800000000000000
+      internalID: -6832062900267882604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_24
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 399
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54e686693e31e5f90800000000000000
+      internalID: -6963106105666277819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_25
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 399
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acd543594c57f5ae0800000000000000
+      internalID: -1558397458869625398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_26
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 355
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf826ddf2c4b4370800000000000000
+      internalID: 8307817706076409786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_27
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 355
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77550f42861f2a870800000000000000
+      internalID: 8692775660377101687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_28
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 355
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b5fe464c8aee840800000000000000
+      internalID: 5255323376648411993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_29
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 355
+        width: 66
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088c294199d5a81d0800000000000000
+      internalID: -3347760460939999104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_30
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 355
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e77eae556b8420b0800000000000000
+      internalID: -5754321156376201248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_31
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 355
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4087b34a0063a6240800000000000000
+      internalID: 4785696930417833988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_32
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 355
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfd01263f52aad4b0800000000000000
+      internalID: -5414837072145871365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_33
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 355
+        width: 66
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ffb0559b40e79e20800000000000000
+      internalID: 3357398662460260336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_34
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 362
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8ccea15fca638ae0800000000000000
+      internalID: -1548276408224134006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_35
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 362
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 530155c6b9bcf0680800000000000000
+      internalID: -8786580479578664907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_36
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 362
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d1d1a3cb1b2973f0800000000000000
+      internalID: -902642852064800301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_37
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 362
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bf2eb67181129b70800000000000000
+      internalID: 8904198661005520821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_38
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 307
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b7e7bee360d24fb0800000000000000
+      internalID: -4664937136377043024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_39
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 307
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f964d732f75954350800000000000000
+      internalID: 6000366451829851807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_40
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 307
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4cde17545b842950800000000000000
+      internalID: 6423412162892323917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_41
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 307
+        width: 66
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebcfc5aad48304df0800000000000000
+      internalID: -198096477382443842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_42
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 307
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f759da49c0c248760800000000000000
+      internalID: 7459135315378017663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_43
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 307
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78aa8a37bc625bb40800000000000000
+      internalID: 5455309178889874055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_44
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 307
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f497cd96758a8fd0800000000000000
+      internalID: -2338910311965813520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_45
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 307
+        width: 66
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 366ec04ca598e2590800000000000000
+      internalID: -7697063690200357277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_46
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 310
+        width: 48
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f109655ed88f8fcc0800000000000000
+      internalID: -3676915807426277345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_47
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 311
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 936582cd6fa1addc0800000000000000
+      internalID: -3613546103453493703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_48
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 310
+        width: 48
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 695cb28221363c170800000000000000
+      internalID: 8197504676378953110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_49
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 311
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5cef4882445cede0800000000000000
+      internalID: -1302573547485402017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_50
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 265
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4858755f82041a5b0800000000000000
+      internalID: -5358931536935156348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_51
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 265
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec3dbffb52733d460800000000000000
+      internalID: 7265211259153011662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_52
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 265
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc130bf886d6cc6a0800000000000000
+      internalID: -6427642272309825077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_53
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 265
+        width: 66
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d2801f3e8468490800000000000000
+      internalID: -7744422365378368179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_54
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 265
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b4372f99af70660800000000000000
+      internalID: 7352120455810206613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_55
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 265
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4905f236365c6ed40800000000000000
+      internalID: 5613391016220381332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_56
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 265
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e32149fb730a6d0800000000000000
+      internalID: -2981321657356763521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_57
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 265
+        width: 66
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab53f632f4394e400800000000000000
+      internalID: 352568638947931578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_58
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 263
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ffdcff2a3c782e0800000000000000
+      internalID: -2123513594438090984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_59
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 263
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eec5440114804cec0800000000000000
+      internalID: -3547701530922296082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_60
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 263
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53f7fb4ae7ce8da60800000000000000
+      internalID: 7699163591663910709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_61
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 263
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1dde7bce27d05c0800000000000000
+      internalID: -4247612512516845062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_62
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 216
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1559da8e4991197c0800000000000000
+      internalID: -4066440861189302959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_63
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 216
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 141513fdcf9623fd0800000000000000
+      internalID: -2363710319618862783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_64
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 216
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27d3b23f67f59a20800000000000000
+      internalID: 3068630778086938411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_65
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 216
+        width: 66
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2926e069558b51c40800000000000000
+      internalID: 5482490799122702994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_66
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 216
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2408017ab5fce0b70800000000000000
+      internalID: 8867252708890935362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_67
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 216
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02825d82f3414f950800000000000000
+      internalID: 6481828025193539616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_68
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 216
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d62fd4ca7e086f2f0800000000000000
+      internalID: -939421739743579539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_69
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 216
+        width: 66
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19e79be88c42d8d0800000000000000
+      internalID: -2823109865456015077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_70
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 214
+        width: 50
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423f8894400d72440800000000000000
+      internalID: 4911122635502973732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_71
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 215
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efdb1f335a6ce5160800000000000000
+      internalID: 7016263682333195774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_72
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 214
+        width: 50
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa57eea648000130800000000000000
+      internalID: 3530831207533599475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_73
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 215
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c148d095552be00800000000000000
+      internalID: 1059002703352700005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_74
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 159
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c55968063ef2f30800000000000000
+      internalID: 4553107752009161739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_75
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 159
+        width: 42
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a398a026952f4a9c0800000000000000
+      internalID: -3916739310194620102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_76
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 159
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c124c5b4dabda2740800000000000000
+      internalID: 5128152663054893596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_77
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 159
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc1707af5d4a2dac0800000000000000
+      internalID: -3831819094002208305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_78
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 159
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174ef3effdf7decb0800000000000000
+      internalID: -4833066225078639503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_79
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 159
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b28e48c7fa686980800000000000000
+      internalID: -8545462680485461325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_80
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 159
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7365bce4b790212d0800000000000000
+      internalID: -3309572350956317129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_81
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 159
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9907c8be72df170800000000000000
+      internalID: 8213765188020640200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_82
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 159
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d9402c7a9fee9000800000000000000
+      internalID: 44736493106776535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_83
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 159
+        width: 82
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa506f31fd774eb0800000000000000
+      internalID: -4735678008052917519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_84
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 111
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59a726e65facda7a0800000000000000
+      internalID: -6364207542936896875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_85
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 111
+        width: 42
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553dbeb43f94296d0800000000000000
+      internalID: -2985242293693590699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_86
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 111
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd69460b60eb54b0800000000000000
+      internalID: -5450516173730255436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_87
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 106
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29f63d5bcf586fe30800000000000000
+      internalID: 4536960995051138962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_88
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 107
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cc754bdc99633850800000000000000
+      internalID: 6355539621564480706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_89
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 111
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb89ef1972dedf00800000000000000
+      internalID: 1143582773066959867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_90
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 111
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f6abd7b5dfeb4f0800000000000000
+      internalID: -810932313486889072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_91
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 111
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4724c8c0a4b7b590800000000000000
+      internalID: -7658454038664173748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_92
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 111
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d7a089a92195c570800000000000000
+      internalID: 8486348680973035480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_93
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 111
+        width: 50
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f52299298d14370800000000000000
+      internalID: 8305157311993896758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_94
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 95
+        width: 98
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ed5ce3c520de150800000000000000
+      internalID: 5903377281765989992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_95
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 32
+        width: 18
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caacc164f812ca420800000000000000
+      internalID: 2642523980599970476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_96
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 16
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9193bf5e557e06b0800000000000000
+      internalID: -5328192260939738722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_97
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 32
+        width: 7
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49740ab68f1cb9c20800000000000000
+      internalID: 3214376031760697236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_98
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 32
+        width: 45
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 408c3b4a470a672d0800000000000000
+      internalID: -3281258855652931580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_99
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 16
+        width: 45
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 830db234a99955bd0800000000000000
+      internalID: -2642036718551969736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_100
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 32
+        width: 6
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc59d2ca93c215880800000000000000
+      internalID: -8624063185224362547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_101
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 32
+        width: 15
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e20c28692a86abdb0800000000000000
+      internalID: -4775389407353847762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_102
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 16
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe1a20929fc294550800000000000000
+      internalID: 6145492615170269679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_103
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 32
+        width: 18
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25e20f2c0049cbd50800000000000000
+      internalID: 6754436272140332626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_104
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 16
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88599f5f00e52cc80800000000000000
+      internalID: -8303971404697987704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_105
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 32
+        width: 7
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77b1cd535958482b0800000000000000
+      internalID: -5583190762132333705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_106
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 32
+        width: 45
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4d4c9cb5049179a0800000000000000
+      internalID: -6237041256571318964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_107
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 16
+        width: 45
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dbcf1206866b30d0800000000000000
+      internalID: -3442044764447323178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_108
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 32
+        width: 6
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23d7e9d092815d4a0800000000000000
+      internalID: -6569317916848784078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_109
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 32
+        width: 15
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c87f390f642576b0800000000000000
+      internalID: -5299289327216396089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_110
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 16
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bb40d1da81b0b900800000000000000
+      internalID: 698253152026119088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_111
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 32
+        width: 18
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2853c3c8c53aac7c0800000000000000
+      internalID: -4050245296981265022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_112
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 16
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5db60c2a9c81c4770800000000000000
+      internalID: 8596273043041446869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_113
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 32
+        width: 7
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995178ffa8d22e670800000000000000
+      internalID: 8566459516227884441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_114
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 32
+        width: 45
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f50616189cf1840800000000000000
+      internalID: 5197094052530511658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_115
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 16
+        width: 45
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af89fea8f51add970800000000000000
+      internalID: 8781352280167258362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_116
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 32
+        width: 6
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a67c94338f30c0310800000000000000
+      internalID: 1372476350988404586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_117
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 32
+        width: 15
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624cf18fb13c87220800000000000000
+      internalID: 2483949719389193254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_118
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 16
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687faa075ebdf0ac0800000000000000
+      internalID: -3886646174913202298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_119
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 32
+        width: 18
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af57f76a4b979d260800000000000000
+      internalID: 7122858102457595386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_120
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 16
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82955810eeb5db5e0800000000000000
+      internalID: -1892255190639879896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_121
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 32
+        width: 7
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7491049ebd0884a30800000000000000
+      internalID: 4199748334522472775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_122
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 32
+        width: 45
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e5eeeddada6b350800000000000000
+      internalID: 6032199713190469196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_123
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 16
+        width: 45
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c616d70bc111e40800000000000000
+      internalID: 5625308953905818739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_124
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 32
+        width: 6
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 872440fa0f204e940800000000000000
+      internalID: 5324383892210467448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_125
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 32
+        width: 15
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f144afddcc45949f0800000000000000
+      internalID: -483762246091389921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_126
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 16
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1445720bf823390b0800000000000000
+      internalID: -5723175108740688831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Windows_and_Doors_127
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 31
+        width: 84
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8116e43f15d048830800000000000000
+      internalID: 4072394608675283224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Windows_and_Doors_0: -9056400037088422135
+      Windows_and_Doors_1: -2080042344855662473
+      Windows_and_Doors_10: -296743725861747136
+      Windows_and_Doors_100: -8624063185224362547
+      Windows_and_Doors_101: -4775389407353847762
+      Windows_and_Doors_102: 6145492615170269679
+      Windows_and_Doors_103: 6754436272140332626
+      Windows_and_Doors_104: -8303971404697987704
+      Windows_and_Doors_105: -5583190762132333705
+      Windows_and_Doors_106: -6237041256571318964
+      Windows_and_Doors_107: -3442044764447323178
+      Windows_and_Doors_108: -6569317916848784078
+      Windows_and_Doors_109: -5299289327216396089
+      Windows_and_Doors_11: -3790309612905936660
+      Windows_and_Doors_110: 698253152026119088
+      Windows_and_Doors_111: -4050245296981265022
+      Windows_and_Doors_112: 8596273043041446869
+      Windows_and_Doors_113: 8566459516227884441
+      Windows_and_Doors_114: 5197094052530511658
+      Windows_and_Doors_115: 8781352280167258362
+      Windows_and_Doors_116: 1372476350988404586
+      Windows_and_Doors_117: 2483949719389193254
+      Windows_and_Doors_118: -3886646174913202298
+      Windows_and_Doors_119: 7122858102457595386
+      Windows_and_Doors_12: 1938669527101372274
+      Windows_and_Doors_120: -1892255190639879896
+      Windows_and_Doors_121: 4199748334522472775
+      Windows_and_Doors_122: 6032199713190469196
+      Windows_and_Doors_123: 5625308953905818739
+      Windows_and_Doors_124: 5324383892210467448
+      Windows_and_Doors_125: -483762246091389921
+      Windows_and_Doors_126: -5723175108740688831
+      Windows_and_Doors_127: 4072394608675283224
+      Windows_and_Doors_13: -542381150084714666
+      Windows_and_Doors_14: -5100545222950419189
+      Windows_and_Doors_15: -6300907987678118180
+      Windows_and_Doors_16: 92646183025218320
+      Windows_and_Doors_17: -4498431949661478607
+      Windows_and_Doors_18: 3419584628325188541
+      Windows_and_Doors_19: -955631190937129229
+      Windows_and_Doors_2: 5729489503186757271
+      Windows_and_Doors_20: 816667400505752608
+      Windows_and_Doors_21: 851153166447170947
+      Windows_and_Doors_22: -8598577565719248346
+      Windows_and_Doors_23: -6832062900267882604
+      Windows_and_Doors_24: -6963106105666277819
+      Windows_and_Doors_25: -1558397458869625398
+      Windows_and_Doors_26: 8307817706076409786
+      Windows_and_Doors_27: 8692775660377101687
+      Windows_and_Doors_28: 5255323376648411993
+      Windows_and_Doors_29: -3347760460939999104
+      Windows_and_Doors_3: 3405596810948283718
+      Windows_and_Doors_30: -5754321156376201248
+      Windows_and_Doors_31: 4785696930417833988
+      Windows_and_Doors_32: -5414837072145871365
+      Windows_and_Doors_33: 3357398662460260336
+      Windows_and_Doors_34: -1548276408224134006
+      Windows_and_Doors_35: -8786580479578664907
+      Windows_and_Doors_36: -902642852064800301
+      Windows_and_Doors_37: 8904198661005520821
+      Windows_and_Doors_38: -4664937136377043024
+      Windows_and_Doors_39: 6000366451829851807
+      Windows_and_Doors_4: -5257229280797094242
+      Windows_and_Doors_40: 6423412162892323917
+      Windows_and_Doors_41: -198096477382443842
+      Windows_and_Doors_42: 7459135315378017663
+      Windows_and_Doors_43: 5455309178889874055
+      Windows_and_Doors_44: -2338910311965813520
+      Windows_and_Doors_45: -7697063690200357277
+      Windows_and_Doors_46: -3676915807426277345
+      Windows_and_Doors_47: -3613546103453493703
+      Windows_and_Doors_48: 8197504676378953110
+      Windows_and_Doors_49: -1302573547485402017
+      Windows_and_Doors_5: -4750358710747922060
+      Windows_and_Doors_50: -5358931536935156348
+      Windows_and_Doors_51: 7265211259153011662
+      Windows_and_Doors_52: -6427642272309825077
+      Windows_and_Doors_53: -7744422365378368179
+      Windows_and_Doors_54: 7352120455810206613
+      Windows_and_Doors_55: 5613391016220381332
+      Windows_and_Doors_56: -2981321657356763521
+      Windows_and_Doors_57: 352568638947931578
+      Windows_and_Doors_58: -2123513594438090984
+      Windows_and_Doors_59: -3547701530922296082
+      Windows_and_Doors_6: -7763621157317837607
+      Windows_and_Doors_60: 7699163591663910709
+      Windows_and_Doors_61: -4247612512516845062
+      Windows_and_Doors_62: -4066440861189302959
+      Windows_and_Doors_63: -2363710319618862783
+      Windows_and_Doors_64: 3068630778086938411
+      Windows_and_Doors_65: 5482490799122702994
+      Windows_and_Doors_66: 8867252708890935362
+      Windows_and_Doors_67: 6481828025193539616
+      Windows_and_Doors_68: -939421739743579539
+      Windows_and_Doors_69: -2823109865456015077
+      Windows_and_Doors_7: 4119253112614145199
+      Windows_and_Doors_70: 4911122635502973732
+      Windows_and_Doors_71: 7016263682333195774
+      Windows_and_Doors_72: 3530831207533599475
+      Windows_and_Doors_73: 1059002703352700005
+      Windows_and_Doors_74: 4553107752009161739
+      Windows_and_Doors_75: -3916739310194620102
+      Windows_and_Doors_76: 5128152663054893596
+      Windows_and_Doors_77: -3831819094002208305
+      Windows_and_Doors_78: -4833066225078639503
+      Windows_and_Doors_79: -8545462680485461325
+      Windows_and_Doors_8: -2557068141949568497
+      Windows_and_Doors_80: -3309572350956317129
+      Windows_and_Doors_81: 8213765188020640200
+      Windows_and_Doors_82: 44736493106776535
+      Windows_and_Doors_83: -4735678008052917519
+      Windows_and_Doors_84: -6364207542936896875
+      Windows_and_Doors_85: -2985242293693590699
+      Windows_and_Doors_86: -5450516173730255436
+      Windows_and_Doors_87: 4536960995051138962
+      Windows_and_Doors_88: 6355539621564480706
+      Windows_and_Doors_89: 1143582773066959867
+      Windows_and_Doors_9: -5205850777124367179
+      Windows_and_Doors_90: -810932313486889072
+      Windows_and_Doors_91: -7658454038664173748
+      Windows_and_Doors_92: 8486348680973035480
+      Windows_and_Doors_93: 8305157311993896758
+      Windows_and_Doors_94: 5903377281765989992
+      Windows_and_Doors_95: 2642523980599970476
+      Windows_and_Doors_96: -5328192260939738722
+      Windows_and_Doors_97: 3214376031760697236
+      Windows_and_Doors_98: -3281258855652931580
+      Windows_and_Doors_99: -2642036718551969736
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

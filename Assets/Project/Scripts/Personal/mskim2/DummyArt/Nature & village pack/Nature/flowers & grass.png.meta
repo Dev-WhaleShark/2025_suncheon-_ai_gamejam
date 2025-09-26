@@ -1,0 +1,1114 @@
+fileFormatVersion: 2
+guid: 90be6615b6af88046969842dd6456951
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8245372091973809269
+    second: flowers & grass_0
+  - first:
+      213: 1477223355239520651
+    second: flowers & grass_1
+  - first:
+      213: -628507353781670015
+    second: flowers & grass_2
+  - first:
+      213: -7004219427565330628
+    second: flowers & grass_3
+  - first:
+      213: -3699022032288764117
+    second: flowers & grass_4
+  - first:
+      213: -4793117441636466502
+    second: flowers & grass_5
+  - first:
+      213: -5637966180628782179
+    second: flowers & grass_6
+  - first:
+      213: 3376053205821384624
+    second: flowers & grass_7
+  - first:
+      213: 8424323227745913680
+    second: flowers & grass_8
+  - first:
+      213: 1964706635624833150
+    second: flowers & grass_9
+  - first:
+      213: 1451076763968427839
+    second: flowers & grass_10
+  - first:
+      213: 5148025059202766678
+    second: flowers & grass_11
+  - first:
+      213: -8842782738489694493
+    second: flowers & grass_12
+  - first:
+      213: -2334191683226606844
+    second: flowers & grass_13
+  - first:
+      213: -871471497389575800
+    second: flowers & grass_14
+  - first:
+      213: -2069439188705648124
+    second: flowers & grass_15
+  - first:
+      213: -1431501928993291718
+    second: flowers & grass_16
+  - first:
+      213: -238355082542856711
+    second: flowers & grass_17
+  - first:
+      213: -3755804478037700941
+    second: flowers & grass_18
+  - first:
+      213: -8786882700355657611
+    second: flowers & grass_19
+  - first:
+      213: -4746936074919937828
+    second: flowers & grass_20
+  - first:
+      213: -7426015400345589445
+    second: flowers & grass_21
+  - first:
+      213: 2428526924213602108
+    second: flowers & grass_22
+  - first:
+      213: 2378729600604437276
+    second: flowers & grass_23
+  - first:
+      213: -5900498590074060650
+    second: flowers & grass_24
+  - first:
+      213: 7731255185682258119
+    second: flowers & grass_25
+  - first:
+      213: 6194803917340959977
+    second: flowers & grass_26
+  - first:
+      213: 1834183188986515808
+    second: flowers & grass_27
+  - first:
+      213: 2445478513909101283
+    second: flowers & grass_28
+  - first:
+      213: 8326765313985149377
+    second: flowers & grass_29
+  - first:
+      213: 8015832476329101005
+    second: flowers & grass_30
+  - first:
+      213: -2127415882322792233
+    second: flowers & grass_31
+  - first:
+      213: 8184875344020744069
+    second: flowers & grass_32
+  - first:
+      213: -6451530957139079465
+    second: flowers & grass_33
+  - first:
+      213: -5496807656734048409
+    second: flowers & grass_34
+  - first:
+      213: -6876780415032378816
+    second: flowers & grass_35
+  - first:
+      213: -4951455468557581597
+    second: flowers & grass_36
+  - first:
+      213: 1436333959387947437
+    second: flowers & grass_37
+  - first:
+      213: -309554316774195010
+    second: flowers & grass_38
+  - first:
+      213: 1746621403061373317
+    second: flowers & grass_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: flowers & grass_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 207
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574b4075b327d6270800000000000000
+      internalID: 8245372091973809269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 207
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8956fe90d6208410800000000000000
+      internalID: 1477223355239520651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_2
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 207
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f6f1744e71747f0800000000000000
+      internalID: -628507353781670015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_3
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 208
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f14136a830cce90800000000000000
+      internalID: -7004219427565330628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_4
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 207
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2fa5155f0f6aacc0800000000000000
+      internalID: -3699022032288764117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_5
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 211
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab08784f41d6b7db0800000000000000
+      internalID: -4793117441636466502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93a4f341abe1c1b0800000000000000
+      internalID: -5637966180628782179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_7
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 178
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b76dcbe0862ade20800000000000000
+      internalID: 3376053205821384624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_8
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 176
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05b0ed6775539e470800000000000000
+      internalID: 8424323227745913680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_9
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 177
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e706540964a044b10800000000000000
+      internalID: 1964706635624833150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_10
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 175
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f375922f0a2432410800000000000000
+      internalID: 1451076763968427839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_11
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 177
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65717941485717740800000000000000
+      internalID: 5148025059202766678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_12
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 146
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e6ad5e43ff184580800000000000000
+      internalID: -8842782738489694493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_13
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 143
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4036b9bf7094b9fd0800000000000000
+      internalID: -2334191683226606844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 146
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88177365a49e7e3f0800000000000000
+      internalID: -871471497389575800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_15
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 145
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4026de0b500e743e0800000000000000
+      internalID: -2069439188705648124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_16
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 152
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32811b7498422ce0800000000000000
+      internalID: -1431501928993291718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_17
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 145
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f5cf96b05131bcf0800000000000000
+      internalID: -238355082542856711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_18
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 146
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3becdb0f9b3b0ebc0800000000000000
+      internalID: -3755804478037700941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_19
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 118
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 570a64a2db8be0680800000000000000
+      internalID: -8786882700355657611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_20
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 114
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8f8ea4ace7f1eb0800000000000000
+      internalID: -4746936074919937828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_21
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 120
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3922dd865e71f890800000000000000
+      internalID: -7426015400345589445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_22
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 120
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c374935ee5cd3b120800000000000000
+      internalID: 2428526924213602108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_23
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 114
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1bfbbcf7f1f20120800000000000000
+      internalID: 2378729600604437276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_24
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 120
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69041f46bc73d1ea0800000000000000
+      internalID: -5900498590074060650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_25
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 114
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c8dc7221afea4b60800000000000000
+      internalID: 7731255185682258119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_26
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 113
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e46e42675d58f550800000000000000
+      internalID: 6194803917340959977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_27
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 119
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 061d88874e3547910800000000000000
+      internalID: 1834183188986515808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_28
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 112
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e2f66f60c510f120800000000000000
+      internalID: 2445478513909101283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_29
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 64
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c9f02c9fec9e8370800000000000000
+      internalID: 8326765313985149377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_30
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 65
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6c2a2ea25fd3f60800000000000000
+      internalID: 8015832476329101005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_31
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 71
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d030acc686e972e0800000000000000
+      internalID: -2127415882322792233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_32
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 64
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587a53392c4869170800000000000000
+      internalID: 8184875344020744069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_33
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 64
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de0a42b6ce8776a0800000000000000
+      internalID: -6451530957139079465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_34
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 64
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76f38bd3f8a67b3b0800000000000000
+      internalID: -5496807656734048409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_35
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 17
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04ab1a3b5a4c090a0800000000000000
+      internalID: -6876780415032378816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_36
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 17
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e2c57b3c75e84bb0800000000000000
+      internalID: -4951455468557581597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_37
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 17
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da126244022eee310800000000000000
+      internalID: 1436333959387947437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_38
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 17
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb04cfd2dfd34bbf0800000000000000
+      internalID: -309554316774195010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flowers & grass_39
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 17
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 589419e79ee3d3810800000000000000
+      internalID: 1746621403061373317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      flowers & grass_0: 8245372091973809269
+      flowers & grass_1: 1477223355239520651
+      flowers & grass_10: 1451076763968427839
+      flowers & grass_11: 5148025059202766678
+      flowers & grass_12: -8842782738489694493
+      flowers & grass_13: -2334191683226606844
+      flowers & grass_14: -871471497389575800
+      flowers & grass_15: -2069439188705648124
+      flowers & grass_16: -1431501928993291718
+      flowers & grass_17: -238355082542856711
+      flowers & grass_18: -3755804478037700941
+      flowers & grass_19: -8786882700355657611
+      flowers & grass_2: -628507353781670015
+      flowers & grass_20: -4746936074919937828
+      flowers & grass_21: -7426015400345589445
+      flowers & grass_22: 2428526924213602108
+      flowers & grass_23: 2378729600604437276
+      flowers & grass_24: -5900498590074060650
+      flowers & grass_25: 7731255185682258119
+      flowers & grass_26: 6194803917340959977
+      flowers & grass_27: 1834183188986515808
+      flowers & grass_28: 2445478513909101283
+      flowers & grass_29: 8326765313985149377
+      flowers & grass_3: -7004219427565330628
+      flowers & grass_30: 8015832476329101005
+      flowers & grass_31: -2127415882322792233
+      flowers & grass_32: 8184875344020744069
+      flowers & grass_33: -6451530957139079465
+      flowers & grass_34: -5496807656734048409
+      flowers & grass_35: -6876780415032378816
+      flowers & grass_36: -4951455468557581597
+      flowers & grass_37: 1436333959387947437
+      flowers & grass_38: -309554316774195010
+      flowers & grass_39: 1746621403061373317
+      flowers & grass_4: -3699022032288764117
+      flowers & grass_5: -4793117441636466502
+      flowers & grass_6: -5637966180628782179
+      flowers & grass_7: 3376053205821384624
+      flowers & grass_8: 8424323227745913680
+      flowers & grass_9: 1964706635624833150
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

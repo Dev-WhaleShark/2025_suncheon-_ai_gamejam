@@ -1,0 +1,764 @@
+fileFormatVersion: 2
+guid: 283c646fbebf15b419a15842ce5d4cd5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 643645115921683493
+    second: Tents_0
+  - first:
+      213: -8038001218310726858
+    second: Tents_1
+  - first:
+      213: 7079025666374799206
+    second: Tents_2
+  - first:
+      213: -8213362364964589203
+    second: Tents_3
+  - first:
+      213: -7334810911669745368
+    second: Tents_4
+  - first:
+      213: -4925877420089872468
+    second: Tents_5
+  - first:
+      213: 7379123157466597646
+    second: Tents_6
+  - first:
+      213: -8578273726886940135
+    second: Tents_7
+  - first:
+      213: -6144478930536633312
+    second: Tents_8
+  - first:
+      213: -1687483952925833633
+    second: Tents_9
+  - first:
+      213: -4575663886916318950
+    second: Tents_10
+  - first:
+      213: 4579236399591956971
+    second: Tents_11
+  - first:
+      213: -7893340437646488174
+    second: Tents_12
+  - first:
+      213: 6947609306991934844
+    second: Tents_13
+  - first:
+      213: 679693659090357712
+    second: Tents_14
+  - first:
+      213: -5314674565960002762
+    second: Tents_15
+  - first:
+      213: -2893995244887371510
+    second: Tents_16
+  - first:
+      213: -5493101657333799658
+    second: Tents_17
+  - first:
+      213: -3602820058544948863
+    second: Tents_18
+  - first:
+      213: 4931424221646258497
+    second: Tents_19
+  - first:
+      213: 8149160620909150362
+    second: Tents_20
+  - first:
+      213: 2449216704251044243
+    second: Tents_21
+  - first:
+      213: -1068986577303454058
+    second: Tents_22
+  - first:
+      213: 6467097544098704638
+    second: Tents_23
+  - first:
+      213: 4795023686806053870
+    second: Tents_24
+  - first:
+      213: 6349624592383074176
+    second: Tents_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tents_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 367
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5245def92dfaee800800000000000000
+      internalID: 643645115921683493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 367
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63b9e66aa78437090800000000000000
+      internalID: -8038001218310726858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_2
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 367
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66f84285650cd3260800000000000000
+      internalID: 7079025666374799206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_3
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 367
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6139b00276440e80800000000000000
+      internalID: -8213362364964589203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_4
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 367
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829044b5654853a90800000000000000
+      internalID: -7334810911669745368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_5
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 271
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cafec68b594c3abb0800000000000000
+      internalID: -4925877420089872468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 271
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e09c7aa5a69e76660800000000000000
+      internalID: 7379123157466597646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_7
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 271
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91276dabe79d3f880800000000000000
+      internalID: -8578273726886940135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_8
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 271
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ced7fa7fc6abaa0800000000000000
+      internalID: -6144478930536633312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_9
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 271
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f560fa5194ad498e0800000000000000
+      internalID: -1687483952925833633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_10
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 175
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1905c010f9ff70c0800000000000000
+      internalID: -4575663886916318950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_11
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 175
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1a73c5e37bc8f30800000000000000
+      internalID: 4579236399591956971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_12
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 175
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29dcad251b8357290800000000000000
+      internalID: -7893340437646488174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_13
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 175
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7db37dcaddda6060800000000000000
+      internalID: 6947609306991934844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_14
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 175
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd8a2228c1ce6900800000000000000
+      internalID: 679693659090357712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_15
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 79
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 633962ff3ab7e36b0800000000000000
+      internalID: -5314674565960002762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_16
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 79
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0191d668a676d7d0800000000000000
+      internalID: -2893995244887371510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_17
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 79
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6156287752594c3b0800000000000000
+      internalID: -5493101657333799658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_18
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 79
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 189b6ccce36300ec0800000000000000
+      internalID: -3602820058544948863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_19
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 79
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1418bf7a330ff6440800000000000000
+      internalID: 4931424221646258497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_20
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 18
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9044ea9862a71170800000000000000
+      internalID: 8149160620909150362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_21
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 18
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39126d2bd9d5df120800000000000000
+      internalID: 2449216704251044243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_22
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 18
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69eba262f523a21f0800000000000000
+      internalID: -1068986577303454058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_23
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 17
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efcedc3c3febfb950800000000000000
+      internalID: 6467097544098704638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_24
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 18
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee3a8a553a85b8240800000000000000
+      internalID: 4795023686806053870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tents_25
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 16
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fd31ecce56e1850800000000000000
+      internalID: 6349624592383074176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tents_0: 643645115921683493
+      Tents_1: -8038001218310726858
+      Tents_10: -4575663886916318950
+      Tents_11: 4579236399591956971
+      Tents_12: -7893340437646488174
+      Tents_13: 6947609306991934844
+      Tents_14: 679693659090357712
+      Tents_15: -5314674565960002762
+      Tents_16: -2893995244887371510
+      Tents_17: -5493101657333799658
+      Tents_18: -3602820058544948863
+      Tents_19: 4931424221646258497
+      Tents_2: 7079025666374799206
+      Tents_20: 8149160620909150362
+      Tents_21: 2449216704251044243
+      Tents_22: -1068986577303454058
+      Tents_23: 6467097544098704638
+      Tents_24: 4795023686806053870
+      Tents_25: 6349624592383074176
+      Tents_3: -8213362364964589203
+      Tents_4: -7334810911669745368
+      Tents_5: -4925877420089872468
+      Tents_6: 7379123157466597646
+      Tents_7: -8578273726886940135
+      Tents_8: -6144478930536633312
+      Tents_9: -1687483952925833633
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
