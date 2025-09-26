@@ -1,6 +1,7 @@
 using UnityEngine;
 using WhaleShark.Config;
 using WhaleShark.Core;
+using UnityEngine.Tilemaps;
 
 namespace WhaleShark.Gameplay
 {
@@ -10,219 +11,136 @@ namespace WhaleShark.Gameplay
     {
         public MoveConfig config;
 
-        [Header("Ground Check")]
-        public Transform groundCheck; // 선택: 별도의 Ground 기준 Transform
-        public Vector2 groundBoxSize = new Vector2(0.5f, 0.1f); // 0 또는 음수면 자동 계산
-        [Range(0f, 0.2f)] public float groundCheckSkin = 0.02f; // 폭 축소 및 발 아래 여유
+        [Header("TopDown Settings")] [Tooltip("대각선 입력 시 하나의 축만 선택(절대값 큰 축)하여 순수 4방향 이동")]
+        public bool cardinalOnly = true;
 
-        [Header("Debug")]
-        public bool showGroundCheck = true;
+        [Tooltip("입력 민감도 임계 (이 값 이하 입력은 0으로 간주)")]
+        public float inputDeadZone = 0.1f;
 
-        Rigidbody2D rb;
-        Collider2D col;
-        float moveX;
-        float coyoteTimer;
-        float jumpBufferTimer;
-        int jumpCount;
-        bool isGrounded;
-        bool wasGrounded;
-        InputManager input;
+        [Tooltip("(선택) 이동 후 타일 셀 중앙에 스냅")] public bool snapToGrid;
+
+        [Tooltip("그리드 스냅 적용 허용 오차(셀 중심까지 거리)")]
+        public float snapThreshold = 0.15f;
+
+        [Tooltip("스냅 대상 타일맵 (없으면 스냅 불가)")] public Tilemap referenceTilemap;
+
+        [Header("Debug")] public bool debugDrawVelocity;
+
+        [Header("Test Pollution")] 
+        [Tooltip("테스트: 이동 중 바라보는/이동하는 방향 타일 오염 활성화")] public bool testPolluteWhileMoving = true;
+        [Tooltip("오염 적용 주기(초)")] public float pollutionInterval = 0.15f;
+        [Tooltip("앞으로 몇 타일 떨어진 곳을 오염시킬지 (0=현재, 1=한 칸 앞)")] public int forwardTiles; // 기본 0
+        [Tooltip("타일 월드 크기(스케일). forwardTiles>0 일 때 오프셋 계산용")] public float tileWorldSize = 1f;
+        [Tooltip("맵 매니저 수동 할당(없으면 자동 탐색)")] public MapManager mapManager;
+
+        Rigidbody2D _rb;
+        Vector2 _moveDir;
+        InputManager _input;
+
+        float _pollutionTimer;
 
         void Awake()
         {
-            rb = GetComponent<Rigidbody2D>();
-            col = GetComponent<Collider2D>();
+            _rb = GetComponent<Rigidbody2D>();
+            // Collider2D 참조는 현재 사용 안 하므로 제거 (필요 시 복원)
+            _rb.gravityScale = 0f; // 탑뷰: 중력 제거
+            _rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
 
-        void Start()
-        {
-            input = InputManager.Instance;
-        }
+        void Start() => _input = InputManager.Instance;
 
         void Update()
         {
             HandleInput();
-            CheckGrounded();
-            HandleCoyoteTime();
-            HandleJumpBuffer();
+            HandleFlip();
+            if (snapToGrid)
+                TrySnapToGrid();
         }
 
         void FixedUpdate()
         {
             HandleMovement();
-            HandleJump();
-            HandleVariableJumpHeight();
+            if (testPolluteWhileMoving)
+                ApplyTestPollution();
         }
 
         void HandleInput()
         {
-            if (input != null)
+            if (config == null) return;
+            Vector2 raw = _input != null ? _input.MoveInput : Vector2.zero;
+
+            if (raw.magnitude < inputDeadZone)
             {
-                moveX = input.MoveInput.x;
-                if (input.JumpPressed)
-                {
-                    jumpBufferTimer = config.jumpBufferTime;
-                }
+                _moveDir = Vector2.zero;
+                return;
             }
-        }
 
-        void CheckGrounded()
-        {
-            wasGrounded = isGrounded;
-
-            // BoxCast 원점과 크기 계산
-            var bounds = col.bounds;
-
-            Vector2 size = groundBoxSize;
-            if (size.x <= 0f || size.y <= 0f)
+            if (cardinalOnly)
             {
-                // 플레이어 콜라이더 기준 자동 사이즈
-                float width = Mathf.Max(0.1f, bounds.size.x - 2f * groundCheckSkin);
-                float height = Mathf.Max(0.02f, Mathf.Min(0.2f, config.groundCheckDist));
-                size = new Vector2(width, height);
+                if (Mathf.Abs(raw.x) > Mathf.Abs(raw.y))
+                    _moveDir = new Vector2(Mathf.Sign(raw.x), 0f);
+                else
+                    _moveDir = new Vector2(0f, Mathf.Sign(raw.y));
             }
             else
             {
-                // 스킨 두께만큼 가로 축소
-                size.x = Mathf.Max(0.05f, size.x - 2f * groundCheckSkin);
+                _moveDir = raw.normalized;
             }
-
-            float angle;
-            Vector2 origin;
-            Vector2 dir;
-            if (groundCheck != null)
-            {
-                origin = groundCheck.position;
-                angle = groundCheck.eulerAngles.z;
-                dir = -(Vector2)groundCheck.up; // groundCheck 아래 방향으로 캐스트
-            }
-            else
-            {
-                // 발 위치 근처에서 시작 (박스의 아래쪽이 콜라이더 바닥에 가깝도록 살짝 올려줌)
-                origin = new Vector2(bounds.center.x, bounds.min.y + size.y * 0.5f + groundCheckSkin);
-                angle = 0f;
-                dir = Vector2.down;
-            }
-
-            var hit = Physics2D.BoxCast(origin, size, angle, dir, config.groundCheckDist, config.groundMask);
-            isGrounded = hit.collider != null;
-
-            // 착지 시 점프 카운트 리셋
-            if (isGrounded && !wasGrounded)
-            {
-                jumpCount = 0;
-            }
-        }
-
-        void HandleCoyoteTime()
-        {
-            if (isGrounded)
-                coyoteTimer = config.coyoteTime;
-            else
-                coyoteTimer -= Time.deltaTime;
-        }
-
-        void HandleJumpBuffer()
-        {
-            if (jumpBufferTimer > 0)
-                jumpBufferTimer -= Time.deltaTime;
         }
 
         void HandleMovement()
         {
-            float targetSpeed = moveX * config.moveSpeed;
-
-            // 공중에서는 제어력 감소
-            if (!isGrounded)
-                targetSpeed *= config.airControl;
-
-            rb.linearVelocity = new Vector2(targetSpeed, rb.linearVelocity.y);
-
-            // 스프라이트 플립
-            if (Mathf.Abs(moveX) > 0.01f)
-                transform.localScale = new Vector3(Mathf.Sign(moveX), 1, 1);
+            if (config == null) return;
+            _rb.linearVelocity = _moveDir * config.moveSpeed;
         }
 
-        void HandleJump()
+        void HandleFlip()
         {
-            bool canJump = (coyoteTimer > 0 || jumpCount < config.maxJumps) && jumpBufferTimer > 0;
-
-            if (canJump)
+            if (_moveDir.x != 0f)
             {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
-                rb.AddForce(Vector2.up * config.jumpPower, ForceMode2D.Impulse);
-
-                jumpCount++;
-                jumpBufferTimer = 0;
-                coyoteTimer = 0;
+                transform.localScale = new Vector3(Mathf.Sign(_moveDir.x), 1f, 1f);
             }
         }
 
-        void HandleVariableJumpHeight()
+        void TrySnapToGrid()
         {
-            if (rb.linearVelocity.y < 0)
+            if (referenceTilemap == null) return;
+            // 이동 중이 아닐 때만 스냅(멈췄거나 축단위 입력 해제 시)
+            if (_moveDir != Vector2.zero) return;
+            Vector3 worldPos = transform.position;
+            Vector3Int cell = referenceTilemap.WorldToCell(worldPos);
+            Vector3 cellCenter = referenceTilemap.GetCellCenterWorld(cell);
+            float dist = Vector2.Distance(new Vector2(worldPos.x, worldPos.y), new Vector2(cellCenter.x, cellCenter.y));
+            if (dist <= snapThreshold)
             {
-                // 떨어질 때 중력 증가
-                rb.linearVelocity += Vector2.up * (Physics2D.gravity.y * (config.fallMultiplier - 1) * Time.fixedDeltaTime);
+                transform.position = new Vector3(cellCenter.x, cellCenter.y, transform.position.z);
             }
-            else if (rb.linearVelocity.y > 0 && !(input?.JumpHeld ?? Input.GetButton("Jump")))
+        }
+
+        void ApplyTestPollution()
+        {
+            if (mapManager == null)
             {
-                // 짧은 점프
-                rb.linearVelocity += Vector2.up * (Physics2D.gravity.y * (config.lowJumpMultiplier - 1) * Time.fixedDeltaTime);
+                mapManager = FindFirstObjectByType<MapManager>();
+                if (mapManager == null) return;
             }
+            if (_moveDir == Vector2.zero) { _pollutionTimer = 0f; return; }
+            _pollutionTimer -= Time.fixedDeltaTime;
+            if (_pollutionTimer > 0f) return;
+            _pollutionTimer = pollutionInterval;
+
+            Vector3 basePos = transform.position;
+            Vector3 forwardOffset = Vector3.zero;
+            if (forwardTiles > 0)
+                forwardOffset = new Vector3(_moveDir.x, _moveDir.y, 0f) * (tileWorldSize * forwardTiles * 0.98f);
+            mapManager.PolluteAtWorld(basePos + forwardOffset);
         }
 
         void OnDrawGizmosSelected()
         {
-            if (!showGroundCheck) return;
-
-            // Gizmo에서 안전하게 콜라이더/사이즈 계산
-            var gizmoCol = Application.isPlaying ? col : GetComponent<Collider2D>();
-            if (gizmoCol == null || config == null) return;
-
-            var bounds = gizmoCol.bounds;
-            Vector2 size = groundBoxSize;
-            if (size.x <= 0f || size.y <= 0f)
-            {
-                float width = Mathf.Max(0.1f, bounds.size.x - 2f * groundCheckSkin);
-                float height = Mathf.Max(0.02f, Mathf.Min(0.2f, config.groundCheckDist));
-                size = new Vector2(width, height);
-            }
-            else
-            {
-                size.x = Mathf.Max(0.05f, size.x - 2f * groundCheckSkin);
-            }
-
-            float angle;
-            Vector3 origin;
-            Vector3 dir;
-            if (groundCheck != null)
-            {
-                angle = groundCheck.eulerAngles.z;
-                origin = groundCheck.position;
-                dir = -groundCheck.up;
-            }
-            else
-            {
-                angle = 0f;
-                origin = new Vector3(bounds.center.x, bounds.min.y + size.y * 0.5f + groundCheckSkin, transform.position.z);
-                dir = Vector3.down;
-            }
-
-            // 시작 박스와 끝 박스 그리기
-            var end = origin + dir.normalized * config.groundCheckDist;
-            Gizmos.color = isGrounded ? Color.green : Color.red;
-            // 시작
-            Matrix4x4 old = Gizmos.matrix;
-            Gizmos.matrix = Matrix4x4.TRS(origin, Quaternion.Euler(0, 0, angle), Vector3.one);
-            Gizmos.DrawWireCube(Vector3.zero, new Vector3(size.x, size.y, 0.01f));
-            // 끝
-            Gizmos.matrix = Matrix4x4.TRS(end, Quaternion.Euler(0, 0, angle), Vector3.one);
-            Gizmos.DrawWireCube(Vector3.zero, new Vector3(size.x, size.y, 0.01f));
-            Gizmos.matrix = old;
-
-            // 캐스트 경로 표시
-            Gizmos.DrawLine(origin, end);
+            if (!debugDrawVelocity || _rb == null) return;
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawLine(transform.position, transform.position + (Vector3)(_rb.linearVelocity * 0.25f));
         }
     }
 }

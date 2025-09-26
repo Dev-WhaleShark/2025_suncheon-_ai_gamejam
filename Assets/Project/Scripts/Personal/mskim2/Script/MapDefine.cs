@@ -1,43 +1,112 @@
+using System;
 using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.Tilemaps;
 
-public enum RoomType
-{
-    Start,
-    Normal,
-    Boss,
-    Shop,
-}
-
-public enum Direction { North, South, East, West }
-
-public class Room
-{
-    public Vector2Int position; // 방의 위치 (x, y)
-    public RoomType type; // 방의 타입 (시작, 일반, 보스, 상점 등)
-    public bool visited; // 플레이어가 방문했는지 여부
-    public GameObject roomObject; // 방의 게임 오브젝트 (씬에서의 실제 방)
-
-    public Dictionary<Direction, bool> connections;
-    public PollutionGrid pollutionGrid; // 오염 데이터 추가
-    public bool isCleared;
-    public bool isVisited;
-}
-
+/// <summary>
+/// 직사각형 타일맵을 2D 배열로 매핑하여 타일 단위 오염도 관리.
+/// </summary>
 public class PollutionGrid
 {
-    private int[,] pollutionLevels;  // 0~4 오염도
-    public Vector2Int gridSize;
-    
-    public int GetPollution(Vector2Int pos) => pollutionLevels[pos.x, pos.y];
-    public void SetPollution(Vector2Int pos, int level) => pollutionLevels[pos.x, pos.y] = Mathf.Clamp(level, 0, 4);
-}
+    private bool[,] polluted; // true = 오염, false = 깨끗
+    public Vector2Int GridSize { get; private set; }
+    public bool IsInitialized => polluted != null;
 
-public class TilemapData
-{
-    public TileBase[] floorTiles;
-    public TileBase[] wallTiles;
-    public TileBase[] decorationTiles;
-    public Vector3Int[] doorPositions;   // 문 위치들
+    /// <summary>
+    /// size 크기 초기화.
+    /// </summary>
+    public void Initialize(Vector2Int size)
+    {
+        if (size.x <= 0 || size.y <= 0)
+        {
+            Debug.LogError($"PollutionGrid Initialize 실패: 잘못된 크기 {size}");
+            return;
+        }
+
+        GridSize = size;
+        polluted = new bool[size.x, size.y];
+        for (int x = 0; x < size.x; x++)
+        {
+            for (int y = 0; y < size.y; y++)
+            {
+                polluted[x, y] = false;
+            }
+        }
+    }
+
+    public bool InBounds(Vector2Int pos) => pos.x >= 0 && pos.y >= 0 && pos.x < GridSize.x && pos.y < GridSize.y;
+
+    private bool Validate(Vector2Int pos)
+    {
+        if (!IsInitialized)
+        {
+            Debug.LogWarning("PollutionGrid is Not Initialized");
+            return false;
+        }
+
+        if (!InBounds(pos)) return false;
+        return true;
+    }
+
+    public bool IsPolluted(Vector2Int pos)
+    {
+        if (!Validate(pos)) return false;
+        return polluted[pos.x, pos.y];
+    }
+
+    public void SetPolluted(Vector2Int pos, bool polluted)
+    {
+        if (!Validate(pos)) return;
+        if (this.polluted[pos.x, pos.y] == polluted) return;
+        this.polluted[pos.x, pos.y] = polluted;
+        OnPollutionChanged?.Invoke(pos, polluted);
+    }
+
+    public void PolluteTile(Vector2Int pos) => SetPolluted(pos, true);
+    public void CleanTile(Vector2Int pos) => SetPolluted(pos, false);
+
+    public void Toggle(Vector2Int pos)
+    {
+        if (!Validate(pos)) return;
+        SetPolluted(pos, !polluted[pos.x, pos.y]);
+    }
+
+    /// <summary>
+    /// 전체를 polluted 값으로 일괄 세팅
+    /// </summary>
+    public void SetAll(bool polluted)
+    {
+        if (!IsInitialized) return;
+        for (int x = 0; x < GridSize.x; x++)
+        {
+            for (int y = 0; y < GridSize.y; y++)
+            {
+                if (this.polluted[x, y] != polluted)
+                {
+                    this.polluted[x, y] = polluted;
+                    OnPollutionChanged?.Invoke(new Vector2Int(x, y), polluted);
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// 정화된 타일 비율(0~1)
+    /// </summary>
+    public float GetCleanRatio()
+    {
+        if (!IsInitialized) return 0f;
+        int total = GridSize.x * GridSize.y;
+        if (total == 0) return 0f;
+        int clean = 0;
+        for (int x = 0; x < GridSize.x; x++)
+        {
+            for (int y = 0; y < GridSize.y; y++)
+            {
+                if (!polluted[x, y]) clean++;
+            }
+        }
+
+        return (float)clean / total;
+    }
+
+    public event Action<Vector2Int, bool> OnPollutionChanged; // (그리드좌표, 오염여부)
 }
