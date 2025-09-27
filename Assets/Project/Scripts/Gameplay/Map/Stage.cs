@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using WhaleShark.Core;
 using System.Collections.Generic;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -282,6 +283,13 @@ public class Stage : MonoBehaviour
         }
 
         mapGrid.SetPollution(cell, enable);
+
+        // clear ratio update
+        float clearRatio = GetCleanPercentage();
+        if (clearRatio >= 100.0f)
+        {
+            SummonBoss();
+        }
     }
 
     /// <summary>
@@ -651,4 +659,25 @@ public class Stage : MonoBehaviour
         }
     }
     #endregion
+
+    private bool isBossSummoned;
+    [SerializeField] GameObject bossPrefab;
+    public System.Action onStageCleared; // stage manager로 어떻게 연결할지 생각이 ㅠㅠ..
+
+    void SummonBoss()
+    {
+        if (!bossPrefab || isBossSummoned) return;
+
+        Enemy boss = Instantiate(bossPrefab, transform.position, Quaternion.identity).GetComponent<Enemy>();
+        isBossSummoned = true;
+
+        boss.onEnemyDied += OnBossDied;
+    }
+
+    void OnBossDied()
+    {
+        //stageManager.ReportStageCleared();
+        Debug.Log("Stage OnBossDied called");
+        onStageCleared.Invoke();
+    }
 }

@@ -35,6 +35,8 @@ public class StageManager : MonoBehaviour
 
     public event Action<RewardData> OnRewardChosen;
 
+    private RewardData[] collectedRewards;
+
     #region Unity
     private void Awake()
     {
@@ -87,6 +89,8 @@ public class StageManager : MonoBehaviour
         {
             instance = InstantiateStage(stages[index]);
             runtimeInstances[index] = instance;
+
+            instance.onStageCleared += ReportStageCleared;
         }
 
         currentStageIndex = index;

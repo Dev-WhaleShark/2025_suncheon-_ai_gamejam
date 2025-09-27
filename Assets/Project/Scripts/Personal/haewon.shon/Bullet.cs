@@ -4,6 +4,7 @@ public class Bullet : MonoBehaviour
 {
     public int damage = 1;
     public float lifetime = 3.0f;
+    public float speed = 20.0f;
     
     public GameObject explosionPrefab;
 
@@ -26,8 +27,6 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Hit " + other.name);
-
         Enemy enemyComponent = other.GetComponent<Enemy>();
         if (enemyComponent)
         {
