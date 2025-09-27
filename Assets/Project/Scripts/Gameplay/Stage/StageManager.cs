@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using WhaleShark.Gameplay;
 
@@ -22,8 +23,14 @@ public class StageManager : MonoBehaviour
     private Stage[] runtimeInstances;
     private bool[] clearedFlags;
 
-    private bool waitingReward = false;          // 보상 선택 대기 중
-    private int pendingNextStageIndex = -1;      // 선택 후 이동할 스테이지
+    private bool waitingReward = false;
+    private int pendingNextStageIndex = -1;
+    private RewardData lastChosenReward;
+
+    // Transition overlay & sequence
+    private CanvasGroup transitionOverlay;
+    private RectTransform transitionOverlayRect;
+    private Sequence rewardTransitionSeq;
 
     public Stage CurrentStage => currentStageInstance;
     public int CurrentStageIndex => currentStageIndex;
@@ -188,55 +195,20 @@ public class StageManager : MonoBehaviour
                 waitingReward = true;
                 pendingNextStageIndex = next;
 
-                // 보상 UI가 이미 떠 있으면 추가 표시 생략
+                rewardUI.externalTransitionMode = true;
+                rewardUI.onRewardChosen.AddListener(StoreChosenReward);
+                rewardUI.onRewardCardChosenVisual.AddListener(OnRewardCardVisualChosen);
+
                 if (!rewardUI.IsShown)
                 {
                     rewardUI.ShowRandomFromDatabase(-1 );
-
                 }
-
-                // 보상 선택 후 콜백 연결
-                rewardUI.onRewardChosen.AddListener(OnRewardChosenInternal);
             }
             else
             {
-                // 보상 UI 비표시 설정 or 미할당 → 즉시 다음 스테이지
                 LoadStage(next);
             }
         }
-    }
-
-    private void OnRewardChosenInternal(RewardData data)
-    {
-        if (!waitingReward) return;
-        waitingReward = false;
-
-        // 리스너 정리
-        if (rewardUI != null)
-        {
-            rewardUI.onRewardChosen.RemoveListener(OnRewardChosenInternal);
-        }
-
-        int target = pendingNextStageIndex;
-        pendingNextStageIndex = -1;
-
-        if (IsValidIndex(target))
-        {
-            LoadStage(target);
-        }
-        else
-        {
-            Debug.LogError("[StageManager] 다음 스테이지 인덱스가 유효하지 않습니다: " + target);
-        }
-    }
-
-    /// <summary>
-    /// 특정 스테이지가 클리어됐는지 여부.
-    /// </summary>
-    public bool IsCleared(int index)
-    {
-        if (!IsValidIndex(index)) return false;
-        return clearedFlags[index];
     }
 
     /// <summary>
@@ -265,11 +237,117 @@ public class StageManager : MonoBehaviour
         pendingNextStageIndex = -1;
     }
 
-    public float GetCurrentStageCleanPercent()
+    public bool IsStageCleared(int index)
     {
-        if (currentStageInstance == null) return 0f;
-        return currentStageInstance.GetCleanPercentage();
+        if (!IsValidIndex(index)) return false;
+        return clearedFlags[index];
     }
+
+    private void StoreChosenReward(RewardData data)
+    {
+        if (lastChosenReward == null)
+        {
+            lastChosenReward = data;
+        }
+    }
+
+    private void OnRewardCardVisualChosen(RewardCard card)
+    {
+        if (!waitingReward) return;
+        waitingReward = false;
+
+        if (rewardUI != null)
+        {
+            rewardUI.onRewardChosen.RemoveListener(StoreChosenReward);
+            rewardUI.onRewardCardChosenVisual.RemoveListener(OnRewardCardVisualChosen);
+            rewardUI.PrepareExternalTransition(card); // 다른 카드 제거 & 패널 숨김
+        }
+
+        OnRewardChosen?.Invoke(card.Data);
+        StartRewardToNextStageSequence(card, lastChosenReward, pendingNextStageIndex);
+    }
+
+    private void StartRewardToNextStageSequence(RewardCard card, RewardData data, int nextIndex)
+    {
+        KillRewardTransitionSequence();
+        EnsureTransitionOverlay();
+
+        if (card != null)
+        {
+            Destroy(card.gameObject);
+        }
+
+        transitionOverlay.alpha = 0f;
+
+        rewardTransitionSeq = DOTween.Sequence();
+
+        rewardTransitionSeq.Append(transitionOverlay.DOFade(0.6f, 0.30f).SetEase(Ease.Linear));
+        rewardTransitionSeq.AppendCallback(() =>
+        {
+            int tgt = nextIndex;
+            pendingNextStageIndex = -1;
+            if (IsValidIndex(tgt))
+            {
+                LoadStage(tgt);
+            }
+            else
+            {
+                Debug.LogWarning("[StageManager] Invalid next index during transition: " + tgt);
+            }
+        });
+
+        rewardTransitionSeq.AppendInterval(0.02f);
+        rewardTransitionSeq.AppendCallback(() =>
+        {
+            if (currentStageInstance != null)
+            {
+                var st = currentStageInstance.transform;
+                st.localScale = Vector3.one * 1.05f; // 가벼운 팝 효과 (과한 강조 제거)
+                rewardTransitionSeq.Join(st.DOScale(1f, 0.28f).SetEase(Ease.OutCubic));
+            }
+            rewardTransitionSeq.Join(transitionOverlay.DOFade(0f, 0.30f));
+        });
+        rewardTransitionSeq.OnComplete(() =>
+        {
+            transitionOverlay.gameObject.SetActive(false);
+            lastChosenReward = null;
+            rewardTransitionSeq = null;
+        });
+    }
+
+    private void EnsureTransitionOverlay()
+    {
+        if (transitionOverlay != null) { transitionOverlay.gameObject.SetActive(true); return; }
+        var canvasGO = new GameObject("StageTransitionOverlay", typeof(RectTransform), typeof(CanvasGroup));
+
+        Transform parent = rewardUI != null ? rewardUI.transform.root : transform;
+        canvasGO.transform.SetParent(parent, false);
+
+        transitionOverlayRect = canvasGO.GetComponent<RectTransform>();
+        transitionOverlayRect.anchorMin = Vector2.zero;
+        transitionOverlayRect.anchorMax = Vector2.one;
+        transitionOverlayRect.offsetMin = Vector2.zero;
+        transitionOverlayRect.offsetMax = Vector2.zero;
+        transitionOverlay = canvasGO.GetComponent<CanvasGroup>();
+
+        var img = canvasGO.AddComponent<UnityEngine.UI.Image>();
+        img.color = Color.black;
+        transitionOverlay.alpha = 0f;
+        canvasGO.SetActive(true);
+        // CanvasGroup raycast 차단 (필요 시 true)
+        transitionOverlay.blocksRaycasts = false;
+        transitionOverlay.interactable = false;
+    }
+
+    private void KillRewardTransitionSequence()
+    {
+        if (rewardTransitionSeq != null && rewardTransitionSeq.IsActive())
+        {
+            rewardTransitionSeq.Kill();
+            rewardTransitionSeq = null;
+        }
+    }
+
     #endregion
 
     #region Internal

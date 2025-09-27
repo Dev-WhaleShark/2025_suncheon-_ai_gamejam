@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using Mono.Cecil;
 
 public class Durumi : Enemy
 {
@@ -35,7 +34,7 @@ public class Durumi : Enemy
         targetPointIndex = Random.Range(0, numberOfPointsOnRoute);
         transform.position = new Vector3(points[targetPointIndex].x, points[targetPointIndex].y, -1);
     }
-    
+
     protected override void Idle()
     {
         currentState = EnemyState.Move;
@@ -57,7 +56,7 @@ public class Durumi : Enemy
         }
 
         if (canAttack)
-        { 
+        {
             currentState = EnemyState.Attack;
         }
     }
@@ -76,7 +75,7 @@ public class Durumi : Enemy
         rb.linearVelocity = Vector2.zero;
         animator.SetTrigger("OnAttack");
         yield return new WaitForSeconds(delayBeforeAttack);
-        
+
         audioSource.clip = attackSound;
         audioSource.Play();
 

@@ -159,7 +159,7 @@ public class StageManagerDebugWindow : EditorWindow
         sb.AppendLine($"Current Stage : {(cachedManager.CurrentStage ? cachedManager.CurrentStage.name : "(none)")}");
         if (cachedManager.CurrentStage != null)
         {
-            sb.AppendLine($"Cleared : {cachedManager.IsCleared(cachedManager.CurrentStageIndex)}");
+            sb.AppendLine($"Cleared : {cachedManager.IsStageCleared(cachedManager.CurrentStageIndex)}");
         }
         EditorGUILayout.HelpBox(sb.ToString(), MessageType.None);
     }
@@ -182,7 +182,7 @@ public class StageManagerDebugWindow : EditorWindow
                 {
                     int idx = r * cols + c;
                     if (idx >= count) break;
-                    bool cleared = cachedManager.IsCleared(idx);
+                    bool cleared = cachedManager.IsStageCleared(idx);
                     var style = new GUIStyle(EditorStyles.miniButtonMid)
                     {
                         normal = { textColor = cleared ? Color.green : Color.white },

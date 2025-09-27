@@ -19,6 +19,7 @@ namespace WhaleShark.Gameplay
         /// </summary>
         void Start()
         {
+            Application.targetFrameRate = 60;
             EventBus.PauseToggled += OnPauseToggled;
         }
 
