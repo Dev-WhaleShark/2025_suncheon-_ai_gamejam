@@ -1,17 +1,17 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(MapManager))]
+[CustomEditor(typeof(Stage))]
 public class MapManagerEditor : Editor
 {
-    private MapManager mgr;
+    private Stage mgr;
     private Vector2Int _lastPainted = new Vector2Int(int.MinValue, int.MinValue);
     private bool _dragging;
 
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
-        mgr = (MapManager)target;
+        mgr = (Stage)target;
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Debug Tools", EditorStyles.boldLabel);
 
@@ -86,7 +86,7 @@ public class MapManagerEditor : Editor
 
     private void OnSceneGUI()
     {
-        mgr = (MapManager)target;
+        mgr = (Stage)target;
         if (Application.isPlaying) return; // 에디터 편집 전용
         if (mgr == null) return;
         if (!mgr.enabled) return;
@@ -137,7 +137,7 @@ public class MapManagerEditor : Editor
         }
     }
 
-    private float GetCellSize(MapManager m)
+    private float GetCellSize(Stage m)
     {
         var so = new SerializedObject(m);
         var prop = so.FindProperty("cellSize");

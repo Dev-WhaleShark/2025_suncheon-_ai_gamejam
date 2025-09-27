@@ -26,6 +26,10 @@ namespace WhaleShark.Core
         public static event Action PlayerDied;
         /// <summary>플레이어 사망 이벤트를 발생시킵니다</summary>
         public static void PublishPlayerDied() => PlayerDied?.Invoke();
-        
+
+        /// <summary>플레이어 사망 시 발생하는 이벤트</summary>
+        public static event Action GameCleared;
+        /// <summary>플레이어 사망 이벤트를 발생시킵니다</summary>
+        public static void PublishGameCleared() => GameCleared?.Invoke();
     }
 }

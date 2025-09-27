@@ -11,6 +11,7 @@ namespace WhaleShark.Gameplay
         /// <summary>게임 시작 후 경과 시간</summary>
         public float gameTime = 0f;
 
+        public bool IsGameStarted = false;
 
         /// <summary>
         /// 이벤트 구독 등록
@@ -19,13 +20,11 @@ namespace WhaleShark.Gameplay
         void Start()
         {
             EventBus.PauseToggled += OnPauseToggled;
-            EventBus.PlayerDied += OnPlayerDied;
         }
 
         void OnDestroy()
         {
             EventBus.PauseToggled -= OnPauseToggled;
-            EventBus.PlayerDied -= OnPlayerDied;
         }
 
         /// <summary>
@@ -34,7 +33,7 @@ namespace WhaleShark.Gameplay
         /// </summary>
         void Update()
         {
-            if (!isPaused)
+            if (!isPaused && IsGameStarted )
             {
                 gameTime += Time.deltaTime;
             }
@@ -62,14 +61,10 @@ namespace WhaleShark.Gameplay
         /// 플레이어 사망 이벤트 핸들러
         /// 게임 오버 처리 및 데이터 저장
         /// </summary>
-        void OnPlayerDied()
-        {
-            Debug.Log("Player died!");
-        }
-
-        private void TestDied()
+        public void OnPlayerDied()
         {
             EventBus.PublishPlayerDied();
+            Debug.Log("Player died!");
         }
 
         public void StartPrologue()
@@ -79,6 +74,11 @@ namespace WhaleShark.Gameplay
             // 추가 초기화 로직
 
             LoadScene("Prologue");
+        }
+
+        public void GameClear()
+        {
+            WhaleShark.Core.EventBus.PublishGameCleared();
         }
 
         /// <summary>
