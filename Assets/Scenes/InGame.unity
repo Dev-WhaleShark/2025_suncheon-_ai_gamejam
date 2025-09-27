@@ -2048,7 +2048,7 @@ MonoBehaviour:
   onRewardChosen:
     m_PersistentCalls:
       m_Calls: []
-  debugLogSelection: 0
+  debugLogSelection: 1
 --- !u!1 &1752876298
 GameObject:
   m_ObjectHideFlags: 0
