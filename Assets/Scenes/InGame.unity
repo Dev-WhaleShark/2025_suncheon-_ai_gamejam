@@ -888,6 +888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bbe8b0c0e4cb784d975f59040bcdd62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageManager
+  rewardUI: {fileID: 1686822201}
   stages:
   - {fileID: 2721974017847011762, guid: f250d9d14c4e27d48ba9e2130013e445, type: 3}
   - {fileID: 2721974017847011762, guid: 55815d181af8eff4d8fbfb6b46585709, type: 3}
@@ -2020,6 +2021,7 @@ MonoBehaviour:
   cardsRoot: {fileID: 1686822197}
   cardPrefab: {fileID: 4953749019510954399, guid: 91d00f48518f0fe4da9da28272a27b3f, type: 3}
   maxCards: 3
+  rewardDatabase: {fileID: 11400000, guid: 3e27d468e4edf0345a5e81bd56d7c8fd, type: 2}
   entryYOffset: 400
   entryMoveDuration: 0.55
   entryMoveEase: 9
@@ -2046,7 +2048,7 @@ MonoBehaviour:
   onRewardChosen:
     m_PersistentCalls:
       m_Calls: []
-  debugLogSelection: 0
+  debugLogSelection: 1
 --- !u!1 &1752876298
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,8 +48,16 @@ public class RewardCard : MonoBehaviour
 
         if (iconImage != null)
         {
-            iconImage.sprite = data.icon;
-            iconImage.enabled = data.icon != null;
+            if (data.icon != null)
+            {
+                iconImage.sprite = data.icon;
+                iconImage.enabled = true;
+                ApplyIconVisuals(data);
+            }
+            else
+            {
+                iconImage.enabled = false; // 아이콘 없는 경우 숨김 (원하면 플레이스홀더 추가 가능)
+            }
         }
 
         if (titleText != null)
@@ -67,6 +75,35 @@ public class RewardCard : MonoBehaviour
             canvasGroup.alpha = 1f;
             canvasGroup.blocksRaycasts = true;
             canvasGroup.interactable = true;
+        }
+    }
+
+    private void ApplyIconVisuals(RewardData data)
+    {
+        if (iconImage == null || data == null) return;
+
+        // Tint
+        iconImage.color = data.iconTint;
+
+        if (data.useNativeSize && data.icon != null)
+        {
+            iconImage.SetNativeSize();
+            // 클램프: maxIconSize 범위 안으로 비율 유지하며 축소
+            var rt = iconImage.rectTransform;
+            Vector2 size = rt.sizeDelta;
+            float maxW = Mathf.Max(1f, data.maxIconSize.x);
+            float maxH = Mathf.Max(1f, data.maxIconSize.y);
+            float scale = 1f;
+            if (size.x > maxW || size.y > maxH)
+            {
+                float sx = maxW / size.x;
+                float sy = maxH / size.y;
+                scale = Mathf.Min(sx, sy);
+            }
+            if (scale < 1f)
+            {
+                rt.sizeDelta = size * scale;
+            }
         }
     }
 
@@ -132,4 +169,3 @@ public class RewardCard : MonoBehaviour
         }
     }
 }
-

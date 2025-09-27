@@ -415,6 +415,18 @@ public class Stage : MonoBehaviour
     {
         mapGrid.SetAllClean();
     }
+
+    public float GetCleanPercentage()
+    {
+        if (!isInit)
+            return 100f;
+        int totalCells = gridSizeInCells.x * gridSizeInCells.y;
+
+        if (totalCells == 0)
+            return 100f;
+
+        return mapGrid.GetCleanRatio() * 100f;
+    }
     #endregion
 
     // ====== Debug & Editor Utilities (게임 플레이 빌드에서 호출 지양) ==================
