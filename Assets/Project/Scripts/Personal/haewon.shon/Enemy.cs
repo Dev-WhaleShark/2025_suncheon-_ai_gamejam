@@ -29,11 +29,16 @@ public class Enemy : MonoBehaviour
     protected float currentHealth;
     protected bool canAttack = true;
 
+    protected float xScale;
+    protected Animator animator;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         currentHealth = maxHealth;
+        xScale = transform.localScale.x;
     }
 
     protected virtual void Start()
@@ -49,6 +54,8 @@ public class Enemy : MonoBehaviour
         if (currentState == EnemyState.Dead) return;
 
         StateLogic();
+
+
     }
 
     public void OnTakeDamage(int damage)

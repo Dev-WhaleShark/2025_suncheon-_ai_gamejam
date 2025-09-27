@@ -79,6 +79,10 @@ public class Crab : Enemy
         yield return new WaitForSeconds(delayAfterAttack);
         currentState = EnemyState.Move;
         rb.linearVelocity = (points[targetPointIndex] - (Vector2)transform.position).normalized * moveSpeed;
+        
+        // 바라보는 방향 설정
+        if (rb.linearVelocityX > 0.0f) transform.localScale = new Vector3(-xScale, transform.localScale.y, 1.0f);
+        else if (rb.linearVelocityX < 0.0f) transform.localScale = new Vector3(xScale, transform.localScale.y, 1.0f);
     }
 
     void CheckHit()

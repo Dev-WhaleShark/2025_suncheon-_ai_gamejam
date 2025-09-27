@@ -48,6 +48,10 @@ public class TrashPile : Enemy
             targetPointIndex = (targetPointIndex + 1) % numberOfPoints;
             targetPoint = points[targetPointIndex];
             rb.linearVelocity = (targetPoint - (Vector2)transform.position).normalized * moveSpeed;
+            
+            // 바라보는 방향 설정
+            if (rb.linearVelocityX > 0.0f) transform.localScale = new Vector3(-xScale, transform.localScale.y, 1.0f);
+            else if (rb.linearVelocityX < 0.0f) transform.localScale = new Vector3(xScale, transform.localScale.y, 1.0f);
         }
 
         if (canAttack)

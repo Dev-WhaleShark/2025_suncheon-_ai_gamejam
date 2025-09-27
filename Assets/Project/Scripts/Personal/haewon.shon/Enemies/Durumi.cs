@@ -57,6 +57,10 @@ public class Durumi : Enemy
             targetPoint = points[targetPointIndex];
             rb.linearVelocity = (targetPoint - (Vector2)transform.position).normalized * moveSpeed;
             isWatchingLeft = rb.linearVelocityX < 0;
+
+            // 바라보는 방향 설정
+            if (rb.linearVelocityX > 0.0f) transform.localScale = new Vector3(-xScale, transform.localScale.y, 1.0f);
+            else if (rb.linearVelocityX < 0.0f) transform.localScale = new Vector3(xScale, transform.localScale.y, 1.0f);
         }
 
         if (canAttack)

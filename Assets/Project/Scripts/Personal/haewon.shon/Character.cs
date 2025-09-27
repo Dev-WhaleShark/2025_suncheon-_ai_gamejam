@@ -4,7 +4,6 @@ using System.Collections;
 
 public class Character : MonoBehaviour
 {
-    [Header("Movement")]
     Rigidbody2D rb;
     private Vector2 moveInput;
 
@@ -25,11 +24,15 @@ public class Character : MonoBehaviour
     private bool hasSlowDebuff = false;
     private float slowTimer = 0.0f;
 
+    // Anim
+    private Animator animator;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         currentHealth = maxHealth;
     }
 
@@ -80,6 +83,8 @@ public class Character : MonoBehaviour
     {
         Vector2 inputVector = value.Get<Vector2>();
         moveInput = inputVector;
+
+        animator.SetBool("isWatchingLeft", inputVector.x < 0);
     }
 
     void OnAttack(InputValue value) // LMB
