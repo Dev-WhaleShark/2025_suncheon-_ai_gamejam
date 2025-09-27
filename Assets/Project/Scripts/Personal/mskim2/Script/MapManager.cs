@@ -1,261 +1,596 @@
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 using WhaleShark.Core;
+using System.Collections.Generic;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class MapManager : MonoBehaviour
-{ 
+{
+    [Header("Grid Config")]
+    [SerializeField] private Vector2Int gridSizeInCells = new Vector2Int(32, 32);
+
+    [SerializeField] private float cellSize = 1f;
+    [SerializeField] private Vector3 gridOrigin = Vector3.zero;
+
     [Header("UI")]
     [SerializeField] private TMP_Text cleanRatioText;
 
-    [Header("Tilemap")] 
-    [SerializeField] private Tilemap baseTilemap; // 고정 맵 타일맵
+    [Header("Pools")]
+    public MultiPrefabPool trashPool; // TrashObject 풀
+    public MultiPrefabPool pollutionPool; // PollutionObject 풀
 
-    [Header("Pollution Tiles")] 
-    [SerializeField] private TileBase pollutedTile; // 오염 상태 표현용 타일
-    [SerializeField] private TileBase cleanTile; // 정화 상태 대체 타일(옵션)
-    [SerializeField] private bool useCleanTile; // true: cleanTile 사용, false: 원본 타일 복원
+    [Header("Options")]
+    [Tooltip("타일이 Clean 상태로 완전히 돌아갈 때 잔여 오브젝트 자동 제거")]
+    [SerializeField] private bool autoRemoveWhenFullyClean = true;
 
-    [Header("Trash")] public SimplePool trashPool;
-    
-    public PollutionGrid PollutionGrid { get; private set; } = new PollutionGrid();
+    [Header("Debug View")]
+    [SerializeField] private bool debugDraw = true;
 
-    private Vector2Int gridSizeInCells; // 전체 그리드 셀 개수 (width/height)
-    private Vector2 cellWorldSize;
-    private BoundsInt bounds; // 타일맵 경계
+    [SerializeField] private bool debugLabels = true;
+    [SerializeField] private Color cleanColor = new Color(0.2f, 0.6f, 1f, 0.10f);
+    [SerializeField] private Color trashOnlyColor = new Color(1f, 0.9f, 0.15f, 0.40f);
+    [SerializeField] private Color pollutionOnlyColor = new Color(0.9f, 0.2f, 1f, 0.45f);
+    [SerializeField] private Color bothColor = new Color(1f, 0.45f, 0.2f, 0.55f); // Trash + Pollution
+    [SerializeField] private Color gridLineColor = new Color(1f, 1f, 1f, 0.12f);
+    [SerializeField] private int debugMaxCells = 10000;
+    [SerializeField] private float labelYOffsetFactor = 0.15f;
+
+    private MapGrid mapGrid = new();
     private bool isInit;
-    private TileBase[,] originalTiles; // 원본 타일 저장 (복원용)
 
-    private void OnValidate()
+    private readonly Dictionary<Vector2Int, TrashObject> _trashMap = new();
+    private readonly Dictionary<Vector2Int, PollutionObject> _pollutionMap = new();
+
+    public MapGrid Grid => mapGrid;
+
+    private void Awake()
     {
-        if (baseTilemap == null)
-            baseTilemap = GetComponentInChildren<Tilemap>();
+        Initialize();
     }
-
-    private void Awake() => Initialize();
 
     private void Start()
     {
-        if (!isInit) 
+        if (!isInit)
+        {
             Initialize();
+        }
     }
 
-    /// <summary>
-    /// PollutionGrid 초기화 및 원본 타일 캐시, 초기 오염 표시
-    /// </summary>
     public void Initialize()
     {
-        if (isInit) return;
-        if (baseTilemap == null)
+        if (isInit)
         {
-            Debug.LogError("MapManager: baseTilemap 이 설정되지 않았습니다.", this);
             return;
         }
 
-        bounds = baseTilemap.cellBounds;
-        gridSizeInCells = new Vector2Int(bounds.size.x, bounds.size.y);
-        cellWorldSize = baseTilemap.cellSize;
+        if (gridSizeInCells.x <= 0 || gridSizeInCells.y <= 0)
+        {
+            Debug.LogError($"[MapManager] 잘못된 Grid Size {gridSizeInCells}");
+            gridSizeInCells = new Vector2Int(Mathf.Max(1, gridSizeInCells.x), Mathf.Max(1, gridSizeInCells.y));
+        }
 
-        PollutionGrid.Initialize(gridSizeInCells);
-        CacheOriginalTiles();
-        PollutionGrid.OnPollutionChanged += HandlePollutionChanged;
-        RefreshAllTiles();
+        cellSize = Mathf.Max(0.01f, cellSize);
+        mapGrid.Initialize(gridSizeInCells);
+        mapGrid.OnTileStateChanged += HandleTileStateChanged;
         isInit = true;
-
         UpdateCleanRatioUI();
     }
 
     private void OnDestroy()
     {
-        PollutionGrid.OnPollutionChanged -= HandlePollutionChanged;
-    }
-
-    private void CacheOriginalTiles()
-    {
-        originalTiles = new TileBase[gridSizeInCells.x, gridSizeInCells.y];
-        for (int x = 0; x < gridSizeInCells.x; x++)
+        if (mapGrid != null)
         {
-            for (int y = 0; y < gridSizeInCells.y; y++)
-            {
-                var cell = new Vector3Int(x + bounds.xMin, y + bounds.yMin, 0);
-                originalTiles[x, y] = baseTilemap.HasTile(cell) ? baseTilemap.GetTile(cell) : null;
-            }
+            mapGrid.OnTileStateChanged -= HandleTileStateChanged;
         }
     }
 
-    private void HandlePollutionChanged(Vector2Int gridPos, bool polluted)
+    private void HandleTileStateChanged(Vector2Int cell, TileState state)
     {
-        var cell = new Vector3Int(gridPos.x + bounds.xMin, gridPos.y + bounds.yMin, 0);
-        if (!baseTilemap.HasTile(cell)) return; // 타일 없는 곳은 무시
-        ApplyTileState(cell, gridPos, polluted);
+        bool hasTrash = (state & TileState.Trash) != 0;
+        bool hasPollution = (state & TileState.Pollution) != 0;
+
+        if (hasTrash)
+        {
+            if (!_trashMap.ContainsKey(cell))
+            {
+                SpawnTrashObject(cell, spawnOnly: true);
+            }
+        }
+        else
+        {
+            if (_trashMap.ContainsKey(cell))
+            {
+                DespawnTrashObject(cell);
+            }
+        }
+
+        if (hasPollution)
+        {
+            if (!_pollutionMap.ContainsKey(cell))
+            {
+                SpawnPollutionObject(cell, spawnOnly: true);
+            }
+        }
+        else
+        {
+            if (_pollutionMap.ContainsKey(cell))
+            {
+                DespawnPollutionObject(cell);
+            }
+        }
+
+        if (!hasTrash && !hasPollution && autoRemoveWhenFullyClean)
+        {
+            DespawnTrashObject(cell);
+            DespawnPollutionObject(cell);
+        }
+
         UpdateCleanRatioUI();
     }
 
     private void UpdateCleanRatioUI()
     {
-        if (cleanRatioText == null) return;
-        // :P1 이 퍼센트 변환을 이미 수행하므로 % 추가하지 않음
-        cleanRatioText.text = $"Clean Ratio: {GetCleanRatio():P1}";
+        if (cleanRatioText != null)
+        {
+            cleanRatioText.text = $"Clean Ratio: {mapGrid.GetCleanRatio():P1}";
+        }
     }
 
-    private void RefreshAllTiles()
+    public bool WorldToGrid(Vector3 worldPos, out Vector2Int cell)
+    {
+        cell = default;
+
+        if (!isInit)
+        {
+            return false;
+        }
+
+        Vector3 local = worldPos - gridOrigin;
+
+        if (local.x < 0 || local.y < 0)
+        {
+            return false;
+        }
+
+        int gx = Mathf.FloorToInt(local.x / cellSize);
+        int gy = Mathf.FloorToInt(local.y / cellSize);
+        var p = new Vector2Int(gx, gy);
+
+        if (!mapGrid.InBounds(p))
+        {
+            return false;
+        }
+
+        cell = p;
+        return true;
+    }
+
+    public Vector3 GridToWorldCenter(Vector2Int cell)
+    {
+        return gridOrigin + new Vector3((cell.x + 0.5f) * cellSize, (cell.y + 0.5f) * cellSize, 0f);
+    }
+
+    public void SetTrash(Vector2Int cell, bool enable)
+    {
+        if (!mapGrid.InBounds(cell))
+        {
+            return;
+        }
+
+        mapGrid.SetTrash(cell, enable);
+    }
+
+    public void SetPollution(Vector2Int cell, bool enable)
+    {
+        if (!mapGrid.InBounds(cell))
+        {
+            return;
+        }
+
+        mapGrid.SetPollution(cell, enable);
+    }
+
+    public void CleanCell(Vector2Int cell)
+    {
+        if (!mapGrid.InBounds(cell))
+        {
+            return;
+        }
+
+        mapGrid.CleanTile(cell);
+    }
+
+    public void SetTrashAtWorld(Vector3 pos, bool enable)
+    {
+        if (WorldToGrid(pos, out var c))
+        {
+            SetTrash(c, enable);
+        }
+    }
+
+    public void SetPollutionAtWorld(Vector3 pos, bool enable)
+    {
+        if (WorldToGrid(pos, out var c))
+        {
+            SetPollution(c, enable);
+        }
+    }
+
+    public void CleanAtWorld(Vector3 pos)
+    {
+        if (WorldToGrid(pos, out var c))
+        {
+            CleanCell(c);
+        }
+    }
+
+    public void PolluteAtWorld(Vector3 pos)
+    {
+        SetPollutionAtWorld(pos, true);
+    }
+
+    public void PlaceTrashAtWorld(Vector3 pos)
+    {
+        SetTrashAtWorld(pos, true);
+    }
+
+    public void ToggleTrash(Vector2Int cell)
+    {
+        SetTrash(cell, !mapGrid.HasTrash(cell));
+    }
+
+    public void TogglePollution(Vector2Int cell)
+    {
+        SetPollution(cell, !mapGrid.HasPollution(cell));
+    }
+
+    public TileState GetState(Vector2Int cell)
+    {
+        return mapGrid.GetTileState(cell);
+    }
+
+    public bool HasTrash(Vector2Int cell)
+    {
+        return mapGrid.HasTrash(cell);
+    }
+
+    public bool HasPollution(Vector2Int cell)
+    {
+        return mapGrid.HasPollution(cell);
+    }
+
+    public void SetAllTrash(bool enable)
     {
         for (int x = 0; x < gridSizeInCells.x; x++)
         {
             for (int y = 0; y < gridSizeInCells.y; y++)
             {
-                var cell = new Vector3Int(x + bounds.xMin, y + bounds.yMin, 0);
-                if (!baseTilemap.HasTile(cell)) continue;
-                bool polluted = PollutionGrid.IsPolluted(new Vector2Int(x, y));
-                ApplyTileState(cell, new Vector2Int(x, y), polluted);
+                mapGrid.SetTrash(new Vector2Int(x, y), enable);
             }
         }
     }
 
-    private void ApplyTileState(Vector3Int cell, Vector2Int gridPos, bool polluted)
+    public void SetAllPollution(bool enable)
     {
-        if (polluted)
+        mapGrid.SetAllPollution(enable);
+    }
+
+    public void SetAllClean()
+    {
+        mapGrid.SetAllClean();
+    }
+
+    public float GetCleanRatio()
+    {
+        return mapGrid.GetCleanRatio();
+    }
+
+    private void SpawnTrashObject(Vector2Int cell, bool spawnOnly = false)
+    {
+        if (_trashMap.ContainsKey(cell))
         {
-            if (pollutedTile == null) return; // 오염 타일 미지정이면 스킵
-            baseTilemap.SetTile(cell, pollutedTile);
+            return;
+        }
+
+        if (trashPool == null)
+        {
+            Debug.LogWarning("[MapManager] trashPool 미할당");
+            return;
+        }
+
+        var go = trashPool.Spawn(GridToWorldCenter(cell), Quaternion.identity);
+
+        if (go == null)
+        {
+            return;
+        }
+
+        var comp = go.GetComponent<TrashObject>();
+
+        if (comp == null)
+        {
+            Debug.LogWarning("[MapManager] TrashObject 컴포넌트 누락");
+            trashPool.Despawn(go);
+            return;
+        }
+
+        _trashMap[cell] = comp;
+        comp.onDestroyed.AddListener(() => OnTrashDestroyed(cell, comp));
+
+        if (!spawnOnly)
+        {
+            mapGrid.SetTrash(cell, true);
+        }
+    }
+
+    private void SpawnPollutionObject(Vector2Int cell, bool spawnOnly = false)
+    {
+        if (_pollutionMap.ContainsKey(cell))
+        {
+            return;
+        }
+
+        if (pollutionPool == null)
+        {
+            Debug.LogWarning("[MapManager] pollutionPool 미할당");
+            return;
+        }
+
+        var go = pollutionPool.Spawn(GridToWorldCenter(cell), Quaternion.identity);
+
+        if (go == null)
+        {
+            return;
+        }
+
+        var comp = go.GetComponent<PollutionObject>();
+
+        if (comp == null)
+        {
+            Debug.LogWarning("[MapManager] PollutionObject 컴포넌트 누락");
+            pollutionPool.Despawn(go);
+            return;
+        }
+
+        _pollutionMap[cell] = comp;
+        comp.onDestroyed.AddListener(() => OnPollutionDestroyed(cell, comp));
+
+        if (!spawnOnly)
+        {
+            mapGrid.SetPollution(cell, true);
+        }
+    }
+
+    private void DespawnTrashObject(Vector2Int cell)
+    {
+        if (!_trashMap.TryGetValue(cell, out var obj) || obj == null)
+        {
+            return;
+        }
+
+        _trashMap.Remove(cell);
+
+        if (trashPool != null)
+        {
+            trashPool.Despawn(obj.gameObject);
         }
         else
         {
-            if (useCleanTile && cleanTile != null)
+            obj.gameObject.SetActive(false);
+        }
+    }
+
+    private void DespawnPollutionObject(Vector2Int cell)
+    {
+        if (!_pollutionMap.TryGetValue(cell, out var obj) || obj == null)
+        {
+            return;
+        }
+
+        _pollutionMap.Remove(cell);
+
+        if (pollutionPool != null)
+        {
+            pollutionPool.Despawn(obj.gameObject);
+        }
+        else
+        {
+            obj.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnTrashDestroyed(Vector2Int cell, TrashObject obj)
+    {
+        if (_trashMap.TryGetValue(cell, out var cur) && cur == obj)
+        {
+            _trashMap.Remove(cell);
+        }
+
+        if (mapGrid.HasTrash(cell))
+        {
+            mapGrid.SetTrash(cell, false);
+        }
+    }
+
+    private void OnPollutionDestroyed(Vector2Int cell, PollutionObject obj)
+    {
+        if (_pollutionMap.TryGetValue(cell, out var cur) && cur == obj)
+        {
+            _pollutionMap.Remove(cell);
+        }
+
+        if (mapGrid.HasPollution(cell))
+        {
+            mapGrid.SetPollution(cell, false);
+        }
+    }
+
+    public void TestRandomTrash(int count = 5)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            var c = new Vector2Int(Random.Range(0, gridSizeInCells.x), Random.Range(0, gridSizeInCells.y));
+            mapGrid.SetTrash(c, true);
+        }
+    }
+
+    public void TestRandomPollution(int count = 5)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            var c = new Vector2Int(Random.Range(0, gridSizeInCells.x), Random.Range(0, gridSizeInCells.y));
+            mapGrid.SetPollution(c, true);
+        }
+    }
+
+    public void TestRandomBoth(int count = 5)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            var c = new Vector2Int(Random.Range(0, gridSizeInCells.x), Random.Range(0, gridSizeInCells.y));
+            mapGrid.SetPollution(c, true);
+            mapGrid.SetTrash(c, true);
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (!debugDraw)
+        {
+            return;
+        }
+
+        if (!Application.isPlaying || !isInit)
+        {
+            DrawGridOutline();
+            return;
+        }
+
+        int total = gridSizeInCells.x * gridSizeInCells.y;
+
+        if (total > debugMaxCells)
+        {
+            return;
+        }
+
+        float s = cellSize;
+
+        for (int x = 0; x < gridSizeInCells.x; x++)
+        {
+            for (int y = 0; y < gridSizeInCells.y; y++)
             {
-                baseTilemap.SetTile(cell, cleanTile);
-            }
-            else
-            {
-                int lx = gridPos.x;
-                int ly = gridPos.y;
-                if (originalTiles != null && lx >= 0 && ly >= 0 && lx < originalTiles.GetLength(0) && ly < originalTiles.GetLength(1))
+                var cell = new Vector2Int(x, y);
+                var state = mapGrid.GetTileState(cell);
+                bool t = (state & TileState.Trash) != 0;
+                bool p = (state & TileState.Pollution) != 0;
+                Color fill;
+
+                if (t && p)
                 {
-                    baseTilemap.SetTile(cell, originalTiles[lx, ly]);
+                    fill = bothColor;
+                }
+                else if (t)
+                {
+                    fill = trashOnlyColor;
+                }
+                else if (p)
+                {
+                    fill = pollutionOnlyColor;
+                }
+                else
+                {
+                    fill = cleanColor;
+                }
+
+                Vector3 center = GridToWorldCenter(cell);
+                Gizmos.color = fill;
+                Gizmos.DrawCube(center, new Vector3(s, s, 0.01f));
+                Gizmos.color = gridLineColor;
+                Gizmos.DrawWireCube(center, new Vector3(s, s, 0));
+#if UNITY_EDITOR
+                if (debugLabels && SceneView.currentDrawingSceneView != null)
+                {
+                    string label = (t && p) ? "P+T" : (p ? "P" : (t ? "T" : "C"));
+                    Handles.color = Color.white;
+                    Handles.Label(center + Vector3.up * (s * labelYOffsetFactor), label);
+                }
+#endif
+            }
+        }
+    }
+
+    private void DrawGridOutline()
+    {
+        float s = Mathf.Max(0.01f, cellSize);
+        Gizmos.color = gridLineColor;
+
+        for (int x = 0; x < gridSizeInCells.x; x++)
+        {
+            for (int y = 0; y < gridSizeInCells.y; y++)
+            {
+                Vector3 center = gridOrigin + new Vector3((x + 0.5f) * s, (y + 0.5f) * s, 0);
+                Gizmos.DrawWireCube(center, new Vector3(s, s, 0));
+            }
+        }
+    }
+
+#if UNITY_EDITOR
+    [CustomEditor(typeof(MapManager))]
+    private class MapManagerEditor : Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            DrawDefaultInspector();
+            var mgr = (MapManager)target;
+            EditorGUILayout.Space();
+            EditorGUILayout.LabelField("Debug Tools", EditorStyles.boldLabel);
+
+            using (new EditorGUILayout.HorizontalScope())
+            {
+                if (GUILayout.Button("All Clean"))
+                {
+                    mgr.SetAllClean();
+                }
+                if (GUILayout.Button("All Poll ON"))
+                {
+                    mgr.SetAllPollution(true);
+                }
+                if (GUILayout.Button("All Poll OFF"))
+                {
+                    mgr.SetAllPollution(false);
+                }
+            }
+
+            using (new EditorGUILayout.HorizontalScope())
+            {
+                if (GUILayout.Button("All Trash ON"))
+                {
+                    mgr.SetAllTrash(true);
+                }
+                if (GUILayout.Button("All Trash OFF"))
+                {
+                    mgr.SetAllTrash(false);
+                }
+            }
+
+            using (new EditorGUILayout.HorizontalScope())
+            {
+                if (GUILayout.Button("Rand Trash 5"))
+                {
+                    mgr.TestRandomTrash();
+                }
+                if (GUILayout.Button("Rand Poll 5"))
+                {
+                    mgr.TestRandomPollution();
+                }
+                if (GUILayout.Button("Rand Both 5"))
+                {
+                    mgr.TestRandomBoth();
                 }
             }
         }
     }
-
-    public bool WorldToPollutionGrid(Vector3 worldPos, out Vector2Int gridPos)
-    {
-        gridPos = default;
-        if (!isInit) return false;
-        var cell = baseTilemap.WorldToCell(worldPos);
-        int gx = cell.x - bounds.xMin;
-        int gy = cell.y - bounds.yMin;
-        if (gx < 0 || gy < 0 || gx >= gridSizeInCells.x || gy >= gridSizeInCells.y) return false;
-        gridPos = new Vector2Int(gx, gy);
-        return true;
-    }
-
-    public bool IsPollutedAtWorld(Vector3 worldPos)
-        => WorldToPollutionGrid(worldPos, out var gp) && PollutionGrid.IsPolluted(gp);
-
-    public void CleanAtWorld(Vector3 worldPos)
-    {
-        if (WorldToPollutionGrid(worldPos, out var gp)) PollutionGrid.CleanTile(gp);
-    }
-
-    public void PolluteAtWorld(Vector3 worldPos)
-    {
-        if (WorldToPollutionGrid(worldPos, out var gp)) PollutionGrid.PolluteTile(gp);
-    }
-
-    public void ToggleAtWorld(Vector3 worldPos)
-    {
-        if (WorldToPollutionGrid(worldPos, out var gp)) PollutionGrid.Toggle(gp);
-    }
-
-    public void CleanAtCell(Vector3Int cell)
-    {
-        var gp = new Vector2Int(cell.x - bounds.xMin, cell.y - bounds.yMin);
-        PollutionGrid.CleanTile(gp);
-    }
-
-    public void PolluteAtCell(Vector3Int cell)
-    {
-        var gp = new Vector2Int(cell.x - bounds.xMin, cell.y - bounds.yMin);
-        PollutionGrid.PolluteTile(gp);
-    }
-
-    public void ToggleAtCell(Vector3Int cell)
-    {
-        var gp = new Vector2Int(cell.x - bounds.xMin, cell.y - bounds.yMin);
-        PollutionGrid.Toggle(gp);
-    }
-
-    public void CleanArea(Vector3Int cellMinInclusive, Vector3Int cellMaxInclusive)
-        => IterateArea(cellMinInclusive, cellMaxInclusive, PollutionGrid.CleanTile);
-
-    public void PolluteArea(Vector3Int cellMinInclusive, Vector3Int cellMaxInclusive)
-        => IterateArea(cellMinInclusive, cellMaxInclusive, PollutionGrid.PolluteTile);
-
-    public void ToggleArea(Vector3Int cellMinInclusive, Vector3Int cellMaxInclusive)
-        => IterateArea(cellMinInclusive, cellMaxInclusive, PollutionGrid.Toggle);
-
-    public void SetAllPollute(bool isPolluted)
-    {
-        PollutionGrid.SetAll(isPolluted);
-        RefreshAllTiles();
-        UpdateCleanRatioUI();
-    }
-
-    private void IterateArea(Vector3Int minCell, Vector3Int maxCell, System.Action<Vector2Int> action)
-    {
-        int minX = Mathf.Min(minCell.x, maxCell.x);
-        int maxX = Mathf.Max(minCell.x, maxCell.x);
-        int minY = Mathf.Min(minCell.y, maxCell.y);
-        int maxY = Mathf.Max(minCell.y, maxCell.y);
-        for (int x = minX; x <= maxX; x++)
-        {
-            for (int y = minY; y <= maxY; y++)
-            {
-                var baseCell = new Vector3Int(x, y, 0);
-                if (!baseTilemap.HasTile(baseCell)) continue;
-                var gp = new Vector2Int(x - bounds.xMin, y - bounds.yMin);
-                action?.Invoke(gp);
-            }
-        }
-    }
-
-    public float GetCleanRatio() => PollutionGrid.GetCleanRatio();
-
-    public static int CalculateVisibleTileCountX(Camera cam, int tilePixelSize, int pixelsPerUnit)
-    {
-        if (cam == null || !cam.orthographic || tilePixelSize <= 0 || pixelsPerUnit <= 0) return 0;
-        float vertWorldUnits = cam.orthographicSize * 2f;            // 세로 월드 유닛
-        float horizWorldUnits = vertWorldUnits * cam.aspect;         // 가로 월드 유닛
-        float tileWorldSize = (float)tilePixelSize / pixelsPerUnit;  // 한 타일의 월드 유닛 크기
-        return Mathf.FloorToInt(horizWorldUnits / tileWorldSize);
-    }
-    
-    public void SpawnTrash(Vector3 worldPos)
-    {
-        if (trashPool == null) return;
-        var obj = trashPool.Spawn(worldPos, Quaternion.identity);
-        if (obj == null) return;
-        var trash = obj.GetComponent<TrashObject>();
-        if (trash != null)
-        {
-            trash.onDestroyed.AddListener(() => trashPool.Despawn(obj));
-        }
-    }
-
-    public void TestRandomTrashSpawn()
-    {
-        if (baseTilemap == null || trashPool == null) return;
-        int attempts = 10;
-        for (int i = 0; i < attempts; i++)
-        {
-            int rx = Random.Range(0, gridSizeInCells.x);
-            int ry = Random.Range(0, gridSizeInCells.y);
-            var cell = new Vector3Int(rx + bounds.xMin, ry + bounds.yMin, 0);
-            if (!baseTilemap.HasTile(cell)) continue;
-            var worldPos = baseTilemap.GetCellCenterWorld(cell);
-            SpawnTrash(worldPos);
-        }
-        
-    }
+#endif
 }

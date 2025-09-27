@@ -1,5 +1,7 @@
- using System.Collections.Generic;
-using UnityEngine;
+using System.Collections.Generic;
+ using JetBrains.Annotations;
+ using UnityEngine;
+ using System.Linq;
 
 namespace WhaleShark.Core
 {
@@ -11,23 +13,25 @@ namespace WhaleShark.Core
             public GameObject prefab;
             [Min(0)] public int initialWarm = 0;
             [Min(0f)] public float weight = 1f;
-            [Tooltip("큐가 비었을 때 새 인스턴스 생성 허용 여부")] public bool expandable = true;
+            
+            [Tooltip("큐가 비었을 때 새 인스턴스 생성 허용 여부")] 
+            public bool expandable = true;
         }
 
         [Header("Multi Prefab Settings")] 
         [SerializeField] private List<PrefabEntry> prefabEntries = new List<PrefabEntry>();
-        [Tooltip("전체 weight 합이 0일 때 fallback 으로 첫 유효 프리팹 사용" )]
-        [SerializeField] private bool fallbackFirstValid = true;
-        [Tooltip("Spawn 시 transform 부모를 풀에서 분리 (false 면 풀 자식으로 둠)")] 
-        [SerializeField] private bool detachFromPoolParent = true;
+
+        [SerializeField] private Transform parent;
 
         float totalWeight;
 
         protected override void Awake()
         {
-            // 단일 prefab 기본 워밍업 로직은 무시하고 멀티전용 실행
             RecalculateTotalWeight();
             WarmUpAll();
+
+            if (parent == null)
+                parent = this.transform;
         }
 
         void RecalculateTotalWeight()
@@ -59,15 +63,7 @@ namespace WhaleShark.Core
         PrefabEntry PickEntry()
         {
             if (prefabEntries.Count == 0) return null;
-            if (totalWeight <= 0f)
-            {
-                if (fallbackFirstValid)
-                {
-                    foreach (var e in prefabEntries)
-                        if (e?.prefab != null) return e;
-                }
-                return null;
-            }
+
             float r = Random.value * totalWeight;
             float acc = 0f;
             foreach (var e in prefabEntries)
@@ -138,8 +134,8 @@ namespace WhaleShark.Core
             }
 
             go.transform.SetPositionAndRotation(pos, rot);
-            if (detachFromPoolParent)
-                go.transform.SetParent(null, true);
+            if (parent != null)
+                go.transform.SetParent(parent, true);
             else
                 go.transform.SetParent(transform, true);
 
@@ -155,6 +151,30 @@ namespace WhaleShark.Core
         public void RebuildWeights()
         {
             RecalculateTotalWeight();
+        }
+
+        /// <summary>
+        /// 현재 활성 상태(씬에 사용 중)인 객체 목록 반환.
+        /// 큐(비활성 풀)에 들어있는 객체는 제외.
+        /// parent 트랜스폼 자식 + activeSelf 로 판별. (Despawn 시 SimplePool.Despawn 이 SetParent(transform) + SetActive(false) 처리)
+        /// </summary>
+        public List<GameObject> GetActiveObjects(bool includeInactive = false)
+        {
+            var list = new List<GameObject>();
+            if (parent == null) parent = transform;
+            foreach (var kv in instanceToPrefab)
+            {
+                var go = kv.Key;
+                if (go == null) continue;
+                // 활성 판정: 부모가 parent 이고 activeSelf (또는 includeInactive 허용)
+                if (go.transform.parent == parent && (includeInactive || go.activeSelf))
+                {
+                    // 큐에 들어가 있지 않은지 한 번 더 방어적 체크 (비활성인데 includeInactive=true 인 경우 걸러질 수 있음)
+                    if (!go.activeSelf && !includeInactive) continue;
+                    list.Add(go);
+                }
+            }
+            return list;
         }
 
 #if UNITY_EDITOR
@@ -178,4 +198,3 @@ namespace WhaleShark.Core
 #endif
     }
 }
-

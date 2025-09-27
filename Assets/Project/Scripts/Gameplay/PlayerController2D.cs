@@ -22,16 +22,13 @@ namespace WhaleShark.Gameplay
         [Tooltip("그리드 스냅 적용 허용 오차(셀 중심까지 거리)")]
         public float snapThreshold = 0.15f;
 
-        [Tooltip("스냅 대상 타일맵 (없으면 스냅 불가)")] public Tilemap referenceTilemap;
-
         [Header("Debug")] public bool debugDrawVelocity;
 
         [Header("Test Pollution")] 
-        [Tooltip("테스트: 이동 중 바라보는/이동하는 방향 타일 오염 활성화")] public bool testPolluteWhileMoving = true;
-        [Tooltip("오염 적용 주기(초)")] public float pollutionInterval = 0.15f;
-        [Tooltip("앞으로 몇 타일 떨어진 곳을 오염시킬지 (0=현재, 1=한 칸 앞)")] public int forwardTiles; // 기본 0
-        [Tooltip("타일 월드 크기(스케일). forwardTiles>0 일 때 오프셋 계산용")] public float tileWorldSize = 1f;
-        [Tooltip("맵 매니저 수동 할당(없으면 자동 탐색)")] public MapManager mapManager;
+        public float pollutionInterval = 0.15f;
+        public int forwardTiles; // 기본 0
+        public float tileWorldSize = 1f;
+        public MapManager mapManager;
 
         Rigidbody2D _rb;
         Vector2 _moveDir;
@@ -53,15 +50,12 @@ namespace WhaleShark.Gameplay
         {
             HandleInput();
             HandleFlip();
-            if (snapToGrid)
-                TrySnapToGrid();
         }
 
         void FixedUpdate()
         {
             HandleMovement();
-            if (testPolluteWhileMoving)
-                ApplyTestPollution();
+            ApplyTestPollution();
         }
 
         void HandleInput()
@@ -99,21 +93,6 @@ namespace WhaleShark.Gameplay
             if (_moveDir.x != 0f)
             {
                 transform.localScale = new Vector3(Mathf.Sign(_moveDir.x), 1f, 1f);
-            }
-        }
-
-        void TrySnapToGrid()
-        {
-            if (referenceTilemap == null) return;
-            // 이동 중이 아닐 때만 스냅(멈췄거나 축단위 입력 해제 시)
-            if (_moveDir != Vector2.zero) return;
-            Vector3 worldPos = transform.position;
-            Vector3Int cell = referenceTilemap.WorldToCell(worldPos);
-            Vector3 cellCenter = referenceTilemap.GetCellCenterWorld(cell);
-            float dist = Vector2.Distance(new Vector2(worldPos.x, worldPos.y), new Vector2(cellCenter.x, cellCenter.y));
-            if (dist <= snapThreshold)
-            {
-                transform.position = new Vector3(cellCenter.x, cellCenter.y, transform.position.z);
             }
         }
 
