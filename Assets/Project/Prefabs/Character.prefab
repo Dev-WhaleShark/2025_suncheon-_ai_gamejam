@@ -206,11 +206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f07bce246cdc8d498b1e50ef960f4db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Character
-  maxHealth: 300
-  moveSpeed: 20
-  attackRange: 1.5
-  attackCooldown: 2
-  attackDamage: 10
+  maxHealth: 100
+  moveSpeed: 10
   immuneTime: 1
   projectile: {fileID: 8612708388542399979, guid: 751ece9490c33ec4b805db750fe7b848, type: 3}
   corpse: {fileID: 8051500952835506853, guid: 7b492c38cfea975438521e2ba9a0cf52, type: 3}
@@ -220,6 +217,7 @@ MonoBehaviour:
   minSpeedThreshold: 0.05
   avoidDuplicateCell: 1
   cleaningRadius: 3
+  characterRadius: 1
 --- !u!50 &3097896948146358760
 Rigidbody2D:
   serializedVersion: 5

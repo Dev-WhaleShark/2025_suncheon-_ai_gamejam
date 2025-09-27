@@ -115,15 +115,21 @@ public class Enemy : MonoBehaviour
 
     public void OnDied()
     {
-        Debug.Log(gameObject.name + " is dead!");
-        animator.SetTrigger("OnDeath");
+        if(animator)
+            animator.SetTrigger("OnDeath");
+
         currentState = EnemyState.Dead;
         rb.linearVelocity = Vector2.zero;
 
-        audioSource.clip = deathSound;
-        audioSource.Play();
+        if (audioSource)
+        { 
+            audioSource.clip = deathSound;
+            audioSource.Play();
+        }
 
-        onEnemyDied.Invoke();
+        if(onEnemyDied != null)
+            onEnemyDied.Invoke();
+            
         Destroy(gameObject, 1.0f);
     }
 

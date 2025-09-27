@@ -168,6 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539a68874644d2945abc218eb71f3938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyProjectile
-  damage: 30
-  lifetime: 3
+  damage: 35
+  lifetime: 2
   speed: 15

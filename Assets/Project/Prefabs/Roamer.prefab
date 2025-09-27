@@ -203,12 +203,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6839a338cf55f44a19c3f5341403bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Roamer
-  maxHealth: 100
-  moveSpeed: 3
+  maxHealth: 50
+  moveSpeed: 1.5
   attackRange: 1.5
   attackCooldown: 2
   attackDamage: 10
   stunDuration: 0.5
+  stunImmune: 1
   currentState: 0
   hpBar: {fileID: 2906514186975884292}
   deathSound: {fileID: 8300000, guid: b942be610395ddf48a5e1d9b231e597e, type: 3}

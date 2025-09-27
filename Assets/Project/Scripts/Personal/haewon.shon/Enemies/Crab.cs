@@ -4,6 +4,7 @@ public class Crab : Enemy
 {
     public Vector2 moveMinRange;
     public Vector2 moveMaxRange;
+    public float rushSpeedMultiplier = 2.0f;
 
     private Vector2 velocity;
 
@@ -67,7 +68,7 @@ public class Crab : Enemy
 
     void SetDoubleSpeed()
     {
-        rb.linearVelocity = velocity * 2;
+        rb.linearVelocity = velocity * rushSpeedMultiplier;
 
         audioSource.clip = attackSound;
         audioSource.Play();

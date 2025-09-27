@@ -213,12 +213,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea4307556142fb48947c75824d5f192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mudskipper
-  maxHealth: 1200
-  moveSpeed: 5
+  maxHealth: 700
+  moveSpeed: 3
   attackRange: 1.5
   attackCooldown: 2
-  attackDamage: 50
+  attackDamage: 30
   stunDuration: 0.5
+  stunImmune: 1
   currentState: 0
   hpBar: {fileID: 1821205886678792947}
   deathSound: {fileID: 8300000, guid: 05cd4668ffb3b5c49897be7a92658252, type: 3}
