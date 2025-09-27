@@ -21,12 +21,12 @@ public class Roamer : Enemy
     private float _pollutionTimer = 0f;
     private Vector2Int _lastCell = new Vector2Int(int.MinValue, int.MinValue);
 
-    private MapManager _map;
+    private Stage _map;
 
     protected override void Awake()
     {
         base.Awake();
-        _map = _map ?? FindFirstObjectByType<MapManager>();
+        _map = _map ?? FindFirstObjectByType<Stage>();
         _pollutionTimer = interval;
     }
 
