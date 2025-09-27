@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public enum EnemyState
 {
@@ -46,6 +47,8 @@ public class Enemy : MonoBehaviour
     public AudioClip attackSound;
     protected AudioSource audioSource;
 
+    public Action onEnemyDied;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Awake()
     {
@@ -53,7 +56,7 @@ public class Enemy : MonoBehaviour
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        
+
         currentHealth = maxHealth;
         xScale = transform.localScale.x;
         stunTimer = 0.0f;
@@ -115,11 +118,13 @@ public class Enemy : MonoBehaviour
         Debug.Log(gameObject.name + " is dead!");
         animator.SetTrigger("OnDeath");
         currentState = EnemyState.Dead;
-        Destroy(gameObject, 1.0f);
         rb.linearVelocity = Vector2.zero;
 
         audioSource.clip = deathSound;
         audioSource.Play();
+
+        onEnemyDied.Invoke();
+        Destroy(gameObject, 1.0f);
     }
 
     protected virtual void StateLogic()

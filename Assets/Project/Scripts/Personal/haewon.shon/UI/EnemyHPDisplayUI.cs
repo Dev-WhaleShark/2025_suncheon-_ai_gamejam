@@ -28,6 +28,7 @@ public class EnemyHPDisplayUI : MonoBehaviour
 
     void UpdateBar()
     {
-        fillImage.fillAmount = currentHP / maxHP;
+        if(fillImage)
+            fillImage.fillAmount = currentHP / maxHP;
     }
 }

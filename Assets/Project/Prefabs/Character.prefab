@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4327795477700345619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1272793224634024139}
+  m_Layer: 8
+  m_Name: CleaningPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1272793224634024139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4327795477700345619}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -4.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5809858181558932358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7797728195183629212
 GameObject:
   m_ObjectHideFlags: 0
@@ -35,7 +66,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1272793224634024139}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2852943857425513743
@@ -184,6 +216,10 @@ MonoBehaviour:
   corpse: {fileID: 8051500952835506853, guid: 7b492c38cfea975438521e2ba9a0cf52, type: 3}
   deathSound: {fileID: 8300000, guid: f911291c1403083468da2e2f4840abbf, type: 3}
   attackSound: {fileID: 8300000, guid: 044569f48b1c40a479e004f64d442161, type: 3}
+  cleaningPos: {fileID: 1272793224634024139}
+  minSpeedThreshold: 0.05
+  avoidDuplicateCell: 1
+  cleaningRadius: 3
 --- !u!50 &3097896948146358760
 Rigidbody2D:
   serializedVersion: 5
