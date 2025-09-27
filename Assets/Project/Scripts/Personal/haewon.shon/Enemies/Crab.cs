@@ -1,33 +1,45 @@
 using UnityEngine;
-using System.Collections;
-using Unity.InferenceEngine;
 
 public class Crab : Enemy
 {
-    private Vector2[] points;
-    private int targetPointIndex = 0;
-    private float pointReachedThreshold = 0.5f;
+    public Vector2 moveMinRange;
+    public Vector2 moveMaxRange;
 
-    private int numberOfPoints = 2;
-
-    public float delayBeforeAttack = 2.0f;
-    public float delayAfterAttack = 1.0f;
-    public float arcAngle = 120.0f; // 공격 범위 각도
-    public LayerMask playerLayer;
+    private Vector2 velocity;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Start()
     {
         base.Start();
 
-        // 임시 왕복 지점 지정
-        points = new Vector2[numberOfPoints];
-        points[0] = new Vector2(transform.position.x - 5.0f, transform.position.y);
-        points[1] = new Vector2(transform.position.x + 5.0f, transform.position.y);
+        rb.linearVelocity = new Vector2(10.0f, Random.Range(1.0f, 2.0f)).normalized * moveSpeed;
+    }
 
-        rb.linearVelocity = (points[targetPointIndex] - (Vector2)transform.position).normalized * moveSpeed;
+    protected void FixedUpdate()
+    { 
+        Vector2 pos = transform.position;
+        Vector2 vel = rb.linearVelocity;
 
-        attackCooldown = attackCooldown + delayBeforeAttack + delayAfterAttack; // 공격에 걸리는 시간 합산
+        // X축 체크
+        if (pos.x < moveMinRange.x || pos.x > moveMaxRange.x)
+        {
+            vel.x = -vel.x;
+            velocity.x = -velocity.x; // 저장된 속도도 반전시켜 돌진 후에도 방향유지
+
+            // 범위 밖으로 너무 나가지 않게 클램프
+            //pos.x = Mathf.Clamp(pos.x, moveMinRange.x, moveMaxRange.x);
+        }
+
+        // Y축 체크
+        if (pos.y < moveMinRange.y || pos.y > moveMaxRange.y)
+        {
+            vel.y = -vel.y;
+            velocity.y = -velocity.y; // 저장된 속도도 반전시켜 돌진 후에도 방향유지
+            //pos.y = Mathf.Clamp(pos.y, moveMinRange.y, moveMaxRange.y);
+        }
+
+        transform.position = new Vector3(pos.x, pos.y, transform.position.z);
+        rb.linearVelocity = vel;
     }
 
     protected override void Idle()
@@ -37,14 +49,6 @@ public class Crab : Enemy
 
     protected override void Move()
     {
-        Vector2 targetPoint = points[targetPointIndex];
-        if (Vector2.Distance(transform.position, targetPoint) < pointReachedThreshold)
-        {
-            targetPointIndex = (targetPointIndex + 1) % numberOfPoints;
-            targetPoint = points[targetPointIndex];
-            rb.linearVelocity = (targetPoint - (Vector2)transform.position).normalized * moveSpeed;
-        }
-
         if (canAttack)
         {
             currentState = EnemyState.Attack;
@@ -53,44 +57,25 @@ public class Crab : Enemy
     protected override void Attack()
     {
         if (!canAttack) return;
+        canAttack = false;
 
-        //attack logic
-        StartCoroutine(AttackRoutine());
+        velocity = rb.linearVelocity;
+        rb.linearVelocity = Vector2.zero;
 
-        // 공격 구현 (예: 데미지 전달)
+        animator.SetTrigger("OnAttack");
+    }
+
+    void SetDoubleSpeed()
+    {
+        rb.linearVelocity = velocity * 2;
+
+        audioSource.clip = attackSound;
+        audioSource.Play();
+    }
+    void SetHalfSpeed()
+    {
+        rb.linearVelocity = velocity;
+        currentState = EnemyState.Move;
         StartCoroutine(AttackCooldown());
     }
-
-    protected virtual IEnumerator AttackRoutine()
-    {
-        rb.linearVelocity = Vector2.zero;
-        yield return new WaitForSeconds(delayBeforeAttack);
-
-        CheckHit();
-
-        yield return new WaitForSeconds(delayAfterAttack);
-        currentState = EnemyState.Move;
-        rb.linearVelocity = (points[targetPointIndex] - (Vector2)transform.position).normalized * moveSpeed;
-        
-        // 바라보는 방향 설정
-        if (rb.linearVelocityX > 0.0f) transform.localScale = new Vector3(-xScale, transform.localScale.y, 1.0f);
-        else if (rb.linearVelocityX < 0.0f) transform.localScale = new Vector3(xScale, transform.localScale.y, 1.0f);
-    }
-
-    void CheckHit()
-    { 
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attackRange, playerLayer);
-        foreach (var hit in hits)
-        {
-            Vector2 dirToTarget = (hit.transform.position - transform.position).normalized;
-            // 왼쪽진행시 위 타격, 오른쪽진행시 아래 타격
-            float angle = (rb.linearVelocityX < 0.0f) ? Vector2.Angle(transform.up, dirToTarget) : Vector2.Angle(-transform.up, dirToTarget);
-            if (angle <= arcAngle / 2)
-            {
-                // 공격 적용
-                hit.GetComponent<Character>().OnTakeDamage(attackDamage);
-            }
-        }
-    }
-
 }

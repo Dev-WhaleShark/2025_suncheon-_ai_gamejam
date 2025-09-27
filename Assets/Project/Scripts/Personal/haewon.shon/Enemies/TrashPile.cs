@@ -12,7 +12,7 @@ public class TrashPile : Enemy
     private float pointReachedThreshold = 0.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Start()
     {
         base.Start();
 
@@ -42,8 +42,8 @@ public class TrashPile : Enemy
             rb.linearVelocity = (targetPoint - (Vector2)transform.position).normalized * moveSpeed;
             
             // 바라보는 방향 설정
-            if (rb.linearVelocityX > 0.0f) transform.localScale = new Vector3(-xScale, transform.localScale.y, 1.0f);
-            else if (rb.linearVelocityX < 0.0f) transform.localScale = new Vector3(xScale, transform.localScale.y, 1.0f);
+            if (rb.linearVelocityX > 0.0f) spriteRenderer.flipX = true;
+            else if (rb.linearVelocityX < 0.0f) spriteRenderer.flipX = false;
         }
 
         if (canAttack)
@@ -58,6 +58,9 @@ public class TrashPile : Enemy
         GameObject sludge = Instantiate(sludgePrefab, transform.position, Quaternion.identity);
         sludge.transform.localScale = transform.localScale; // 몬스터 스케일 따라가도록
         currentState = EnemyState.Move;
+        
+        audioSource.clip = attackSound;
+        audioSource.Play();
 
         // 공격 구현 (예: 데미지 전달)
         StartCoroutine(AttackCooldown());

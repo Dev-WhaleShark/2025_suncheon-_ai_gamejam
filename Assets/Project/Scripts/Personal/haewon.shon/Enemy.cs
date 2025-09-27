@@ -22,7 +22,8 @@ public class Enemy : MonoBehaviour
     public float attackCooldown = 2f;
     public int attackDamage = 10;
 
-    public float stunDuration = 0.5f;
+    public float stunDuration = 0.2f;
+    public float stunImmune = 1.0f;
 
     [Header("State")]
     public EnemyState currentState = EnemyState.Idle;
@@ -32,15 +33,27 @@ public class Enemy : MonoBehaviour
     protected bool canAttack = true;
 
     protected float stunTimer;
+    protected float stunImmuneTimer;
 
     protected float xScale;
     protected Animator animator;
+    protected SpriteRenderer spriteRenderer;
+
+    public EnemyHPDisplayUI hpBar;
+
+    [Header("Sound")]
+    public AudioClip deathSound;
+    public AudioClip attackSound;
+    protected AudioSource audioSource;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        
         currentHealth = maxHealth;
         xScale = transform.localScale.x;
         stunTimer = 0.0f;
@@ -51,6 +64,8 @@ public class Enemy : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
             target = player.transform;
+
+        hpBar.Initialize(maxHealth);
     }
 
     // Update is called once per frame
@@ -58,6 +73,7 @@ public class Enemy : MonoBehaviour
     {
         if (currentState == EnemyState.Dead) return;
 
+        stunImmuneTimer -= Time.deltaTime;
         if (stunTimer <= 0.0f)
         {
             StateLogic();
@@ -73,6 +89,7 @@ public class Enemy : MonoBehaviour
         if (currentState == EnemyState.Dead) return;
 
         currentHealth -= damage;
+        hpBar.SetHP(currentHealth);
 
         if (currentHealth <= 0)
         {
@@ -80,10 +97,11 @@ public class Enemy : MonoBehaviour
             return;
         }
 
-        if (currentState != EnemyState.Attack)
+        if (stunImmuneTimer <= 0.0f && currentState != EnemyState.Attack)
         { 
             animator.SetTrigger("OnHit");
             stunTimer = stunDuration;
+            stunImmuneTimer = stunImmune;
             StartCoroutine(RecoverVelocity(stunTimer));
         }
 
@@ -99,6 +117,9 @@ public class Enemy : MonoBehaviour
         currentState = EnemyState.Dead;
         Destroy(gameObject, 1.0f);
         rb.linearVelocity = Vector2.zero;
+
+        audioSource.clip = deathSound;
+        audioSource.Play();
     }
 
     protected virtual void StateLogic()
@@ -161,13 +182,9 @@ public class Enemy : MonoBehaviour
 
     protected virtual IEnumerator RecoverVelocity(float stopDuration)
     {
-        Vector2 v = rb.linearVelocity;
-        rb.linearVelocity = Vector2.zero;
+        rb.simulated = false;
         yield return new WaitForSeconds(stopDuration);
-        if (currentState != EnemyState.Dead)
-        { 
-            rb.linearVelocity = v;
-        }
+        rb.simulated = true;
 
         // // 바라보는 방향 설정
         // if (rb.linearVelocityX > 0.0f) transform.localScale = new Vector3(-xScale, transform.localScale.y, 1.0f);

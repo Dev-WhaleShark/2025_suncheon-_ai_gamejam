@@ -14,7 +14,7 @@ public class Otter : Enemy
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Start()
     {
         base.Start();
 
@@ -40,8 +40,8 @@ public class Otter : Enemy
             rb.linearVelocity = (targetPoint - (Vector2)transform.position).normalized * moveSpeed;
 
             // 바라보는 방향 설정
-            if (rb.linearVelocityX > 0.0f) transform.localScale = new Vector3(-xScale, transform.localScale.y, 1.0f);
-            else if (rb.linearVelocityX < 0.0f) transform.localScale = new Vector3(xScale, transform.localScale.y, 1.0f);
+            if (rb.linearVelocityX > 0.0f) spriteRenderer.flipX = true;
+            else if (rb.linearVelocityX < 0.0f) spriteRenderer.flipX = false;
         }
 
         if (canAttack)
@@ -67,6 +67,9 @@ public class Otter : Enemy
         GameObject spawnedProjectile = Instantiate(projectile, projectileReleasePoint.position, Quaternion.identity);
         EnemyProjectile projComponent = spawnedProjectile.GetComponent<EnemyProjectile>();
         projComponent.SetDirection((target.position - projectileReleasePoint.position).normalized);
+        
+        audioSource.clip = attackSound;
+        audioSource.Play();
     }
 
     void OnAttackEnd()

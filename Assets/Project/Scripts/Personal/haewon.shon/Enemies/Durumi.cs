@@ -17,10 +17,11 @@ public class Durumi : Enemy
     public float featherThrowingAngle = 180.0f;
     bool isWatchingLeft;
     public float delayBeforeAttack = 0.5f;
+    public float delayAfterAttack = 0.75f;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Start()
     {
         base.Start();
 
@@ -51,8 +52,8 @@ public class Durumi : Enemy
             isWatchingLeft = rb.linearVelocityX < 0;
 
             // 바라보는 방향 설정
-            if (rb.linearVelocityX > 0.0f) transform.localScale = new Vector3(-xScale, transform.localScale.y, 1.0f);
-            else if (rb.linearVelocityX < 0.0f) transform.localScale = new Vector3(xScale, transform.localScale.y, 1.0f);
+            if (rb.linearVelocityX > 0.0f) spriteRenderer.flipX = true;
+            else if (rb.linearVelocityX < 0.0f) spriteRenderer.flipX = false;
         }
 
         if (canAttack)
@@ -73,28 +74,11 @@ public class Durumi : Enemy
     protected virtual IEnumerator AttackRoutine()
     {
         rb.linearVelocity = Vector2.zero;
+        animator.SetTrigger("OnAttack");
         yield return new WaitForSeconds(delayBeforeAttack);
-
-        //float angleGap = featherThrowingAngle / (featherCount - 1);
-
-        // if (isWatchingLeft)
-        // {
-        //     for (int i = 0; i < featherCount; ++i)
-        //     {
-        //         float angle = 180.0f + -featherThrowingAngle / 2.0f + angleGap * i;
-        //         GameObject spawnedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
-        //         spawnedProjectile.GetComponent<EnemyProjectile>().SetDirection(new Vector2(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle)));
-        //     }
-        // }
-        // else
-        // {
-        //     for (int i = 0; i < featherCount; ++i)
-        //     {
-        //         float angle = -featherThrowingAngle / 2.0f + angleGap * i;
-        //         GameObject spawnedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
-        //         spawnedProjectile.GetComponent<EnemyProjectile>().SetDirection(new Vector2(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle)));
-        //     }
-        // }
+        
+        audioSource.clip = attackSound;
+        audioSource.Play();
 
         // 전방위 깃털 흩뿌리기
         int count = 12;
@@ -106,10 +90,11 @@ public class Durumi : Enemy
             // feather rotation
             spawnedProjectile.GetComponent<EnemyProjectile>().SetDirection(v);
             yield return new WaitForSeconds(0.1f); // 약간의 딜레이 추가
-            
         }
 
+        yield return new WaitForSeconds(delayAfterAttack); // 약간의 딜레이 추가
         currentState = EnemyState.Move;
+        animator.SetTrigger("OnAttackEnd");
         rb.linearVelocity = (points[targetPointIndex] - (Vector2)transform.position).normalized * moveSpeed;
     }
 }

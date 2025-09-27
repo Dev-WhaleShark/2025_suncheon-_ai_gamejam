@@ -16,7 +16,7 @@ public class Mudskipper : Enemy
     private float offset = 10.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Start()
     {
         base.Start();
 
@@ -61,11 +61,11 @@ public class Mudskipper : Enemy
         float xDir = target.position.x - gameObject.transform.position.x;
         if (xDir < 0)
         {
-            transform.localScale = new Vector3(-xScale, transform.localScale.y, 1.0f);
+            spriteRenderer.flipX = true;
         }
         else
         {
-            transform.localScale = new Vector3(xScale, transform.localScale.y, 1.0f);
+            spriteRenderer.flipX = false;
         }
         
         StartCoroutine(AttackCooldown());
@@ -83,8 +83,8 @@ public class Mudskipper : Enemy
         rb.linearVelocity = (points[targetPointIndex] - (Vector2)transform.position).normalized * moveSpeed;
 
         // 바라보는 방향 설정
-        if (rb.linearVelocityX > 0.0f) transform.localScale = new Vector3(-xScale, transform.localScale.y, 1.0f);
-        else if (rb.linearVelocityX < 0.0f) transform.localScale = new Vector3(xScale, transform.localScale.y, 1.0f);
+        if (rb.linearVelocityX > 0.0f) spriteRenderer.flipX = true;
+        else if (rb.linearVelocityX < 0.0f) spriteRenderer.flipX = false;
     }
 
     void SetProjectile()
@@ -92,12 +92,15 @@ public class Mudskipper : Enemy
         GameObject spawnedProjectile = Instantiate(projectile, projectileReleasePoint.position, Quaternion.identity);
         Mud projComponent = spawnedProjectile.GetComponent<Mud>();
         projComponent.SetDestination(target.position);
+        
+        audioSource.clip = attackSound;
+        audioSource.Play();
     }
 
     void OnAttackEnd()
     {
         currentState = EnemyState.Move;
-        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1.0f);
+        spriteRenderer.flipX = true;
         SetNextTargetPoint();
     }
 }
