@@ -219,8 +219,8 @@ MonoBehaviour:
   attackDamage: 50
   stunDuration: 0.5
   currentState: 0
-  deathSound: {fileID: 0}
-  AttackSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 05cd4668ffb3b5c49897be7a92658252, type: 3}
+  attackSound: {fileID: 8300000, guid: 3a83fef46f2576641955b92f7591b47c, type: 3}
   projectile: {fileID: 8612708388542399979, guid: 5d8aeac444f6fdc498629a52471507f4, type: 3}
   projectileReleasePoint: {fileID: 1954472919731342877}
   delayBeforeAttack: 1

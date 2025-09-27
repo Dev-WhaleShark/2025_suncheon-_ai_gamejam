@@ -187,8 +187,8 @@ MonoBehaviour:
   attackDamage: 10
   stunDuration: 0.5
   currentState: 0
-  deathSound: {fileID: 0}
-  attackSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 94cb3b34689ec8b449ee4a02a8340939, type: 3}
+  attackSound: {fileID: 8300000, guid: fd342aa808f2ddd458f327f6bfdc1b06, type: 3}
   moveRouteRadius: 10
   numberOfPointsOnRoute: 32
   projectile: {fileID: 8612708388542399979, guid: 27684283ed4e69c4b90d08f6d27be287, type: 3}

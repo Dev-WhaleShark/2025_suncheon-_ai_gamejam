@@ -114,8 +114,8 @@ MonoBehaviour:
   attackDamage: 10
   stunDuration: 0.25
   currentState: 0
-  deathSound: {fileID: 0}
-  AttackSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 90f52d0e04ddb8040b22b36dfa528f86, type: 3}
+  attackSound: {fileID: 8300000, guid: 1d0ffd577cd688d45a9582f925870ee6, type: 3}
   sludgePrefab: {fileID: 4591758380060657593, guid: 95f3cf89ad8b84341aee18211603f9f7, type: 3}
   moveRouteRadius: 3
   numberOfPoints: 32

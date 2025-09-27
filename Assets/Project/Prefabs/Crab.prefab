@@ -209,8 +209,8 @@ MonoBehaviour:
   attackDamage: 10
   stunDuration: 0.5
   currentState: 0
-  deathSound: {fileID: 0}
-  attackSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: a5c82b87d0eda2a43bccf83d6f6dbcc2, type: 3}
+  attackSound: {fileID: 8300000, guid: ae1ce5dba9e02254f99dd6e1e472581d, type: 3}
   moveMinRange: {x: -18, y: -9}
   moveMaxRange: {x: 18, y: 9}
 --- !u!82 &2690553502534554289

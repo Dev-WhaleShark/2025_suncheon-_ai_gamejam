@@ -31,6 +31,12 @@ public class Character : MonoBehaviour
     // Anim
     private Animator animator;
 
+    [Header("SFX")]
+    private AudioSource audioSource;
+    public AudioClip deathSound;
+    public AudioClip attackSound;
+
+
     [Header("Cleaning")]
     private bool isCleaning = false;
 
@@ -40,6 +46,7 @@ public class Character : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         currentHealth = maxHealth;
     }
 
@@ -138,12 +145,15 @@ public class Character : MonoBehaviour
         Debug.Log(gameObject.name + " is dead!");
         animator.SetTrigger("OnDeath");
         isDead = true;
+        rb.linearVelocity = Vector2.zero;
+
+        audioSource.clip = deathSound;
+        audioSource.Play();
 
         if (corpse)
         {
             GameObject deadBody = Instantiate(corpse, gameObject.transform.position, Quaternion.identity);
             deadBody.transform.localScale = transform.localScale;
-            this.rb.linearVelocity = Vector2.zero;
         }
     }
 
@@ -151,5 +161,8 @@ public class Character : MonoBehaviour
     {
         GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity);
         proj.GetComponent<Bullet>().SetDirection((mousePos - (Vector2)transform.position).normalized);
+
+        audioSource.clip = attackSound;
+        audioSource.Play();
     }
 }
