@@ -43,8 +43,6 @@ public class MapManager : MonoBehaviour
     private readonly Dictionary<Vector2Int, TrashObject> _trashMap = new();
     private readonly Dictionary<Vector2Int, PollutionObject> _pollutionMap = new();
 
-    public MapGrid Grid => mapGrid;
-
     private void Awake()
     {
         Initialize();
