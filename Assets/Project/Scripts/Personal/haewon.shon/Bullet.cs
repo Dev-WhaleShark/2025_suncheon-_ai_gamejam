@@ -4,6 +4,9 @@ public class Bullet : MonoBehaviour
 {
     public int damage = 1;
     public float lifetime = 3.0f;
+    
+    public GameObject explosionPrefab;
+
     Rigidbody2D rb;
 
     void Awake()
@@ -30,9 +33,15 @@ public class Bullet : MonoBehaviour
         Debug.Log("Hit " + other.name);
         Enemy enemyComponent = other.GetComponent<Enemy>();
         if (enemyComponent)
-        { 
+        {
+            if (explosionPrefab)
+            {
+                Instantiate(explosionPrefab, transform.position, Quaternion.AngleAxis(Random.Range(0.0f, 360.0f), new Vector3(0.0f, 0.0f, 1.0f)));
+            }
+            
             enemyComponent.OnTakeDamage(damage, rb.linearVelocityX);
             Destroy(gameObject);
+            
         }
     }
 }

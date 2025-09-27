@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   damage: 20
   lifetime: 3
+  explosionPrefab: {fileID: 5099061577304893069, guid: ef7f274e88dac744d946b43936cd8b22, type: 3}
 --- !u!50 &3762577185171507789
 Rigidbody2D:
   serializedVersion: 5

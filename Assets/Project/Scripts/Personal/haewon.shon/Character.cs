@@ -94,12 +94,16 @@ public class Character : MonoBehaviour
 
     void OnMove(InputValue value)
     {
+        if (isDead) return;
+
         Vector2 inputVector = value.Get<Vector2>();
         moveInput = inputVector;
     }
 
     void OnAttack(InputValue value) // LMB
     {
+        if (isDead) return;
+        
         if (value.isPressed)
         {
             animator.SetTrigger("OnAttack");

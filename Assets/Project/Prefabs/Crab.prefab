@@ -203,16 +203,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Crab
   maxHealth: 100
-  moveSpeed: 2
+  moveSpeed: 5
   attackRange: 1.5
   attackCooldown: 2
   attackDamage: 10
   stunDuration: 0.5
   currentState: 0
   deathSound: {fileID: 0}
-  AttackSound: {fileID: 0}
-  moveMinRange: {x: 0, y: 0}
-  moveMaxRange: {x: 0, y: 0}
+  attackSound: {fileID: 0}
+  moveMinRange: {x: -18, y: -9}
+  moveMaxRange: {x: 18, y: 9}
 --- !u!82 &2690553502534554289
 AudioSource:
   m_ObjectHideFlags: 0

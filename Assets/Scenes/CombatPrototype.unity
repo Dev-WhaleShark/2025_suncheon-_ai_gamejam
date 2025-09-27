@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f07bce246cdc8d498b1e50ef960f4db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Character
-  maxHealth: 1
+  maxHealth: 300
   moveSpeed: 20
   attackRange: 1.5
   attackCooldown: 2
@@ -755,6 +755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Otter
       objectReference: {fileID: 0}
+    - target: {fileID: 4128041164302147496, guid: e48a5b2c4b39b8448948c0696227020c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -770,11 +774,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1042678651530875807, guid: b8426a28691599e40a70b113053db9a1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.85
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1042678651530875807, guid: b8426a28691599e40a70b113053db9a1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.95
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1042678651530875807, guid: b8426a28691599e40a70b113053db9a1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -828,6 +832,14 @@ PrefabInstance:
     - target: {fileID: 452734990694896417, guid: d85aae83e04ee4b408f0add5438c8e86, type: 3}
       propertyPath: m_Name
       value: TrashPile
+      objectReference: {fileID: 0}
+    - target: {fileID: 452734990694896417, guid: d85aae83e04ee4b408f0add5438c8e86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368434876978948774, guid: d85aae83e04ee4b408f0add5438c8e86, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7729148556094927228, guid: d85aae83e04ee4b408f0add5438c8e86, type: 3}
       propertyPath: m_LocalPosition.x
@@ -941,7 +953,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3985129264760479957, guid: f5ab5cf5d8865d4459a4f9eee2a0e835, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.11
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 3985129264760479957, guid: f5ab5cf5d8865d4459a4f9eee2a0e835, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1039,6 +1051,10 @@ PrefabInstance:
     - target: {fileID: 6519227195985387442, guid: 8dc4e0ae5db660b4fa2c2ff790f8e79b, type: 3}
       propertyPath: m_Name
       value: MudSkipper
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519227195985387442, guid: 8dc4e0ae5db660b4fa2c2ff790f8e79b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
