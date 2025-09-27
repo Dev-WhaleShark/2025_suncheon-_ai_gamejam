@@ -282,11 +282,6 @@ public class MapManager : MonoBehaviour
         mapGrid.SetAllClean();
     }
 
-    public float GetCleanRatio()
-    {
-        return mapGrid.GetCleanRatio();
-    }
-
     private void SpawnTrashObject(Vector2Int cell, bool spawnOnly = false)
     {
         if (_trashMap.ContainsKey(cell))

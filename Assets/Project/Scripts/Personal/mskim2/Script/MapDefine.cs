@@ -104,7 +104,11 @@ public class MapGrid
     public float GetCleanRatio()
     {
         if (!IsInitialized) return 0f;
-        int total = GridSize.x * GridSize.y; if (total == 0) return 0f;
+        int total = GridSize.x * GridSize.y;
+
+        if (total == 0)
+            return 0f;
+
         int clean = 0;
         for (int x = 0; x < GridSize.x; x++)
             for (int y = 0; y < GridSize.y; y++)

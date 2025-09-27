@@ -7,10 +7,10 @@ using WhaleShark.Core; // DOTween 사용
 [RequireComponent(typeof(Collider2D))]
 public class TrashObject : MonoBehaviour, IPoolable
 {
-    [Header("Life Settings")] 
+    [Header("Life Settings")]
     [SerializeField] private int maxHits = 3;
 
-    [Header("Pooling")] 
+    [Header("Pooling")]
     [SerializeField] private SimplePool pool;
 
     [Header("Hit Feedback")]
@@ -30,43 +30,71 @@ public class TrashObject : MonoBehaviour, IPoolable
     [SerializeField] private int deathRotateJitterLoops = 4;
     [SerializeField] private Ease deathScaleEase = Ease.InBack;
 
-    [Header("References")] 
+    [Header("References")]
     [SerializeField] private SpriteRenderer spriteRenderer;
 
-    [Header("Events")] 
+    [Header("Events")]
     public UnityEvent onHit;
     public UnityEvent onDestroyed;
     public UnityEvent<float> onHitProgress; // 0~1 누적 비율
 
-    public bool IsAlive => currentHits < maxHits;
+    public bool IsAlive => _currentHits < maxHits;
 
-    int currentHits;
-    Color originalColor;
-    Collider2D col;
+    private int _currentHits;
+    private Color _originalColor;
+    private Collider2D _col;
 
-    Sequence hitSequence;
-    Tween flashTween;
-    Sequence deathSequence;
-    Vector3 baseLocalPos;
-    bool isDying;
-    bool _despawned;
+    private Sequence _hitSequence;
+    private Tween _flashTween;
+    private Sequence _deathSequence;
 
-    void Awake()
+    private Vector3 _baseLocalPos;
+    private bool _isDying;
+    private bool _despawned;
+
+    private Vector3 _initialScale; // 최초 스케일 저장 (재스폰 시 복원)
+
+    private void Awake()
     {
         if (!spriteRenderer)
+        {
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        col = GetComponent<Collider2D>();
+        }
+
+        _col = GetComponent<Collider2D>();
+
         if (spriteRenderer)
-            originalColor = spriteRenderer.color;
+        {
+            _originalColor = spriteRenderer.color;
+        }
+
         if (pool == null)
+        {
             pool = GetComponentInParent<SimplePool>();
+        }
+
+        _initialScale = transform.localScale; // 초기 스케일 기록
     }
-    
-    void KillTweens()
+
+    private void KillTweens()
     {
-        hitSequence?.Kill(); hitSequence = null;
-        flashTween?.Kill(); flashTween = null;
-        deathSequence?.Kill(); deathSequence = null;
+        if (_hitSequence != null)
+        {
+            _hitSequence.Kill();
+            _hitSequence = null;
+        }
+
+        if (_flashTween != null)
+        {
+            _flashTween.Kill();
+            _flashTween = null;
+        }
+
+        if (_deathSequence != null)
+        {
+            _deathSequence.Kill();
+            _deathSequence = null;
+        }
     }
 
     /// <summary>
@@ -74,67 +102,89 @@ public class TrashObject : MonoBehaviour, IPoolable
     /// </summary>
     public void Hit(int hitPower, Vector2 hitPoint, Vector2 hitDirection, UnityEngine.Object attacker)
     {
-        if (isDying) return;
+        if (_isDying)
+        {
+            return;
+        }
 
-        currentHits += Mathf.Max(1, hitPower);
+        _currentHits += Mathf.Max(1, hitPower);
         onHit?.Invoke();
-        onHitProgress?.Invoke(Mathf.Clamp01((float)currentHits / maxHits));
+        onHitProgress?.Invoke(Mathf.Clamp01((float)_currentHits / maxHits));
 
         PlayHitFeedback(hitDirection, hitPoint);
 
-        if (currentHits >= maxHits)
+        if (_currentHits >= maxHits)
         {
             HandleDestroy();
         }
     }
 
-    void PlayHitFeedback(Vector2 hitDirection, Vector2 hitPoint)
+    private void PlayHitFeedback(Vector2 hitDirection, Vector2 hitPoint)
     {
-        if (!spriteRenderer) return;
+        if (!spriteRenderer)
+        {
+            return;
+        }
 
-        // 방향 보정: 0 벡터면 오브젝트 중심 기준
         if (hitDirection == Vector2.zero)
         {
             Vector2 center = transform.position;
             hitDirection = (center - hitPoint).normalized;
-            if (hitDirection == Vector2.zero) hitDirection = Vector2.up; // 완전 동일 위치 fallback
+            if (hitDirection == Vector2.zero)
+            {
+                hitDirection = Vector2.up;
+            }
         }
 
         hitDirection.Normalize();
 
-        // Flash: 기존 진행 중이면 재시작
-        flashTween?.Kill();
+        // Flash
+        if (_flashTween != null)
+        {
+            _flashTween.Kill();
+        }
         spriteRenderer.color = flashColor;
-        flashTween = spriteRenderer.DOColor(originalColor, flashDuration).SetEase(Ease.Linear);
+        _flashTween = spriteRenderer.DOColor(_originalColor, flashDuration).SetEase(Ease.Linear);
 
         // Push
-        if (hitSequence != null)
+        if (_hitSequence != null)
         {
             if (restartTweenOnNewHit)
             {
-                hitSequence.Kill();
-                transform.localPosition = baseLocalPos; // 원위치 강제
+                _hitSequence.Kill();
+                transform.localPosition = _baseLocalPos;
             }
-            else return; // 새 히트 무시
+            else
+            {
+                return; // 새 히트 무시
+            }
         }
 
-        baseLocalPos = transform.localPosition; // 현재 위치 기준 (연속 히트 자연스러운 반응)
-        Vector3 target = baseLocalPos + (Vector3)hitDirection * pushDistance;
-        hitSequence = DOTween.Sequence();
-        hitSequence.SetUpdate(false)
-                   .Append(transform.DOLocalMove(target, pushOutTime).SetEase(pushOutEase))
-                   .Append(transform.DOLocalMove(baseLocalPos, pushReturnTime).SetEase(pushReturnEase))
-                   .OnKill(() => hitSequence = null);
+        _baseLocalPos = transform.localPosition;
+        Vector3 target = _baseLocalPos + (Vector3)hitDirection * pushDistance;
+        _hitSequence = DOTween.Sequence();
+        _hitSequence.SetUpdate(false)
+            .Append(transform.DOLocalMove(target, pushOutTime).SetEase(pushOutEase))
+            .Append(transform.DOLocalMove(_baseLocalPos, pushReturnTime).SetEase(pushReturnEase))
+            .OnKill(() => _hitSequence = null);
     }
 
-    void HandleDestroy()
+    private void HandleDestroy()
     {
-        if (isDying) return;
-        isDying = true;
-        if (col) col.enabled = false;
-        onDestroyed?.Invoke();
+        if (_isDying)
+        {
+            return;
+        }
 
-        KillTweens(); // 히트 트윈 중단 후 사망 연출 시작
+        _isDying = true;
+
+        if (_col)
+        {
+            _col.enabled = false;
+        }
+
+        onDestroyed?.Invoke();
+        KillTweens();
 
         if (!spriteRenderer)
         {
@@ -142,32 +192,48 @@ public class TrashObject : MonoBehaviour, IPoolable
             return;
         }
 
-        deathSequence = DOTween.Sequence().SetUpdate(false);
+        _deathSequence = DOTween.Sequence().SetUpdate(false);
 
-        // 회전 흔들 (Z축 기준 2D)
         if (deathRotateJitter > 0f && deathRotateJitterLoops > 0)
         {
             float endRot = UnityEngine.Random.Range(-deathRotateJitter, deathRotateJitter);
-            deathSequence.Join(transform.DOLocalRotate(new Vector3(0,0,endRot), deathScaleTime * 0.5f)
-                                          .SetLoops(deathRotateJitterLoops, LoopType.Yoyo)
-                                          .SetEase(Ease.InOutSine));
+            _deathSequence.Join(
+                transform
+                    .DOLocalRotate(new Vector3(0, 0, endRot), deathScaleTime * 0.5f)
+                    .SetLoops(deathRotateJitterLoops, LoopType.Yoyo)
+                    .SetEase(Ease.InOutSine)
+            );
         }
 
-        // 스케일 축소 + 페이드
         Vector3 initScale = transform.localScale;
-        deathSequence.Join(transform.DOScale(initScale * 0.1f, deathScaleTime).SetEase(deathScaleEase));
-        if (spriteRenderer)
-            deathSequence.Join(spriteRenderer.DOFade(0f, deathFadeTime).SetEase(Ease.Linear));
+        _deathSequence.Join(
+            transform
+                .DOScale(initScale * 0.1f, deathScaleTime)
+                .SetEase(deathScaleEase)
+        );
 
-        deathSequence.OnComplete(FinalizeDeath)
-                     .OnKill(() => deathSequence = null);
+        if (spriteRenderer)
+        {
+            _deathSequence.Join(
+                spriteRenderer
+                    .DOFade(0f, deathFadeTime)
+                    .SetEase(Ease.Linear)
+            );
+        }
+
+        _deathSequence.OnComplete(FinalizeDeath)
+            .OnKill(() => _deathSequence = null);
     }
 
-    void FinalizeDeath()
+    private void FinalizeDeath()
     {
-        if (_despawned) return; // 중복 방지
+        if (_despawned)
+        {
+            return;
+        }
+
         _despawned = true;
-        // 풀 존재하면 풀로 반환, 없으면 비활성 (Destroy 사용 안 함)
+
         if (pool != null)
         {
             pool.Despawn(gameObject);
@@ -181,16 +247,28 @@ public class TrashObject : MonoBehaviour, IPoolable
     public void OnSpawned()
     {
         _despawned = false;
-        currentHits = 0;
-        isDying = false;
+        _currentHits = 0;
+        _isDying = false;
         KillTweens();
-        baseLocalPos = transform.localPosition;
-        if (col) col.enabled = true;
+
+        // 사망 시 축소된 스케일 복원
+        transform.localScale = _initialScale;
+
+        _baseLocalPos = transform.localPosition;
+
+        if (_col)
+        {
+            _col.enabled = true;
+        }
+
         if (spriteRenderer)
         {
-            spriteRenderer.color = originalColor;
-            var c = spriteRenderer.color; c.a = 1f; spriteRenderer.color = c; // 페이드 복구
+            spriteRenderer.color = _originalColor;
+            var c = spriteRenderer.color;
+            c.a = 1f;
+            spriteRenderer.color = c;
         }
+
         onHitProgress?.Invoke(0f);
     }
 
