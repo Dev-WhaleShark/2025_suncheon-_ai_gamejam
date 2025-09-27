@@ -824,10 +824,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 96e85a4d-27cf-4594-a18c-e32b93916535
+  cloudProjectId: 5f0a856b-ccc0-4a22-a55f-5b9ca690309e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: WhaleSharkFramework 2025-09-20_14-26-47
+  projectName: 2025_suncheon_gamejam
   organizationId: developerkua
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

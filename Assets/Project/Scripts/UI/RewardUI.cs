@@ -31,7 +31,7 @@ public class RewardUI : MonoBehaviour
 
     [Header("Input")]
     [SerializeField] private bool blockRaycastWhileAnimating = true;
-    [SerializeField] private CanvasGroup canvasGroup; // Optional for whole UI fade
+    [SerializeField] private CanvasGroup canvasGroup;
 
     [Header("Events")]
     public UnityEvent onShowStart;

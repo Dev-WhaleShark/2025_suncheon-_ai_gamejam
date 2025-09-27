@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a4574824a7457eb3d125c88146bfe0, type: 3}
+  m_Name: TestDialogueSequence
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  lines:
+  - speaker: "\uB098\uB808\uC774\uC158"
+    text: "\"\uC21C\uCC9C\uB9CC \uAD6D\uAC00\uC815\uC6D0... \n\uC0DD\uBA85\uC774
+      \uC228\uC26C\uB294 \uC544\uB984\uB2E4\uC6B4 \uC790\uC5F0\uC758 \uBCF4\uAE08\uC790\uB9AC\uC600\uC2B5\uB2C8\uB2E4.\""
+    speedMultiplier: 0
+    autoAdvanceDelay: 3
+    sfxKey: 
+  - speaker: "\uB098\uB808\uC774\uC158"
+    text: "\"\uD558\uC9C0\uB9CC \uC5B4\uB290 \uB0A0, \uC54C \uC218 \uC5C6\uB294 \uC624\uC5FC\uBB3C\uC9C8\uC774
+      \n\uC774 \uD3C9\uD654\uB85C\uC6B4 \uB545\uC744 \uCE68\uBC94\uD558\uAE30 \uC2DC\uC791\uD588\uC2B5\uB2C8\uB2E4.\""
+    speedMultiplier: 0
+    autoAdvanceDelay: 3
+    sfxKey: 
+  - speaker: "\uB098\uB808\uC774\uC158"
+    text: "\"\uC21C\uCC9C\uB9CC\uC758 \uC0DD\uBA85\uB4E4\uC774 \uD558\uB098\uB458
+      \uBCC0\uD574\uAC00\uAE30 \uC2DC\uC791\uD588\uACE0...\""
+    speedMultiplier: 0
+    autoAdvanceDelay: 3
+    sfxKey: 
+  - speaker: "\uB098\uB808\uC774\uC158"
+    text: "\"\uC21C\uCC9C\uB9CC\uC758 \uB9C8\uC9C0\uB9C9 \uC218\uD638\uC790, \uAF43\uB450\uB8E8\uBBF8.\n\uADF8\uC758
+      \uAE43\uD138\uC5D0\uB294 \uC0DD\uBA85\uC744 \uC815\uD654\uD558\uB294 \uC2E0\uBE44\uD55C
+      \uD798\uC774 \uAE43\uB4E4\uC5B4 \uC788\uC5C8\uC2B5\uB2C8\uB2E4.\""
+    speedMultiplier: 0
+    autoAdvanceDelay: 3
+    sfxKey: 
