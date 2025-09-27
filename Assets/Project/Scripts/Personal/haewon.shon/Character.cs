@@ -17,6 +17,7 @@ public class Character : MonoBehaviour
 
     [Header("Combat")]
     public GameObject projectile;
+    public GameObject corpse;
     private Vector2 mousePos;
 
     private float currentHealth;
@@ -24,6 +25,8 @@ public class Character : MonoBehaviour
 
     private bool hasSlowDebuff = false;
     private float slowTimer = 0.0f;
+
+    private bool isDead = false;
 
     // Anim
     private Animator animator;
@@ -43,6 +46,8 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (isDead) return;
+
         rb.linearVelocity = moveInput * moveSpeed;
         animator.SetFloat("xVelocity", rb.linearVelocityX);
         animator.SetBool("isMoving", rb.linearVelocity.magnitude > 0.0f);
@@ -61,6 +66,7 @@ public class Character : MonoBehaviour
 
     public void OnTakeDamage(int damage)
     {
+        if (isDead) return;
         if (immuneTimer > 0) return;
 
         currentHealth -= damage;
@@ -104,7 +110,7 @@ public class Character : MonoBehaviour
                 animator.SetFloat("xVelocity", -1);
             }
             else
-            { 
+            {
                 animator.SetFloat("xVelocity", 1);
             }
         }
@@ -126,13 +132,20 @@ public class Character : MonoBehaviour
     void OnDied()
     {
         Debug.Log(gameObject.name + " is dead!");
-        //Destroy(gameObject);
+        animator.SetTrigger("OnDeath");
+        isDead = true;
+
+        if (corpse)
+        {
+            GameObject deadBody = Instantiate(corpse, gameObject.transform.position, Quaternion.identity);
+            deadBody.transform.localScale = transform.localScale;
+            this.rb.linearVelocity = Vector2.zero;
+        }
     }
 
     void SetProjectile()
-    { 
+    {
         GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity);
         proj.GetComponent<Bullet>().SetDirection((mousePos - (Vector2)transform.position).normalized);
     }
-
 }

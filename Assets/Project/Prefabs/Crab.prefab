@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1105633624693454625
+--- !u!1 &8590583824586630741
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,74 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4127505456092310301}
+  - component: {fileID: 1042678651530875807}
+  - component: {fileID: 5155931221329333194}
+  - component: {fileID: 2967700854671534053}
+  - component: {fileID: 114421792473442784}
+  - component: {fileID: 4912778270642411617}
+  - component: {fileID: 6112819300550493655}
+  - component: {fileID: 2690553502534554289}
   m_Layer: 7
-  m_Name: ProjectileReleasePoint
+  m_Name: Crab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4127505456092310301
+--- !u!4 &1042678651530875807
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105633624693454625}
+  m_GameObject: {fileID: 8590583824586630741}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.18, y: 5.58, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.85, y: -1.95, z: -1}
+  m_LocalScale: {x: 0.39012, y: 0.39012, z: 0.39012}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3726053731735052237}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4128041164302147496
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3726053731735052237}
-  - component: {fileID: 5969391193674160708}
-  - component: {fileID: 5129881415416969387}
-  - component: {fileID: 4556017720002579811}
-  - component: {fileID: 9199730577765639753}
-  - component: {fileID: 3719447702312184447}
-  - component: {fileID: 1335817214000231365}
-  m_Layer: 7
-  m_Name: Otter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3726053731735052237
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4128041164302147496}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.34, y: 5.91, z: -1}
-  m_LocalScale: {x: 0.35476, y: 0.35476, z: 0.35476}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4127505456092310301}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5969391193674160708
+--- !u!212 &5155931221329333194
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4128041164302147496}
+  m_GameObject: {fileID: 8590583824586630741}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -116,7 +84,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4ac90f9127ed0984da3b65a85c013a53, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb73b665f66564b4799a95298a3ee209, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,14 +95,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &5129881415416969387
+--- !u!50 &2967700854671534053
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4128041164302147496}
+  m_GameObject: {fileID: 8590583824586630741}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -154,13 +122,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &4556017720002579811
+--- !u!61 &114421792473442784
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4128041164302147496}
+  m_GameObject: {fileID: 8590583824586630741}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -188,7 +156,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -2.0610867, y: 0.4293928}
+  m_Offset: {x: -0.6512699, y: -1.3321466}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -198,42 +166,19 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.126004, y: 12.164219}
+  m_Size: {x: 9.288914, y: 11.124315}
   m_EdgeRadius: 0
---- !u!114 &9199730577765639753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4128041164302147496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5885549810dc8f84ab5c27521b2d60da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Otter
-  maxHealth: 500
-  moveSpeed: 4.5
-  attackRange: 6
-  attackCooldown: 7
-  attackDamage: 30
-  stunDuration: 0.5
-  currentState: 0
-  deathSound: {fileID: 0}
-  AttackSound: {fileID: 0}
-  projectile: {fileID: 8612708388542399979, guid: 3b2ece6741aa54c4eb76a221669701b6, type: 3}
-  projectileReleasePoint: {fileID: 4127505456092310301}
---- !u!95 &3719447702312184447
+--- !u!95 &4912778270642411617
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4128041164302147496}
+  m_GameObject: {fileID: 8590583824586630741}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 49865b9a90c97e647a14e3a03be3927e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 09203b35c845a8a4caa9d0614c838174, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -245,13 +190,36 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!82 &1335817214000231365
+--- !u!114 &6112819300550493655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8590583824586630741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f0449612851694c9e948ac5b76febf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Crab
+  maxHealth: 100
+  moveSpeed: 2
+  attackRange: 1.5
+  attackCooldown: 2
+  attackDamage: 10
+  stunDuration: 0.5
+  currentState: 0
+  deathSound: {fileID: 0}
+  AttackSound: {fileID: 0}
+  moveMinRange: {x: 0, y: 0}
+  moveMaxRange: {x: 0, y: 0}
+--- !u!82 &2690553502534554289
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4128041164302147496}
+  m_GameObject: {fileID: 8590583824586630741}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}

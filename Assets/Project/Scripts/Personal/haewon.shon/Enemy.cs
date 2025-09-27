@@ -36,11 +36,18 @@ public class Enemy : MonoBehaviour
     protected float xScale;
     protected Animator animator;
 
+    [Header("Sound")]
+    public AudioClip deathSound;
+    public AudioClip AttackSound;
+    private AudioSource audioSource;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+        
         currentHealth = maxHealth;
         xScale = transform.localScale.x;
         stunTimer = 0.0f;
