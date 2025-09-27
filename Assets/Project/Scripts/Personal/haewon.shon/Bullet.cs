@@ -15,11 +15,6 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
-    void FixedUpdate()
-    {
-
-    }
-    
     public void SetDirection(Vector2 dir)
     {
         rb.linearVelocity = dir * 10.0f;
@@ -32,6 +27,7 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Hit " + other.name);
+
         Enemy enemyComponent = other.GetComponent<Enemy>();
         if (enemyComponent)
         {
@@ -39,10 +35,22 @@ public class Bullet : MonoBehaviour
             {
                 Instantiate(explosionPrefab, transform.position, Quaternion.AngleAxis(Random.Range(0.0f, 360.0f), new Vector3(0.0f, 0.0f, 1.0f)));
             }
-            
+
             enemyComponent.OnTakeDamage(damage, rb.linearVelocityX);
             Destroy(gameObject);
-            
+
+        }
+        
+        // Trash
+        TrashObject trashComponent = other.GetComponent<TrashObject>();
+        if (trashComponent)
+        {
+            if (explosionPrefab)
+            {
+                Instantiate(explosionPrefab, transform.position, Quaternion.AngleAxis(Random.Range(0.0f, 360.0f), new Vector3(0.0f, 0.0f, 1.0f)));
+            }
+            trashComponent.Hit(1, other.ClosestPoint(transform.position), rb.linearVelocity, null);
+            Destroy(gameObject);
         }
     }
 }

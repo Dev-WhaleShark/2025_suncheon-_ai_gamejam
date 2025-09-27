@@ -41,6 +41,21 @@ public class Character : MonoBehaviour
     private bool isCleaning = false;
 
 
+    [Header("Cleaning Config")]
+    public Transform cleaningPos;
+    [SerializeField] private float minSpeedThreshold = 0.05f;
+    [SerializeField] private bool avoidDuplicateCell = true;
+    [SerializeField] private int cleaningRadius = 1;
+
+    private Vector2Int _lastCell = new Vector2Int(int.MinValue, int.MinValue);
+
+    private Stage _map;
+
+    void Awake()
+    {
+        _map = _map ?? FindFirstObjectByType<Stage>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -68,6 +83,11 @@ public class Character : MonoBehaviour
                 hasSlowDebuff = false;
                 moveSpeed /= (1.0f - 0.5f); // Assuming the slow amount is always 50%
             }
+        }
+
+        if (isCleaning)
+        {
+            ApplyCleaning();
         }
     }
 
@@ -110,7 +130,7 @@ public class Character : MonoBehaviour
     void OnAttack(InputValue value) // LMB
     {
         if (isDead || isCleaning) return;
-        
+
         if (value.isPressed)
         {
             animator.SetTrigger("OnAttack");
@@ -164,5 +184,39 @@ public class Character : MonoBehaviour
 
         audioSource.clip = attackSound;
         audioSource.Play();
+    }
+    
+    private void ApplyCleaning()
+    {
+        if (_map == null) return;
+
+        Vector2 moveDir = rb.linearVelocity;
+        float speed = moveDir.magnitude;
+        if (speed < minSpeedThreshold) return;
+
+        moveDir.Normalize();
+
+        if (!_map.WorldToGrid(cleaningPos.position, out var centerCell))
+            return;
+
+        if (avoidDuplicateCell && centerCell == _lastCell)
+            return;
+
+        // 지정된 크기만큼 오염 적용 (중심 기준 대칭)
+        int halfRadius = cleaningRadius / 2;
+        for (int x = -halfRadius; x < cleaningRadius - halfRadius; x++)
+        {
+            for (int y = -halfRadius; y < cleaningRadius - halfRadius; y++)
+            {
+                Vector2Int targetCell = centerCell + new Vector2Int(x, y);
+                if (_map.IsValidGridPosition(targetCell))
+                {
+                    _map.SetPollution(targetCell, false); // 오염만 해제
+                    //_map.CleanCell(targetCell); // 쓰레기도 같이?
+                }
+            }
+        }
+
+        _lastCell = centerCell;
     }
 }
