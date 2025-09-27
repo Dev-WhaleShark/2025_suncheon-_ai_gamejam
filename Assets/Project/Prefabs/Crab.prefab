@@ -81,6 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25ddf754ecc35d42ac3706e1e55c89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  damage: 30
 --- !u!1 &8590583824586630741
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,12 +286,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f0449612851694c9e948ac5b76febf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Crab
-  maxHealth: 100
+  maxHealth: 600
   moveSpeed: 5
   attackRange: 1.5
   attackCooldown: 2
   attackDamage: 10
-  stunDuration: 0.5
+  stunDuration: 0.25
   stunImmune: 1
   currentState: 0
   hpBar: {fileID: 7251459736422674590}
@@ -298,6 +299,7 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: ae1ce5dba9e02254f99dd6e1e472581d, type: 3}
   moveMinRange: {x: -18, y: -9}
   moveMaxRange: {x: 18, y: 9}
+  rushSpeedMultiplier: 2.5
 --- !u!82 &2690553502534554289
 AudioSource:
   m_ObjectHideFlags: 0

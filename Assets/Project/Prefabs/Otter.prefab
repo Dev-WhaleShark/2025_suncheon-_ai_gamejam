@@ -218,7 +218,8 @@ MonoBehaviour:
   attackRange: 6
   attackCooldown: 7
   attackDamage: 30
-  stunDuration: 0.5
+  stunDuration: 0.25
+  stunImmune: 1
   currentState: 0
   hpBar: {fileID: 7833401955578027453}
   deathSound: {fileID: 8300000, guid: 5a9ad7f33b035f34784e6f55f53bd2df, type: 3}
@@ -394,7 +395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1655391425388557852, guid: 1bb7f39dd08d2a144b273daf0f41a951, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.8188074
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1655391425388557852, guid: 1bb7f39dd08d2a144b273daf0f41a951, type: 3}
       propertyPath: m_LocalRotation.w

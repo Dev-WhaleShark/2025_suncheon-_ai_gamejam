@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashPile
   maxHealth: 300
-  moveSpeed: 1
+  moveSpeed: 10
   attackRange: 1.5
   attackCooldown: 5
   attackDamage: 10
@@ -120,7 +120,7 @@ MonoBehaviour:
   deathSound: {fileID: 8300000, guid: 90f52d0e04ddb8040b22b36dfa528f86, type: 3}
   attackSound: {fileID: 8300000, guid: 1d0ffd577cd688d45a9582f925870ee6, type: 3}
   sludgePrefab: {fileID: 4591758380060657593, guid: 95f3cf89ad8b84341aee18211603f9f7, type: 3}
-  moveRouteRadius: 3
+  moveRouteRadius: 8
   numberOfPoints: 32
 --- !u!50 &8426586158701645084
 Rigidbody2D:
@@ -183,7 +183,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.6512699, y: -1.3321466}
+  m_Offset: {x: -0.40945816, y: -1.3321466}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -193,7 +193,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 9.288914, y: 11.124315}
+  m_Size: {x: 11.827932, y: 11.124315}
   m_EdgeRadius: 0
 --- !u!95 &4053709016759343782
 Animator:

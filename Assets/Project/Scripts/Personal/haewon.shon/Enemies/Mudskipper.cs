@@ -12,8 +12,9 @@ public class Mudskipper : Enemy
     private int numberOfPoints = 4;
     public float delayBeforeAttack = 1.0f;
     private Vector2 velocity;
+
     // temp
-    private float offset = 10.0f;
+    public Vector2 offset;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected override void Start()
@@ -22,10 +23,10 @@ public class Mudskipper : Enemy
 
         // 임시 왕복 지점 지정
         points = new Vector2[numberOfPoints];
-        points[0] = new Vector2(transform.position.x - offset, transform.position.y - offset);
-        points[1] = new Vector2(transform.position.x + offset, transform.position.y + offset);
-        points[2] = new Vector2(transform.position.x - offset, transform.position.y + offset);
-        points[3] = new Vector2(transform.position.x + offset, transform.position.y - offset);
+        points[0] = new Vector2(transform.position.x - offset.x, transform.position.y - offset.y);
+        points[1] = new Vector2(transform.position.x + offset.x, transform.position.y + offset.y);
+        points[2] = new Vector2(transform.position.x - offset.x, transform.position.y + offset.y);
+        points[3] = new Vector2(transform.position.x + offset.x, transform.position.y - offset.y);
 
         attackCooldown = attackCooldown + delayBeforeAttack; // 공격에 걸리는 시간 합산
     }

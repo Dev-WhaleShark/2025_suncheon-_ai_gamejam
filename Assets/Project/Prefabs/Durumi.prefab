@@ -181,12 +181,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99a36cb17c6e6354f883d5bff6ecc227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Durumi
-  maxHealth: 100
-  moveSpeed: 2
+  maxHealth: 1000
+  moveSpeed: 5
   attackRange: 1.5
   attackCooldown: 10
-  attackDamage: 10
-  stunDuration: 0.5
+  attackDamage: 40
+  stunDuration: 0.25
+  stunImmune: 1
   currentState: 0
   hpBar: {fileID: 44453977707248181}
   deathSound: {fileID: 8300000, guid: 94cb3b34689ec8b449ee4a02a8340939, type: 3}

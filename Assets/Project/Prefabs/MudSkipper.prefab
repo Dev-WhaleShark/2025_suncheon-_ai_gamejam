@@ -213,12 +213,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea4307556142fb48947c75824d5f192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mudskipper
-  maxHealth: 1200
-  moveSpeed: 5
+  maxHealth: 700
+  moveSpeed: 3
   attackRange: 1.5
   attackCooldown: 2
-  attackDamage: 50
+  attackDamage: 30
   stunDuration: 0.5
+  stunImmune: 1
   currentState: 0
   hpBar: {fileID: 1821205886678792947}
   deathSound: {fileID: 8300000, guid: 05cd4668ffb3b5c49897be7a92658252, type: 3}
@@ -226,6 +227,7 @@ MonoBehaviour:
   projectile: {fileID: 8612708388542399979, guid: 5d8aeac444f6fdc498629a52471507f4, type: 3}
   projectileReleasePoint: {fileID: 1954472919731342877}
   delayBeforeAttack: 1
+  offset: {x: 16, y: 8}
 --- !u!95 &1165568584390845912
 Animator:
   serializedVersion: 7
@@ -395,7 +397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1655391425388557852, guid: 1bb7f39dd08d2a144b273daf0f41a951, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.563314
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1655391425388557852, guid: 1bb7f39dd08d2a144b273daf0f41a951, type: 3}
       propertyPath: m_LocalRotation.w
