@@ -22,12 +22,16 @@ public class Enemy : MonoBehaviour
     public float attackCooldown = 2f;
     public int attackDamage = 10;
 
+    public float stunDuration = 0.5f;
+
     [Header("State")]
     public EnemyState currentState = EnemyState.Idle;
     protected Rigidbody2D rb;
     protected Transform target;
     protected float currentHealth;
     protected bool canAttack = true;
+
+    protected float stunTimer;
 
     protected float xScale;
     protected Animator animator;
@@ -39,6 +43,7 @@ public class Enemy : MonoBehaviour
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
         xScale = transform.localScale.x;
+        stunTimer = 0.0f;
     }
 
     protected virtual void Start()
@@ -53,25 +58,47 @@ public class Enemy : MonoBehaviour
     {
         if (currentState == EnemyState.Dead) return;
 
-        StateLogic();
-
-
+        if (stunTimer <= 0.0f)
+        {
+            StateLogic();
+        }
+        else
+        {
+            stunTimer -= Time.deltaTime;
+        }
     }
 
-    public void OnTakeDamage(int damage)
+    public void OnTakeDamage(int damage, float bulletVelocity)
     {
+        if (currentState == EnemyState.Dead) return;
+
         currentHealth -= damage;
 
         if (currentHealth <= 0)
         {
             OnDied();
+            return;
         }
+
+        if (currentState != EnemyState.Attack)
+        { 
+            animator.SetTrigger("OnHit");
+            stunTimer = stunDuration;
+            StartCoroutine(RecoverVelocity(stunTimer));
+        }
+
+        // // 바라보는 방향 설정
+        // if (bulletVelocity > 0.0f) transform.localScale = new Vector3(xScale, transform.localScale.y, 1.0f);
+        // else if (bulletVelocity < 0.0f) transform.localScale = new Vector3(-xScale, transform.localScale.y, 1.0f);
     }
 
     public void OnDied()
     {
         Debug.Log(gameObject.name + " is dead!");
-        Destroy(gameObject);
+        animator.SetTrigger("OnDeath");
+        currentState = EnemyState.Dead;
+        Destroy(gameObject, 1.0f);
+        rb.linearVelocity = Vector2.zero;
     }
 
     protected virtual void StateLogic()
@@ -94,9 +121,7 @@ public class Enemy : MonoBehaviour
     }
     protected virtual void Idle()
     {
-        // 기본: 타겟이 가까우면 Move로 전환
-        if (target != null && Vector2.Distance(transform.position, target.position) < 5f)
-            currentState = EnemyState.Move;
+        currentState = EnemyState.Move;
     }
 
     protected virtual void Move()
@@ -134,17 +159,18 @@ public class Enemy : MonoBehaviour
         // 특수 스킬 구현용 오버라이드
     }
 
-    public virtual void TakeDamage(float amount)
+    protected virtual IEnumerator RecoverVelocity(float stopDuration)
     {
-        currentHealth -= amount;
-        if (currentHealth <= 0f) Die();
-    }
-
-    protected virtual void Die()
-    {
-        currentState = EnemyState.Dead;
+        Vector2 v = rb.linearVelocity;
         rb.linearVelocity = Vector2.zero;
-        // 사망 처리: 애니메이션, 오브젝트 제거 등
-        Destroy(gameObject, 1f);
+        yield return new WaitForSeconds(stopDuration);
+        if (currentState != EnemyState.Dead)
+        { 
+            rb.linearVelocity = v;
+        }
+
+        // // 바라보는 방향 설정
+        // if (rb.linearVelocityX > 0.0f) transform.localScale = new Vector3(-xScale, transform.localScale.y, 1.0f);
+        // else if (rb.linearVelocityX < 0.0f) transform.localScale = new Vector3(xScale, transform.localScale.y, 1.0f);
     }
 }

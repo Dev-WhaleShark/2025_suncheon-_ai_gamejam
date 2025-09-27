@@ -5,7 +5,7 @@ public class EnemyProjectile : MonoBehaviour
     public int damage = 1;
     public float lifetime = 3.0f;
     public float speed = 10.0f;
-    Rigidbody2D rb;
+    protected Rigidbody2D rb;
 
     void Awake()
     {
@@ -13,10 +13,6 @@ public class EnemyProjectile : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
-    void FixedUpdate()
-    {
-
-    }
     public void SetDirection(Vector2 dir)
     {
        rb.linearVelocity = dir * speed;

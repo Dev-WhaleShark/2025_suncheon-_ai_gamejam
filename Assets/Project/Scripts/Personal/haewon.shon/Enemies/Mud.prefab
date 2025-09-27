@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2583087657091090052}
   - component: {fileID: 5773439441610072826}
   - component: {fileID: 3762577185171507789}
-  - component: {fileID: 155686072945121298}
+  - component: {fileID: -4418000081201166977}
   m_Layer: 0
   m_Name: Mud
   m_TagString: Untagged
@@ -82,8 +82,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.2924528, g: 0.121855326, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: fb2d94614714aff43b6d1ddaf8849421, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,8 +127,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0.34882092, y: 1.5818596}
+  m_Radius: 2.0412993
 --- !u!50 &3762577185171507789
 Rigidbody2D:
   serializedVersion: 5
@@ -144,7 +144,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -156,7 +156,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &155686072945121298
+--- !u!114 &-4418000081201166977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,9 +165,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8612708388542399979}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 539a68874644d2945abc218eb71f3938, type: 3}
+  m_Script: {fileID: 11500000, guid: d29c331590bda6546b38ab05dd63804b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyProjectile
-  damage: 50
+  m_EditorClassIdentifier: Assembly-CSharp::Mud
+  damage: 30
   lifetime: 3
-  speed: 20
+  speed: 10
+  flightTime: 1.5
+  afterEffectLifeTime: 0.1
+  collisionLifeTime: 0.1
+  brokenMudSprite: {fileID: 21300000, guid: fdeca160ec7788e47b41ed7ad226adff, type: 3}

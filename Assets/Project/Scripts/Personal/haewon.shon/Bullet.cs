@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour
         Enemy enemyComponent = other.GetComponent<Enemy>();
         if (enemyComponent)
         { 
-            enemyComponent.OnTakeDamage(damage);
+            enemyComponent.OnTakeDamage(damage, rb.linearVelocityX);
             Destroy(gameObject);
         }
     }

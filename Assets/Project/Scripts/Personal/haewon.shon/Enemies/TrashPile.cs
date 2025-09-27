@@ -27,14 +27,6 @@ public class TrashPile : Enemy
         transform.position = new Vector3(points[targetPointIndex].x, points[targetPointIndex].y, -1);
     }
 
-    // Update is called once per frame
-    protected override void Update()
-    {
-        if (currentState == EnemyState.Dead) return;
-
-        StateLogic();
-    }
-
     protected override void Idle()
     {
         currentState = EnemyState.Move;
@@ -63,7 +55,8 @@ public class TrashPile : Enemy
     {
         if (!canAttack) return;
 
-        Instantiate(sludgePrefab, transform.position, Quaternion.identity);
+        GameObject sludge = Instantiate(sludgePrefab, transform.position, Quaternion.identity);
+        sludge.transform.localScale = transform.localScale; // 몬스터 스케일 따라가도록
         currentState = EnemyState.Move;
 
         // 공격 구현 (예: 데미지 전달)

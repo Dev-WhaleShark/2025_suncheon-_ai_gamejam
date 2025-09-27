@@ -34,14 +34,6 @@ public class Durumi : Enemy
         targetPointIndex = Random.Range(0, numberOfPointsOnRoute);
         transform.position = new Vector3(points[targetPointIndex].x, points[targetPointIndex].y, -1);
     }
-
-    // Update is called once per frame
-    protected override void Update()
-    {
-        if (currentState == EnemyState.Dead) return;
-
-        StateLogic();
-    }
     
     protected override void Idle()
     {

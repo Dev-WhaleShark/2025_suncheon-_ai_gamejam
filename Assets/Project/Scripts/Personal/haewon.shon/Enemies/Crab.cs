@@ -30,14 +30,6 @@ public class Crab : Enemy
         attackCooldown = attackCooldown + delayBeforeAttack + delayAfterAttack; // 공격에 걸리는 시간 합산
     }
 
-    // Update is called once per frame
-    protected override void Update()
-    {
-        if (currentState == EnemyState.Dead) return;
-
-        StateLogic();
-    }
-
     protected override void Idle()
     {
         currentState = EnemyState.Move;

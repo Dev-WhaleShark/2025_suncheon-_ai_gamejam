@@ -40,6 +40,8 @@ public class Character : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = moveInput * moveSpeed;
+        animator.SetFloat("xVelocity", rb.linearVelocityX);
+        animator.SetBool("isMoving", rb.linearVelocity.magnitude > 0.0f);
         immuneTimer -= Time.fixedDeltaTime;
 
         if(hasSlowDebuff)
@@ -83,8 +85,6 @@ public class Character : MonoBehaviour
     {
         Vector2 inputVector = value.Get<Vector2>();
         moveInput = inputVector;
-
-        animator.SetBool("isWatchingLeft", inputVector.x < 0);
     }
 
     void OnAttack(InputValue value) // LMB
