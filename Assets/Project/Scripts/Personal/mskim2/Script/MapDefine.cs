@@ -1,43 +1,114 @@
+using System;
 using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.Tilemaps;
 
-public enum RoomType
+[Flags]
+public enum TileState
 {
-    Start,
-    Normal,
-    Boss,
-    Shop,
+    Clean     = 0,
+    Pollution = 1 << 0,
+    Trash     = 1 << 1
 }
 
-public enum Direction { North, South, East, West }
-
-public class Room
+/// <summary>
+/// 맵을 Grid 단위로 상태(Clean/Polluted/Trash) 관리 (타일맵 비사용)
+/// </summary>
+public class MapGrid
 {
-    public Vector2Int position; // 방의 위치 (x, y)
-    public RoomType type; // 방의 타입 (시작, 일반, 보스, 상점 등)
-    public bool visited; // 플레이어가 방문했는지 여부
-    public GameObject roomObject; // 방의 게임 오브젝트 (씬에서의 실제 방)
+    private TileState[,] _states;
+    public Vector2Int GridSize { get; private set; }
+    public bool IsInitialized => _states != null;
 
-    public Dictionary<Direction, bool> connections;
-    public PollutionGrid pollutionGrid; // 오염 데이터 추가
-    public bool isCleared;
-    public bool isVisited;
-}
+    public event Action<Vector2Int, TileState> OnTileStateChanged;
 
-public class PollutionGrid
-{
-    private int[,] pollutionLevels;  // 0~4 오염도
-    public Vector2Int gridSize;
-    
-    public int GetPollution(Vector2Int pos) => pollutionLevels[pos.x, pos.y];
-    public void SetPollution(Vector2Int pos, int level) => pollutionLevels[pos.x, pos.y] = Mathf.Clamp(level, 0, 4);
-}
+    /// <summary>
+    /// size 크기 초기화 (모든 셀 Clean)
+    /// </summary>
+    public void Initialize(Vector2Int size)
+    {
+        if (size.x <= 0 || size.y <= 0)
+        {
+            Debug.LogError($"MapGrid Initialize 실패: 잘못된 크기 {size}");
+            return;
+        }
+        GridSize = size;
+        _states = new TileState[size.x, size.y]; // 기본 Clean(0)
+    }
 
-public class TilemapData
-{
-    public TileBase[] floorTiles;
-    public TileBase[] wallTiles;
-    public TileBase[] decorationTiles;
-    public Vector3Int[] doorPositions;   // 문 위치들
+    public bool InBounds(Vector2Int p) => IsInitialized && p.x >= 0 && p.y >= 0 && p.x < GridSize.x && p.y < GridSize.y;
+
+    private bool Validate(Vector2Int p)
+    {
+        if (!IsInitialized) { Debug.LogWarning("MapGrid not initialized"); return false; }
+        if (!InBounds(p)) return false;
+        return true;
+    }
+
+    /// <summary>
+    /// 해당 셀의 전체 상태 반환 (Out of Bounds 시 Clean)
+    /// </summary>
+    public TileState GetTileState(Vector2Int p)
+    {
+        if (!Validate(p)) return TileState.Clean;
+        return _states[p.x, p.y];
+    }
+
+    private void SetTileStateInternal(Vector2Int p, TileState newState)
+    {
+        if (!Validate(p)) return;
+        var prev = _states[p.x, p.y];
+        if (prev == newState) return;
+        _states[p.x, p.y] = newState;
+        OnTileStateChanged?.Invoke(p, newState);
+    }
+
+    public void SetFlag(Vector2Int p, TileState flag, bool enable)
+    {
+        if (!Validate(p)) return;
+        var cur = _states[p.x, p.y];
+        var next = enable ? (cur | flag) : (cur & ~flag);
+        SetTileStateInternal(p, next);
+    }
+
+    public void SetPollution(Vector2Int p, bool enable = true) => SetFlag(p, TileState.Pollution, enable);
+    public void SetTrash(Vector2Int p, bool enable = true) => SetFlag(p, TileState.Trash, enable);
+    public void CleanTile(Vector2Int p) => SetTileStateInternal(p, TileState.Clean);
+
+    public bool HasPollution(Vector2Int p) => (GetTileState(p) & TileState.Pollution) != 0;
+    public bool HasTrash(Vector2Int p) => (GetTileState(p) & TileState.Trash) != 0;
+
+    /// <summary>
+    /// 전체를 polluted 값으로 일괄 세팅 (true = 모두 Polluted, false = 모두 Clean)
+    /// </summary>
+    public void SetAllPollution(bool enable)
+    {
+        if (!IsInitialized) return;
+        for (int x = 0; x < GridSize.x; x++)
+            for (int y = 0; y < GridSize.y; y++)
+            {
+                var cell = new Vector2Int(x, y);
+                SetPollution(cell, enable);
+            }
+    }
+
+    public void SetAllClean()
+    {
+        if (!IsInitialized) return;
+        for (int x = 0; x < GridSize.x; x++)
+            for (int y = 0; y < GridSize.y; y++)
+                SetTileStateInternal(new Vector2Int(x, y), TileState.Clean);
+    }
+
+    /// <summary>
+    /// 정화된 타일 비율(0~1)
+    /// </summary>
+    public float GetCleanRatio()
+    {
+        if (!IsInitialized) return 0f;
+        int total = GridSize.x * GridSize.y; if (total == 0) return 0f;
+        int clean = 0;
+        for (int x = 0; x < GridSize.x; x++)
+            for (int y = 0; y < GridSize.y; y++)
+                if (_states[x, y] == TileState.Clean) clean++;
+        return (float)clean / total;
+    }
 }
