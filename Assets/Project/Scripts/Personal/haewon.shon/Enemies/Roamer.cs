@@ -16,6 +16,7 @@ public class Roamer : Enemy
     [SerializeField] private float interval = 0.15f;
     [SerializeField] private float minSpeedThreshold = 0.05f;
     [SerializeField] private bool avoidDuplicateCell = true;
+    [SerializeField] private int pollutionRadius = 1;
 
     private float _pollutionTimer = 0f;
     private Vector2Int _lastCell = new Vector2Int(int.MinValue, int.MinValue);
@@ -98,15 +99,32 @@ public class Roamer : Enemy
         moveDir.Normalize();
 
         Vector3 pos = transform.position;
-
         pos += (Vector3)moveDir * -0.4f;
 
-        if (!_map.WorldToGrid(pos, out var cell)) return false;
-        if (avoidDuplicateCell && cell == _lastCell) return false;
+        if (!_map.WorldToGrid(pos, out var centerCell))
+            return false;
 
-        _map.SetPollution(cell, true);
-        _lastCell = cell;
-        return true;
+        if (avoidDuplicateCell && centerCell == _lastCell)
+            return false;
+
+        // 지정된 크기만큼 오염 적용 (중심 기준 대칭)
+        bool anyPollutionApplied = false;
+        int halfRadius = pollutionRadius / 2;
+        for (int x = -halfRadius; x < pollutionRadius - halfRadius; x++)
+        {
+            for (int y = -halfRadius; y < pollutionRadius - halfRadius; y++)
+            {
+                Vector2Int targetCell = centerCell + new Vector2Int(x, y);
+                if (_map.IsValidGridPosition(targetCell))
+                {
+                    _map.SetPollution(targetCell, true);
+                    anyPollutionApplied = true;
+                }
+            }
+        }
+
+        _lastCell = centerCell;
+        return anyPollutionApplied;
     }
 
     #endregion

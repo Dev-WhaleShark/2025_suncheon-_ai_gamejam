@@ -170,6 +170,9 @@ public class MapManager : MonoBehaviour
         return gridOrigin + new Vector3((cell.x + 0.5f) * cellSize, (cell.y + 0.5f) * cellSize, 0f);
     }
 
+    public bool IsValidGridPosition(Vector2Int cell) => mapGrid.InBounds(cell);
+
+
     public void SetTrash(Vector2Int cell, bool enable)
     {
         if (!mapGrid.InBounds(cell))
