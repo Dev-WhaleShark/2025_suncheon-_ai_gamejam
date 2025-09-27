@@ -109,7 +109,7 @@ public class Character : MonoBehaviour
 
     void OnAttack(InputValue value) // LMB
     {
-        if (isDead) return;
+        if (isDead || isCleaning) return;
         
         if (value.isPressed)
         {

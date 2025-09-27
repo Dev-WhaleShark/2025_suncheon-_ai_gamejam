@@ -52,8 +52,8 @@ public class Durumi : Enemy
             isWatchingLeft = rb.linearVelocityX < 0;
 
             // 바라보는 방향 설정
-            if (rb.linearVelocityX > 0.0f) transform.localScale = new Vector3(-xScale, transform.localScale.y, 1.0f);
-            else if (rb.linearVelocityX < 0.0f) transform.localScale = new Vector3(xScale, transform.localScale.y, 1.0f);
+            if (rb.linearVelocityX > 0.0f) spriteRenderer.flipX = true;
+            else if (rb.linearVelocityX < 0.0f) spriteRenderer.flipX = false;
         }
 
         if (canAttack)

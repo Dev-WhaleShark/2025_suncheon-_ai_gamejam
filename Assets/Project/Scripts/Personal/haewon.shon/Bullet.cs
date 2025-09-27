@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
     {
 
     }
+    
     public void SetDirection(Vector2 dir)
     {
         rb.linearVelocity = dir * 10.0f;
