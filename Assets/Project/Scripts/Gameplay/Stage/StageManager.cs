@@ -5,6 +5,8 @@ using WhaleShark.Gameplay;
 
 public class StageManager : MonoBehaviour
 {
+    public RewardUI rewardUI;
+
     [Header("Stage Prefabs")]
     [SerializeField] private List<Stage> stages = new List<Stage>();
 
@@ -20,6 +22,9 @@ public class StageManager : MonoBehaviour
     private Stage[] runtimeInstances;
     private bool[] clearedFlags;
 
+    private bool waitingReward = false;          // 보상 선택 대기 중
+    private int pendingNextStageIndex = -1;      // 선택 후 이동할 스테이지
+
     public Stage CurrentStage => currentStageInstance;
     public int CurrentStageIndex => currentStageIndex;
     public int StageCount => stages?.Count ?? 0;
@@ -27,6 +32,8 @@ public class StageManager : MonoBehaviour
     public event Action<int, Stage> OnStageLoaded;
     public event Action<int, Stage> OnStageUnloaded;
     public event Action<int, Stage> OnStageCleared;
+
+    public event Action<RewardData> OnRewardChosen;
 
     #region Unity
     private void Awake()
@@ -156,8 +163,66 @@ public class StageManager : MonoBehaviour
             currentStageInstance.isCleared = true;
             OnStageCleared?.Invoke(currentStageIndex, currentStageInstance);
 
-            // 자동으로 다음 스테이지 로드
-            LoadNextStage();
+            int next = currentStageIndex + 1;
+            bool hasNext = IsValidIndex(next);
+
+            // 마지막 스테이지면 즉시 게임 클리어
+            if (!hasNext)
+            {
+                GameManager.Instance.GameClear();
+                return;
+            }
+
+            // 이미 보상 대기 중이면 중복 처리 방지
+            if (waitingReward)
+            {
+                return;
+            }
+
+            if ( rewardUI != null)
+            {
+                waitingReward = true;
+                pendingNextStageIndex = next;
+
+                // 보상 UI가 이미 떠 있으면 추가 표시 생략
+                if (!rewardUI.IsShown)
+                {
+                    rewardUI.ShowRandomFromDatabase(-1 );
+
+                }
+
+                // 보상 선택 후 콜백 연결
+                rewardUI.onRewardChosen.AddListener(OnRewardChosenInternal);
+            }
+            else
+            {
+                // 보상 UI 비표시 설정 or 미할당 → 즉시 다음 스테이지
+                LoadStage(next);
+            }
+        }
+    }
+
+    private void OnRewardChosenInternal(RewardData data)
+    {
+        if (!waitingReward) return;
+        waitingReward = false;
+
+        // 리스너 정리
+        if (rewardUI != null)
+        {
+            rewardUI.onRewardChosen.RemoveListener(OnRewardChosenInternal);
+        }
+
+        int target = pendingNextStageIndex;
+        pendingNextStageIndex = -1;
+
+        if (IsValidIndex(target))
+        {
+            LoadStage(target);
+        }
+        else
+        {
+            Debug.LogError("[StageManager] 다음 스테이지 인덱스가 유효하지 않습니다: " + target);
         }
     }
 
@@ -192,6 +257,14 @@ public class StageManager : MonoBehaviour
         }
         currentStageInstance = null;
         currentStageIndex = -1;
+        waitingReward = false;
+        pendingNextStageIndex = -1;
+    }
+
+    public float GetCurrentStageCleanPercent()
+    {
+        if (currentStageInstance == null) return 0f;
+        return currentStageInstance.GetCleanPercentage();
     }
     #endregion
 

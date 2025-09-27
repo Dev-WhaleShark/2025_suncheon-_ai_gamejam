@@ -10,6 +10,7 @@ public class RewardUI : MonoBehaviour
     [SerializeField] private RectTransform cardsRoot;
     [SerializeField] private RewardCard cardPrefab;
     [SerializeField] private int maxCards = 3;
+    [SerializeField] private RewardDatabase rewardDatabase; // ScriptableObject 데이터베이스
 
     [Header("Entry Animation")]
     [SerializeField] private float entryYOffset = 400f;
@@ -103,6 +104,8 @@ public class RewardUI : MonoBehaviour
 
         onShowStart?.Invoke();
 
+        gameObject.SetActive(true);
+
         if (canvasGroup != null)
         {
             canvasGroup.alpha = 1f;
@@ -195,6 +198,7 @@ public class RewardUI : MonoBehaviour
             canvasGroup.interactable = false;
         }
 
+        gameObject.SetActive(false);
         _isShown = false;
         onHideComplete?.Invoke();
     }
@@ -274,22 +278,33 @@ public class RewardUI : MonoBehaviour
         });
     }
 
-    // ===== Test Helper (Editor button will call) =====
-    public void TestShowDummy()
+    /// <summary>
+    /// RewardDatabase 에서 무작위(가중치 포함 선택 가능)로 count 만큼 뽑아 표시.
+    /// </summary>
+    public void ShowRandomFromDatabase(int count = -1, bool weightByRarity = true)
     {
-        var dummy = new List<RewardData>();
-
-        for (int i = 0; i < maxCards; i++)
+        if (rewardDatabase == null)
         {
-            dummy.Add(new RewardData
-            {
-                id = $"reward_{i}",
-                displayName = $"Reward {i + 1}",
-                description = "테스트 보상 설명",
-                icon = null
-            });
+            Debug.LogWarning("[RewardUI] RewardDatabase 미할당");
+            return;
         }
-
-        ShowRewards(dummy);
+        int useCount = count <= 0 ? maxCards : Mathf.Min(count, maxCards);
+        var list = rewardDatabase.GetRandomDistinct(useCount, weightByRarity);
+        ShowRewards(list);
     }
+
+
+    // ===== Test Helper (Editor button will call) =====
+    [ContextMenu("Test/Show Random Rewards")]
+    public void TestShowRandom()
+    {
+        ShowRandomFromDatabase(maxCards, true);
+    }
+
+    [ContextMenu("Test/Show Random Rewards (No Weight)")]
+    public void TestShowRandomNoWeight()
+    {
+        ShowRandomFromDatabase(maxCards, false);
+    }
+
 }

@@ -22,7 +22,7 @@ public class RewardUIEditor : Editor
             GUILayout.BeginHorizontal();
             if (GUILayout.Button("Test Show Dummy"))
             {
-                ui.TestShowDummy();
+                ui.TestShowRandom();
             }
             if (GUILayout.Button("Hide Immediate"))
             {
