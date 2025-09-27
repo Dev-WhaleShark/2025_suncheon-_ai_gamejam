@@ -62,6 +62,9 @@ public class Crab : Enemy
     void SetDoubleSpeed()
     {
         rb.linearVelocity = velocity * 2;
+
+        audioSource.clip = attackSound;
+        audioSource.Play();
     }
     void SetHalfSpeed()
     {

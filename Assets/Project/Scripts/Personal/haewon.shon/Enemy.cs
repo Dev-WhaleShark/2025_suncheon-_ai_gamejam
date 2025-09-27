@@ -38,8 +38,8 @@ public class Enemy : MonoBehaviour
 
     [Header("Sound")]
     public AudioClip deathSound;
-    public AudioClip AttackSound;
-    private AudioSource audioSource;
+    public AudioClip attackSound;
+    protected AudioSource audioSource;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Awake()
@@ -106,6 +106,9 @@ public class Enemy : MonoBehaviour
         currentState = EnemyState.Dead;
         Destroy(gameObject, 1.0f);
         rb.linearVelocity = Vector2.zero;
+
+        audioSource.clip = deathSound;
+        audioSource.Play();
     }
 
     protected virtual void StateLogic()

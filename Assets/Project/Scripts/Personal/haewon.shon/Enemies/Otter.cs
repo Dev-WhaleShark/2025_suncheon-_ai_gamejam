@@ -67,6 +67,9 @@ public class Otter : Enemy
         GameObject spawnedProjectile = Instantiate(projectile, projectileReleasePoint.position, Quaternion.identity);
         EnemyProjectile projComponent = spawnedProjectile.GetComponent<EnemyProjectile>();
         projComponent.SetDirection((target.position - projectileReleasePoint.position).normalized);
+        
+        audioSource.clip = attackSound;
+        audioSource.Play();
     }
 
     void OnAttackEnd()

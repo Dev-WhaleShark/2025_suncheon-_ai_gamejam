@@ -74,6 +74,9 @@ public class Durumi : Enemy
     {
         rb.linearVelocity = Vector2.zero;
         yield return new WaitForSeconds(delayBeforeAttack);
+        
+        audioSource.clip = attackSound;
+        audioSource.Play();
 
         //float angleGap = featherThrowingAngle / (featherCount - 1);
 

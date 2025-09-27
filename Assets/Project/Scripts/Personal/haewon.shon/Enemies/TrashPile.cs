@@ -58,6 +58,9 @@ public class TrashPile : Enemy
         GameObject sludge = Instantiate(sludgePrefab, transform.position, Quaternion.identity);
         sludge.transform.localScale = transform.localScale; // 몬스터 스케일 따라가도록
         currentState = EnemyState.Move;
+        
+        audioSource.clip = attackSound;
+        audioSource.Play();
 
         // 공격 구현 (예: 데미지 전달)
         StartCoroutine(AttackCooldown());

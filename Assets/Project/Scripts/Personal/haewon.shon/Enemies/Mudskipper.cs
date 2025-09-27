@@ -92,6 +92,9 @@ public class Mudskipper : Enemy
         GameObject spawnedProjectile = Instantiate(projectile, projectileReleasePoint.position, Quaternion.identity);
         Mud projComponent = spawnedProjectile.GetComponent<Mud>();
         projComponent.SetDestination(target.position);
+        
+        audioSource.clip = attackSound;
+        audioSource.Play();
     }
 
     void OnAttackEnd()
