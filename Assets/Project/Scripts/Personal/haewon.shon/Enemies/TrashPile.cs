@@ -12,7 +12,7 @@ public class TrashPile : Enemy
     private float pointReachedThreshold = 0.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Start()
     {
         base.Start();
 

@@ -17,6 +17,7 @@ public class Character : MonoBehaviour
 
     [Header("Combat")]
     public GameObject projectile;
+    private Vector2 mousePos;
 
     private float currentHealth;
     private float immuneTimer = 1.0f;
@@ -26,6 +27,9 @@ public class Character : MonoBehaviour
 
     // Anim
     private Animator animator;
+
+    [Header("Cleaning")]
+    private bool isCleaning = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -44,10 +48,10 @@ public class Character : MonoBehaviour
         animator.SetBool("isMoving", rb.linearVelocity.magnitude > 0.0f);
         immuneTimer -= Time.fixedDeltaTime;
 
-        if(hasSlowDebuff)
+        if (hasSlowDebuff)
         {
             slowTimer -= Time.fixedDeltaTime;
-            if(slowTimer <= 0.0f)
+            if (slowTimer <= 0.0f)
             {
                 hasSlowDebuff = false;
                 moveSpeed /= (1.0f - 0.5f); // Assuming the slow amount is always 50%
@@ -57,11 +61,12 @@ public class Character : MonoBehaviour
 
     public void OnTakeDamage(int damage)
     {
-        if(immuneTimer > 0) return;
+        if (immuneTimer > 0) return;
 
         currentHealth -= damage;
         immuneTimer = immuneTime;
         Debug.Log("health: " + currentHealth.ToString());
+        animator.SetTrigger("OnHit");
         if (currentHealth <= 0)
         {
             OnDied();
@@ -70,12 +75,12 @@ public class Character : MonoBehaviour
 
     public void OnSlow(float percent, float duration)
     {
-        if(hasSlowDebuff)
+        if (hasSlowDebuff)
         {
             slowTimer = duration; // Refresh the slow duration
             return;
         }
-        
+
         moveSpeed *= 1.0f - percent;
         hasSlowDebuff = true;
         slowTimer = duration;
@@ -89,16 +94,45 @@ public class Character : MonoBehaviour
 
     void OnAttack(InputValue value) // LMB
     {
-        if (projectile)
+        if (value.isPressed)
         {
-            GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity);
-            proj.GetComponent<Bullet>().SetDirection(Vector2.right);
+            animator.SetTrigger("OnAttack");
+            mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+
+            if (mousePos.x < transform.position.x) // 공격 방향전환 위한 일시 update
+            {
+                animator.SetFloat("xVelocity", -1);
+            }
+            else
+            { 
+                animator.SetFloat("xVelocity", 1);
+            }
         }
     }
 
+    void OnClean(InputValue value) // space
+    {
+        if (value.isPressed)
+        {
+            isCleaning = true;
+        }
+        else
+        {
+            isCleaning = false;
+        }
+        animator.SetBool("isCleaning", isCleaning);
+    }
+
     void OnDied()
-    { 
+    {
         Debug.Log(gameObject.name + " is dead!");
         //Destroy(gameObject);
     }
+
+    void SetProjectile()
+    { 
+        GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity);
+        proj.GetComponent<Bullet>().SetDirection((mousePos - (Vector2)transform.position).normalized);
+    }
+
 }

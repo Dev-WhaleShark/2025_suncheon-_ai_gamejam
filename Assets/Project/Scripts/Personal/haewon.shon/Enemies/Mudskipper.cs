@@ -16,7 +16,7 @@ public class Mudskipper : Enemy
     private float offset = 10.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Start()
     {
         base.Start();
 
