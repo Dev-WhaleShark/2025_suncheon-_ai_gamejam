@@ -37,7 +37,6 @@ TagManager:
   - 
   - 
   - 
-  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
@@ -47,6 +46,9 @@ TagManager:
     locked: 0
   - name: Entity
     uniqueID: 1424704153
+    locked: 0
+  - name: Player
+    uniqueID: 1394163761
     locked: 0
   - name: UI
     uniqueID: 2527627567
