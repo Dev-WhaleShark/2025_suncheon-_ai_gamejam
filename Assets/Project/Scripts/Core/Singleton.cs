@@ -12,8 +12,9 @@ namespace WhaleShark.Core
         {
             get
             {
-                if (isDestroyed) return null;
-                
+                if (isDestroyed)
+                    return null;
+
                 if (instance == null)
                 {
                     lock (lockObject)

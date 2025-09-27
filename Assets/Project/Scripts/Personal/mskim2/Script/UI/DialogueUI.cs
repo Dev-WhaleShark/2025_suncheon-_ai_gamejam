@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
@@ -6,6 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using TMPro;
 using Febucci.UI.Core;
+using DG.Tweening;
 
 [DisallowMultipleComponent]
 public class DialogueUI : MonoBehaviour
@@ -14,17 +14,10 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private TypewriterCore typewriter;
     [SerializeField] private TMP_Text speakerLabel;
     [SerializeField] private CanvasGroup canvasGroup;
-
-    [Header("Input System")]
     [SerializeField] private InputActionReference advanceAction;
-    [SerializeField] private InputActionReference fastForwardAction;
 
-    [Header("Behaviour")]
-    [Tooltip("시작 전/종료 후 자동 숨김")]
-    [SerializeField] private bool hideWhenIdle = true;
+    [Header("Settings")]
     [SerializeField] private float fadeTime = 0.15f;
-    [SerializeField] private bool autoFastForwardWhileHolding = true;
-    [SerializeField] private float minHoldTimeForFastForward = 0.35f;
 
     [Header("Events")]
     public UnityEvent onDialogueStart;
@@ -33,22 +26,21 @@ public class DialogueUI : MonoBehaviour
     public UnityEvent<DialogueLine> onLineComplete;
     public UnityEvent<string> onPlaySfx;
 
-    private readonly Queue<DialogueLine> _queue = new Queue<DialogueLine>();
-    private Coroutine _autoAdvanceCo;
-    private Coroutine _fadeCo;
+    // Queue of dialogue lines
+    private readonly Queue<DialogueLine> queue = new();
 
-    private DialogueLine _currentLine;
-    private bool _hasCurrent;
-    private bool _active;
-    private bool _initialized;
-    private bool _isTyping;
-    private float _holdTimer;
+    // State
+    private DialogueLine current;
+    private bool hasCurrent;
+    private bool active;
+    private bool initialized;
+    [SerializeField]private bool isTyping;
+    private float pendingDelay;
 
-    // Reflection targets
-    private MethodInfo _miSkip;
-    private FieldInfo _fiSpeedMultiplier;
-
-    private static readonly string[] SkipCandidateMethodNames =
+    // Reflection (skip & speed)
+    private MethodInfo miSkip;
+    private FieldInfo fiSpeedMultiplier;
+    private static readonly string[] skipMethodNames =
     {
         "SkipTypewriter",
         "Skip",
@@ -57,229 +49,277 @@ public class DialogueUI : MonoBehaviour
         "SkipTypewriterEffect"
     };
 
+    private Tween fadeTween;
+    private Tween autoAdvanceTween;
+
     private void Awake()
     {
-        if (canvasGroup == null)
+        if (!canvasGroup)
+        {
             canvasGroup = GetComponent<CanvasGroup>() ?? gameObject.AddComponent<CanvasGroup>();
+        }
 
-        if (hideWhenIdle)
-        {
-            canvasGroup.alpha = 0f;
-            canvasGroup.interactable = false;
-            canvasGroup.blocksRaycasts = false;
-        }
-        else
-        {
-            canvasGroup.alpha = 1f;
-        }
+        canvasGroup.alpha = 0f;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
 
         ResolveTypewriter();
-        BindTypewriterEvents();
         CacheReflection();
-        _initialized = true;
+        initialized = true;
     }
 
     private void OnEnable()
     {
-        if (advanceAction?.action != null) advanceAction.action.Enable();
-        if (fastForwardAction?.action != null) fastForwardAction.action.Enable();
-        BindTypewriterEvents();
+        if (advanceAction?.action != null)
+        {
+            advanceAction.action.performed += OnAdvance;
+            advanceAction.action.Enable();
+        }
+
+        BindTypewriter();
     }
 
     private void OnDisable()
     {
-        if (advanceAction?.action != null) advanceAction.action.Disable();
-        if (fastForwardAction?.action != null) fastForwardAction.action.Disable();
-        UnbindTypewriterEvents();
-    }
-
-    private void Update()
-    {
-        if (!_active) return;
-        HandleInput();
-    }
-
-    private void HandleInput()
-    {
-        if (advanceAction && advanceAction.action != null && advanceAction.action.triggered)
+        if (advanceAction?.action != null)
         {
-            if (IsTyping()) SkipCurrent();
-            else PlayNextLine();
+            advanceAction.action.performed -= OnAdvance;
+            advanceAction.action.Disable();
         }
 
-        if (autoFastForwardWhileHolding && fastForwardAction?.action != null)
+        UnbindTypewriter();
+        KillTweens();
+    }
+
+    private void OnAdvance(InputAction.CallbackContext ctx)
+    {
+        if (ctx.ReadValue<float>() == 0)
         {
-            if (fastForwardAction.action.IsPressed())
-            {
-                _holdTimer += Time.unscaledDeltaTime;
-                if (_holdTimer >= minHoldTimeForFastForward && IsTyping())
-                    SkipCurrent();
-            }
-            else
-            {
-                _holdTimer = 0f;
-            }
+            ForceSkipOrNext();
         }
     }
 
-    // Public API
-    public void StartSequence(DialogueSequence seq)
+    public void StartSequence(DialogueSequence sequence)
     {
-        if (seq == null) return;
-        StartSequence(seq.lines);
+        if (sequence == null)
+            return;
+
+        StartSequence(sequence.lines);
     }
 
     public void StartSequence(IEnumerable<DialogueLine> lines)
     {
-        if (!_initialized) return;
+        if (!initialized)
+            return;
 
-        _queue.Clear();
-        foreach (var l in lines) _queue.Enqueue(l);
-        if (_queue.Count == 0) return;
+        queue.Clear();
 
-        _active = true;
-        FadeCanvas(true);
+        foreach (var l in lines)
+        {
+            queue.Enqueue(l);
+        }
+
+        if (queue.Count == 0)
+            return;
+
+        active = true;
+        Fade(true);
         onDialogueStart?.Invoke();
         PlayNextLine();
     }
 
-    public bool IsActive() => _active;
-
-    public bool IsTyping() => _isTyping;
-
     public void ForceSkipOrNext()
     {
-        if (!_active) return;
-        if (IsTyping()) SkipCurrent();
-        else PlayNextLine();
+        if (!active)
+            return;
+
+        if (isTyping)
+        {
+            SkipCurrent();
+        }
+        else
+        {
+            PlayNextLine();
+        }
     }
 
     public void ForceEnd()
     {
-        if (!_active) return;
-        _queue.Clear();
+        if (!active)
+            return;
+
+        queue.Clear();
         EndSequence();
     }
 
-    // Internal Flow
     private void PlayNextLine()
     {
-        if (_autoAdvanceCo != null)
-        {
-            StopCoroutine(_autoAdvanceCo);
-            _autoAdvanceCo = null;
-        }
+        CancelAutoAdvance();
 
-        if (_queue.Count == 0)
+        if (queue.Count == 0)
         {
             EndSequence();
             return;
         }
 
-        _currentLine = _queue.Dequeue();
-        _hasCurrent = true;
+        current = queue.Dequeue();
+        hasCurrent = true;
 
         if (speakerLabel)
-            speakerLabel.text = _currentLine.HasSpeaker ? _currentLine.speaker : string.Empty;
+        {
+            speakerLabel.text = current.HasSpeaker ? current.speaker : string.Empty;
+        }
 
-        ApplySpeedMultiplier(_currentLine.speedMultiplier <= 0 ? 1f : _currentLine.speedMultiplier);
+        float speed = current.speedMultiplier <= 0f ? 1f : current.speedMultiplier;
+        ApplySpeedMultiplier(speed);
 
-        if (!string.IsNullOrWhiteSpace(_currentLine.sfxKey))
-            onPlaySfx?.Invoke(_currentLine.sfxKey);
+        if (!string.IsNullOrWhiteSpace(current.sfxKey))
+        {
+            onPlaySfx?.Invoke(current.sfxKey);
+        }
 
-        ShowText(_currentLine.text);
-        onLineStart?.Invoke(_currentLine);
+        pendingDelay = current.autoAdvanceDelay > 0f ? current.autoAdvanceDelay : 0f;
 
-        if (_currentLine.autoAdvanceDelay > 0f)
-            _autoAdvanceCo = StartCoroutine(AutoAdvanceRoutine(_currentLine.autoAdvanceDelay));
-    }
-
-    private IEnumerator AutoAdvanceRoutine(float delay)
-    {
-        while (IsTyping()) yield return null;
-        yield return new WaitForSeconds(delay);
-        if (_active) PlayNextLine();
+        ShowText(current.text);
+        onLineStart?.Invoke(current);
     }
 
     private void SkipCurrent()
     {
-        if (!IsTyping()) return;
+        if (!isTyping)
+            return;
 
-        if (_miSkip != null && typewriter != null)
+        // 스킵 시 pendingDelay 유지하여 자동 진행이 정상적으로 동작하도록 함
+        CancelAutoAdvance();
+
+        if (miSkip != null && typewriter != null)
         {
             try
             {
-                _miSkip.Invoke(typewriter, null);
+                miSkip.Invoke(typewriter, null);
+                // TypewriterCore가 즉시 onTextShowed 이벤트를 호출하지 않을 수도 있으니 방어적으로 isTyping=false 처리
+                isTyping = false;
                 return;
             }
             catch { }
         }
 
-        // 폴백: 강제 완료 처리
-        _isTyping = false;
+        isTyping = false;
         OnTypewriterCompleted();
+    }
+
+    private void OnTypewriterCompleted()
+    {
+        isTyping = false;
+
+        if (hasCurrent)
+        {
+            onLineComplete?.Invoke(current);
+        }
+
+        // 이전엔 skipFlag 로 스킵 시 auto advance 방지했지만 현재는 스킵 후에도 자동 진행 허용
+        if (pendingDelay > 0f && active)
+        {
+            autoAdvanceTween = DOVirtual.DelayedCall(pendingDelay, () =>
+            {
+                if (active)
+                {
+                    PlayNextLine();
+                }
+            }).SetUpdate(true);
+        }
     }
 
     private void EndSequence()
     {
-        _active = false;
-        _hasCurrent = false;
-        FadeCanvas(false);
+        active = false;
+        hasCurrent = false;
+        CancelAutoAdvance();
+        Fade(false);
         onDialogueEnd?.Invoke();
     }
 
-    // UI Fade
-    private void FadeCanvas(bool show)
+    private void Fade(bool show)
     {
-        if (canvasGroup == null) return;
-
-        if (!hideWhenIdle)
-        {
-            canvasGroup.alpha = 1f;
-            canvasGroup.interactable = show;
-            canvasGroup.blocksRaycasts = show;
+        if (!canvasGroup)
             return;
-        }
 
-        if (_fadeCo != null) StopCoroutine(_fadeCo);
-        _fadeCo = StartCoroutine(FadeRoutine(show));
-    }
-
-    private IEnumerator FadeRoutine(bool show)
-    {
-        float start = canvasGroup.alpha;
-        float end = show ? 1f : 0f;
-        float t = 0f;
-        while (t < fadeTime)
+        if (fadeTween != null)
         {
-            t += Time.unscaledDeltaTime;
-            canvasGroup.alpha = Mathf.Lerp(start, end, t / fadeTime);
-            yield return null;
+            fadeTween.Kill();
         }
-        canvasGroup.alpha = end;
-        canvasGroup.interactable = show;
-        canvasGroup.blocksRaycasts = show;
+
+        if (show)
+        {
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
+        }
+
+        fadeTween = canvasGroup
+            .DOFade(show ? 1f : 0f, fadeTime)
+            .SetUpdate(true)
+            .OnComplete(() =>
+            {
+                if (!show)
+                {
+                    canvasGroup.interactable = false;
+                    canvasGroup.blocksRaycasts = false;
+                }
+            });
     }
 
-    // Typewriter handling
+    private void CancelAutoAdvance()
+    {
+        if (autoAdvanceTween != null)
+        {
+            autoAdvanceTween.Kill();
+        }
+        autoAdvanceTween = null;
+    }
+
+    private void KillTweens()
+    {
+        if (fadeTween != null)
+        {
+            fadeTween.Kill();
+        }
+
+        if (autoAdvanceTween != null)
+        {
+            autoAdvanceTween.Kill();
+        }
+
+        fadeTween = null;
+        autoAdvanceTween = null;
+    }
+
     private void ResolveTypewriter()
     {
-        if (typewriter != null) return;
+        if (typewriter)
+            return;
+
         typewriter = GetComponentInChildren<TypewriterCore>(true);
-        if (typewriter == null)
-            Debug.LogWarning("[DialogueUI] TypewriterCore 을 찾지 못했습니다.", this);
+
+        if (!typewriter)
+        {
+            Debug.LogWarning("[DialogueUI] TypewriterCore not found", this);
+        }
     }
 
-    private void BindTypewriterEvents()
+    private void BindTypewriter()
     {
-        if (!typewriter) return;
+        if (!typewriter)
+            return;
+
         typewriter.onTextShowed.RemoveListener(OnTypewriterCompleted);
         typewriter.onTextShowed.AddListener(OnTypewriterCompleted);
     }
 
-    private void UnbindTypewriterEvents()
+    private void UnbindTypewriter()
     {
-        if (!typewriter) return;
+        if (!typewriter)
+            return;
+
         typewriter.onTextShowed.RemoveListener(OnTypewriterCompleted);
     }
 
@@ -287,45 +327,45 @@ public class DialogueUI : MonoBehaviour
     {
         if (!typewriter)
         {
-            Debug.LogWarning("[DialogueUI] TypewriterCore 없음", this);
+            Debug.LogWarning("[DialogueUI] Missing TypewriterCore", this);
             return;
         }
-        _isTyping = true;
-        typewriter.ShowText(text);
-    }
 
-    private void OnTypewriterCompleted()
-    {
-        if (!_isTyping) return;
-        _isTyping = false;
-        if (_hasCurrent)
-            onLineComplete?.Invoke(_currentLine);
+        isTyping = true;
+        typewriter.ShowText(text);
     }
 
     private void CacheReflection()
     {
-        if (!typewriter) return;
+        if (!typewriter)
+            return;
 
-        // Skip 메서드 탐색
-        foreach (var name in SkipCandidateMethodNames)
+        foreach (var name in skipMethodNames)
         {
-            _miSkip = typewriter.GetType().GetMethod(name,
-                BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic,
-                null, System.Type.EmptyTypes, null);
-            if (_miSkip != null) break;
+            miSkip = typewriter.GetType().GetMethod(
+                name,
+                BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+
+            if (miSkip != null)
+            {
+                break;
+            }
         }
 
-        // 속도 배율 필드 탐색
-        _fiSpeedMultiplier = typewriter.GetType().GetField("speedMultiplier",
+        fiSpeedMultiplier = typewriter.GetType().GetField(
+            "speedMultiplier",
             BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
     }
 
     private void ApplySpeedMultiplier(float mult)
     {
-        if (_fiSpeedMultiplier != null && typewriter != null)
+        if (fiSpeedMultiplier == null || typewriter == null)
+            return;
+
+        try
         {
-            try { _fiSpeedMultiplier.SetValue(typewriter, mult); }
-            catch { }
+            fiSpeedMultiplier.SetValue(typewriter, mult);
         }
+        catch { }
     }
 }
