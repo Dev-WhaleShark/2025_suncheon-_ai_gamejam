@@ -114,7 +114,7 @@ public class Stage : MonoBehaviour
 
         // 임시: 정화 상태 표시 찾아 등록
         if (purifyUI == null)
-        { 
+        {
             purifyUI = FindAnyObjectByType<PurifyUI>();
         }
     }
@@ -236,13 +236,13 @@ public class Stage : MonoBehaviour
 
         // clear ratio update
         float clearRatio = GetCleanPercentage();
-        
+
         if (purifyUI != null)
         {
             purifyUI.UpdatePurifyProgress(clearRatio);
         }
 
-        if (clearRatio >= 100.0f)
+        if (clearRatio >= 99.5f)
         {
             SummonBoss();
         }
