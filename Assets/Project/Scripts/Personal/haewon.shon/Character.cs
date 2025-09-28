@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 using TMPro;
+using WhaleShark.Core;
+using WhaleShark.Gameplay;
 using Random = UnityEngine.Random;
 
 [Serializable]
@@ -92,7 +94,7 @@ public class Character : MonoBehaviour
     }
 
     public void ResetMap()
-    { 
+    {
         _map = FindFirstObjectByType<Stage>();
     }
 
@@ -246,6 +248,8 @@ public class Character : MonoBehaviour
 
         audioSource.clip = deathSound;
         audioSource.Play();
+
+        GameManager.Instance.OnPlayerDied();
 
         if (corpse)
         {
