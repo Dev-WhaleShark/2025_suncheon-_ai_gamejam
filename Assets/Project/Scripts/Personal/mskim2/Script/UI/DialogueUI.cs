@@ -13,8 +13,14 @@ public class DialogueUI : MonoBehaviour
     [Header("References")]
     [SerializeField] private TypewriterCore typewriter;
     [SerializeField] private TMP_Text speakerLabel;
+    [SerializeField] private RectTransform speakerPanel;
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private InputActionReference advanceAction;
+
+    [Header("Background")]
+    [SerializeField] private DialogueBackgroundLayer backgroundLayer;
+    [SerializeField] private DialogueBackgroundDatabase backgroundDatabase;
+    [SerializeField] private float defaultBackgroundFade = 0.35f;
 
     [Header("Settings")]
     [SerializeField] private float fadeTime = 0.15f;
@@ -25,6 +31,7 @@ public class DialogueUI : MonoBehaviour
     public UnityEvent<DialogueLine> onLineStart;
     public UnityEvent<DialogueLine> onLineComplete;
     public UnityEvent<string> onPlaySfx;
+    public UnityEvent<Sprite> onBackgroundChanged; // 배경 변경 시 스프라이트 통지
 
     // Queue of dialogue lines
     private readonly Queue<DialogueLine> queue = new();
@@ -168,7 +175,11 @@ public class DialogueUI : MonoBehaviour
         if (speakerLabel)
         {
             speakerLabel.text = current.HasSpeaker ? current.speaker : string.Empty;
+            speakerLabel.gameObject.SetActive(current.HasSpeaker);
+            speakerPanel.gameObject.SetActive(current.HasSpeaker);
         }
+
+        TryApplyBackground(current);
 
         float speed = current.speedMultiplier <= 0f ? 1f : current.speedMultiplier;
         ApplySpeedMultiplier(speed);
@@ -182,6 +193,21 @@ public class DialogueUI : MonoBehaviour
 
         ShowText(current.text);
         onLineStart?.Invoke(current);
+    }
+
+    private void TryApplyBackground(DialogueLine line)
+    {
+        if (!line.HasBackgroundChange) return;
+        if (backgroundLayer == null) return;
+        Sprite target = line.backgroundSprite;
+        if (target == null && backgroundDatabase != null && !string.IsNullOrWhiteSpace(line.backgroundKey))
+        {
+            target = backgroundDatabase.Get(line.backgroundKey);
+        }
+        if (target == null) return; // 키/스프라이트 둘 다 무효
+        float fade = line.backgroundFade > 0f ? line.backgroundFade : defaultBackgroundFade;
+        backgroundLayer.Apply(target, fade);
+        onBackgroundChanged?.Invoke(target);
     }
 
     private void SkipCurrent()

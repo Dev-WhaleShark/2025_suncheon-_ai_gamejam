@@ -13,44 +13,114 @@ MonoBehaviour:
   m_Name: TestDialogueSequence
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   lines:
-  - speaker: "\uB098\uB808\uC774\uC158"
-    text: "\uB2E4\uC774\uC5BC\uB85C\uADF8 \uD14C\uC2A4\uD2B8 123123123  Test 123123123"
-    speedMultiplier: 0
-    autoAdvanceDelay: 2
-    sfxKey: 
-  - speaker: "\uB098\uB808\uC774\uC158"
-    text: "\uB2E4\uC774\uC5BC\uB85C\uADF8 \uD14C\uC2A4\uD2B8 \uD14D\uC2A4\uD14C 009090"
-    speedMultiplier: 0
-    autoAdvanceDelay: 2
-    sfxKey: 
-  - speaker: "\uB098\uB808\uC774\uC158"
-    text: "\uC2A4\uC704\uCE58 \uADF8\uB0E5 \uC800\uD76C \uC8FC\uBA74 \uC548\uB418\uB098\uC694?\n"
-    speedMultiplier: 0
-    autoAdvanceDelay: 2
-    sfxKey: 
-  - speaker: "\uB098\uB808\uC774\uC158"
-    text: "\"\uC21C\uCC9C\uB9CC\uC758 \uB9C8\uC9C0\uB9C9 \uC218\uD638\uC790, \uAF43\uB450\uB8E8\uBBF8.\n\uADF8\uC758
-      \uAE43\uD138\uC5D0\uB294 \uC0DD\uBA85\uC744 \uC815\uD654\uD558\uB294 \uC2E0\uBE44\uD55C
-      \uD798\uC774 \uAE43\uB4E4\uC5B4 \uC788\uC5C8\uC2B5\uB2C8\uB2E4.\""
-    speedMultiplier: 0
-    autoAdvanceDelay: 2
-    sfxKey: 
   - speaker: 
-    text: "\uB2E4\uC774\uC5BC\uB85C\uADF8 \uD14C\uC2A4\uD2B8 \uD14D\uC2A4\uD14C 009090\uB2E4\uC774\uC5BC\uB85C\uADF8
-      \uD14C\uC2A4\uD2B8 \uD14D\uC2A4\uD14C 009090\uB2E4\uC774\uC5BC\uB85C\uADF8
-      \uD14C\uC2A4\uD2B8 \uD14D\uC2A4\uD14C 009090\uB2E4\uC774\uC5BC\uB85C\uADF8
-      \uD14C\uC2A4\uD2B8 \uD14D\uC2A4\uD14C 009090\uB2E4\uC774\uC5BC\uB85C\uADF8
-      \uD14C\uC2A4\uD2B8 \uD14D\uC2A4\uD14C 009090\uB2E4\uC774\uC5BC\uB85C\uADF8
-      \uD14C\uC2A4\uD2B8 \uD14D\uC2A4\uD14C 009090"
+    text: "\uD3C9\uD654\uB85C\uC6E0\uB358 \uC21C\uCC9C\uB9CC\uC758 \uACFC\uAC70.."
     speedMultiplier: 0
-    autoAdvanceDelay: 2
+    autoAdvanceDelay: 0
     sfxKey: 
+    backgroundKey: cut_1
+    backgroundSprite: {fileID: 0}
+    backgroundFade: 0
   - speaker: 
-    text: "\uB2E4\uC774\uC5BC\uB85C\uADF8 \uD14C\uC2A4\uD2B8 \uD14D\uC2A4\uD14C 009090\uB2E4\uC774\uC5BC\uB85C\uADF8
-      \uD14C\uC2A4\uD2B8 \uD14D\uC2A4\uD14C 009090\uB2E4\uC774\uC5BC\uB85C\uADF8
-      \uD14C\uC2A4\uD2B8 \uD14D\uC2A4\uD14C 009090\uB2E4\uC774\uC5BC\uB85C\uADF8
-      \uD14C\uC2A4\uD2B8 \uD14D\uC2A4\uD14C 009090\uB2E4\uC774\uC5BC\uB85C\uADF8
-      \uD14C\uC2A4\uD2B8 \uD14D\uC2A4\uD14C 009090"
+    text: "\uD751\uB450\uB8E8\uBBF8\uB294 \uC21C\uCC9C\uB9CC \uCD5C\uACE0\uC758 \uC778\uC2F8\uC600\uB2E4.
+      \uB9E4\uB144 \uACA8\uC6B8, \uC804 \uC138\uACC4\uC5D0\uC11C \uC628 \uCE5C\uAD6C\uB4E4\uC774
+      \uC21C\uB9CC\uC758 \uAC2F\uBC8C \uC544\uC9C0\uD2B8\uC5D0 \uBAA8\uC5EC\uB4E4\uC5C8\uC73C\uB2C8\uAE4C!"
     speedMultiplier: 0
     autoAdvanceDelay: 2
     sfxKey: 
+    backgroundKey: cut_1
+    backgroundSprite: {fileID: 0}
+    backgroundFade: 0
+  - speaker: "\uD751\uB450\uB8E8\uBBF8"
+    text: "\uC5B4\uC774, \uAE30\uB7ED\uC2A4! \uC624\uB79C\uB9CC\uC774\uC57C! \uBABD\uACE8
+      \uC774\uC57C\uAE30\uB294 \uB2E4\uC74C\uC5D0 \uD480\uACE0, \uC77C\uB2E8 \uC774
+      \uB9DB\uC788\uB294 \uC9F1\uB6B1\uC5B4\uBD80\uD130 \uBA39\uC5B4\uBCF4\uB77C\uAD6C!"
+    speedMultiplier: 0
+    autoAdvanceDelay: 2
+    sfxKey: 
+    backgroundKey: cut_1
+    backgroundSprite: {fileID: 0}
+    backgroundFade: 0
+  - speaker: "\uCE5C\uAD6C\uB4E4"
+    text: "\uC21C\uCC9C\uB9CC\uC774 \uCD5C\uACE0!"
+    speedMultiplier: 0
+    autoAdvanceDelay: 2
+    sfxKey: 
+    backgroundKey: cut_1
+    backgroundSprite: {fileID: 0}
+    backgroundFade: 0
+  - speaker: "\uCE5C\uAD6C\uB4E4"
+    text: "\uC5EC\uAE30\uAC00 \uC81C\uC77C \uC7AC\uBC0C\uC5B4!"
+    speedMultiplier: 0
+    autoAdvanceDelay: 2
+    sfxKey: 
+    backgroundKey: cut_1
+    backgroundSprite: {fileID: 0}
+    backgroundFade: 0
+  - speaker: 
+    text: "\uBA87\uB144 \uB4A4 \uAC19\uC740 \uB0A0.."
+    speedMultiplier: 0
+    autoAdvanceDelay: 0
+    sfxKey: 
+    backgroundKey: dark
+    backgroundSprite: {fileID: 0}
+    backgroundFade: 0
+  - speaker: "\uD751\uB450\uB8E8\uBBF8"
+    text: "\uC62C\uD574\uB294... \uC880 \uC870\uC6A9\uD558\uB124.\r\n"
+    speedMultiplier: 0
+    autoAdvanceDelay: 2
+    sfxKey: 
+    backgroundKey: cut_2
+    backgroundSprite: {fileID: 0}
+    backgroundFade: 0
+  - speaker: "\uC624\uB9AC"
+    text: " (\uC18D\uC0AD\uC774\uBA70) \uC57C, \uC800\uAE30 \uB0C4\uC0C8 \uC548 \uB098\uB0D0?
+      \uAC54\uB124 \uC9D1 \uB108\uBB34 \uB354\uB7EC\uC6CC\uC838\uC11C \uBABB \uAC00\uACA0\uC5B4.
+      \uAE43\uD138\uC5D0 \uC624\uC810\uC774\uB77C\uB3C4 \uC0DD\uAE30\uBA74 \uC5B4\uB5A1\uD574."
+    speedMultiplier: 0
+    autoAdvanceDelay: 2
+    sfxKey: 
+    backgroundKey: cut_2
+    backgroundSprite: {fileID: 0}
+    backgroundFade: 0
+  - speaker: "\uAE30\uB7EC\uAE30"
+    text: "\uBBF8\uC548, \uD751\uB450\uB8E8\uBBF8. \uB2E4\uC74C \uACA8\uC6B8\uC5D0...
+      \uB124 '\uC544\uD30C\uD2B8'\uAC00 \uC880 \uAE68\uB057\uD574\uC9C0\uBA74 \uB180\uB7EC
+      \uAC08\uAC8C. \uBC14\uC774!"
+    speedMultiplier: 0
+    autoAdvanceDelay: 2
+    sfxKey: 
+    backgroundKey: cut_2
+    backgroundSprite: {fileID: 0}
+    backgroundFade: 0
+  - speaker: 
+    text: "\uC544\uD30C\uD2B8\uAC00 \uB354\uB7FD\uB2E4'\uB294 \uB9D0\uC774 \uD751\uB450\uB8E8\uBBF8\uC758\uB294
+      \uACB0\uC2EC\uD55C \uB4EF \uB0A0\uCE74\uB85C\uC6B4 \uB208\uBE5B\uC73C\uB85C
+      \uC4F0\uB808\uAE30\uB97C \uC751\uC2DC\uD55C\uB2E4."
+    speedMultiplier: 0
+    autoAdvanceDelay: 2
+    sfxKey: 
+    backgroundKey: cut_3
+    backgroundSprite: {fileID: 0}
+    backgroundFade: 0
+  - speaker: 
+    text: "\uCE5C\uAD6C\uB4E4\uC744 \uD3EC\uAE30\uD560 \uC218 \uC5C6\uC5C8\uB358
+      \uD751\uB450\uB8E8\uBBF8\uB294, \uC778\uC2F8\uC758 \uC790\uC874\uC2EC\uC744
+      \uAC78\uACE0 \uC21C\uCC9C\uB9CC \uCCAD\uC18C\uB97C \uACB0\uC2EC\uD55C\uB2E4."
+    speedMultiplier: 0
+    autoAdvanceDelay: 2
+    sfxKey: 
+    backgroundKey: cut_3
+    backgroundSprite: {fileID: 0}
+    backgroundFade: 0
+  - speaker: "\uD751\uB450\uB8E8\uBBF8"
+    text: "\uB354\uB7EC\uC6CC\uC11C \uBABB \uB17C\uB2E4\uACE0? \uADF8\uB7FC \uB0B4\uAC00
+      \uB450\uB8E8\uB450\uB8E8 \uAE68\uB057\uD558\uAC8C \uD074\uB9B0\uC5C5 \uD574\uC8FC\uB9C8!
+      \uB2E4\uC2DC \uC21C\uCC9C\uB9CC\uC744 '\uD56B\uD50C'\uB85C \uB9CC\uB4DC\uB294
+      \uAC70\uC57C!"
+    speedMultiplier: 0
+    autoAdvanceDelay: 2
+    sfxKey: 
+    backgroundKey: cut_4
+    backgroundSprite: {fileID: 0}
+    backgroundFade: 0
