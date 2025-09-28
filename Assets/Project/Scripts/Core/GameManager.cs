@@ -13,6 +13,11 @@ namespace WhaleShark.Gameplay
 
         public bool IsGameStarted = false;
 
+        private AudioSource audioSource;
+
+        public AudioClip peacefulBGM;
+        public AudioClip combatBGM;
+
         /// <summary>
         /// 이벤트 구독 등록
         /// 게임 시작 시 필요한 이벤트들을 구독합니다
@@ -21,6 +26,8 @@ namespace WhaleShark.Gameplay
         {
             Application.targetFrameRate = 60;
             EventBus.PauseToggled += OnPauseToggled;
+
+            audioSource = GetComponent<AudioSource>();
         }
 
         void OnDestroy()
@@ -88,6 +95,13 @@ namespace WhaleShark.Gameplay
         public void LoadScene(string sceneName, bool useFade = true)
         {
             SceneTransitionManager.Instance.LoadScene(sceneName, useFade);
+            if (sceneName == "InGame")
+            {
+                // play combat bgm
+                audioSource.Stop();
+                audioSource.clip = combatBGM;
+                audioSource.Play();
+            }
         }
 
         /// <summary>

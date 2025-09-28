@@ -70,7 +70,7 @@ public class Enemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    protected virtual void FixedUpdate()
+    protected virtual void Update()
     {
         if (currentState == EnemyState.Dead) return;
 
