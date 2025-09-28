@@ -11,7 +11,6 @@ public enum EnemyState
     Dead
 }
 
-
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
 public class Enemy : MonoBehaviour
@@ -101,7 +100,7 @@ public class Enemy : MonoBehaviour
         }
 
         if (stunImmuneTimer <= 0.0f && currentState != EnemyState.Attack)
-        { 
+        {
             animator.SetTrigger("OnHit");
             stunTimer = stunDuration;
             stunImmuneTimer = stunImmune;
@@ -122,14 +121,14 @@ public class Enemy : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
 
         if (audioSource)
-        { 
+        {
             audioSource.clip = deathSound;
             audioSource.Play();
         }
 
         if(onEnemyDied != null)
             onEnemyDied.Invoke();
-            
+
         Destroy(gameObject, 1.0f);
     }
 
