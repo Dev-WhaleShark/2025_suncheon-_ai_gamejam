@@ -9,7 +9,7 @@ using UnityEditor;
 [ExecuteAlways]
 public class Stage : MonoBehaviour
 {
-    public bool isCleared;
+    public bool isCleared = false;
 
     [Header("Grid Config")]
     [SerializeField] private Vector2Int gridSizeInCells = new Vector2Int(32, 32);
@@ -42,6 +42,11 @@ public class Stage : MonoBehaviour
 
     private readonly HashSet<Enemy> registeredEnemies = new();
     private Enemy bossInstance;
+
+    /// <summary>
+    /// 정화표시 UI - pollution update시 같이 update
+    /// </summary>
+    private PurifyUI purifyUI;
 
     private void Awake()
     {
@@ -98,6 +103,19 @@ public class Stage : MonoBehaviour
         if (mapGrid.IsInitialized && mapGrid.GridSize != gridSizeInCells)
         {
             mapGrid.Resize(gridSizeInCells, preserveContents: true);
+        }
+
+        //// 4) 이벤트 누락 복구 안전장치
+        //if (mapGrid != null)
+        //{
+        //    mapGrid.OnTileStateChanged -= HandleTileStateChanged;
+        //    mapGrid.OnTileStateChanged += HandleTileStateChanged;
+        //}
+
+        // 임시: 정화 상태 표시 찾아 등록
+        if (purifyUI == null)
+        { 
+            purifyUI = FindAnyObjectByType<PurifyUI>();
         }
     }
 
@@ -209,8 +227,25 @@ public class Stage : MonoBehaviour
 
     public void SetPollution(Vector2Int cell, bool enable)
     {
-        if (mapGrid.InBounds(cell))
-            mapGrid.SetPollution(cell, enable);
+        if (!mapGrid.InBounds(cell))
+        {
+            return;
+        }
+
+        mapGrid.SetPollution(cell, enable);
+
+        // clear ratio update
+        float clearRatio = GetCleanPercentage();
+        
+        if (purifyUI != null)
+        {
+            purifyUI.UpdatePurifyProgress(clearRatio);
+        }
+
+        if (clearRatio >= 100.0f)
+        {
+            SummonBoss();
+        }
     }
 
     public void CleanCell(Vector2Int cell)
