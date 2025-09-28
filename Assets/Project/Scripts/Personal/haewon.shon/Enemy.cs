@@ -35,10 +35,10 @@ public class Enemy : MonoBehaviour
 
     protected float stunTimer;
     protected float stunImmuneTimer;
-
-    protected float xScale;
     protected Animator animator;
     protected SpriteRenderer spriteRenderer;
+
+    //private Vector2 velocity;
 
     public EnemyHPDisplayUI hpBar;
 
@@ -58,7 +58,6 @@ public class Enemy : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         currentHealth = maxHealth;
-        xScale = transform.localScale.x;
         stunTimer = 0.0f;
     }
 
@@ -72,7 +71,7 @@ public class Enemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    protected virtual void Update()
+    protected virtual void FixedUpdate()
     {
         if (currentState == EnemyState.Dead) return;
 
@@ -107,10 +106,6 @@ public class Enemy : MonoBehaviour
             stunImmuneTimer = stunImmune;
             StartCoroutine(RecoverVelocity(stunTimer));
         }
-
-        // // 바라보는 방향 설정
-        // if (bulletVelocity > 0.0f) transform.localScale = new Vector3(xScale, transform.localScale.y, 1.0f);
-        // else if (bulletVelocity < 0.0f) transform.localScale = new Vector3(-xScale, transform.localScale.y, 1.0f);
     }
 
     public void OnDied()

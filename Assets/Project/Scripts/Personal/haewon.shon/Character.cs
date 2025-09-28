@@ -40,7 +40,7 @@ public class Character : MonoBehaviour
 
     private float speedMultiplier = 1.0f;
 
-
+    private HPBarUI HPBar;
 
     [Header("Combat")]
     public GameObject projectile;
@@ -97,7 +97,14 @@ public class Character : MonoBehaviour
         //////////////
         /// 테스트용 버프 적용
         /// 
-       // ApplyBuff(BuffType.TAIL_WIND); // 추가타
+        // ApplyBuff(BuffType.TAIL_WIND); // 추가타
+
+        HPBar = FindAnyObjectByType<HPBarUI>();
+        if (HPBar)
+        {
+            Debug.Log("HP Interface Set");
+            HPBar.Initialize(maxHealth);
+        }
     }
 
     // Update is called once per frame
@@ -136,7 +143,13 @@ public class Character : MonoBehaviour
         damage = (int)Mathf.Ceil(damage * (1.0f - defenseRate));
         currentHealth -= damage;
         immuneTimer = immuneTime;
+
         Debug.Log("health: " + currentHealth.ToString());
+        if (HPBar)
+        {
+            HPBar.UpdateHPBar(Mathf.Max(currentHealth, 0.0f));
+        }
+
         animator.SetTrigger("OnHit");
         if (currentHealth <= 0)
         {
@@ -187,6 +200,8 @@ public class Character : MonoBehaviour
 
     void OnClean(InputValue value) // space
     {
+        if (isDead) return;
+
         if (value.isPressed)
         {
             isCleaning = true;
@@ -200,6 +215,8 @@ public class Character : MonoBehaviour
 
     void OnDied()
     {
+        if (isDead) return;
+
         Debug.Log(gameObject.name + " is dead!");
         animator.SetTrigger("OnDeath");
         isDead = true;
@@ -361,7 +378,7 @@ public class Character : MonoBehaviour
 
     private IEnumerator ApplySpringOfLife() // 정화구역내 5초마다 회복
     {
-        while (true) // ...
+        while (!isDead) // ...
         {
             yield return new WaitForSeconds(5.0f);
             if (isInPurifiedArea)
@@ -373,7 +390,7 @@ public class Character : MonoBehaviour
 
     private IEnumerator ApplyTailWind() // 이동시(0.5초단위 체크) 확률적 속도버프
     {
-        while (true)
+        while (!isDead)
         {
             if (rb.linearVelocity.magnitude > 0)
             {
@@ -387,7 +404,7 @@ public class Character : MonoBehaviour
 
     private IEnumerator ApplyCleaningAura() // 플레이어 주변 1.0m 범위의 오염된 타일이 초당 1개씩 자동으로 정화됩니다.
     {
-        while (true)
+        while (!isDead)
         {
             ApplyCleaning(1.0f);
             yield return new WaitForSeconds(1.0f);

@@ -44,6 +44,11 @@ public class Stage : MonoBehaviour
     private readonly Dictionary<Vector2Int, PollutionObject> _pollutionMap = new();
     private bool _runtimeSynced;
 
+    /// <summary>
+    /// 정화표시 UI - pollution update시 같이 update
+    /// </summary>
+    private PurifyUI purifyUI;
+
     private void Awake()
     {
         if (Application.isPlaying)
@@ -118,6 +123,12 @@ public class Stage : MonoBehaviour
         {
             mapGrid.OnTileStateChanged -= HandleTileStateChanged;
             mapGrid.OnTileStateChanged += HandleTileStateChanged;
+        }
+
+        // 임시: 정화 상태 표시 찾아 등록
+        if (purifyUI == null)
+        { 
+            purifyUI = FindAnyObjectByType<PurifyUI>();
         }
     }
 
@@ -286,6 +297,12 @@ public class Stage : MonoBehaviour
 
         // clear ratio update
         float clearRatio = GetCleanPercentage();
+        
+        if (purifyUI != null)
+        {
+            purifyUI.UpdatePurifyProgress(clearRatio);
+        }
+
         if (clearRatio >= 100.0f)
         {
             SummonBoss();
