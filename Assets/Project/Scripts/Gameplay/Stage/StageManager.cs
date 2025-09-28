@@ -1,12 +1,15 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using WhaleShark.Core;
 using WhaleShark.Gameplay;
+using DG.Tweening; // DOTween 사용
 
 public class StageManager : MonoBehaviour
 {
     public RewardUI rewardUI;
+    [SerializeField] private MapUI mapUI; // 보상 선택 후 맵 연출용
 
     [Header("Stage Prefabs")]
     [SerializeField] private List<Stage> stages = new List<Stage>();
@@ -25,6 +28,9 @@ public class StageManager : MonoBehaviour
 
     // 보상 선택 후 이동 예정 스테이지 인덱스
     private int pendingNextStageIndex = -1;
+
+    private Coroutine loadNextRoutine; // 제거 예정 (더 이상 사용 안 함)
+    private Tween loadNextTween; // DOTween 대기용
 
     public Stage CurrentStage => currentStageInstance;
     public int CurrentStageIndex => currentStageIndex;
@@ -52,7 +58,6 @@ public class StageManager : MonoBehaviour
             Debug.LogWarning("[StageManager] 스테이지 프리팹이 비어 있습니다.");
             return;
         }
-        LoadStage(startStageIndex);
     }
     #endregion
 
@@ -69,6 +74,12 @@ public class StageManager : MonoBehaviour
     #endregion
 
     #region Public API
+
+    public void StartStage()
+    {
+        LoadStage(startStageIndex);
+    }
+
     public void LoadStage(int index)
     {
         if (!IsValidIndex(index))
@@ -195,18 +206,48 @@ public class StageManager : MonoBehaviour
     private void OnRewardSelectionComplete(RewardData data)
     {
         rewardUI.onRewardChosen.RemoveListener(OnRewardSelectionComplete);
-
         OnRewardChosen?.Invoke(data);
-
         int next = pendingNextStageIndex;
         pendingNextStageIndex = -1;
         if (IsValidIndex(next))
         {
-            LoadStage(next);
+            // 기존 코루틴 중단
+            if (loadNextRoutine != null) { StopCoroutine(loadNextRoutine); loadNextRoutine = null; }
+            // 기존 Tween 중단
+            if (loadNextTween != null && loadNextTween.IsActive()) loadNextTween.Kill();
+            StartMapTransition(next);
         }
         else
         {
             Debug.LogWarning("[StageManager] 보상 완료 후 잘못된 다음 인덱스: " + next);
+        }
+    }
+
+    private void StartMapTransition(int nextIndex)
+    {
+        float wait = UnityEngine.Random.Range(2f, 4f);
+
+        if (mapUI != null && mapUI.animatedPanel != null)
+        {
+            mapUI.animatedPanel.Show();
+            // 대기 후 패널 Hide -> Hide 애니 끝(onHideCompleted)에서 스테이지 로드
+            void OnHideCompleted()
+            {
+                mapUI.animatedPanel.onHideCompleted.RemoveListener(OnHideCompleted);
+                LoadStage(nextIndex);
+            }
+            // DelayedCall 로 Hide 예약
+            loadNextTween = DOVirtual.DelayedCall(wait, () =>
+            {
+                mapUI.animatedPanel.onHideCompleted.RemoveListener(OnHideCompleted);
+                mapUI.animatedPanel.onHideCompleted.AddListener(OnHideCompleted);
+                mapUI.animatedPanel.Hide();
+            });
+        }
+        else
+        {
+            // 맵 연출 없으면 대기 후 바로 로드
+            loadNextTween = DOVirtual.DelayedCall(wait, () => LoadStage(nextIndex));
         }
     }
     #endregion

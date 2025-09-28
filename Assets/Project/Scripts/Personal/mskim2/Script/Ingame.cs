@@ -6,8 +6,15 @@ public class Ingame : MonoBehaviour
     [SerializeField] private UIAnimatedPanel gameOverUI;
     [SerializeField] private UIAnimatedPanel gameClearUI;
 
+    [SerializeField] private UIAnimatedPanel gameGuideUI;
+    [SerializeField] private UIAnimatedPanel gameMapUI;
+
+    public StageManager stageManager;
+
     private void Start()
     {
+        gameGuideUI.Show();
+
         WhaleShark.Core.EventBus.PlayerDied += ShowGameOver;
         WhaleShark.Core.EventBus.GameCleared += ShowGameClear;
 
@@ -40,5 +47,11 @@ public class Ingame : MonoBehaviour
     public void GoMainMenu()
     {
         GameManager.Instance.LoadScene("MainMenu");
+    }
+
+    public void HideGuide()
+    {
+        gameGuideUI.Hide();
+        stageManager.StartStage();
     }
 }
