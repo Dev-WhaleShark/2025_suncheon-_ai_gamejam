@@ -226,6 +226,7 @@ public class StageManager : MonoBehaviour
         try
         {
             stage.Initialize();
+            ResetCharacterMap();
         }
         catch (Exception ex)
         {
@@ -244,4 +245,10 @@ public class StageManager : MonoBehaviour
         OnStageUnloaded?.Invoke(oldIndex, inst);
     }
     #endregion
+
+    public Character character;
+    void ResetCharacterMap()
+    {
+        character.ResetMap();
+    }
 }

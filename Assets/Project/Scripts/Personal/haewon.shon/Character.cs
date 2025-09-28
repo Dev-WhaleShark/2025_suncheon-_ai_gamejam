@@ -78,6 +78,8 @@ public class Character : MonoBehaviour
     [SerializeField] private int cleaningRadius = 1;
     [SerializeField] private int characterRadius = 1;
 
+    public AudioClip cleaningSound;
+
     private Vector2Int _lastCell = new Vector2Int(int.MinValue, int.MinValue);
 
     private Stage _map;
@@ -87,6 +89,11 @@ public class Character : MonoBehaviour
     void Awake()
     {
         _map = _map ?? FindFirstObjectByType<Stage>();
+    }
+
+    public void ResetMap()
+    { 
+        _map = FindFirstObjectByType<Stage>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -215,10 +222,15 @@ public class Character : MonoBehaviour
         if (value.isPressed)
         {
             isCleaning = true;
+            audioSource.clip = cleaningSound;
+            audioSource.loop = true;
+            audioSource.Play();
         }
         else
         {
             isCleaning = false;
+            audioSource.Stop();
+            audioSource.loop = false;
         }
         animator.SetBool("isCleaning", isCleaning);
     }

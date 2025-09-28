@@ -218,6 +218,7 @@ MonoBehaviour:
   avoidDuplicateCell: 1
   cleaningRadius: 3
   characterRadius: 1
+  cleaningSound: {fileID: 8300000, guid: 25d060103a725894f82aeee649f6e670, type: 3}
 --- !u!50 &3097896948146358760
 Rigidbody2D:
   serializedVersion: 5
