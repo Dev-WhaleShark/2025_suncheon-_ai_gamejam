@@ -641,8 +641,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c0c20b64b729544286ebfa6d8523857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ingame
-  gameOverUI: {fileID: 1752876300}
-  gameClearUI: {fileID: 2025334288}
+  gameOverUI: {fileID: 1752876304}
+  gameClearUI: {fileID: 2025334291}
 --- !u!1 &249323584
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,10 +2016,6 @@ MonoBehaviour:
   onRewardChosen:
     m_PersistentCalls:
       m_Calls: []
-  externalTransitionMode: 0
-  onRewardCardChosenVisual:
-    m_PersistentCalls:
-      m_Calls: []
   debugLogSelection: 1
 --- !u!114 &1686822202
 MonoBehaviour:
@@ -2047,13 +2043,7 @@ MonoBehaviour:
   onShowStart:
     m_PersistentCalls:
       m_Calls: []
-  onShowComplete:
-    m_PersistentCalls:
-      m_Calls: []
   onShowCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-  onHideComplete:
     m_PersistentCalls:
       m_Calls: []
   onHideCompleted:
@@ -2203,13 +2193,7 @@ MonoBehaviour:
   onShowStart:
     m_PersistentCalls:
       m_Calls: []
-  onShowComplete:
-    m_PersistentCalls:
-      m_Calls: []
   onShowCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-  onHideComplete:
     m_PersistentCalls:
       m_Calls: []
   onHideCompleted:
@@ -2332,13 +2316,7 @@ MonoBehaviour:
   onShowStart:
     m_PersistentCalls:
       m_Calls: []
-  onShowComplete:
-    m_PersistentCalls:
-      m_Calls: []
   onShowCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-  onHideComplete:
     m_PersistentCalls:
       m_Calls: []
   onHideCompleted:

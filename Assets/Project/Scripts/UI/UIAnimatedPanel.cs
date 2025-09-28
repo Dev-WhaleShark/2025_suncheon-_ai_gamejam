@@ -26,16 +26,11 @@ public class UIAnimatedPanel : MonoBehaviour
 
     [Header("Events")]
     public UnityEvent onShowStart;
-    public UnityEvent onShowComplete;
     public UnityEvent onShowCompleted; // alias
-    public UnityEvent onHideComplete;
     public UnityEvent onHideCompleted; // alias
 
     private Sequence seq;
-    private bool shown;
     private Vector3 originalScale = Vector3.one;
-
-    public bool IsShown => shown;
 
     private void Awake()
     {
@@ -66,7 +61,6 @@ public class UIAnimatedPanel : MonoBehaviour
 
     public void Show()
     {
-        if (shown) return;
         KillSequence();
         canvasGroup.gameObject.SetActive(true);
 
@@ -90,16 +84,13 @@ public class UIAnimatedPanel : MonoBehaviour
         {
             canvasGroup.interactable = true;
             canvasGroup.blocksRaycasts = true;
-            shown = true;
             seq = null;
-            onShowComplete?.Invoke();
             onShowCompleted?.Invoke();
         });
     }
 
     public void Hide()
     {
-        if (!shown) return;
         KillSequence();
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
@@ -115,7 +106,6 @@ public class UIAnimatedPanel : MonoBehaviour
             canvasGroup.gameObject.SetActive(false);
 
             seq = null;
-            onHideComplete?.Invoke();
             onHideCompleted?.Invoke();
         });
     }
@@ -127,9 +117,7 @@ public class UIAnimatedPanel : MonoBehaviour
         canvasGroup.alpha = 0f;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
-        shown = false;
         if (canvasGroup.gameObject.activeSelf) canvasGroup.gameObject.SetActive(false);
-        onHideComplete?.Invoke();
         onHideCompleted?.Invoke();
     }
 
@@ -140,9 +128,7 @@ public class UIAnimatedPanel : MonoBehaviour
         canvasGroup.alpha = 1f;
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
-        shown = true;
         if (!canvasGroup.gameObject.activeSelf) canvasGroup.gameObject.SetActive(true);
-        onShowComplete?.Invoke();
         onShowCompleted?.Invoke();
     }
 

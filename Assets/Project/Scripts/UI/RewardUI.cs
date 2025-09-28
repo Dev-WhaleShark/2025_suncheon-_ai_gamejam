@@ -11,7 +11,7 @@ public class RewardUI : MonoBehaviour
     [SerializeField] private RewardCard cardPrefab;
     [SerializeField] private int maxCards = 3;
     [SerializeField] private RewardDatabase rewardDatabase;
-    [SerializeField] private UIAnimatedPanel rootAnimatedPanel;
+    [SerializeField] private UIAnimatedPanel rootAnimatedPanel; // 반드시 존재 (없으면 런타임에서 붙임)
 
     [Header("Entry Animation")]
     [SerializeField] private float entryYOffset = 400f;
@@ -36,34 +36,35 @@ public class RewardUI : MonoBehaviour
     public UnityEvent onHideComplete;
     public UnityEvent<RewardData> onRewardChosen; // 선택된 데이터 알림
 
-    [Header("External Transition")]
-    [Tooltip("StageManager 전환 시 RewardUI 자체가 Exit 애니를 실행하지 않고 외부 전환 연출에 위임.")]
-    public bool externalTransitionMode = false;
-    public UnityEvent<RewardCard> onRewardCardChosenVisual;
-
     [Header("Debug")]
     [SerializeField] private bool debugLogSelection = false;
 
     // 내부 상태
     private readonly List<RewardCard> activeCards = new();
     private readonly List<Vector2> finalPositions = new();
-    private bool isShown;
     private bool selectionLocked;
 
     private Sequence showSequence;   // 카드 등장 애니메이션
     private Tween pendingHideDelay;  // 선택 후 Hide 예약용
-
-    public bool IsShown => isShown;
 
     #region Unity
     private void Awake()
     {
         if (cardsRoot == null)
             cardsRoot = (RectTransform)transform;
+
+        if (rootAnimatedPanel == null)
+        {
+            // 자동 부착 (CanvasGroup 없는 경우 UIAnimatedPanel이 자체로 추가/설정)
+            rootAnimatedPanel = gameObject.GetComponent<UIAnimatedPanel>();
+            if (rootAnimatedPanel == null)
+                rootAnimatedPanel = gameObject.AddComponent<UIAnimatedPanel>();
+        }
     }
 
     private void OnDisable()
     {
+        // 비정상 종료 대비(씬 전환 등) 딜레이 트윈 제거
         if (pendingHideDelay != null && pendingHideDelay.IsActive()) pendingHideDelay.Kill();
         pendingHideDelay = null;
     }
@@ -77,25 +78,29 @@ public class RewardUI : MonoBehaviour
             if (debugLogSelection) Debug.LogWarning("[RewardUI] ShowRewards - 빈 리스트", this);
             return;
         }
+        if (cardPrefab == null)
+        {
+            Debug.LogError("[RewardUI] cardPrefab 미할당", this);
+            return;
+        }
 
         KillSequences();
         ClearCards();
 
         selectionLocked = false;
-        isShown = true;
         onShowStart?.Invoke();
         gameObject.SetActive(true);
 
-        // 패널 Show 완료 후 카드 애니 시작
-        rootAnimatedPanel.onShowComplete.AddListener(OnPanelShownSpawnCards);
-        rootAnimatedPanel.Show();
-
         void OnPanelShownSpawnCards()
         {
-            rootAnimatedPanel.onShowComplete.RemoveListener(OnPanelShownSpawnCards);
+            rootAnimatedPanel.onShowCompleted.RemoveListener(OnPanelShownSpawnCards);
             SpawnCards(rewards);
             PlayCardsShowSequence();
         }
+
+        rootAnimatedPanel.onShowCompleted.RemoveListener(OnPanelShownSpawnCards);
+        rootAnimatedPanel.onShowCompleted.AddListener(OnPanelShownSpawnCards);
+        rootAnimatedPanel.Show();
     }
 
     public void ShowRandomFromDatabase(int count = -1, bool weightByRarity = true)
@@ -106,12 +111,18 @@ public class RewardUI : MonoBehaviour
             return;
         }
         var pool = rewardDatabase.GetRandomDistinct(count <= 0 ? maxCards : Mathf.Min(count, maxCards), weightByRarity);
+
+        if (pool == null || pool.Count == 0)
+        {
+            Debug.LogWarning("[RewardUI] 데이터베이스에서 뽑은 결과 0개", this);
+            return;
+        }
+
         ShowRewards(pool);
     }
 
     public void HideUIImmediate()
     {
-        if (!isShown) return;
         if (pendingHideDelay != null && pendingHideDelay.IsActive()) pendingHideDelay.Kill();
         pendingHideDelay = null;
         rootAnimatedPanel.HideImmediate();
@@ -168,7 +179,9 @@ public class RewardUI : MonoBehaviour
     #region Selection
     internal void HandleCardClicked(RewardCard card)
     {
-        if (selectionLocked) return;
+        if (selectionLocked)
+            return;
+
         selectionLocked = true;
 
         var data = card.Data;
@@ -176,32 +189,34 @@ public class RewardUI : MonoBehaviour
             Debug.Log(data != null ? $"[RewardUI] 선택: {data.id} ({data.displayName})" : "[RewardUI] 선택: 데이터 null", this);
 
         onRewardChosen?.Invoke(data);
-        onRewardCardChosenVisual?.Invoke(card);
-    }
 
-    public void PrepareExternalTransition(RewardCard chosen)
-    {
-        // 이미 카드 선택 애니 중단
-        KillSequences();
-        // 다른 카드 제거
-        for (int i = activeCards.Count - 1; i >= 0; i--)
+        // 카드 애니: 선택된 것 확대, 나머지 페이드
+        foreach (var c in activeCards)
         {
-            var c = activeCards[i];
-            if (c == null) { activeCards.RemoveAt(i); continue; }
-            if (c != chosen)
+            var rt = (RectTransform)c.transform;
+            if (c == card)
             {
-                Destroy(c.gameObject);
-                activeCards.RemoveAt(i);
+                rt.DOKill();
+                rt.DOScale(selectScale, selectScaleTime).SetEase(selectScaleEase);
+            }
+            else
+            {
+                c.FadeAndDisable(unselectedFadeTime);
             }
         }
-        finalPositions.Clear();
 
-        rootAnimatedPanel.Hide();
+        // 일정 시간 뒤 패널 숨김 (rootAnimatedPanel 닫힘 이벤트로 최종 정리)
+        pendingHideDelay = DOVirtual.DelayedCall(exitDelayAfterSelect, () =>
+        {
+            rootAnimatedPanel.onHideCompleted.AddListener(OnRootHideCompleteOnce);
+            rootAnimatedPanel.Hide();
+        });
+    }
 
-        if (pendingHideDelay != null && pendingHideDelay.IsActive())
-            pendingHideDelay.Kill();
-
-        pendingHideDelay = null;
+    private void OnRootHideCompleteOnce()
+    {
+        rootAnimatedPanel.onHideCompleted.RemoveListener(OnRootHideCompleteOnce);
+        FinalizeHide();
     }
     #endregion
 
@@ -210,7 +225,6 @@ public class RewardUI : MonoBehaviour
     {
         KillSequences();
         ClearCards();
-        isShown = false;
         gameObject.SetActive(false);
         onHideComplete?.Invoke();
     }

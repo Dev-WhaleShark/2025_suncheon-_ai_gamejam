@@ -1,9 +1,5 @@
-using System;
-using DG.Tweening; // DOTween 추가
-using Unity.VisualScripting;
 using UnityEngine;
 using WhaleShark.Gameplay;
-using Sequence = DG.Tweening.Sequence;
 
 public class Ingame : MonoBehaviour
 {
