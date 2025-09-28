@@ -10,6 +10,10 @@ public class RewardDataEditor : Editor
     private SerializedProperty descProp;
     private SerializedProperty iconProp;
     private SerializedProperty rarityProp;
+    private SerializedProperty buffTypeProp; // 새로 추가된 버프 타입
+    private SerializedProperty iconTintProp;
+    private SerializedProperty useNativeSizeProp;
+    private SerializedProperty maxIconSizeProp;
 
     // 미리보기 크기 (필요시 조절 가능)
     private const float PreviewMaxSize = 256f;
@@ -22,6 +26,10 @@ public class RewardDataEditor : Editor
         descProp = serializedObject.FindProperty("description");
         iconProp = serializedObject.FindProperty("icon");
         rarityProp = serializedObject.FindProperty("rarityWeight");
+        buffTypeProp = serializedObject.FindProperty("buffType");
+        iconTintProp = serializedObject.FindProperty("iconTint");
+        useNativeSizeProp = serializedObject.FindProperty("useNativeSize");
+        maxIconSizeProp = serializedObject.FindProperty("maxIconSize");
     }
 
     public override void OnInspectorGUI()
@@ -33,12 +41,25 @@ public class RewardDataEditor : Editor
         EditorGUILayout.PropertyField(nameProp);
         EditorGUILayout.PropertyField(rarityProp);
 
+        EditorGUILayout.Space();
+        EditorGUILayout.PropertyField(buffTypeProp); // Enum 노출
+
         // Description (멀티라인 크게)
         EditorGUILayout.LabelField("Description");
         descProp.stringValue = EditorGUILayout.TextArea(descProp.stringValue, GUILayout.MinHeight(60));
 
         EditorGUILayout.Space();
         DrawIconSection();
+
+        // Icon Visual 옵션
+        EditorGUILayout.Space();
+        EditorGUILayout.LabelField("Icon Visual", EditorStyles.boldLabel);
+        EditorGUILayout.PropertyField(iconTintProp);
+        EditorGUILayout.PropertyField(useNativeSizeProp);
+        if (useNativeSizeProp.boolValue)
+        {
+            EditorGUILayout.PropertyField(maxIconSizeProp);
+        }
 
         serializedObject.ApplyModifiedProperties();
     }

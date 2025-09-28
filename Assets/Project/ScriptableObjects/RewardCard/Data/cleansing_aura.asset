@@ -18,6 +18,7 @@ MonoBehaviour:
     \uD0C0\uC77C\uC774 \uCD08\uB2F9 1\uAC1C\uC529 \uC790\uB3D9\uC73C\uB85C \uC815\uD654\uB429\uB2C8\uB2E4."
   icon: {fileID: 21300000, guid: ce19af229ae82c947ba1216730cd0517, type: 3}
   rarityWeight: 1
+  buffType: 0
   iconTint: {r: 1, g: 1, b: 1, a: 1}
   useNativeSize: 1
   maxIconSize: {x: 256, y: 256}

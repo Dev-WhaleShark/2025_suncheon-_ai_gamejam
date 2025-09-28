@@ -14,6 +14,9 @@ public class RewardData : ScriptableObject
     // 확장 가능: rarity, value, category 등
     [Header("Meta (Optional)")] public int rarityWeight = 1;
 
+    [Header("Gameplay Effect")]
+    public BuffType buffType = BuffType.BUFF_COUNT;
+
     [Header("Icon Visual")]
     [Tooltip("아이콘 색상을 덮어씁니다 (기본: 흰색 = 원본).")]
     public Color iconTint = Color.white;

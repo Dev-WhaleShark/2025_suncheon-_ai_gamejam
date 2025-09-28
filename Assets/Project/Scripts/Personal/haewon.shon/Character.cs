@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 using TMPro;
+using Random = UnityEngine.Random;
 
-enum BuffType
+[Serializable]
+public enum BuffType
 {
     CLEANSING_AURA = 0, // 확인
     FEATHER_BLADE, // 확인
@@ -94,9 +97,11 @@ public class Character : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         currentHealth = maxHealth;
 
+        WhaleShark.Core.EventBus.RewardCollected += RewardCollected;
+
         //////////////
         /// 테스트용 버프 적용
-        /// 
+        ///
         // ApplyBuff(BuffType.TAIL_WIND); // 추가타
 
         HPBar = FindAnyObjectByType<HPBarUI>();
@@ -105,6 +110,11 @@ public class Character : MonoBehaviour
             Debug.Log("HP Interface Set");
             HPBar.Initialize(maxHealth);
         }
+    }
+
+    private void OnDestroy()
+    {
+        WhaleShark.Core.EventBus.RewardCollected -= RewardCollected;
     }
 
     // Update is called once per frame
@@ -352,7 +362,7 @@ public class Character : MonoBehaviour
                 speedMultiplier += 0.2f;
                 break;
             case BuffType.PURIFICATION_ZONE_BUFF: // 정화구역 피해량증가 - SetProjectile에서 적용
-                hasPurificationZoneBuff = true; 
+                hasPurificationZoneBuff = true;
                 break;
             case BuffType.SHARP_BEAK: // SetProjectile에서 적용
                 attackMultiplier += 0.15f;
@@ -408,6 +418,15 @@ public class Character : MonoBehaviour
         {
             ApplyCleaning(1.0f);
             yield return new WaitForSeconds(1.0f);
+        }
+    }
+
+    private void RewardCollected(RewardData data)
+    {
+        Debug.Log("Player Collected Reward: " + (data ? data.id : "(null)") );
+        if (data != null && data.buffType != BuffType.BUFF_COUNT)
+        {
+            ApplyBuff(data.buffType);
         }
     }
 }

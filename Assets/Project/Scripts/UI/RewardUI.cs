@@ -3,6 +3,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using WhaleShark.Core;
 
 public class RewardUI : MonoBehaviour
 {
@@ -189,6 +190,8 @@ public class RewardUI : MonoBehaviour
             Debug.Log(data != null ? $"[RewardUI] 선택: {data.id} ({data.displayName})" : "[RewardUI] 선택: 데이터 null", this);
 
         onRewardChosen?.Invoke(data);
+
+        EventBus.PublishRewardCollected(data);
 
         // 카드 애니: 선택된 것 확대, 나머지 페이드
         foreach (var c in activeCards)

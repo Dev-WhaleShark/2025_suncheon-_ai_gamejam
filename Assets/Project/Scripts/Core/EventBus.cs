@@ -34,5 +34,8 @@ namespace WhaleShark.Core
 
         public static event Action CurrentStageCleared;
         public static void PublishCurrentStageCleared() => CurrentStageCleared?.Invoke();
+
+        public static event Action<RewardData> RewardCollected;
+        public static void PublishRewardCollected(RewardData reward) => RewardCollected?.Invoke(reward);
     }
 }
