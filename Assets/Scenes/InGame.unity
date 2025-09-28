@@ -1354,12 +1354,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapUI
   mapSprites:
-  - {fileID: 21300000, guid: 153f6d6414bbd7143a7dd79b335ab5b1, type: 3}
   - {fileID: 21300000, guid: 27eb965b85bd52c4188b9404cdce4c29, type: 3}
   - {fileID: 21300000, guid: d3026ca29548595469cd3c5762c6c449, type: 3}
   - {fileID: 21300000, guid: 44ac6b789782c3a4b8896094cd217dd5, type: 3}
-  - {fileID: 21300000, guid: 9e6afacbe16ced64fb48f0566546d44c, type: 3}
   - {fileID: 21300000, guid: f77260340eb85e94ea7c202a95df45ef, type: 3}
+  - {fileID: 21300000, guid: 9e6afacbe16ced64fb48f0566546d44c, type: 3}
   - {fileID: 21300000, guid: 6d901fa0abf80c84eb27213c2899da83, type: 3}
   stageManager: {fileID: 1096320428}
   renderer: {fileID: 1696860680}
@@ -2699,7 +2698,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 153f6d6414bbd7143a7dd79b335ab5b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 27eb965b85bd52c4188b9404cdce4c29, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
