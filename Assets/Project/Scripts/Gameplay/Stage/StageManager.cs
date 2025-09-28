@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
+using WhaleShark.Core;
 using WhaleShark.Gameplay;
 
 public class StageManager : MonoBehaviour
@@ -23,14 +23,8 @@ public class StageManager : MonoBehaviour
     private Stage[] runtimeInstances;
     private bool[] clearedFlags;
 
-    private bool waitingReward = false;
+    // 보상 선택 후 이동 예정 스테이지 인덱스
     private int pendingNextStageIndex = -1;
-    private RewardData lastChosenReward;
-
-    // Transition overlay & sequence
-    private CanvasGroup transitionOverlay;
-    private RectTransform transitionOverlayRect;
-    private Sequence rewardTransitionSeq;
 
     public Stage CurrentStage => currentStageInstance;
     public int CurrentStageIndex => currentStageIndex;
@@ -39,16 +33,16 @@ public class StageManager : MonoBehaviour
     public event Action<int, Stage> OnStageLoaded;
     public event Action<int, Stage> OnStageUnloaded;
     public event Action<int, Stage> OnStageCleared;
+    public event Action<RewardData> OnRewardChosen; // 선택된 보상 외부 알림
 
-    public event Action<RewardData> OnRewardChosen;
-
-    private RewardData[] collectedRewards;
+    private RewardData[] collectedRewards; // (향후 확장 대비) 현재는 사용 안 함
 
     #region Unity
     private void Awake()
     {
         PrepareArrays();
         if (stageRoot == null) stageRoot = transform;
+        EventBus.CurrentStageCleared += ReportStageCleared;
     }
 
     private void Start()
@@ -66,9 +60,7 @@ public class StageManager : MonoBehaviour
     private void PrepareArrays()
     {
         int count = StageCount;
-        if (count <= 0)
-            return;
-
+        if (count <= 0) return;
         runtimeInstances = new Stage[count];
         clearedFlags = new bool[count];
     }
@@ -96,8 +88,6 @@ public class StageManager : MonoBehaviour
         {
             instance = InstantiateStage(stages[index]);
             runtimeInstances[index] = instance;
-
-            instance.onStageCleared += ReportStageCleared;
         }
 
         currentStageIndex = index;
@@ -119,29 +109,12 @@ public class StageManager : MonoBehaviour
         OnStageLoaded?.Invoke(index, currentStageInstance);
     }
 
-    /// <summary>
-    /// 현재 스테이지 다시 로드(초기화) - 클리어 플래그는 유지.
-    /// </summary>
     public void ReloadCurrentStage()
     {
-        if (currentStageIndex < 0)
-        {
-            return;
-        }
-        // 클리어 되어있지 않다면 단순 Initialize 재호출, 되어있으면 굳이 다시 초기화 안할 수도 있음.
-        if (currentStageInstance != null)
-        {
-            SafeInitialize(currentStageInstance);
-        }
-        else
-        {
-            LoadStage(currentStageIndex);
-        }
+        if (currentStageIndex < 0) return;
+        if (currentStageInstance != null) SafeInitialize(currentStageInstance); else LoadStage(currentStageIndex);
     }
 
-    /// <summary>
-    /// 다음 스테이지 로드 (마지막이면 아무 동작 안 함)
-    /// </summary>
     public void LoadNextStage()
     {
         int next = currentStageIndex + 1;
@@ -154,20 +127,12 @@ public class StageManager : MonoBehaviour
         LoadStage(next);
     }
 
-    /// <summary>
-    /// 현재 스테이지 언로드.
-    /// </summary>
-    public void UnloadCurrentStage()
-    {
-        UnloadCurrentInternal();
-    }
+    public void UnloadCurrentStage() => UnloadCurrentInternal();
 
-    /// <summary>
-    /// 외부에서 (예: Stage 내부) 클리어 보고 시 호출.
-    /// </summary>
     public void ReportStageCleared()
     {
         if (!IsValidIndex(currentStageIndex) || currentStageInstance == null) return;
+
         if (!clearedFlags[currentStageIndex])
         {
             clearedFlags[currentStageIndex] = true;
@@ -177,32 +142,22 @@ public class StageManager : MonoBehaviour
             int next = currentStageIndex + 1;
             bool hasNext = IsValidIndex(next);
 
-            // 마지막 스테이지면 즉시 게임 클리어
             if (!hasNext)
             {
+                // 마지막 스테이지: 보상 없이 게임 클리어 (요구사항 명시 없으므로 기존 동작 유지)
                 GameManager.Instance.GameClear();
                 return;
             }
 
-            // 이미 보상 대기 중이면 중복 처리 방지
-            if (waitingReward)
+            if (rewardUI != null)
             {
-                return;
-            }
-
-            if ( rewardUI != null)
-            {
-                waitingReward = true;
                 pendingNextStageIndex = next;
 
-                rewardUI.externalTransitionMode = true;
-                rewardUI.onRewardChosen.AddListener(StoreChosenReward);
-                rewardUI.onRewardCardChosenVisual.AddListener(OnRewardCardVisualChosen);
+                // 이전 구독 제거 (안전)
+                rewardUI.onRewardChosen.RemoveListener(OnRewardSelectionComplete);
+                rewardUI.onRewardChosen.AddListener(OnRewardSelectionComplete);
 
-                if (!rewardUI.IsShown)
-                {
-                    rewardUI.ShowRandomFromDatabase(-1 );
-                }
+                rewardUI.ShowRandomFromDatabase(-1);
             }
             else
             {
@@ -211,9 +166,6 @@ public class StageManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 모든 진행 상황 초기화(클리어 플래그 및 인스턴스)
-    /// </summary>
     public void ResetAllProgress(bool destroyInstances = true)
     {
         if (clearedFlags != null)
@@ -233,121 +185,30 @@ public class StageManager : MonoBehaviour
         }
         currentStageInstance = null;
         currentStageIndex = -1;
-        waitingReward = false;
         pendingNextStageIndex = -1;
     }
 
-    public bool IsStageCleared(int index)
-    {
-        if (!IsValidIndex(index)) return false;
-        return clearedFlags[index];
-    }
+    public bool IsStageCleared(int index) => IsValidIndex(index) && clearedFlags[index];
+    #endregion
 
-    private void StoreChosenReward(RewardData data)
+    #region Reward Handling
+    private void OnRewardSelectionComplete(RewardData data)
     {
-        if (lastChosenReward == null)
+        rewardUI.onRewardChosen.RemoveListener(OnRewardSelectionComplete);
+
+        OnRewardChosen?.Invoke(data);
+
+        int next = pendingNextStageIndex;
+        pendingNextStageIndex = -1;
+        if (IsValidIndex(next))
         {
-            lastChosenReward = data;
+            LoadStage(next);
+        }
+        else
+        {
+            Debug.LogWarning("[StageManager] 보상 완료 후 잘못된 다음 인덱스: " + next);
         }
     }
-
-    private void OnRewardCardVisualChosen(RewardCard card)
-    {
-        if (!waitingReward) return;
-        waitingReward = false;
-
-        if (rewardUI != null)
-        {
-            rewardUI.onRewardChosen.RemoveListener(StoreChosenReward);
-            rewardUI.onRewardCardChosenVisual.RemoveListener(OnRewardCardVisualChosen);
-            rewardUI.PrepareExternalTransition(card); // 다른 카드 제거 & 패널 숨김
-        }
-
-        OnRewardChosen?.Invoke(card.Data);
-        StartRewardToNextStageSequence(card, lastChosenReward, pendingNextStageIndex);
-    }
-
-    private void StartRewardToNextStageSequence(RewardCard card, RewardData data, int nextIndex)
-    {
-        KillRewardTransitionSequence();
-        EnsureTransitionOverlay();
-
-        if (card != null)
-        {
-            Destroy(card.gameObject);
-        }
-
-        transitionOverlay.alpha = 0f;
-
-        rewardTransitionSeq = DOTween.Sequence();
-
-        rewardTransitionSeq.Append(transitionOverlay.DOFade(0.6f, 0.30f).SetEase(Ease.Linear));
-        rewardTransitionSeq.AppendCallback(() =>
-        {
-            int tgt = nextIndex;
-            pendingNextStageIndex = -1;
-            if (IsValidIndex(tgt))
-            {
-                LoadStage(tgt);
-            }
-            else
-            {
-                Debug.LogWarning("[StageManager] Invalid next index during transition: " + tgt);
-            }
-        });
-
-        rewardTransitionSeq.AppendInterval(0.02f);
-        rewardTransitionSeq.AppendCallback(() =>
-        {
-            if (currentStageInstance != null)
-            {
-                var st = currentStageInstance.transform;
-                st.localScale = Vector3.one * 1.05f; // 가벼운 팝 효과 (과한 강조 제거)
-                rewardTransitionSeq.Join(st.DOScale(1f, 0.28f).SetEase(Ease.OutCubic));
-            }
-            rewardTransitionSeq.Join(transitionOverlay.DOFade(0f, 0.30f));
-        });
-        rewardTransitionSeq.OnComplete(() =>
-        {
-            transitionOverlay.gameObject.SetActive(false);
-            lastChosenReward = null;
-            rewardTransitionSeq = null;
-        });
-    }
-
-    private void EnsureTransitionOverlay()
-    {
-        if (transitionOverlay != null) { transitionOverlay.gameObject.SetActive(true); return; }
-        var canvasGO = new GameObject("StageTransitionOverlay", typeof(RectTransform), typeof(CanvasGroup));
-
-        Transform parent = rewardUI != null ? rewardUI.transform.root : transform;
-        canvasGO.transform.SetParent(parent, false);
-
-        transitionOverlayRect = canvasGO.GetComponent<RectTransform>();
-        transitionOverlayRect.anchorMin = Vector2.zero;
-        transitionOverlayRect.anchorMax = Vector2.one;
-        transitionOverlayRect.offsetMin = Vector2.zero;
-        transitionOverlayRect.offsetMax = Vector2.zero;
-        transitionOverlay = canvasGO.GetComponent<CanvasGroup>();
-
-        var img = canvasGO.AddComponent<UnityEngine.UI.Image>();
-        img.color = Color.black;
-        transitionOverlay.alpha = 0f;
-        canvasGO.SetActive(true);
-        // CanvasGroup raycast 차단 (필요 시 true)
-        transitionOverlay.blocksRaycasts = false;
-        transitionOverlay.interactable = false;
-    }
-
-    private void KillRewardTransitionSequence()
-    {
-        if (rewardTransitionSeq != null && rewardTransitionSeq.IsActive())
-        {
-            rewardTransitionSeq.Kill();
-            rewardTransitionSeq = null;
-        }
-    }
-
     #endregion
 
     #region Internal
@@ -377,10 +238,7 @@ public class StageManager : MonoBehaviour
         if (currentStageInstance == null) return;
         int oldIndex = currentStageIndex;
         var inst = currentStageInstance;
-
-        // 파괴하지 않고 비활성화하여 재사용
-        inst.gameObject.SetActive(false);
-
+        inst.gameObject.SetActive(false); // 재사용
         currentStageInstance = null;
         currentStageIndex = -1;
         OnStageUnloaded?.Invoke(oldIndex, inst);

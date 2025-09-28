@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 209964300}
   - component: {fileID: 209964299}
   - component: {fileID: 209964298}
+  - component: {fileID: 209964302}
   m_Layer: 5
   m_Name: Game Start
   m_TagString: Untagged
@@ -382,6 +383,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209964296}
   m_CullTransparentMesh: 1
+--- !u!114 &209964302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209964296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8cf7efc91c61d438e5d39590090a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonEffect
+  scaleFactor: 1.1
+  duration: 0.2
 --- !u!1 &312646703
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,13 +634,14 @@ GameObject:
   - component: {fileID: 468016354}
   - component: {fileID: 468016353}
   - component: {fileID: 468016355}
+  - component: {fileID: 468016356}
   m_Layer: 5
   m_Name: Guide Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &468016352
 RectTransform:
   m_ObjectHideFlags: 0
@@ -692,10 +708,33 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 468016351}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &468016356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468016351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a65574b2d20d434b8d632c45aabe2976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIAnimatedPanel
+  canvasGroup: {fileID: 468016355}
+  scaleTarget: {fileID: 125911972}
+  fadeDuration: 0.25
+  scaleDuration: 0.4
+  openStartScale: 0.9
+  closeEndScale: 0.9
+  openScaleEase: 27
+  closeScaleEase: 8
+  openFadeEase: 6
+  closeFadeEase: 5
+  useUnscaledTime: 1
 --- !u!1 &816312633
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +850,7 @@ GameObject:
   - component: {fileID: 860946555}
   - component: {fileID: 860946554}
   - component: {fileID: 860946553}
+  - component: {fileID: 860946557}
   m_Layer: 5
   m_Name: Game Guide
   m_TagString: Untagged
@@ -945,6 +985,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860946551}
   m_CullTransparentMesh: 1
+--- !u!114 &860946557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860946551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8cf7efc91c61d438e5d39590090a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonEffect
+  scaleFactor: 1.1
+  duration: 0.2
 --- !u!1 &912923896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,20 +1258,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a2b105de5e68f4fa7050d5710781a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainScene
-  guidePanel: {fileID: 468016355}
-  guideRect: {fileID: 125911972}
+  guideAnimatedPanel: {fileID: 468016356}
   startButton: {fileID: 209964299}
   guideButton: {fileID: 860946554}
   guideCloseButton: {fileID: 1699026828}
-  guideFadeDuration: 0.25
-  guideScaleDuration: 0.4
-  guideOpenStartScale: 0.9
-  guideCloseEndScale: 0.9
-  guideOpenScaleEase: 27
-  guideCloseScaleEase: 8
-  guideOpenFadeEase: 6
-  guideCloseFadeEase: 5
-  useUnscaledTime: 1
 --- !u!1 &1293574068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1337,6 +1381,7 @@ GameObject:
   - component: {fileID: 1699026829}
   - component: {fileID: 1699026828}
   - component: {fileID: 1699026827}
+  - component: {fileID: 1699026831}
   m_Layer: 5
   m_Name: Guide Close Button
   m_TagString: Untagged
@@ -1471,6 +1516,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699026825}
   m_CullTransparentMesh: 1
+--- !u!114 &1699026831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699026825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8cf7efc91c61d438e5d39590090a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonEffect
+  scaleFactor: 1.1
+  duration: 0.2
 --- !u!1 &1845570992
 GameObject:
   m_ObjectHideFlags: 0

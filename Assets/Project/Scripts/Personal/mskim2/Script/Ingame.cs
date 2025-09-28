@@ -1,25 +1,15 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using WhaleShark.Gameplay;
 
 public class Ingame : MonoBehaviour
 {
-    public CanvasGroup gameOverUI;
-    public CanvasGroup gameClearUI;
+    [SerializeField] private UIAnimatedPanel gameOverUI;
+    [SerializeField] private UIAnimatedPanel gameClearUI;
 
     private void Start()
     {
         WhaleShark.Core.EventBus.PlayerDied += ShowGameOver;
         WhaleShark.Core.EventBus.GameCleared += ShowGameClear;
-
-        gameOverUI.alpha = 0;
-        gameOverUI.interactable = false;
-        gameOverUI.blocksRaycasts = false;
-
-        gameClearUI.alpha = 0;
-        gameClearUI.interactable = false;
-        gameClearUI.blocksRaycasts = false;
 
         GameManager.Instance.IsGameStarted = true;
     }
@@ -33,21 +23,13 @@ public class Ingame : MonoBehaviour
     public void ShowGameOver()
     {
         GameManager.Instance.IsGameStarted = false;
-
-        gameOverUI.gameObject.SetActive(true);
-        gameOverUI.alpha = 1;
-        gameOverUI.interactable = true;
-        gameOverUI.blocksRaycasts = true;
+        gameOverUI.Show();
     }
 
     public void ShowGameClear()
     {
         GameManager.Instance.IsGameStarted = false;
-
-        gameClearUI.gameObject.SetActive(true);
-        gameClearUI.alpha = 1;
-        gameClearUI.interactable = true;
-        gameClearUI.blocksRaycasts = true;
+        gameClearUI.Show();
     }
 
     public void RestartGame()
@@ -59,6 +41,4 @@ public class Ingame : MonoBehaviour
     {
         GameManager.Instance.LoadScene("MainMenu");
     }
-
-
 }

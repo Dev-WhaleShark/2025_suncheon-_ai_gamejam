@@ -20,10 +20,6 @@ public class RewardUIEditor : Editor
             }
 
             GUILayout.BeginHorizontal();
-            if (GUILayout.Button("Test Show Dummy"))
-            {
-                ui.TestShowRandom();
-            }
             if (GUILayout.Button("Hide Immediate"))
             {
                 ui.HideUIImmediate();
