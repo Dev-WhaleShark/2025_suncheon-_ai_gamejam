@@ -29,6 +29,15 @@ public class MapManagerEditor : OdinEditor
 
         using (new EditorGUILayout.HorizontalScope())
         {
+            if (GUILayout.Button(("Initialize")))
+            {
+                mgr.ForceInitialize();
+                MarkDirty();
+            }
+        }
+
+        using (new EditorGUILayout.HorizontalScope())
+        {
             if (GUILayout.Button("All Clean"))
             {
                 mgr.SetAllClean();
@@ -90,7 +99,7 @@ public class MapManagerEditor : OdinEditor
 
     private void MarkDirty()
     {
-        if (mgr != null)
+        if (mgr == null)
             return;
 
         EditorUtility.SetDirty(mgr);

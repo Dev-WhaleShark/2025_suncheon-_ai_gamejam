@@ -11,7 +11,7 @@ using Sirenix.Serialization;
 #endif
 
 [ExecuteAlways]
-public class Stage : MonoBehaviour
+public class Stage : SerializedMonoBehaviour
 {
     public bool isCleared = false;
 
@@ -39,7 +39,8 @@ public class Stage : MonoBehaviour
 
     private bool isInit;
 
-    [SerializeField, OdinSerialize] private MapGrid mapGrid = new();
+    [SerializeField, OdinSerialize]
+    private MapGrid mapGrid = new();
 
     private readonly Dictionary<Vector2Int, TrashObject> trashMap = new();
     private readonly Dictionary<Vector2Int, PollutionObject> pollutionMap = new();
@@ -47,12 +48,6 @@ public class Stage : MonoBehaviour
 
     private readonly HashSet<Enemy> registeredEnemies = new();
     private Enemy bossInstance;
-
-    /// <summary>
-    /// 정화표시 UI - pollution update시 같이 update
-    /// TODO : 추후 EventBus 등으로 변경
-    /// </summary>
-    private PurifyUI purifyUI;
 
     private bool isBossSummoned;
     [SerializeField] GameObject bossPrefab;
@@ -88,16 +83,27 @@ public class Stage : MonoBehaviour
     {
 #if UNITY_EDITOR
         if (!Application.isPlaying)
+        {
             EnsureEditorInitialized();
+            if (mapGrid.IsInitialized && mapGrid.GridSize != gridSizeInCells)
+                mapGrid.Resize(gridSizeInCells, preserve: true);
+        }
 #endif
+    }
+
+    public void ForceInitialize()
+    {
+        isInit = false;
+        Initialize();
     }
 
     public void Initialize()
     {
-
         if (!isInit)
         {
             mapGrid ??= new MapGrid();
+            mapGrid.OnAfterDeserialize();
+
             if (!mapGrid.IsInitialized)
                 mapGrid.Initialize(gridSizeInCells);
 
@@ -105,15 +111,7 @@ public class Stage : MonoBehaviour
             mapGrid.OnTileStateChanged += HandleTileStateChanged;
 
             isInit = true;
-            return;
         }
-
-        if (mapGrid.IsInitialized && mapGrid.GridSize != gridSizeInCells)
-            mapGrid.Resize(gridSizeInCells, preserveContents: true);
-
-        // 임시: 정화 상태 표시 찾아 등록
-        if (purifyUI == null)
-            purifyUI = FindAnyObjectByType<PurifyUI>();
     }
 
     private void EnsureEditorInitialized() => Initialize();
@@ -188,11 +186,7 @@ public class Stage : MonoBehaviour
                 DespawnPollutionObject(cell);
             }
 
-            // clear ratio update
-            float clearRatio = GetCleanPercentage();
-
-            if (purifyUI != null)
-                purifyUI.UpdatePurifyProgress(clearRatio);
+            EventBus.PublishPurifyProgressUpdated(GetCleanPercentage());
 
             CheckBossSummonCondition();
         }
@@ -561,6 +555,7 @@ public class Stage : MonoBehaviour
 #if UNITY_EDITOR
     private void MarkEditorDirty()
     {
+        Debug.Log($"[Stage] MarkEditorDirty: Prefab={PrefabUtility.IsPartOfPrefabInstance(this)}, Scene={gameObject.scene.name}");
         EditorUtility.SetDirty(this);
 
         if(PrefabUtility.IsPartOfPrefabInstance(this))
@@ -569,7 +564,14 @@ public class Stage : MonoBehaviour
         var prefabStage = UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();
 
         if (prefabStage != null)
+        {
             EditorSceneManager.MarkSceneDirty(prefabStage.scene);
+        }
+        else
+        {
+            if (gameObject.scene.IsValid())
+                EditorSceneManager.MarkSceneDirty(gameObject.scene);
+        }
     }
 
     private void MarkEditorDirtyIfNotPlaying()

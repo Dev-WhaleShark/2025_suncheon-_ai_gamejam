@@ -1,7 +1,9 @@
 using DG.Tweening;
 using Febucci.UI.Core;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using EventBus = WhaleShark.Core.EventBus;
 
 public class PurifyUI : MonoBehaviour
 {
@@ -23,6 +25,13 @@ public class PurifyUI : MonoBehaviour
     {
         range = new Vector2(purifyBar.rectTransform.anchorMin.x, purifyBar.rectTransform.anchorMax.x);
         length = range.y - range.x;
+
+        EventBus.PurifyProgressUpdated += UpdatePurifyProgress;
+    }
+
+    void OnDestroy()
+    {
+        EventBus.PurifyProgressUpdated -= UpdatePurifyProgress;
     }
 
     public void UpdatePurifyProgress(float progress)
@@ -43,13 +52,13 @@ public class PurifyUI : MonoBehaviour
             progressDisplayObject.sprite = uglyFace;
         }
         else if (world.x > 0 && progressDisplayObject.transform.position.x < 0)
-        { 
+        {
             progressDisplayObject.sprite = happyFace;
         }
 
 
         progressDisplayObject.transform.position = world;
 
-        
+
     }
 }

@@ -37,5 +37,8 @@ namespace WhaleShark.Core
 
         public static event Action<RewardData> RewardCollected;
         public static void PublishRewardCollected(RewardData reward) => RewardCollected?.Invoke(reward);
+
+        public static event Action<float> PurifyProgressUpdated;
+        public static void PublishPurifyProgressUpdated(float progress) => PurifyProgressUpdated?.Invoke(progress);
     }
 }

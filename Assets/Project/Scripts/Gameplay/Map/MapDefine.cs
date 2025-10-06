@@ -20,11 +20,11 @@ public enum TileState
 [Serializable]
 public class MapGrid : ISerializationCallbackReceiver
 {
-    [OdinSerialize, TableMatrix(SquareCells = true, ResizableColumns = false, DrawElementMethod = nameof(DrawCell))]
-    private TileState[,] _states;
-
     [ShowInInspector, ReadOnly]
     public Vector2Int GridSize { get; private set; }
+
+    [ShowInInspector, OdinSerialize, TableMatrix(SquareCells = true, ResizableColumns = false)]
+    private TileState[,] _states;
 
     public bool IsInitialized => _states != null;
     public event Action<Vector2Int, TileState> OnTileStateChanged;
@@ -32,66 +32,48 @@ public class MapGrid : ISerializationCallbackReceiver
     /// <summary>
     /// size 크기 초기화 (모든 셀 Clean)
     /// </summary>
-    [Button(ButtonSizes.Medium)]
     public void Initialize(Vector2Int size)
     {
-        if (size.x <= 0 || size.y <= 0)
-        {
-            Debug.LogError($"MapGrid Initialize 실패: 잘못된 크기 {size}");
-            return;
-        }
         GridSize = size;
         _states = new TileState[size.x, size.y]; // 기본 Clean(0)
     }
 
     public bool InBounds(Vector2Int p) => IsInitialized && p is { x: >= 0, y: >= 0 } && p.x < GridSize.x && p.y < GridSize.y;
 
-    private bool Validate(Vector2Int p)
+    public TileState GetTileState(Vector2Int p) => InBounds(p) ? _states[p.x, p.y] : TileState.Clean;
+
+    public void SetTrash(Vector2Int p, bool enable = true) => SetFlag(p, TileState.Trash, enable);
+    public void SetPollution(Vector2Int p, bool enable = true) => SetFlag(p, TileState.Pollution, enable);
+    public void CleanTile(Vector2Int p) => SetState(p, TileState.Clean);
+
+    public bool HasTrash(Vector2Int p) => (GetTileState(p) & TileState.Trash) != 0;
+    public bool HasPollution(Vector2Int p) => (GetTileState(p) & TileState.Pollution) != 0;
+
+    private void SetFlag(Vector2Int p, TileState flag, bool enable)
     {
-        if (!IsInitialized)
-            return false;
-
-        return InBounds(p);
-    }
-
-    /// <summary>
-    /// 해당 셀의 전체 상태 반환 (Out of Bounds 시 Clean)
-    /// </summary>
-    public TileState GetTileState(Vector2Int p) => Validate(p) ? _states[p.x, p.y] : TileState.Clean;
-
-    private void SetTileStateInternal(Vector2Int p, TileState newState)
-    {
-        if (!Validate(p))
-            return;
-
-        var prev = _states[p.x, p.y];
-        if (prev == newState)
-            return;
-
-        _states[p.x, p.y] = newState;
-        OnTileStateChanged?.Invoke(p, newState);
-    }
-
-    public void SetFlag(Vector2Int p, TileState flag, bool enable)
-    {
-        if (!Validate(p))
+        if (!InBounds(p))
             return;
 
         var cur = _states[p.x, p.y];
         var next = enable ? (cur | flag) : (cur & ~flag);
 
-        SetTileStateInternal(p, next);
+        if (next != cur)
+            SetState(p, next);
     }
 
-    public void SetPollution(Vector2Int p, bool enable = true) => SetFlag(p, TileState.Pollution, enable);
-    public void SetTrash(Vector2Int p, bool enable = true) => SetFlag(p, TileState.Trash, enable);
-    public void CleanTile(Vector2Int p) => SetTileStateInternal(p, TileState.Clean);
+    private void SetState(Vector2Int p, TileState s)
+    {
+        if (!InBounds(p))
+            return;
 
-    public bool HasPollution(Vector2Int p) => (GetTileState(p) & TileState.Pollution) != 0;
-    public bool HasTrash(Vector2Int p) => (GetTileState(p) & TileState.Trash) != 0;
+        var prev = _states[p.x, p.y];
+        if (prev == s)
+            return;
 
+        _states[p.x, p.y] = s;
+        OnTileStateChanged?.Invoke(p, s);
+    }
 
-    [Button]
     public void SetAllPollution(bool enable)
     {
         if (!IsInitialized)
@@ -100,14 +82,7 @@ public class MapGrid : ISerializationCallbackReceiver
         for (int x = 0; x < GridSize.x; x++)
             for (int y = 0; y < GridSize.y; y++)
             {
-                var cell = new Vector2Int(x, y);
-                var cur = _states[x, y];
-                var has = (cur & TileState.Pollution) != 0;
-                if (enable != has)
-                {
-                    _states[x, y] = enable ? (cur | TileState.Pollution) : (cur & ~TileState.Pollution);
-                    OnTileStateChanged?.Invoke(cell, _states[x, y]);
-                }
+                SetFlag(new Vector2Int(x, y), TileState.Pollution, enable);
             }
     }
 
@@ -120,11 +95,7 @@ public class MapGrid : ISerializationCallbackReceiver
         for (int x = 0; x < GridSize.x; x++)
             for (int y = 0; y < GridSize.y; y++)
             {
-                if (_states[x, y] != TileState.Clean)
-                {
-                    _states[x, y] = TileState.Clean;
-                    OnTileStateChanged?.Invoke(new Vector2Int(x, y), TileState.Clean);
-                }
+                SetState(new Vector2Int(x, y), TileState.Clean);
             }
     }
 
@@ -146,15 +117,9 @@ public class MapGrid : ISerializationCallbackReceiver
         return (float)clean / total;
     }
 
-    public void Resize(Vector2Int newSize, bool preserveContents)
+    public void Resize(Vector2Int newSize, bool preserve)
     {
-        if (newSize.x <= 0 || newSize.y <= 0)
-        {
-            Debug.LogError($"MapGrid Resize 실패: {newSize}");
-            return;
-        }
-
-        if (!IsInitialized || !preserveContents)
+        if (!IsInitialized || !preserve)
         {
             Initialize(newSize);
             return;
@@ -181,40 +146,5 @@ public class MapGrid : ISerializationCallbackReceiver
     public void OnAfterDeserialize()
     {
         GridSize = _states != null ? new Vector2Int(_states.GetLength(0), _states.GetLength(1)) : Vector2Int.zero;
-    }
-
-    private static TileState DrawCell(Rect r, TileState value)
-    {
-#if UNITY_EDITOR
-        if (GUI.Button(r, ShortLabel(value)))
-        {
-            value = Next(value);
-        }
-#endif
-        return value;
-    }
-
-    private static string ShortLabel(TileState state)
-    {
-        return state switch
-        {
-            TileState.Clean => "C",
-            TileState.Pollution => "P",
-            TileState.Trash => "T",
-            TileState.Pollution | TileState.Trash => "PT",
-            _ => "?"
-        };
-    }
-
-    private static TileState Next(TileState state)
-    {
-        return state switch
-        {
-            TileState.Clean => TileState.Pollution,
-            TileState.Pollution => TileState.Trash,
-            TileState.Trash => TileState.Pollution | TileState.Trash,
-            TileState.Pollution | TileState.Trash => TileState.Clean,
-            _ => TileState.Clean
-        };
     }
 }
