@@ -228,7 +228,9 @@ public class Stage : SerializedMonoBehaviour
         if (mapGrid.InBounds(cell))
             mapGrid.SetTrash(cell, enable);
 
+#if UNITY_EDITOR
         MarkEditorDirtyIfNotPlaying();
+#endif
     }
 
     public void SetPollution(Vector2Int cell, bool enable)
@@ -240,7 +242,9 @@ public class Stage : SerializedMonoBehaviour
 
         mapGrid.SetPollution(cell, enable);
 
+#if UNITY_EDITOR
         MarkEditorDirtyIfNotPlaying();
+#endif
     }
 
     public void CleanCell(Vector2Int cell)
@@ -248,7 +252,9 @@ public class Stage : SerializedMonoBehaviour
         if (mapGrid.InBounds(cell))
             mapGrid.CleanTile(cell);
 
+#if UNITY_EDITOR
         MarkEditorDirtyIfNotPlaying();
+#endif
     }
 
     public void SetTrashAtWorld(Vector3 pos, bool enable)
@@ -283,20 +289,26 @@ public class Stage : SerializedMonoBehaviour
         {
             for (int y = 0; y < gridSizeInCells.y; y++)
                 mapGrid.SetTrash(new Vector2Int(x, y), enable);
+#if UNITY_EDITOR
             MarkEditorDirtyIfNotPlaying();
+#endif
         }
     }
 
     public void SetAllPollution(bool enable)
     {
         mapGrid.SetAllPollution(enable);
+#if UNITY_EDITOR
         MarkEditorDirtyIfNotPlaying();
+#endif
     }
 
     public void SetAllClean()
     {
         mapGrid.SetAllClean();
+#if UNITY_EDITOR
         MarkEditorDirtyIfNotPlaying();
+#endif
     }
 
     public void CheckBossSummonCondition()
@@ -339,7 +351,9 @@ public class Stage : SerializedMonoBehaviour
         for (int i = 0; i < count; i++)
             mapGrid.SetTrash(new Vector2Int(Random.Range(0, gridSizeInCells.x), Random.Range(0, gridSizeInCells.y)), true);
 
+#if UNITY_EDITOR
         MarkEditorDirtyIfNotPlaying();
+#endif
     }
 
     public void TestRandomPollution(int count = 5)
@@ -347,7 +361,9 @@ public class Stage : SerializedMonoBehaviour
         for (int i = 0; i < count; i++)
             mapGrid.SetPollution(new Vector2Int(Random.Range(0, gridSizeInCells.x), Random.Range(0, gridSizeInCells.y)), true);
 
+#if UNITY_EDITOR
         MarkEditorDirtyIfNotPlaying();
+#endif
     }
 
     public void TestRandomBoth(int count = 5)
@@ -359,7 +375,9 @@ public class Stage : SerializedMonoBehaviour
             mapGrid.SetTrash(c, true);
         }
 
+#if UNITY_EDITOR
         MarkEditorDirtyIfNotPlaying();
+#endif
     }
 
     #endregion
