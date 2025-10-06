@@ -1,8 +1,12 @@
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+#if ODIN_INSPECTOR
+using Sirenix.OdinInspector.Editor;
+#endif
 
-[CustomEditor(typeof(Stage))]
-public class MapManagerEditor : Editor
+[CustomEditor(typeof(Stage)), CanEditMultipleObjects]
+public class MapManagerEditor : OdinEditor
 {
     private Stage mgr;
     private Vector2Int _lastPainted = new Vector2Int(int.MinValue, int.MinValue);
@@ -10,10 +14,18 @@ public class MapManagerEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        DrawDefaultInspector();
         mgr = (Stage)target;
+
+        base.OnInspectorGUI();
+
+        DrawUtilityButtons();
         EditorGUILayout.Space();
-        EditorGUILayout.LabelField("Debug Tools", EditorStyles.boldLabel);
+        EditorGUILayout.HelpBox("Scene/Prefab 그리기 : 좌클릭 => 순환 / Shift => Trash 토글 / Ctrl => Pollution 토글 / Alt=Clean / Shift+Ctrl=둘다.", MessageType.Info);
+    }
+
+    private void DrawUtilityButtons()
+    {
+        if (mgr == null) return;
 
         using (new EditorGUILayout.HorizontalScope())
         {
@@ -72,67 +84,83 @@ public class MapManagerEditor : Editor
             }
         }
 
-        EditorGUILayout.HelpBox("Scene 뷰 페인트: 좌클릭 상태 순환 / Shift=Trash 토글 / Ctrl=Pollution 토글 / Alt=Clean. 드래그 가능.",
-            MessageType.Info);
+        EditorGUILayout.LabelField("Clean %", mgr.GetCleanPercentage().ToString("F2") + "%");
     }
+
 
     private void MarkDirty()
     {
         if (mgr != null)
-        {
-            EditorUtility.SetDirty(mgr);
-        }
+            return;
+
+        EditorUtility.SetDirty(mgr);
+        if (PrefabUtility.IsPartOfPrefabInstance(mgr))
+            PrefabUtility.RecordPrefabInstancePropertyModifications(mgr);
+
+        var prefabStage =  UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();
+        if (prefabStage != null)
+            EditorSceneManager.MarkSceneDirty(prefabStage.scene);
     }
 
     private void OnSceneGUI()
     {
         mgr = (Stage)target;
-        if (Application.isPlaying) return; // 에디터 편집 전용
-        if (mgr == null) return;
-        if (!mgr.enabled) return;
+
+        if (Application.isPlaying)
+            return; // 에디터 편집 전용
+
+        if (mgr == null)
+            return;
+
+        if (!mgr.enabled)
+            return;
 
         Event e = Event.current;
         int controlId = GUIUtility.GetControlID(FocusType.Passive);
 
-        if (e.isMouse)
+        if (!e.isMouse)
+            return;
+
+        Ray ray = HandleUtility.GUIPointToWorldRay(e.mousePosition);
+        float planeZ = mgr.transform.position.z;
+
+        if (Mathf.Abs(ray.direction.z) < 0.0001f)
+            return;
+
+        float t = (planeZ - ray.origin.z) / ray.direction.z;
+
+        if (t < 0)
+            return;
+
+        Vector3 hit = ray.origin + ray.direction * t;
+
+        if (mgr.WorldToGrid(hit, out var cell))
         {
-            Ray ray = HandleUtility.GUIPointToWorldRay(e.mousePosition);
-            float planeZ = mgr.transform.position.z;
-            if (Mathf.Abs(ray.direction.z) < 0.0001f) return;
-            float t = (planeZ - ray.origin.z) / ray.direction.z;
-            if (t < 0) return;
-            Vector3 hit = ray.origin + ray.direction * t;
+            Handles.color = new Color(1f, 1f, 1f, 0.25f);
+            Vector3 c = mgr.GridToWorldCenter(cell);
+            float s = Mathf.Max(0.01f, GetCellSize(mgr));
+            Handles.DrawWireCube(c, new Vector3(s, s, 0));
 
-            if (mgr.WorldToGrid(hit, out var cell))
+            if (e.type == EventType.MouseDown && e.button == 0)
             {
-                Handles.color = new Color(1f, 1f, 1f, 0.25f);
-                Vector3 c = mgr.GridToWorldCenter(cell);
-                float s = Mathf.Max(0.01f, GetCellSize(mgr));
-                Handles.DrawWireCube(c, new Vector3(s, s, 0));
-
-                if (e.type == EventType.MouseDown && e.button == 0)
-                {
-                    GUIUtility.hotControl = controlId;
-                    _dragging = true;
-                    _lastPainted = new Vector2Int(int.MinValue, int.MinValue);
+                GUIUtility.hotControl = controlId;
+                _dragging = true;
+                _lastPainted = new Vector2Int(int.MinValue, int.MinValue);
+                Paint(cell, e);
+                e.Use();
+            }
+            else if (e.type == EventType.MouseDrag && e.button == 0 && _dragging)
+            {
+                if (cell != _lastPainted)
                     Paint(cell, e);
-                    e.Use();
-                }
-                else if (e.type == EventType.MouseDrag && e.button == 0 && _dragging)
-                {
-                    if (cell != _lastPainted)
-                    {
-                        Paint(cell, e);
-                    }
 
-                    e.Use();
-                }
-                else if (e.type == EventType.MouseUp && e.button == 0 && _dragging)
-                {
-                    _dragging = false;
-                    GUIUtility.hotControl = 0;
-                    e.Use();
-                }
+                e.Use();
+            }
+            else if (e.type == EventType.MouseUp && e.button == 0 && _dragging)
+            {
+                _dragging = false;
+                GUIUtility.hotControl = 0;
+                e.Use();
             }
         }
     }
@@ -148,6 +176,7 @@ public class MapManagerEditor : Editor
     {
         if (mgr == null) return;
         Undo.RecordObject(mgr, "Paint Map Cell");
+
         bool shift = e.shift;
         bool ctrl = e.control || e.command;
         bool alt = e.alt;

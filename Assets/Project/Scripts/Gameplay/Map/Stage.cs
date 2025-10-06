@@ -1,9 +1,13 @@
 using UnityEngine;
 using WhaleShark.Core;
 using System.Collections.Generic;
-
 #if UNITY_EDITOR
 using UnityEditor;
+using UnityEditor.SceneManagement;
+#endif
+#if ODIN_INSPECTOR
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 #endif
 
 [ExecuteAlways]
@@ -34,7 +38,8 @@ public class Stage : MonoBehaviour
     #endregion
 
     private bool isInit;
-    [SerializeField] private MapGrid mapGrid = new();
+
+    [SerializeField, OdinSerialize] private MapGrid mapGrid = new();
 
     private readonly Dictionary<Vector2Int, TrashObject> trashMap = new();
     private readonly Dictionary<Vector2Int, PollutionObject> pollutionMap = new();
@@ -45,8 +50,12 @@ public class Stage : MonoBehaviour
 
     /// <summary>
     /// 정화표시 UI - pollution update시 같이 update
+    /// TODO : 추후 EventBus 등으로 변경
     /// </summary>
     private PurifyUI purifyUI;
+
+    private bool isBossSummoned;
+    [SerializeField] GameObject bossPrefab;
 
     private void Awake()
     {
@@ -85,7 +94,6 @@ public class Stage : MonoBehaviour
 
     public void Initialize()
     {
-        mapGrid?.RebuildFromSerializedIfNeeded();
 
         if (!isInit)
         {
@@ -101,22 +109,11 @@ public class Stage : MonoBehaviour
         }
 
         if (mapGrid.IsInitialized && mapGrid.GridSize != gridSizeInCells)
-        {
             mapGrid.Resize(gridSizeInCells, preserveContents: true);
-        }
-
-        //// 4) 이벤트 누락 복구 안전장치
-        //if (mapGrid != null)
-        //{
-        //    mapGrid.OnTileStateChanged -= HandleTileStateChanged;
-        //    mapGrid.OnTileStateChanged += HandleTileStateChanged;
-        //}
 
         // 임시: 정화 상태 표시 찾아 등록
         if (purifyUI == null)
-        {
             purifyUI = FindAnyObjectByType<PurifyUI>();
-        }
     }
 
     private void EnsureEditorInitialized() => Initialize();
@@ -127,9 +124,12 @@ public class Stage : MonoBehaviour
             return;
 
         var trashCells = new List<Vector2Int>(trashMap.Keys);
-        foreach (var c in trashCells) DespawnTrashObject(c);
+        foreach (var c in trashCells)
+            DespawnTrashObject(c);
+
         var pollCells = new List<Vector2Int>(pollutionMap.Keys);
-        foreach (var c in pollCells) DespawnPollutionObject(c);
+        foreach (var c in pollCells)
+            DespawnPollutionObject(c);
 
         for (int x = 0; x < gridSizeInCells.x; x++)
         {
@@ -152,9 +152,7 @@ public class Stage : MonoBehaviour
             mapGrid.OnTileStateChanged -= HandleTileStateChanged;
 
         foreach (var e in registeredEnemies)
-        {
             if (e != null) e.onEnemyDied -= OnNormalEnemyDied;
-        }
     }
 
     private void HandleTileStateChanged(Vector2Int cell, TileState state)
@@ -170,7 +168,9 @@ public class Stage : MonoBehaviour
                     SpawnTrashObject(cell, spawnOnly: true);
             }
             else if (trashMap.ContainsKey(cell))
+            {
                 DespawnTrashObject(cell);
+            }
 
             if (hasPollution)
             {
@@ -178,19 +178,28 @@ public class Stage : MonoBehaviour
                     SpawnPollutionObject(cell, spawnOnly: true);
             }
             else if (pollutionMap.ContainsKey(cell))
+            {
                 DespawnPollutionObject(cell);
+            }
 
             if (!hasTrash && !hasPollution)
             {
                 DespawnTrashObject(cell);
                 DespawnPollutionObject(cell);
             }
+
+            // clear ratio update
+            float clearRatio = GetCleanPercentage();
+
+            if (purifyUI != null)
+                purifyUI.UpdatePurifyProgress(clearRatio);
+
             CheckBossSummonCondition();
         }
 #if UNITY_EDITOR
         else
         {
-            EditorUtility.SetDirty(this);
+            MarkEditorDirty();
         }
 #endif
     }
@@ -201,6 +210,7 @@ public class Stage : MonoBehaviour
         cell = default;
         if (!isInit)
             return false;
+
         Vector3 local = worldPos - gridOrigin;
         if (local.x < 0 || local.y < 0)
             return false;
@@ -223,6 +233,8 @@ public class Stage : MonoBehaviour
     {
         if (mapGrid.InBounds(cell))
             mapGrid.SetTrash(cell, enable);
+
+        MarkEditorDirtyIfNotPlaying();
     }
 
     public void SetPollution(Vector2Int cell, bool enable)
@@ -234,24 +246,15 @@ public class Stage : MonoBehaviour
 
         mapGrid.SetPollution(cell, enable);
 
-        // clear ratio update
-        float clearRatio = GetCleanPercentage();
-
-        if (purifyUI != null)
-        {
-            purifyUI.UpdatePurifyProgress(clearRatio);
-        }
-
-        if (clearRatio >= 99.5f)
-        {
-            SummonBoss();
-        }
+        MarkEditorDirtyIfNotPlaying();
     }
 
     public void CleanCell(Vector2Int cell)
     {
         if (mapGrid.InBounds(cell))
             mapGrid.CleanTile(cell);
+
+        MarkEditorDirtyIfNotPlaying();
     }
 
     public void SetTrashAtWorld(Vector3 pos, bool enable)
@@ -286,16 +289,26 @@ public class Stage : MonoBehaviour
         {
             for (int y = 0; y < gridSizeInCells.y; y++)
                 mapGrid.SetTrash(new Vector2Int(x, y), enable);
+            MarkEditorDirtyIfNotPlaying();
         }
     }
 
-    public void SetAllPollution(bool enable) => mapGrid.SetAllPollution(enable);
-    public void SetAllClean() => mapGrid.SetAllClean();
+    public void SetAllPollution(bool enable)
+    {
+        mapGrid.SetAllPollution(enable);
+        MarkEditorDirtyIfNotPlaying();
+    }
+
+    public void SetAllClean()
+    {
+        mapGrid.SetAllClean();
+        MarkEditorDirtyIfNotPlaying();
+    }
 
     public void CheckBossSummonCondition()
     {
         if (isCleared || isBossSummoned) return;
-        if (GetCleanPercentage() >= 100f && !HasRemainingNormalEnemies())
+        if (GetCleanPercentage() >= 99.5f && !HasRemainingNormalEnemies())
         {
             isCleared = true;
             SummonBoss();
@@ -330,15 +343,17 @@ public class Stage : MonoBehaviour
     public void TestRandomTrash(int count = 5)
     {
         for (int i = 0; i < count; i++)
-            mapGrid.SetTrash(new Vector2Int(Random.Range(0, gridSizeInCells.x), Random.Range(0, gridSizeInCells.y)),
-                true);
+            mapGrid.SetTrash(new Vector2Int(Random.Range(0, gridSizeInCells.x), Random.Range(0, gridSizeInCells.y)), true);
+
+        MarkEditorDirtyIfNotPlaying();
     }
 
     public void TestRandomPollution(int count = 5)
     {
         for (int i = 0; i < count; i++)
-            mapGrid.SetPollution(new Vector2Int(Random.Range(0, gridSizeInCells.x), Random.Range(0, gridSizeInCells.y)),
-                true);
+            mapGrid.SetPollution(new Vector2Int(Random.Range(0, gridSizeInCells.x), Random.Range(0, gridSizeInCells.y)), true);
+
+        MarkEditorDirtyIfNotPlaying();
     }
 
     public void TestRandomBoth(int count = 5)
@@ -349,6 +364,8 @@ public class Stage : MonoBehaviour
             mapGrid.SetPollution(c, true);
             mapGrid.SetTrash(c, true);
         }
+
+        MarkEditorDirtyIfNotPlaying();
     }
 
     #endregion
@@ -357,14 +374,17 @@ public class Stage : MonoBehaviour
     {
         if (!debugDraw)
             return;
+
         if (!isInit)
         {
-            DrawGridOutline(); return;
+            DrawGridOutline();
+            return;
         }
 
         int total = gridSizeInCells.x * gridSizeInCells.y;
         if (total > debugMaxCells)
             return;
+
         float s = cellSize;
         for (int x = 0; x < gridSizeInCells.x; x++)
         {
@@ -439,6 +459,7 @@ public class Stage : MonoBehaviour
         var go = pollutionPool.Spawn(GridToWorldCenter(cell), Quaternion.identity);
         if (!go)
             return;
+
         var comp = go.GetComponent<PollutionObject>();
         if (!comp)
         {
@@ -492,16 +513,13 @@ public class Stage : MonoBehaviour
     {
         if (pollutionMap.TryGetValue(cell, out var cur) && cur == obj)
             pollutionMap.Remove(cell);
+
         if (mapGrid.HasPollution(cell))
             mapGrid.SetPollution(cell, false);
 
         CheckBossSummonCondition();
     }
     #endregion
-
-    private bool isBossSummoned;
-    [SerializeField] GameObject bossPrefab;
-
     private void SummonBoss()
     {
         if (isBossSummoned)
@@ -539,4 +557,25 @@ public class Stage : MonoBehaviour
         for (int i = 0; i < all.Length; i++)
             RegisterEnemy(all[i]);
     }
+
+#if UNITY_EDITOR
+    private void MarkEditorDirty()
+    {
+        EditorUtility.SetDirty(this);
+
+        if(PrefabUtility.IsPartOfPrefabInstance(this))
+            PrefabUtility.RecordPrefabInstancePropertyModifications(this);
+
+        var prefabStage = UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();
+
+        if (prefabStage != null)
+            EditorSceneManager.MarkSceneDirty(prefabStage.scene);
+    }
+
+    private void MarkEditorDirtyIfNotPlaying()
+    {
+        if (!Application.isPlaying)
+            MarkEditorDirty();
+    }
+#endif
 }
